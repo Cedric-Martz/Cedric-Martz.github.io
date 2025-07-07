@@ -1,4 +1,3 @@
-/* Reset */
 * {
   margin: 0;
   padding: 0;
@@ -29,8 +28,13 @@ header h1 {
 }
 
 @keyframes glow {
-  from { text-shadow: 0 0 10px #00ffff; }
-  to { text-shadow: 0 0 25px #00ffff, 0 0 35px #00ffff; }
+  from {
+    text-shadow: 0 0 10px #00ffff;
+  }
+
+  to {
+    text-shadow: 0 0 25px #00ffff, 0 0 35px #00ffff;
+  }
 }
 
 nav {
@@ -274,5 +278,62 @@ iframe {
   .projects-grid {
     grid-template-columns: 1fr;
     gap: 1rem;
+  }
+}
+
+.page-footer {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 1000;
+}
+
+.page-footer a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 15px;
+  background: rgba(0, 0, 0, 0.8);
+  border: 1px solid rgba(0, 255, 255, 0.3);
+  border-radius: 25px;
+  color: rgba(0, 255, 255, 0.7);
+  text-decoration: none;
+  font-size: 0.9rem;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+.page-footer a:hover {
+  color: #00ffff;
+  border-color: #00ffff;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
+  transform: translateY(-2px);
+}
+
+.page-footer svg {
+  width: 16px;
+  height: 16px;
+}
+
+body.show-footer .page-footer {
+  opacity: 1;
+}
+
+@media (max-width: 768px) {
+  .page-footer {
+    bottom: 15px;
+    right: 15px;
+  }
+
+  .page-footer a {
+    padding: 8px 12px;
+    font-size: 0.8rem;
+  }
+
+  .page-footer svg {
+    width: 14px;
+    height: 14px;
   }
 }
