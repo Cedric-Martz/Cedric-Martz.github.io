@@ -15,6 +15,18 @@ body {
   min-height: 100vh;
 }
 
+@media (max-width: 768px) {
+  body {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 0.5rem;
+  }
+}
+
 header {
   margin-bottom: 3rem;
   text-align: center;
@@ -25,6 +37,18 @@ header h1 {
   color: #fff;
   text-shadow: 0 0 15px #00ffff;
   animation: glow 2s ease-in-out infinite alternate;
+}
+
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 1.8rem;
+  }
 }
 
 @keyframes glow {
@@ -53,6 +77,36 @@ nav {
   border-radius: 5px;
   text-decoration: none;
   display: inline-block;
+}
+
+@media (max-width: 768px) {
+  nav {
+    margin-top: 1.5rem;
+  }
+  
+  .nav-button {
+    margin: 5px;
+    padding: 8px 15px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-top: 1rem;
+  }
+  
+  .nav-button {
+    margin: 0;
+    padding: 10px 20px;
+    width: 150px;
+    text-align: center;
+    font-size: 0.9rem;
+  }
 }
 
 .nav-button:hover {
@@ -85,6 +139,20 @@ nav {
   margin-right: auto;
 }
 
+@media (max-width: 768px) {
+  .video-container {
+    margin: 1.5rem 0;
+    border-radius: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .video-container {
+    margin: 1rem 0;
+    border-radius: 6px;
+  }
+}
+
 .video-container a {
   display: block;
   width: 100%;
@@ -103,6 +171,18 @@ nav {
   text-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
   opacity: 0.8;
   transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .video-container a::after {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .video-container a::after {
+    font-size: 2.5rem;
+  }
 }
 
 .video-container a:hover::after {
@@ -148,6 +228,37 @@ iframe {
   margin: 0 auto;
 }
 
+@media (max-width: 768px) {
+  .intro-section {
+    margin: 1.5rem 0;
+    padding: 1.5rem;
+  }
+  
+  .intro-section h2 {
+    font-size: 1.6rem;
+  }
+  
+  .intro-section p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .intro-section {
+    margin: 1rem 0;
+    padding: 1rem;
+  }
+  
+  .intro-section h2 {
+    font-size: 1.4rem;
+  }
+  
+  .intro-section p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+}
+
 .contact-form {
   max-width: 600px;
   margin: 2rem auto;
@@ -155,6 +266,21 @@ iframe {
   background: rgba(0, 255, 255, 0.1);
   border-radius: 10px;
   border: 1px solid rgba(0, 255, 255, 0.3);
+}
+
+@media (max-width: 768px) {
+  .contact-form {
+    margin: 1.5rem auto;
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-form {
+    margin: 1rem auto;
+    padding: 1rem;
+    border-radius: 8px;
+  }
 }
 
 .form-group {
@@ -228,6 +354,37 @@ iframe {
   font-size: 1.1rem;
 }
 
+@media (max-width: 768px) {
+  .contact-info {
+    margin: 1.5rem 0;
+    padding: 1.5rem;
+  }
+  
+  .contact-info h3 {
+    font-size: 1.3rem;
+  }
+  
+  .contact-info p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-info {
+    margin: 1rem 0;
+    padding: 1rem;
+    border-radius: 8px;
+  }
+  
+  .contact-info h3 {
+    font-size: 1.2rem;
+  }
+  
+  .contact-info p {
+    font-size: 0.9rem;
+  }
+}
+
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -257,27 +414,28 @@ iframe {
 }
 
 @media (max-width: 768px) {
-  header h1 {
-    font-size: 2rem;
+  .projects-grid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin: 1.5rem 0;
   }
-
-  .nav-button {
-    margin: 5px;
-    padding: 8px 15px;
-    font-size: 0.9rem;
+  
+  .project-card h3 {
+    padding: 1.2rem;
+    font-size: 1.2rem;
   }
+}
 
-  .intro-section h2 {
-    font-size: 1.5rem;
-  }
-
-  .intro-section p {
-    font-size: 1rem;
-  }
-
+@media (max-width: 480px) {
   .projects-grid {
     grid-template-columns: 1fr;
     gap: 1rem;
+    margin: 1rem 0;
+  }
+  
+  .project-card h3 {
+    padding: 1rem;
+    font-size: 1.1rem;
   }
 }
 
