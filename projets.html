@@ -84,12 +84,32 @@
     </footer>
 
     <script>
-        function checkScroll() {
+        window.addEventListener('load', function ()
+        {
+            const projectCards = document.querySelectorAll('.project-card');
+
+            projectCards.forEach((card) => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(50px) scale(0.9)';
+            });
+
+            projectCards.forEach((card, index) => {
+                setTimeout(() => {
+                    card.style.transition = 'all 0.6s ease-out';
+                    card.style.opacity = '1';
+                    card.style.transform = 'translateY(0) scale(1)';
+                }, index * 200);
+            });
+        });
+
+        function checkScroll()
+        {
             const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
             const windowHeight = window.innerHeight;
             const documentHeight = document.documentElement.scrollHeight;
+            const scrollPercentage = (scrollTop + windowHeight) / documentHeight;
 
-            if (scrollTop + windowHeight >= documentHeight) {
+            if (scrollPercentage >= 0.8 || (scrollTop + windowHeight >= documentHeight - 50)) {
                 document.body.classList.add('show-footer');
             } else {
                 document.body.classList.remove('show-footer');
@@ -98,7 +118,5 @@
         window.addEventListener('scroll', checkScroll);
         window.addEventListener('load', checkScroll);
     </script>
-
 </body>
-
 </html>
