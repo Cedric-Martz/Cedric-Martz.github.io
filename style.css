@@ -12,8 +12,9 @@ body
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 2rem;
+    padding: 2re    m;
     min-height: 100vh;
+    padding-top: 70px;
     padding-bottom: 120px;
 }
 
@@ -22,6 +23,7 @@ body
     body
     {
         padding: 1rem;
+        padding-top: 70px;
         padding-bottom: 100px;
     }
 }
@@ -31,6 +33,7 @@ body
     body
     {
         padding: 0.5rem;
+        padding-top: 70px;
         padding-bottom: 80px;
     }
 }
