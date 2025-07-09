@@ -2,91 +2,146 @@
 <html lang="fr">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact - Cédric Martz</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Cédric Martz</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-  <header>
-    <h1>Cédric Martz - Contact</h1>
-    <nav>
-      <a href="index.html" class="nav-button">Accueil</a>
-      <a href="projets.html" class="nav-button">Projets</a>
-      <a href="contact.html" class="nav-button active">Contact</a>
-    </nav>
-  </header>
+    <header>
+        <h1>Cédric Martz - Contact</h1>
+        <nav>
+            <a href="index.html" class="nav-button">Accueil</a>
+            <a href="projets.html" class="nav-button">Projets</a>
+            <a href="contact.html" class="nav-button active">Contact</a>
+        </nav>
+    </header>
 
-  <main class="content">
-    <section class="intro-section">
-      <h2>Restons en contact</h2>
-      <p>
-        Vous avez un projet en tête ? Une question à me poser ? N'hésitez pas à me contacter.
-        Je serai ravi d'échanger avec vous !
-      </p>
-    </section>
+    <main class="content">
+        <section class="intro-section">
+            <h2>Restons en contact</h2>
+            <p>
+                Vous avez un projet en tête ? Une question à me poser ? N'hésitez pas à me contacter.
+                Je serai ravi d'échanger avec vous !
+            </p>
+        </section>
 
-    <div class="contact-form">
-      <h3 style="text-align: center; color: #00ffff; margin-bottom: 2rem;">Envoyez-moi un message</h3>
-      <form>
-        <div class="form-group">
-          <label for="name">Nom</label>
-          <input type="text" id="name" name="name" required>
+        <div class="contact-center">
+            <div class="contact-card">
+                <div class="contact-header">
+                    <h3>Informations de contact</h3>
+                </div>
+
+                <div class="contact-details">
+                    <div class="contact-item">
+                        <span class="contact-icon">📧</span>
+                        <div class="contact-text">
+                            <p class="contact-label">Email</p>
+                            <p class="contact-value">mail@example.com</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <span class="contact-icon">📱</span>
+                        <div class="contact-text">
+                            <p class="contact-label">Téléphone</p>
+                            <p class="contact-value">+33 X XX XX XX XX</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <span class="contact-icon">📍</span>
+                        <div class="contact-text">
+                            <p class="contact-label">Localisation</p>
+                            <p class="contact-value">France</p>
+                        </div>
+                    </div>
+                </div>
+
+                <button id="emailBtn" class="email-button">
+                    <span class="email-icon">✉️</span>
+                    Envoyer un email
+                </button>
+            </div>
         </div>
+    </main>
 
-        <div class="form-group">
-          <label for="email">Email</label>
-          <input type="email" id="email" name="email" required>
-        </div>
+    <footer class="page-footer">
+        <a href="https://github.com/Cedric-Martz" target="_blank" rel="noopener noreferrer">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                    d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.2 11.4.6.1.8-.26.8-.58v-2.02c-3.34.72-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.1-.75.08-.73.08-.73 1.21.09 1.85 1.25 1.85 1.25 1.08 1.85 2.83 1.31 3.52 1 .11-.78.42-1.31.77-1.61-2.67-.3-5.47-1.34-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.12-.3-.54-1.52.12-3.18 0 0 1.01-.32 3.3 1.23.96-.27 1.98-.4 3-.4s2.04.13 3 .4c2.29-1.55 3.3-1.23 3.3-1.23.66 1.66.24 2.88.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.61-2.8 5.63-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.2.69.82.57C20.57 21.8 24 17.3 24 12c0-6.63-5.37-12-12-12z" />
+            </svg>
+            GitHub
+        </a>
+    </footer>
+    <script>
+        window.addEventListener('load', function ()
+        {
+            const contactCard = document.querySelector('.contact-card');
+            contactCard.style.opacity = '0';
+            contactCard.style.transform = 'translateY(30px)';
 
-        <div class="form-group">
-          <label for="subject">Sujet</label>
-          <input type="text" id="subject" name="subject" required>
-        </div>
+            setTimeout(() => {
+                contactCard.style.transition = 'all 0.6s ease-out';
+                contactCard.style.opacity = '1';
+                contactCard.style.transform = 'translateY(0)';
+            }, 100);
 
-        <div class="form-group">
-          <label for="message">Message</label>
-          <textarea id="message" name="message" required></textarea>
-        </div>
+            const contactItems = document.querySelectorAll('.contact-item');
+            contactItems.forEach((item, index) => {
+                item.style.opacity = '0';
+                item.style.transform = 'translateX(-20px)';
 
-        <button type="submit" class="submit-btn">Envoyer le message</button>
-      </form>
-    </div>
+                setTimeout(() => {
+                    item.style.transition = 'all 0.4s ease-out';
+                    item.style.opacity = '1';
+                    item.style.transform = 'translateX(0)';
+                }, 300 + (index * 150));
+            });
 
-    <div class="contact-info">
-      <h3>Informations de contact</h3>
-      <p><strong>Email :</strong> mail@example.com</p>
-      <p><strong>Téléphone :</strong> +33 X XX XX XX XX</p>
-      <p><strong>Localisation :</strong> France</p>
-      <!-- <p><strong>etc :</strong> example</p> -->
-    </div>
-  </main>
+            const emailBtn = document.getElementById('emailBtn');
+            emailBtn.style.opacity = '0';
+            emailBtn.style.transform = 'scale(0.8)';
 
-  <footer class="page-footer">
-    <a href="https://github.com/Cedric-Martz" target="_blank" rel="noopener noreferrer">
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-        <path
-          d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.2 11.4.6.1.8-.26.8-.58v-2.02c-3.34.72-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.1-.75.08-.73.08-.73 1.21.09 1.85 1.25 1.85 1.25 1.08 1.85 2.83 1.31 3.52 1 .11-.78.42-1.31.77-1.61-2.67-.3-5.47-1.34-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.12-.3-.54-1.52.12-3.18 0 0 1.01-.32 3.3 1.23.96-.27 1.98-.4 3-.4s2.04.13 3 .4c2.29-1.55 3.3-1.23 3.3-1.23.66 1.66.24 2.88.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.61-2.8 5.63-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.2.69.82.57C20.57 21.8 24 17.3 24 12c0-6.63-5.37-12-12-12z" />
-      </svg>
-      GitHub
-    </a>
-  </footer>
-  <script>
-    function checkScroll() {
-      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-      const windowHeight = window.innerHeight;
-      const documentHeight = document.documentElement.scrollHeight;
-      if (scrollTop + windowHeight >= documentHeight) {
-        document.body.classList.add('show-footer');
-      } else {
-        document.body.classList.remove('show-footer');
-      }
-    }
-    window.addEventListener('scroll', checkScroll);
-    window.addEventListener('load', checkScroll);
-  </script>
+            setTimeout(() => {
+                emailBtn.style.transition = 'all 0.5s ease-out';
+                emailBtn.style.opacity = '1';
+                emailBtn.style.transform = 'scale(1)';
+            }, 800);
+        });
+
+        document.getElementById('emailBtn').addEventListener('click', function ()
+        {
+            const email = 'mail.mail@example.com';
+            const subject = 'Contact depuis le site web';
+            const body = 'Bonjour Samuel,\n\nJe vous contacte depuis votre site web.\n\n';
+
+            const mailtoLink = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+            this.style.transform = 'scale(0.95)';
+            this.style.boxShadow = '0 0 25px #00ffff';
+            setTimeout(() => {
+                this.style.transform = 'scale(1)';
+                window.location.href = mailtoLink;
+            }, 150);
+        });
+
+        function checkScroll()
+        {
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            const windowHeight = window.innerHeight;
+            const documentHeight = document.documentElement.scrollHeight;
+            const scrollPercentage = (scrollTop + windowHeight) / documentHeight;
+            if (scrollPercentage >= 0.8 || (scrollTop + windowHeight >= documentHeight - 50)) {
+                document.body.classList.add('show-footer');
+            } else {
+                document.body.classList.remove('show-footer');
+            }
+        }
+        window.addEventListener('scroll', checkScroll);
+        window.addEventListener('load', checkScroll);
+    </script>
 </body>
-
 </html>
