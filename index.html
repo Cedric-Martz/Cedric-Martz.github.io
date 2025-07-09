@@ -36,19 +36,95 @@
         </section>
     </main>
 
-    <footer class="page-footer">
-        <a href="https://github.com/Cedric-Martz" target="_blank" rel="noopener noreferrer">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                <path
-                    d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.2 11.4.6.1.8-.26.8-.58v-2.02c-3.34.72-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.1-.75.08-.73.08-.73 1.21.09 1.85 1.25 1.85 1.25 1.08 1.85 2.83 1.31 3.52 1 .11-.78.42-1.31.77-1.61-2.67-.3-5.47-1.34-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.12-.3-.54-1.52.12-3.18 0 0 1.01-.32 3.3 1.23.96-.27 1.98-.4 3-.4s2.04.13 3 .4c2.29-1.55 3.3-1.23 3.3-1.23.66 1.66.24 2.88.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.61-2.8 5.63-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.2.69.82.57C20.57 21.8 24 17.3 24 12c0-6.63-5.37-12-12-12z" />
-            </svg>
-            GitHub
-        </a>
-    </footer>
+  <footer class="page-footer">
+    <a href="https://github.com/Cedric-Martz" target="_blank" rel="noopener noreferrer">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+        <path
+          d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.2 11.4.6.1.8-.26.8-.58v-2.02c-3.34.72-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.1-.75.08-.73.08-.73 1.21.09 1.85 1.25 1.85 1.25 1.08 1.85 2.83 1.31 3.52 1 .11-.78.42-1.31.77-1.61-2.67-.3-5.47-1.34-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.12-.3-.54-1.52.12-3.18 0 0 1.01-.32 3.3 1.23.96-.27 1.98-.4 3-.4s2.04.13 3 .4c2.29-1.55 3.3-1.23 3.3-1.23.66 1.66.24 2.88.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.61-2.8 5.63-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.2.69.82.57C20.57 21.8 24 17.3 24 12c0-6.63-5.37-12-12-12z" />
+      </svg>
+      GitHub
+    </a>
+  </footer>
+
+  <div class="language-toggle">
+    <button id="langBtn" class="lang-button" title="Switch to English">
+      <svg class="flag-icon" width="24" height="18" viewBox="0 0 24 18" fill="none">
+        <rect width="24" height="18" fill="#012169"/>
+        <path d="M0 0L24 18M24 0L0 18" stroke="white" stroke-width="2"/>
+        <path d="M0 0L24 18M24 0L0 18" stroke="#C8102E" stroke-width="1"/>
+        <path d="M12 0V18M0 9H24" stroke="white" stroke-width="3"/>
+        <path d="M12 0V18M0 9H24" stroke="#C8102E" stroke-width="2"/>
+      </svg>
+    </button>
+  </div>
 
     <script>
+        const translations = {
+            fr: {
+                title: "Accueil - Cédric Martz",
+                headerTitle: "Cédric Martz - Portfolio",
+                navHome: "Accueil",
+                navProjects: "Projets",
+                navContact: "Contact",
+                introTitle: "Bienvenue sur mon Portfolio",
+                introText1: "Passionné par la création et l'innovation, je vous invite à découvrir mon univers à travers mes réalisations. Explorez mes projets, découvrez mon parcours et n'hésitez pas à me contacter pour toute collaboration ou question.",
+                aboutTitle: "À propos de moi",
+                aboutText: "Créatif et déterminé, je m'efforce constamment de repousser les limites de mes projets. Chaque réalisation est le fruit d'une réflexion approfondie et d'une passion sincère pour l'excellence.",
+                langButtonTitle: "Switch to English"
+            },
+            en: {
+                title: "Home - Cédric Martz",
+                headerTitle: "Cédric Martz - Portfolio",
+                navHome: "Home",
+                navProjects: "Projects",
+                navContact: "Contact",
+                introTitle: "Welcome to my Portfolio",
+                introText1: "Passionate about creation and innovation, I invite you to discover my universe through my achievements. Explore my projects, discover my journey and feel free to contact me for any collaboration or question.",
+                aboutTitle: "About me",
+                aboutText: "Creative and determined, I constantly strive to push the limits of my projects. Each achievement is the result of deep reflection and sincere passion for excellence.",
+                langButtonTitle: "Passer en français"
+            }
+        };
+
+        let currentLang = localStorage.getItem('language') || 'fr';
+
+        function updateContent(lang) {
+            const t = translations[lang];
+            
+            document.title = t.title;
+            document.querySelector('header h1').textContent = t.headerTitle;
+            document.querySelector('nav a[href="index.html"]').textContent = t.navHome;
+            document.querySelector('nav a[href="projets.html"]').textContent = t.navProjects;
+            document.querySelector('nav a[href="contact.html"]').textContent = t.navContact;
+            document.querySelector('.intro-section h2').textContent = t.introTitle;
+            document.querySelector('.intro-section p:first-of-type').textContent = t.introText1;
+            document.querySelector('.intro-section h3').textContent = t.aboutTitle;
+            document.querySelector('.intro-section p:last-of-type').textContent = t.aboutText;
+            
+            const langBtn = document.getElementById('langBtn');
+            if (lang === 'fr') {
+                langBtn.innerHTML = `<svg class="flag-icon" width="24" height="18" viewBox="0 0 24 18" fill="none">
+                    <rect width="24" height="18" fill="#012169"/>
+                    <path d="M0 0L24 18M24 0L0 18" stroke="white" stroke-width="2"/>
+                    <path d="M0 0L24 18M24 0L0 18" stroke="#C8102E" stroke-width="1"/>
+                    <path d="M12 0V18M0 9H24" stroke="white" stroke-width="3"/>
+                    <path d="M12 0V18M0 9H24" stroke="#C8102E" stroke-width="2"/>
+                </svg>`;
+                langBtn.title = t.langButtonTitle;
+            } else {
+                langBtn.innerHTML = `<svg class="flag-icon" width="24" height="18" viewBox="0 0 24 18" fill="none">
+                    <rect width="8" height="18" fill="#002654"/>
+                    <rect x="8" width="8" height="18" fill="white"/>
+                    <rect x="16" width="8" height="18" fill="#CE1126"/>
+                </svg>`;
+                langBtn.title = t.langButtonTitle;
+            }
+        }
+
         window.addEventListener('load', function ()
         {
+            updateContent(currentLang);
+            
             const introSection = document.querySelector('.intro-section');
             const introElements = introSection.querySelectorAll('h2, h3, p');
             introSection.style.opacity = '0';
@@ -69,7 +145,26 @@
             });
         });
 
-        function checkScroll() {
+        document.addEventListener('DOMContentLoaded', function()
+        {
+            const langBtn = document.getElementById('langBtn');
+            
+            langBtn.addEventListener('click', function()
+            {
+                this.style.transform = 'scale(0.9)';
+                this.style.boxShadow = '0 0 20px #00ffff';
+                
+                setTimeout(() => {
+                    this.style.transform = 'scale(1)';
+                    currentLang = currentLang === 'fr' ? 'en' : 'fr';
+                    localStorage.setItem('language', currentLang);
+                    updateContent(currentLang);
+                }, 150);
+            });
+        });
+
+        function checkScroll()
+        {
             const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
             const windowHeight = window.innerHeight;
             const documentHeight = document.documentElement.scrollHeight;
@@ -78,6 +173,12 @@
                 document.body.classList.add('show-footer');
             } else {
                 document.body.classList.remove('show-footer');
+            }
+            const langToggle = document.querySelector('.language-toggle');
+            if (scrollTop <= 50) {
+                langToggle.classList.add('show-lang');
+            } else {
+                langToggle.classList.remove('show-lang');
             }
         }
         window.addEventListener('scroll', checkScroll);

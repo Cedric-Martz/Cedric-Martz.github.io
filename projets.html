@@ -84,11 +84,102 @@
         </a>
     </footer>
 
-    <script>
-        window.addEventListener('load', function ()
-        {
-            const projectCards = document.querySelectorAll('.project-card');
+    <div class="language-toggle">
+        <button id="langBtn" class="lang-button" title="Switch to English">
+            <svg class="flag-icon" width="24" height="18" viewBox="0 0 24 18" fill="none">
+                <rect width="24" height="18" fill="#012169"/>
+                <path d="M0 0L24 18M24 0L0 18" stroke="white" stroke-width="2"/>
+                <path d="M0 0L24 18M24 0L0 18" stroke="#C8102E" stroke-width="1"/>
+                <path d="M12 0V18M0 9H24" stroke="white" stroke-width="3"/>
+                <path d="M12 0V18M0 9H24" stroke="#C8102E" stroke-width="2"/>
+            </svg>
+        </button>
+    </div>
 
+    <script>
+        const translations = {
+            fr: {
+                title: "Projets - Cédric Martz",
+                headerTitle: "Cédric Martz - Mes Projets",
+                navHome: "Accueil",
+                navProjects: "Projets",
+                navContact: "Contact",
+                introTitle: "Découvrez mes réalisations",
+                introText: "Voici une sélection de mes projets les plus marquants.",
+                project1: "Projet 1",
+                project2: "Projet 2",
+                project3: "Projet 3",
+                project4: "Projet 4",
+                altText: "Projet X - Cliquez pour voir sur YouTube",
+                langButtonTitle: "Switch to English"
+            },
+            en: {
+                title: "Projects - Cédric Martz",
+                headerTitle: "Cédric Martz - My Projects",
+                navHome: "Home",
+                navProjects: "Projects",
+                navContact: "Contact",
+                introTitle: "Discover my work",
+                introText: "Here is a selection of my most notable projects.",
+                project1: "Project 1",
+                project2: "Project 2",
+                project3: "Project 3",
+                project4: "Project 4",
+                altText: "Project X - Click to watch on YouTube",
+                langButtonTitle: "Passer en français"
+            }
+        };
+
+        let currentLang = localStorage.getItem('language') || 'fr';
+
+        function updateContent(lang)
+        {
+            const t = translations[lang];
+            
+            document.title = t.title;            
+            document.querySelector('header h1').textContent = t.headerTitle;
+            document.querySelector('nav a[href="index.html"]').textContent = t.navHome;
+            document.querySelector('nav a[href="projets.html"]').textContent = t.navProjects;
+            document.querySelector('nav a[href="contact.html"]').textContent = t.navContact;
+            document.querySelector('.intro-section h2').textContent = t.introTitle;
+            document.querySelector('.intro-section p').textContent = t.introText;
+            
+            const projectTitles = document.querySelectorAll('.project-card h3');
+            projectTitles[0].textContent = t.project1;
+            projectTitles[1].textContent = t.project2;
+            projectTitles[2].textContent = t.project3;
+            projectTitles[3].textContent = t.project4;
+            
+            const images = document.querySelectorAll('.project-card img');
+            images.forEach((img, index) => {
+                img.alt = t.altText.replace('X', index + 1);
+            });
+            
+            const langBtn = document.getElementById('langBtn');
+            if (lang === 'fr') {
+                langBtn.innerHTML = `<svg class="flag-icon" width="24" height="18" viewBox="0 0 24 18" fill="none">
+                    <rect width="24" height="18" fill="#012169"/>
+                    <path d="M0 0L24 18M24 0L0 18" stroke="white" stroke-width="2"/>
+                    <path d="M0 0L24 18M24 0L0 18" stroke="#C8102E" stroke-width="1"/>
+                    <path d="M12 0V18M0 9H24" stroke="white" stroke-width="3"/>
+                    <path d="M12 0V18M0 9H24" stroke="#C8102E" stroke-width="2"/>
+                </svg>`;
+                langBtn.title = t.langButtonTitle;
+            } else {
+                langBtn.innerHTML = `<svg class="flag-icon" width="24" height="18" viewBox="0 0 24 18" fill="none">
+                    <rect width="8" height="18" fill="#002654"/>
+                    <rect x="8" width="8" height="18" fill="white"/>
+                    <rect x="16" width="8" height="18" fill="#CE1126"/>
+                </svg>`;
+                langBtn.title = t.langButtonTitle;
+            }
+        }
+
+        window.addEventListener('load', function()
+        {
+            updateContent(currentLang);
+            
+            const projectCards = document.querySelectorAll('.project-card');
             projectCards.forEach((card) => {
                 card.style.opacity = '0';
                 card.style.transform = 'translateY(50px) scale(0.9)';
@@ -103,6 +194,24 @@
             });
         });
 
+        document.addEventListener('DOMContentLoaded', function()
+        {
+            const langBtn = document.getElementById('langBtn');
+            
+            langBtn.addEventListener('click', function()
+            {
+                this.style.transform = 'scale(0.9)';
+                this.style.boxShadow = '0 0 20px #00ffff';
+                
+                setTimeout(() => {
+                    this.style.transform = 'scale(1)';
+                    currentLang = currentLang === 'fr' ? 'en' : 'fr';
+                    localStorage.setItem('language', currentLang);
+                    updateContent(currentLang);
+                }, 150);
+            });
+        });
+
         function checkScroll()
         {
             const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
@@ -114,6 +223,12 @@
                 document.body.classList.add('show-footer');
             } else {
                 document.body.classList.remove('show-footer');
+            }
+            const langToggle = document.querySelector('.language-toggle');
+            if (scrollTop <= 50) {
+                langToggle.classList.add('show-lang');
+            } else {
+                langToggle.classList.remove('show-lang');
             }
         }
         window.addEventListener('scroll', checkScroll);
