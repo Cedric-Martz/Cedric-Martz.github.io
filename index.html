@@ -27,16 +27,16 @@
         <section class="intro-section">
             <h2>Bienvenue sur mon Portfolio</h2>
             <p>
-                Passionné par la création et l'innovation, je vous invite à découvrir mon univers à travers mes
-                réalisations.
-                Explorez mes projets, découvrez mon parcours et n'hésitez pas à me contacter pour toute collaboration ou
+                Passionné par la technologie et l'innovation, je vous invite à découvrir mon univers à travers mes
+                réalisations en développement web, cybersécurité et gaming.
+                Explorez mes projets tech, découvrez mon parcours et n'hésitez pas à me contacter pour toute collaboration ou
                 question.
             </p>
 
             <h3>À propos de moi</h3>
             <p>
-                Créatif et déterminé, je m'efforce constamment de repousser les limites de mes projets.
-                Chaque réalisation est le fruit d'une réflexion approfondie et d'une passion sincère pour l'excellence.
+                Développeur passionné par l'univers tech, les jeux vidéo et la cybersécurité, je m'efforce constamment de repousser les limites de mes projets.
+                Chaque réalisation est le fruit d'une réflexion approfondie sur les défis technologiques modernes et d'une passion sincère pour l'innovation.
             </p>
         </section>
     </main>
@@ -48,6 +48,13 @@
           d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.2 11.4.6.1.8-.26.8-.58v-2.02c-3.34.72-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.1-.75.08-.73.08-.73 1.21.09 1.85 1.25 1.85 1.25 1.08 1.85 2.83 1.31 3.52 1 .11-.78.42-1.31.77-1.61-2.67-.3-5.47-1.34-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.12-.3-.54-1.52.12-3.18 0 0 1.01-.32 3.3 1.23.96-.27 1.98-.4 3-.4s2.04.13 3 .4c2.29-1.55 3.3-1.23 3.3-1.23.66 1.66.24 2.88.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.61-2.8 5.63-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.2.69.82.57C20.57 21.8 24 17.3 24 12c0-6.63-5.37-12-12-12z" />
       </svg>
       GitHub
+    </a>
+    <a href="https://www.linkedin.com/in/c%C3%A9dric-martz-2b2240259/" target="_blank" rel="noopener noreferrer">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+        <path
+          d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+      </svg>
+      LinkedIn
     </a>
   </footer>
 
@@ -72,9 +79,9 @@
                 navProjects: "Projets",
                 navContact: "Contact",
                 introTitle: "Bienvenue sur mon Portfolio",
-                introText1: "Passionné par la création et l'innovation, je vous invite à découvrir mon univers à travers mes réalisations. Explorez mes projets, découvrez mon parcours et n'hésitez pas à me contacter pour toute collaboration ou question.",
+                introText1: "Passionné par la technologie et l'innovation, je vous invite à découvrir mon univers à travers mes réalisations en développement web, cybersécurité et gaming. Explorez mes projets tech, découvrez mon parcours et n'hésitez pas à me contacter pour toute collaboration ou question.",
                 aboutTitle: "À propos de moi",
-                aboutText: "Créatif et déterminé, je m'efforce constamment de repousser les limites de mes projets. Chaque réalisation est le fruit d'une réflexion approfondie et d'une passion sincère pour l'excellence.",
+                aboutText: "Développeur passionné par l'univers tech, les jeux vidéo et la cybersécurité, je m'efforce constamment de repousser les limites de mes projets. Chaque réalisation est le fruit d'une réflexion approfondie sur les défis technologiques modernes et d'une passion sincère pour l'innovation.",
                 langButtonTitle: "Switch to English"
             },
             en: {
@@ -84,16 +91,17 @@
                 navProjects: "Projects",
                 navContact: "Contact",
                 introTitle: "Welcome to my Portfolio",
-                introText1: "Passionate about creation and innovation, I invite you to discover my universe through my achievements. Explore my projects, discover my journey and feel free to contact me for any collaboration or question.",
+                introText1: "Passionate about technology and innovation, I invite you to discover my universe through my achievements in web development, cybersecurity, and gaming. Explore my tech projects, discover my journey and feel free to contact me for any collaboration or question.",
                 aboutTitle: "About me",
-                aboutText: "Creative and determined, I constantly strive to push the limits of my projects. Each achievement is the result of deep reflection and sincere passion for excellence.",
+                aboutText: "Developer passionate about the tech universe, video games and cybersecurity, I constantly strive to push the limits of my projects. Each achievement is the result of deep reflection on modern technological challenges and sincere passion for innovation.",
                 langButtonTitle: "Passer en français"
             }
         };
 
         let currentLang = localStorage.getItem('language') || 'fr';
 
-        function updateContent(lang) {
+        function updateContent(lang)
+        {
             const t = translations[lang];
             
             document.title = t.title;
@@ -157,7 +165,7 @@
             langBtn.addEventListener('click', function()
             {
                 this.style.transform = 'scale(0.9)';
-                this.style.boxShadow = '0 0 20px #00ffff';
+                this.style.boxShadow = '0 0 20px #8A2BE2';
                 
                 setTimeout(() => {
                     this.style.transform = 'scale(1)';
@@ -174,16 +182,17 @@
             const windowHeight = window.innerHeight;
             const documentHeight = document.documentElement.scrollHeight;
 
-            if (scrollTop + windowHeight >= documentHeight * 0.95) {
+            if (scrollTop + windowHeight >= documentHeight * 0.9) {
                 document.body.classList.add('show-footer');
             } else {
                 document.body.classList.remove('show-footer');
             }
+
             const langToggle = document.querySelector('.language-toggle');
-            if (scrollTop <= 50) {
-                langToggle.classList.add('show-lang');
+            if (scrollTop <= 100) {
+                langToggle.classList.remove('hide-lang');
             } else {
-                langToggle.classList.remove('show-lang');
+                langToggle.classList.add('hide-lang');
             }
         }
         window.addEventListener('scroll', checkScroll);

@@ -45,15 +45,20 @@
                         <span class="contact-icon">📧</span>
                         <div class="contact-text">
                             <p class="contact-label">Email</p>
-                            <p class="contact-value">mail@example.com</p>
+                            <p class="contact-value">cedric.martz.1.pro@gmail.com</p>
                         </div>
                     </div>
 
                     <div class="contact-item">
-                        <span class="contact-icon">📱</span>
+                        <span class="contact-icon">👤</span>
                         <div class="contact-text">
-                            <p class="contact-label">Téléphone</p>
-                            <p class="contact-value">+33 X XX XX XX XX</p>
+                            <p class="contact-label">LinkedIn</p>
+                            <p class="contact-value">
+                                <a href="https://www.linkedin.com/in/c%C3%A9dric-martz-2b2240259/" target="_blank"
+                                    rel="noopener noreferrer" style="color: #8A2BE2; text-decoration: none;">
+                                    Cédric Martz
+                                </a>
+                            </p>
                         </div>
                     </div>
 
@@ -82,16 +87,23 @@
             </svg>
             GitHub
         </a>
+        <a href="https://www.linkedin.com/in/c%C3%A9dric-martz-2b2240259/" target="_blank" rel="noopener noreferrer">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                    d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+            </svg>
+            LinkedIn
+        </a>
     </footer>
 
     <div class="language-toggle">
         <button id="langBtn" class="lang-button" title="Switch to English">
             <svg class="flag-icon" width="24" height="18" viewBox="0 0 24 18" fill="none">
-                <rect width="24" height="18" fill="#012169"/>
-                <path d="M0 0L24 18M24 0L0 18" stroke="white" stroke-width="2"/>
-                <path d="M0 0L24 18M24 0L0 18" stroke="#C8102E" stroke-width="1"/>
-                <path d="M12 0V18M0 9H24" stroke="white" stroke-width="3"/>
-                <path d="M12 0V18M0 9H24" stroke="#C8102E" stroke-width="2"/>
+                <rect width="24" height="18" fill="#012169" />
+                <path d="M0 0L24 18M24 0L0 18" stroke="white" stroke-width="2" />
+                <path d="M0 0L24 18M24 0L0 18" stroke="#C8102E" stroke-width="1" />
+                <path d="M12 0V18M0 9H24" stroke="white" stroke-width="3" />
+                <path d="M12 0V18M0 9H24" stroke="#C8102E" stroke-width="2" />
             </svg>
         </button>
     </div>
@@ -104,10 +116,10 @@
                 navProjects: "Projets",
                 navContact: "Contact",
                 introTitle: "Restons en contact",
-                introText: "Vous avez un projet en tête ? Une question à me poser ? N'hésitez pas à me contacter. Je serai ravi d'échanger avec vous !",
+                introText: "Vous avez un projet tech en tête ? Une question sur la cybersécurité ou le développement ? N'hésitez pas à me contacter. Je serai ravi d'échanger avec vous !",
                 contactInfoTitle: "Informations de contact",
                 emailLabel: "Email",
-                phoneLabel: "Téléphone",
+                linkedinLabel: "LinkedIn",
                 locationLabel: "Localisation",
                 locationValue: "France",
                 emailBtnText: "Envoyer un email",
@@ -122,10 +134,10 @@
                 navProjects: "Projects",
                 navContact: "Contact",
                 introTitle: "Let's get in touch",
-                introText: "Do you have a project in mind? A question to ask me? Don't hesitate to contact me. I'll be delighted to chat with you!",
+                introText: "Do you have a tech project in mind? A question about cybersecurity or development? Don't hesitate to contact me. I'll be delighted to chat with you!",
                 contactInfoTitle: "Contact information",
                 emailLabel: "Email",
-                phoneLabel: "Phone",
+                linkedinLabel: "LinkedIn",
                 locationLabel: "Location",
                 locationValue: "France",
                 emailBtnText: "Send an email",
@@ -137,9 +149,10 @@
 
         let currentLang = localStorage.getItem('language') || 'fr';
 
-        function updateContent(lang) {
+        function updateContent(lang)
+        {
             const t = translations[lang];
-            
+
             document.title = t.title;
             document.querySelector('header h1').textContent = t.headerTitle;
             document.querySelector('nav a[href="index.html"]').textContent = t.navHome;
@@ -149,11 +162,11 @@
             document.querySelector('.intro-section p').textContent = t.introText;
             document.querySelector('.contact-header h3').textContent = t.contactInfoTitle;
             document.querySelectorAll('.contact-label')[0].textContent = t.emailLabel;
-            document.querySelectorAll('.contact-label')[1].textContent = t.phoneLabel;
+            document.querySelectorAll('.contact-label')[1].textContent = t.linkedinLabel;
             document.querySelectorAll('.contact-label')[2].textContent = t.locationLabel;
-            document.querySelectorAll('.contact-value')[2].textContent = t.locationValue;            
+            document.querySelectorAll('.contact-value')[2].textContent = t.locationValue;
             document.querySelector('.email-button').innerHTML = `<span class="email-icon">✉️</span>${t.emailBtnText}`;
-            
+
             const langBtn = document.getElementById('langBtn');
             if (lang === 'fr') {
                 langBtn.innerHTML = `<svg class="flag-icon" width="24" height="18" viewBox="0 0 24 18" fill="none">
@@ -177,7 +190,7 @@
         window.addEventListener('load', function ()
         {
             updateContent(currentLang);
-            
+
             const contactCard = document.querySelector('.contact-card');
             contactCard.style.opacity = '0';
             contactCard.style.transform = 'translateY(30px)';
@@ -211,15 +224,15 @@
             }, 800);
         });
 
-        document.addEventListener('DOMContentLoaded', function()
+        document.addEventListener('DOMContentLoaded', function ()
         {
             const langBtn = document.getElementById('langBtn');
-            
-            langBtn.addEventListener('click', function()
+
+            langBtn.addEventListener('click', function ()
             {
                 this.style.transform = 'scale(0.9)';
-                this.style.boxShadow = '0 0 20px #00ffff';
-                
+                this.style.boxShadow = '0 0 20px #8A2BE2';
+
                 setTimeout(() => {
                     this.style.transform = 'scale(1)';
                     currentLang = currentLang === 'fr' ? 'en' : 'fr';
@@ -232,13 +245,13 @@
         document.getElementById('emailBtn').addEventListener('click', function ()
         {
             const t = translations[currentLang];
-            const email = 'mail.mail@example.com';
+            const email = 'cedric.martz.1.pro@gmail.com';
             const subject = t.emailSubject;
             const body = t.emailBody;
 
             const mailtoLink = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
             this.style.transform = 'scale(0.95)';
-            this.style.boxShadow = '0 0 25px #00ffff';
+            this.style.boxShadow = '0 0 25px #8A2BE2';
             setTimeout(() => {
                 this.style.transform = 'scale(1)';
                 window.location.href = mailtoLink;
@@ -252,20 +265,21 @@
             const documentHeight = document.documentElement.scrollHeight;
             const scrollPercentage = (scrollTop + windowHeight) / documentHeight;
 
-            if (scrollPercentage >= 0.8 || (scrollTop + windowHeight >= documentHeight - 50)) {
+            if (scrollPercentage >= 0.9 || (scrollTop + windowHeight >= documentHeight - 50)) {
                 document.body.classList.add('show-footer');
             } else {
                 document.body.classList.remove('show-footer');
             }
             const langToggle = document.querySelector('.language-toggle');
-            if (scrollTop <= 50) {
-                langToggle.classList.add('show-lang');
+            if (scrollTop <= 100) {
+                langToggle.classList.remove('hide-lang');
             } else {
-                langToggle.classList.remove('show-lang');
+                langToggle.classList.add('hide-lang');
             }
         }
         window.addEventListener('scroll', checkScroll);
         window.addEventListener('load', checkScroll);
     </script>
 </body>
+
 </html>
