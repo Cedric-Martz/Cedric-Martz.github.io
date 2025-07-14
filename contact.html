@@ -71,8 +71,8 @@
                         </div>
                     </div>
 
-                    <a href="https://www.linkedin.com/in/c%C3%A9dric-martz-2b2240259/" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit;">
-                        <div class="contact-item" style="cursor: pointer;">
+                    <a href="https://www.linkedin.com/in/c%C3%A9dric-martz-2b2240259/" target="_blank" rel="noopener noreferrer" class="linkedin-link">
+                        <div class="contact-item linkedin-item">
                             <span class="contact-icon" aria-hidden="true">👤</span>
                             <div class="contact-text">
                                 <p class="contact-label">LinkedIn</p>
@@ -150,8 +150,8 @@
                 emailBtnText: "Envoyer un email",
                 emailSubject: "Contact depuis le site web",
                 emailBody: "Bonjour Cédric,\n\nJe vous contacte depuis votre site web.\n\n",
-                cvText: "CV",
-                cvAriaLabel: "Télécharger le CV",
+                cvText: "CV (FR)",
+                cvAriaLabel: "Télécharger le CV en français",
                 langButtonTitle: "Switch to English",
                 langAriaLabel: "Changer la langue"
             },
@@ -171,8 +171,8 @@
                 emailBtnText: "Send an email",
                 emailSubject: "Contact from website",
                 emailBody: "Hello Cédric,\n\nI'm contacting you from your website.\n\n",
-                cvText: "CV",
-                cvAriaLabel: "Download CV",
+                cvText: "CV (EN)",
+                cvAriaLabel: "Download CV in English",
                 langButtonTitle: "Passer en français",
                 langAriaLabel: "Switch language"
             }
@@ -198,7 +198,6 @@
             document.querySelectorAll('.contact-value')[2].textContent = t.locationValue;
             document.querySelector('.email-button').innerHTML = `<span class="email-icon">✉️</span>${t.emailBtnText}`;
 
-            // Gestion du bouton CV
             const cvBtn = document.getElementById('cvBtn');
             const cvText = document.getElementById('cvText');
             if (cvBtn && cvText) {

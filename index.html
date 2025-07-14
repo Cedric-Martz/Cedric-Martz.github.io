@@ -86,8 +86,8 @@
                 introText1: "Passionné par la technologie, je vous invite à découvrir mes réalisations. Explorez mes projets et n'hésitez pas à me contacter pour toute collaboration ou question.",
                 aboutTitle: "À propos de moi",
                 aboutText: "Développeur passionné, curieux de la tech, les jeux vidéo et la cybersécurité. Je garde en tête les défis actuels dans mes projets, cherchant à innover.",
-                cvText: "CV",
-                cvAriaLabel: "Télécharger le CV",
+                cvText: "CV (FR)",
+                cvAriaLabel: "Télécharger le CV en français",
                 langButtonTitle: "Switch to English",
                 langAriaLabel: "Changer la langue"
             },
@@ -101,8 +101,8 @@
                 introText1: "Passionate about technology, I invite you to discover my work. Explore my projects and don't hesitate to contact me if you have any questions or would like to collaborate.",
                 aboutTitle: "About me",
                 aboutText: "Passionate developer, curious about tech, video games and cybersecurity. I keep current challenges in mind in my projects, seeking to innovate.",
-                cvText: "CV",
-                cvAriaLabel: "Download CV",
+                cvText: "CV (EN)",
+                cvAriaLabel: "Download CV in English",
                 langButtonTitle: "Passer en français",
                 langAriaLabel: "Switch language"
             }
@@ -124,7 +124,6 @@
             document.querySelector('.intro-section h3').textContent = t.aboutTitle;
             document.querySelector('.intro-section p:last-of-type').textContent = t.aboutText;
             
-            // Gestion du bouton CV
             const cvBtn = document.getElementById('cvBtn');
             const cvText = document.getElementById('cvText');
             if (cvBtn && cvText) {
