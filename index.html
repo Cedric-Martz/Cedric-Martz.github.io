@@ -27,16 +27,14 @@
         <section class="intro-section">
             <h2>Bienvenue sur mon Portfolio</h2>
             <p>
-                Passionné par la technologie et l'innovation, je vous invite à découvrir mon univers à travers mes
-                réalisations en développement web, cybersécurité et gaming.
-                Explorez mes projets tech, découvrez mon parcours et n'hésitez pas à me contacter pour toute collaboration ou
-                question.
+                Passionné par la technologie, je vous invite à découvrir mes réalisations.
+                Explorez mes projets et n'hésitez pas à me contacter pour toute collaboration ou question.
             </p>
 
             <h3>À propos de moi</h3>
             <p>
-                Développeur passionné par l'univers tech, les jeux vidéo et la cybersécurité, je m'efforce constamment de repousser les limites de mes projets.
-                Chaque réalisation est le fruit d'une réflexion approfondie sur les défis technologiques modernes et d'une passion sincère pour l'innovation.
+                Développeur passionné, curieux de la tech, les jeux vidéo et la cybersécurité.
+                Je garde en tête les défis actuels dans mes projets, cherchant à innover.
             </p>
         </section>
     </main>
@@ -58,16 +56,22 @@
     </a>
   </footer>
 
-  <div class="language-toggle">
-    <button id="langBtn" class="lang-button" title="Switch to English">
-      <svg class="flag-icon" width="24" height="18" viewBox="0 0 24 18" fill="none">
-        <rect width="24" height="18" fill="#012169"/>
-        <path d="M0 0L24 18M24 0L0 18" stroke="white" stroke-width="2"/>
-        <path d="M0 0L24 18M24 0L0 18" stroke="#C8102E" stroke-width="1"/>
-        <path d="M12 0V18M0 9H24" stroke="white" stroke-width="3"/>
-        <path d="M12 0V18M0 9H24" stroke="#C8102E" stroke-width="2"/>
-      </svg>
-    </button>
+  <div class="floating-controls">
+    <div class="language-toggle">
+      <button id="langBtn" class="lang-button" title="Switch to English" aria-label="Changer la langue">
+        <svg class="flag-icon" width="24" height="18" viewBox="0 0 24 18" fill="none">
+          <rect width="24" height="18" fill="#012169"/>
+          <path d="M0 0L24 18M24 0L0 18" stroke="white" stroke-width="2"/>
+          <path d="M0 0L24 18M24 0L0 18" stroke="#C8102E" stroke-width="1"/>
+          <path d="M12 0V18M0 9H24" stroke="white" stroke-width="3"/>
+          <path d="M12 0V18M0 9H24" stroke="#C8102E" stroke-width="2"/>
+        </svg>
+      </button>
+    </div>
+    
+    <a href="MARTZ_Cédric_CV_fr.pdf" title="CV" target="_blank" class="control-button" id="cvBtn" aria-label="Télécharger le CV">
+      <span id="cvText"> CV</span>
+    </a>
   </div>
 
     <script>
@@ -79,10 +83,13 @@
                 navProjects: "Projets",
                 navContact: "Contact",
                 introTitle: "Bienvenue sur mon Portfolio",
-                introText1: "Passionné par la technologie et l'innovation, je vous invite à découvrir mon univers à travers mes réalisations en développement web, cybersécurité et gaming. Explorez mes projets tech, découvrez mon parcours et n'hésitez pas à me contacter pour toute collaboration ou question.",
+                introText1: "Passionné par la technologie, je vous invite à découvrir mes réalisations. Explorez mes projets et n'hésitez pas à me contacter pour toute collaboration ou question.",
                 aboutTitle: "À propos de moi",
-                aboutText: "Développeur passionné par l'univers tech, les jeux vidéo et la cybersécurité, je m'efforce constamment de repousser les limites de mes projets. Chaque réalisation est le fruit d'une réflexion approfondie sur les défis technologiques modernes et d'une passion sincère pour l'innovation.",
-                langButtonTitle: "Switch to English"
+                aboutText: "Développeur passionné, curieux de la tech, les jeux vidéo et la cybersécurité. Je garde en tête les défis actuels dans mes projets, cherchant à innover.",
+                cvText: "CV",
+                cvAriaLabel: "Télécharger le CV",
+                langButtonTitle: "Switch to English",
+                langAriaLabel: "Changer la langue"
             },
             en: {
                 title: "Home - Cédric Martz",
@@ -91,10 +98,13 @@
                 navProjects: "Projects",
                 navContact: "Contact",
                 introTitle: "Welcome to my Portfolio",
-                introText1: "Passionate about technology and innovation, I invite you to discover my universe through my achievements in web development, cybersecurity, and gaming. Explore my tech projects, discover my journey and feel free to contact me for any collaboration or question.",
+                introText1: "Passionate about technology, I invite you to discover my work. Explore my projects and don't hesitate to contact me if you have any questions or would like to collaborate.",
                 aboutTitle: "About me",
-                aboutText: "Developer passionate about the tech universe, video games and cybersecurity, I constantly strive to push the limits of my projects. Each achievement is the result of deep reflection on modern technological challenges and sincere passion for innovation.",
-                langButtonTitle: "Passer en français"
+                aboutText: "Passionate developer, curious about tech, video games and cybersecurity. I keep current challenges in mind in my projects, seeking to innovate.",
+                cvText: "CV",
+                cvAriaLabel: "Download CV",
+                langButtonTitle: "Passer en français",
+                langAriaLabel: "Switch language"
             }
         };
 
@@ -114,23 +124,39 @@
             document.querySelector('.intro-section h3').textContent = t.aboutTitle;
             document.querySelector('.intro-section p:last-of-type').textContent = t.aboutText;
             
+            // Gestion du bouton CV
+            const cvBtn = document.getElementById('cvBtn');
+            const cvText = document.getElementById('cvText');
+            if (cvBtn && cvText) {
+                cvText.textContent = t.cvText;
+                cvBtn.setAttribute('aria-label', t.cvAriaLabel);
+                if (lang === 'fr') {
+                    cvBtn.href = 'MARTZ_Cédric_CV_fr.pdf';
+                } else {
+                    cvBtn.href = 'MARTZ_Cédric_CV_eng.pdf';
+                }
+            }
+            
             const langBtn = document.getElementById('langBtn');
-            if (lang === 'fr') {
-                langBtn.innerHTML = `<svg class="flag-icon" width="24" height="18" viewBox="0 0 24 18" fill="none">
-                    <rect width="24" height="18" fill="#012169"/>
-                    <path d="M0 0L24 18M24 0L0 18" stroke="white" stroke-width="2"/>
-                    <path d="M0 0L24 18M24 0L0 18" stroke="#C8102E" stroke-width="1"/>
-                    <path d="M12 0V18M0 9H24" stroke="white" stroke-width="3"/>
-                    <path d="M12 0V18M0 9H24" stroke="#C8102E" stroke-width="2"/>
-                </svg>`;
+            if (langBtn) {
                 langBtn.title = t.langButtonTitle;
-            } else {
-                langBtn.innerHTML = `<svg class="flag-icon" width="24" height="18" viewBox="0 0 24 18" fill="none">
-                    <rect width="8" height="18" fill="#002654"/>
-                    <rect x="8" width="8" height="18" fill="white"/>
-                    <rect x="16" width="8" height="18" fill="#CE1126"/>
-                </svg>`;
-                langBtn.title = t.langButtonTitle;
+                langBtn.setAttribute('aria-label', t.langAriaLabel);
+                
+                if (lang === 'fr') {
+                    langBtn.innerHTML = `<svg class="flag-icon" width="24" height="18" viewBox="0 0 24 18" fill="none">
+                        <rect width="24" height="18" fill="#012169"/>
+                        <path d="M0 0L24 18M24 0L0 18" stroke="white" stroke-width="2"/>
+                        <path d="M0 0L24 18M24 0L0 18" stroke="#C8102E" stroke-width="1"/>
+                        <path d="M12 0V18M0 9H24" stroke="white" stroke-width="3"/>
+                        <path d="M12 0V18M0 9H24" stroke="#C8102E" stroke-width="2"/>
+                    </svg>`;
+                } else {
+                    langBtn.innerHTML = `<svg class="flag-icon" width="24" height="18" viewBox="0 0 24 18" fill="none">
+                        <rect width="8" height="18" fill="#002654"/>
+                        <rect x="8" width="8" height="18" fill="white"/>
+                        <rect x="16" width="8" height="18" fill="#CE1126"/>
+                    </svg>`;
+                }
             }
         }
 
@@ -188,11 +214,11 @@
                 document.body.classList.remove('show-footer');
             }
 
-            const langToggle = document.querySelector('.language-toggle');
+            const floatingControls = document.querySelector('.floating-controls');
             if (scrollTop <= 100) {
-                langToggle.classList.remove('hide-lang');
+                floatingControls.classList.remove('hide-controls');
             } else {
-                langToggle.classList.add('hide-lang');
+                floatingControls.classList.add('hide-controls');
             }
         }
         window.addEventListener('scroll', checkScroll);

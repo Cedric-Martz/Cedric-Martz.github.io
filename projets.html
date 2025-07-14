@@ -3,81 +3,133 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="description" content="Explorez les projets créatifs de Cédric Martz. Une sélection de réalisations innovantes.">
+    <meta name="description" content="Explorez les projets créatifs de Cédric Martz. Une sélection de réalisations innovantes en développement et cybersécurité.">
+    <meta name="keywords" content="Cédric Martz, développement, cybersécurité, projets, portfolio, Epitech, programmation, C++, Python, JavaScript">
+    <meta name="author" content="Cédric Martz">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#8A2BE2">
+    <meta name="robots" content="index, follow">
+    
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://cedric-martz.github.io/projets.html">
+    <meta property="og:title" content="Projets - Cédric Martz">
+    <meta property="og:description" content="Explorez les projets créatifs de Cédric Martz. Une sélection de réalisations innovantes en développement et cybersécurité.">
+    <meta property="og:image" content="https://cedric-martz.github.io/final_logo.png">
+    
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://cedric-martz.github.io/projets.html">
+    <meta property="twitter:title" content="Projets - Cédric Martz">
+    <meta property="twitter:description" content="Explorez les projets créatifs de Cédric Martz. Une sélection de réalisations innovantes en développement et cybersécurité.">
+    <meta property="twitter:image" content="https://cedric-martz.github.io/final_logo.png">
+    
     <title>Projets - Cédric Martz</title>
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="manifest" href="site.webmanifest">
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
 </head>
 
 <body>
+    <a href="#main-content" class="skip-link">Aller au contenu principal</a>
 
     <header>
         <h1>Cédric Martz - Mes Projets</h1>
-        <nav>
+        <nav role="navigation" aria-label="Navigation principale">
             <a href="index.html" class="nav-button">Accueil</a>
-            <a href="projets.html" class="nav-button active">Projets</a>
+            <a href="projets.html" class="nav-button active" aria-current="page">Projets</a>
             <a href="contact.html" class="nav-button">Contact</a>
         </nav>
     </header>
 
-    <main class="content">
+    <main class="content" role="main" id="main-content">
         <section class="intro-section">
             <h2>Mes Projets de Développement</h2>
             <p>
-                Découvrez mes réalisations en développement web, cybersécurité et gaming. Chaque projet reflète ma passion pour la tech et l'innovation.
+                Découvrez mes réalisations, dans le développement et la cybersécurité.
             </p>
         </section>
-
-        <!-- <div class="projects-grid">
-            <div class="project-card">
-                <div class="project-header">
-                    <h3>🌐 Portfolio Cyberpunk</h3>
-                    <div class="project-tags">
-                        <span class="tag">HTML/CSS</span>
-                        <span class="tag">JavaScript</span>
-                        <span class="tag">Design</span>
+        
+        <section aria-labelledby="featured-project-title">
+            <h2 id="featured-project-title" class="sr-only">Projet principal</h2>
+            <div class="projects-grid">
+                <div class="featured-project">
+                    <div class="project-header">
+                        <h3>🔎 VIDOQ - Projet Étudiant Innovant</h3>
+                        <div class="project-tags">
+                            <span class="tag">OSINT</span>
+                            <span class="tag">Innovation</span>
+                            <span class="tag">Audit</span>
+                        </div>
                     </div>
-                </div>
-                <div class="project-image">
-                    <div class="project-preview">
-                        <div class="code-preview">
-                            <div class="code-line">&lt;div class="cyberpunk-ui"&gt;</div>
-                            <div class="code-line">  &lt;h1&gt;Cédric Martz&lt;/h1&gt;</div>
-                            <div class="code-line">  &lt;span&gt;Developer&lt;/span&gt;</div>
-                            <div class="code-line">&lt;/div&gt;</div>
+                    <div class="featured-content">
+                        <div class="project-info">
+                            <div class="project-description">
+                                <p>Vidoq représente l'aboutissement de mes études. Vidoq vous permet d'auditer votre empreinte numérique.</p>
+                                <div class="project-features">
+                                    <span>🧐 OSINT</span>
+                                    <span>🛡️ Cybersécurité</span>
+                                    <span>💻 Développement</span>
+                                    <span>📊 Analyse</span>
+                                </div>
+                            </div>
+                            <div class="project-links">
+                                <a href="Vidoq Public Presentation.pdf" target="_blank" class="project-btn demo-btn" aria-label="Voir la présentation VIDOQ (PDF)">
+                                    <span>📄</span> <span>Présentation</span>
+                                </a>
+                                <a href="https://docs.google.com/forms/d/e/1FAIpQLSeceimFzedlAEh39ypi2Qcy1pbCmlIEVllUtVgSu34An1rSAw/viewform?usp=preview" class="project-btn demo-btn" aria-label="Participer au projet VIDOQ">
+                                    <span>📋</span> <span>Get Involved</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-image">
+                            <img src="final_logo.png" alt="Logo du projet VIDOQ">
                         </div>
                     </div>
                 </div>
-                <div class="project-description">
-                    <p>Portfolio personnel avec un design cyberpunk futuriste, animations CSS avancées et interface responsive.</p>
-                    <div class="project-features">
-                        <span>✨ Animations CSS</span>
-                        <span>📱 Responsive Design</span>
-                        <span>🎮 Style Gaming</span>
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>🌐 Portfolio</h3>
+                        <div class="project-tags">
+                            <span class="tag">HTML</span>
+                            <span class="tag">CSS</span>
+                            <span class="tag">JavaScript</span>
+                        </div>
+                    </div>
+                    <div class="project-image">
+                        <div class="project-preview">
+                            <div class="code-preview">
+                                <div class="code-line">&lt;!DOCTYPE html&gt;</div>
+                                <div class="code-line">&lt;html lang="fr"&gt;</div>
+                                <div class="code-line">  &lt;head&gt;</div>
+                                <div class="code-line">    &lt;title&gt;Cédric Martz&lt;/title&gt;</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-description">
+                        <p>Portfolio. Le site que vous consultez actuellement.</p>
+                        <div class="project-features">
+                            <span>✨ Animations CSS</span>
+                            <span>📱 Responsive</span>
+                        </div>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/Cedric-Martz/Cedric-Martz.github.io" class="project-btn github-btn" aria-label="Voir le code source du portfolio sur GitHub">
+                            <span>💻</span> GitHub
+                        </a>
                     </div>
                 </div>
-                <div class="project-links">
-                    <a href="https://github.com/Cedric-Martz" class="project-btn github-btn">
-                        <span>💻</span> GitHub
-                    </a>
-                    <a href="#" class="project-btn demo-btn">
-                        <span>🚀</span> Demo
-                    </a>
-                </div>
-            </div>
 
-            <div class="project-card">
+                <div class="project-card">
                 <div class="project-header">
-                    <h3>🔐 CyberSec Tools</h3>
+                    <h3>🔐 Security assessment</h3>
                     <div class="project-tags">
-                        <span class="tag">Python</span>
-                        <span class="tag">Security</span>
-                        <span class="tag">Automation</span>
+                        <span class="tag">CVE-2017-0143</span>
                     </div>
                 </div>
                 <div class="project-image">
@@ -89,42 +141,41 @@
                                     <span class="btn yellow"></span>
                                     <span class="btn green"></span>
                                 </div>
-                                <span class="terminal-title">security-scanner.py</span>
+                                <span class="terminal-title">EthernalBlue report</span>
                             </div>
                             <div class="terminal-body">
-                                <div class="terminal-line">$ python security_scanner.py</div>
-                                <div class="terminal-line text-green">[✓] Scanning network...</div>
-                                <div class="terminal-line text-yellow">[!] Vulnerability detected</div>
-                                <div class="terminal-line text-purple">[INFO] Generating report...</div>
+                                <div class="terminal-line">CVE-2017-0143 Analysis</div>
+                                <div class="terminal-line text-yellow">[!] EternalBlue Vulnerability</div>
+                                <div class="terminal-line text-green">[✓] Assessment Complete</div>
+                                <div class="terminal-line text-purple">[INFO] Report Generated</div>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="project-description">
-                    <p>Suite d'outils de cybersécurité pour l'analyse de vulnérabilités et la sécurisation des systèmes.</p>
+                    <p>Rapport d'évaluation de sécurité sur EternalBlue.</p>
                     <div class="project-features">
-                        <span>🛡️ Scan Sécurité</span>
-                        <span>📊 Reporting</span>
-                        <span>⚡ Automatisation</span>
+                        <span>🛡️ Analyse CVE</span>
+                        <span>📊 Évaluation</span>
+                        <span>📋 Rapport</span>
                     </div>
                 </div>
                 <div class="project-links">
-                    <a href="https://github.com/Cedric-Martz" class="project-btn github-btn">
+                    <a href="https://github.com/Cedric-Martz/EthernalBlue_report" class="project-btn github-btn">
                         <span>💻</span> GitHub
                     </a>
-                    <a href="#" class="project-btn demo-btn">
-                        <span>🔒</span> Docs
+                    <a href="https://github.com/Cedric-Martz/EthernalBlue_report" class="project-btn demo-btn">
+                        <span>�</span> Report
                     </a>
                 </div>
             </div>
 
             <div class="project-card">
                 <div class="project-header">
-                    <h3>🎮 Game Dev Framework</h3>
+                    <h3>🎮 Tron Game</h3>
                     <div class="project-tags">
-                        <span class="tag">JavaScript</span>
-                        <span class="tag">Canvas</span>
-                        <span class="tag">Game Engine</span>
+                        <span class="tag">Python</span>
+                        <span class="tag">Game Dev</span>
                     </div>
                 </div>
                 <div class="project-image">
@@ -135,78 +186,111 @@
                                 <div class="game-element enemy"></div>
                                 <div class="game-element power-up"></div>
                                 <div class="game-ui">
-                                    <span class="score">Score: 1337</span>
-                                    <span class="level">Level: 7</span>
+                                    <span class="score">Player 1</span>
+                                    <span class="level">Player 2</span>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="project-description">
-                    <p>Framework de développement de jeux 2D avec moteur physique, système de particules et gestion d'états.</p>
+                    <p>Mythique jeu, écrit en Python avec un multijoueur et des IA simples.</p>
                     <div class="project-features">
-                        <span>🎯 Moteur Physique</span>
-                        <span>✨ Particules</span>
-                        <span>🎵 Audio Engine</span>
+                        <span>🐍 Python</span>
+                        <span>🎯 Collisions</span>
+                        <span>🤖 IA Simple</span>
                     </div>
                 </div>
                 <div class="project-links">
-                    <a href="https://github.com/Cedric-Martz" class="project-btn github-btn">
+                    <a href="https://github.com/Cedric-Martz/Tron" class="project-btn github-btn">
                         <span>💻</span> GitHub
-                    </a>
-                    <a href="#" class="project-btn demo-btn">
-                        <span>🎮</span> Play
                     </a>
                 </div>
             </div>
 
             <div class="project-card">
                 <div class="project-header">
-                    <h3>🤖 AI Assistant</h3>
+                    <h3>🌟 Raytracer 3D</h3>
                     <div class="project-tags">
-                        <span class="tag">Python</span>
-                        <span class="tag">Machine Learning</span>
-                        <span class="tag">NLP</span>
+                        <span class="tag">C++</span>
+                        <span class="tag">3D Graphics</span>
+                        <span class="tag">Raytracing</span>
                     </div>
                 </div>
                 <div class="project-image">
                     <div class="project-preview">
-                        <div class="ai-preview">
-                            <div class="ai-interface">
-                                <div class="ai-message user">
-                                    <span class="message-text">Analyse ce code pour des vulnérabilités</span>
+                        <div class="code-preview">
+                            <div class="code-line">#include &lt;iostream&gt;</div>
+                            <div class="code-line">class Ray {</div>
+                            <div class="code-line">  Vector3 origin;</div>
+                            <div class="code-line">  Vector3 direction;</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-description">
+                    <p>Moteur de rendu 3D utilisant la technique de raytracing pour générer des formes.</p>
+                    <div class="project-features">
+                        <span>🎯 Raytracing</span>
+                        <span>💡 Éclairage</span>
+                        <span>🪞 Reflets</span>
+                    </div>
+                </div>
+                <div class="project-links">
+                    <a href="https://github.com/Cedric-Martz/raytracer" class="project-btn github-btn">
+                        <span>💻</span> GitHub
+                    </a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-header">
+                    <h3>🚀 Zappy</h3>
+                    <div class="project-tags">
+                        <span class="tag">C++</span>
+                        <span class="tag">Python</span>
+                        <span class="tag">C</span>
+                        <span class="tag">Network</span>
+                        <span class="tag">AI</span>
+                    </div>
+                </div>
+                <div class="project-image">
+                    <div class="project-preview">
+                        <div class="terminal-preview">
+                            <div class="terminal-header">
+                                <div class="terminal-buttons">
+                                    <span class="btn red"></span>
+                                    <span class="btn yellow"></span>
+                                    <span class="btn green"></span>
                                 </div>
-                                <div class="ai-message bot">
-                                    <span class="message-text">🔍 Analyse en cours...</span>
-                                    <div class="thinking-dots">
-                                        <span></span><span></span><span></span>
-                                    </div>
-                                </div>
+                                <span class="terminal-title">zappy_server</span>
+                            </div>
+                            <div class="terminal-body">
+                                <div class="terminal-line">$ ./zappy_server</div>
+                                <div class="terminal-line text-green">[✓] Server started</div>
+                                <div class="terminal-line text-yellow">[!] Client connected</div>
+                                <div class="terminal-line text-purple">[INFO] Game running...</div>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="project-description">
-                    <p>Assistant IA spécialisé dans l'analyse de code et la détection de vulnérabilités de sécurité.</p>
+                    <p>Projet de fin de 2ème année à Epitech. Simulation d'équipes. Jeu en réseau avec serveur, client graphique et IA.</p>
                     <div class="project-features">
-                        <span>🧠 IA Avancée</span>
-                        <span>🔍 Code Analysis</span>
-                        <span>📝 Auto-Report</span>
+                        <span>🌐 Réseau</span>
+                        <span>🎮 Multijoueur</span>
+                        <span>🎓 Epitech</span>
                     </div>
                 </div>
                 <div class="project-links">
-                    <a href="https://github.com/Cedric-Martz" class="project-btn github-btn">
+                    <a href="https://github.com/Cedric-Martz/zappy" class="project-btn github-btn">
                         <span>💻</span> GitHub
-                    </a>
-                    <a href="#" class="project-btn demo-btn">
-                        <span>🤖</span> Try AI
                     </a>
                 </div>
             </div>
-        </div> -->
+        </section>
     </main>
 
-    <footer class="page-footer">
+    <footer class="page-footer" role="contentinfo">
         <a href="https://github.com/Cedric-Martz" target="_blank" rel="noopener noreferrer">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
                 <path
@@ -223,49 +307,91 @@
         </a>
     </footer>
 
-    <div class="language-toggle">
-        <button id="langBtn" class="lang-button" title="Switch to English">
-            <svg class="flag-icon" width="24" height="18" viewBox="0 0 24 18" fill="none">
-                <rect width="24" height="18" fill="#012169"/>
-                <path d="M0 0L24 18M24 0L0 18" stroke="white" stroke-width="2"/>
-                <path d="M0 0L24 18M24 0L0 18" stroke="#C8102E" stroke-width="1"/>
-                <path d="M12 0V18M0 9H24" stroke="white" stroke-width="3"/>
-                <path d="M12 0V18M0 9H24" stroke="#C8102E" stroke-width="2"/>
-            </svg>
-        </button>
+    <div class="floating-controls">
+        <div class="language-toggle">
+            <button id="langBtn" class="lang-button" title="Switch to English" aria-label="Changer la langue">
+                <svg class="flag-icon" width="24" height="18" viewBox="0 0 24 18" fill="none">
+                    <rect width="24" height="18" fill="#012169"/>
+                    <path d="M0 0L24 18M24 0L0 18" stroke="white" stroke-width="2"/>
+                    <path d="M0 0L24 18M24 0L0 18" stroke="#C8102E" stroke-width="1"/>
+                    <path d="M12 0V18M0 9H24" stroke="white" stroke-width="3"/>
+                    <path d="M12 0V18M0 9H24" stroke="#C8102E" stroke-width="2"/>
+                </svg>
+            </button>
+        </div>
+        
+        <a href="MARTZ_Cédric_CV_fr.pdf" title="CV" target="_blank" class="control-button" id="cvBtn" aria-label="Télécharger le CV">
+            <span id="cvText"> CV</span>
+        </a>
     </div>
 
     <script>
         const translations = {
             fr: {
                 title: "Projets - Cédric Martz",
+                metaDescription: "Explorez les projets créatifs de Cédric Martz. Une sélection de réalisations innovantes en développement et cybersécurité.",
                 headerTitle: "Cédric Martz - Mes Projets",
                 navHome: "Accueil",
                 navProjects: "Projets",
                 navContact: "Contact",
                 introTitle: "Mes Projets de Développement",
-                introText: "Découvrez mes réalisations en développement web, cybersécurité et gaming. Chaque projet reflète ma passion pour la tech et l'innovation.",
-                project1: "🌐 Portfolio Cyberpunk",
-                project2: "🔐 CyberSec Tools",
-                project3: "🎮 Game Dev Framework",
-                project4: "🤖 AI Assistant",
-                altText: "Projet X - Cliquez pour voir sur YouTube",
-                langButtonTitle: "Switch to English"
+                introText: "Découvrez mes réalisations, dans le développement et la cybersécurité.",
+                vidoqTitle: "🔎 VIDOQ - Projet Étudiant Innovant",
+                vidoqDesc: "Vidoq représente l'aboutissement de mes études. Vidoq vous permet d'auditer votre empreinte numérique.",
+                vidoqPresentation: "📄 Présentation",
+                vidoqFeatures: ["🧐 OSINT", "🛡️ Cybersécurité", "💻 Développement", "📊 Analyse"],
+                project1: "🌐 Portfolio",
+                project1Desc: "Portfolio. The site you are currently visiting. It includes animations and styling enhanced by Copilot AI.",
+                project1Features: ["✨ Animations CSS", "📱 Responsive"],
+                project2: "🔐 Security assessment",
+                project2Desc: "Évaluation de sécurité concernant la vulnérabilité EternalBlue (CVE-2017-0143).",
+                project2Features: ["🛡️ Analyse CVE", "📊 Évaluation", "📋 Rapport"],
+                project3: "🎮 Tron Game",
+                project3Desc: "Classique jeu fait en Python. Comprend un IA simple et du multijoueur.",
+                project3Features: ["🐍 Python", "🎯 Collisions", "🤖 IA Simple"],
+                project4: "🌟 Raytracer 3D",
+                project4Desc: "Moteur de rendu 3D utilisant la technique de raytracing pour générer des images réalistes.",
+                project4Features: ["🎯 Raytracing", "💡 Éclairage", "🪞 Reflets"],
+                project5: "🚀 Zappy",
+                project5Desc: "Projet de fin de 2ème année à Epitech. Simulation d'équipes. Client, serveur et IA.",
+                project5Features: ["🌐 Réseau", "🎮 Multijoueur", "🎓 Epitech"],
+                cvText: "CV",
+                cvAriaLabel: "Télécharger le CV",
+                langButtonTitle: "Switch to English",
+                langAriaLabel: "Changer la langue"
             },
             en: {
                 title: "Projects - Cédric Martz",
+                metaDescription: "Explore Cédric Martz's creative projects. A selection of innovative achievements in development and cybersecurity.",
                 headerTitle: "Cédric Martz - My Projects",
                 navHome: "Home",
                 navProjects: "Projects",
                 navContact: "Contact",
                 introTitle: "My Development Projects",
-                introText: "Discover my achievements in web development, cybersecurity and gaming. Each project reflects my passion for tech and innovation.",
-                project1: "🌐 Cyberpunk Portfolio",
-                project2: "🔐 CyberSec Tools",
-                project3: "🎮 Game Dev Framework",
-                project4: "🤖 AI Assistant",
-                altText: "Project X - Click to watch on YouTube",
-                langButtonTitle: "Passer en français"
+                introText: "Discover my achievements in development and cybersecurity.",
+                vidoqTitle: "🔎 VIDOQ - Innovative Student Project",
+                vidoqDesc: "Vidoq is the culmination of my studies. Vidoq allows you to audit your digital footprint.",
+                vidoqPresentation: "📄 Presentation",
+                vidoqFeatures: ["🧐 OSINT", "🛡️ Cybersecurity", "💻 Development", "📊 Analysis"],
+                project1: "🌐 Portfolio",
+                project1Desc: "Portfolio. The site you are currently visiting. It includes animations and styling enhanced by Copilot AI.",
+                project1Features: ["✨ CSS Animations", "📱 Responsive"],
+                project2: "🔐 Security Report",
+                project2Desc: "Detailed security assessment report regarding the EternalBlue vulnerability.",
+                project2Features: ["🛡️ CVE Analysis", "📊 Assessment", "📋 Report"],
+                project3: "🎮 Tron Game",
+                project3Desc: "Classic game implementation in Python. Features simple AI and multiplayer.",
+                project3Features: ["🐍 Python", "🎯 Collisions", "🤖 Simple AI"],
+                project4: "🌟 Raytracer",
+                project4Desc: "3D rendering engine using raytracing technique to generate realistic shapes.",
+                project4Features: ["🎯 Raytracing", "💡 Lighting", "🪞 Reflections"],
+                project5: "🚀 Zappy",
+                project5Desc: "End-of-2nd-year project at Epitech. Network game with server, graphical client and AI.",
+                project5Features: ["🌐 Network", "🎮 Multiplayer", "🎓 Epitech"],
+                cvText: "CV",
+                cvAriaLabel: "Download CV",
+                langButtonTitle: "Passer en français",
+                langAriaLabel: "Switch language"
             }
         };
 
@@ -274,43 +400,126 @@
         function updateContent(lang)
         {
             const t = translations[lang];
-            
-            document.title = t.title;            
+
+            document.title = t.title;
+            document.querySelector('meta[name="description"]').setAttribute('content', t.metaDescription);
+            document.documentElement.lang = lang;
             document.querySelector('header h1').textContent = t.headerTitle;
             document.querySelector('nav a[href="index.html"]').textContent = t.navHome;
             document.querySelector('nav a[href="projets.html"]').textContent = t.navProjects;
             document.querySelector('nav a[href="contact.html"]').textContent = t.navContact;
             document.querySelector('.intro-section h2').textContent = t.introTitle;
             document.querySelector('.intro-section p').textContent = t.introText;
+
+            const vidoqTitle = document.querySelector('.featured-project h3');
+            const vidoqDesc = document.querySelector('.featured-project .project-description p');
+            const vidoqBtn = document.querySelector('.featured-project .demo-btn span:last-child');
+            const vidoqFeatures = document.querySelectorAll('.featured-project .project-features span');
             
-            const projectTitles = document.querySelectorAll('.project-card h3');
-            projectTitles[0].textContent = t.project1;
-            projectTitles[1].textContent = t.project2;
-            projectTitles[2].textContent = t.project3;
-            projectTitles[3].textContent = t.project4;
-            
-            const images = document.querySelectorAll('.project-card img');
-            images.forEach((img, index) => {
-                img.alt = t.altText.replace('X', index + 1);
-            });
-            
+            if (vidoqTitle) vidoqTitle.textContent = t.vidoqTitle;
+            if (vidoqDesc) vidoqDesc.textContent = t.vidoqDesc;
+            if (vidoqBtn) vidoqBtn.textContent = t.vidoqPresentation.replace('📄 ', '');
+            if (vidoqFeatures.length > 0) {
+                vidoqFeatures.forEach((span, index) => {
+                    if (t.vidoqFeatures[index]) {
+                        span.textContent = t.vidoqFeatures[index];
+                    }
+                });
+            }
+
+            const projectTitles = document.querySelectorAll('.projects-grid .project-card h3');
+            const projectDescs = document.querySelectorAll('.projects-grid .project-card .project-description p');
+            const projectFeatures = document.querySelectorAll('.projects-grid .project-card .project-features');
+
+            if (projectTitles.length >= 5 && projectDescs.length >= 5) {
+                projectTitles[0].textContent = t.project1;
+                projectDescs[0].textContent = t.project1Desc;
+                if (projectFeatures[0]) {
+                    const spans = projectFeatures[0].querySelectorAll('span');
+                    spans.forEach((span, index) => {
+                        if (t.project1Features[index]) {
+                            span.textContent = t.project1Features[index];
+                        }
+                    });
+                }
+                
+                projectTitles[1].textContent = t.project2;
+                projectDescs[1].textContent = t.project2Desc;
+                if (projectFeatures[1]) {
+                    const spans = projectFeatures[1].querySelectorAll('span');
+                    spans.forEach((span, index) => {
+                        if (t.project2Features[index]) {
+                            span.textContent = t.project2Features[index];
+                        }
+                    });
+                }
+                
+                projectTitles[2].textContent = t.project3;
+                projectDescs[2].textContent = t.project3Desc;
+                if (projectFeatures[2]) {
+                    const spans = projectFeatures[2].querySelectorAll('span');
+                    spans.forEach((span, index) => {
+                        if (t.project3Features[index]) {
+                            span.textContent = t.project3Features[index];
+                        }
+                    });
+                }
+                
+                projectTitles[3].textContent = t.project4;
+                projectDescs[3].textContent = t.project4Desc;
+                if (projectFeatures[3]) {
+                    const spans = projectFeatures[3].querySelectorAll('span');
+                    spans.forEach((span, index) => {
+                        if (t.project4Features[index]) {
+                            span.textContent = t.project4Features[index];
+                        }
+                    });
+                }
+                
+                projectTitles[4].textContent = t.project5;
+                projectDescs[4].textContent = t.project5Desc;
+                if (projectFeatures[4]) {
+                    const spans = projectFeatures[4].querySelectorAll('span');
+                    spans.forEach((span, index) => {
+                        if (t.project5Features[index]) {
+                            span.textContent = t.project5Features[index];
+                        }
+                    });
+                }
+            }
+
+            const cvBtn = document.getElementById('cvBtn');
+            const cvText = document.getElementById('cvText');
+            if (cvBtn && cvText) {
+                cvText.textContent = t.cvText;
+                cvBtn.setAttribute('aria-label', t.cvAriaLabel);
+                if (lang === 'fr') {
+                    cvBtn.href = 'MARTZ_Cédric_CV_fr.pdf';
+                } else {
+                    cvBtn.href = 'MARTZ_Cédric_CV_eng.pdf';
+                }
+            }
+
             const langBtn = document.getElementById('langBtn');
-            if (lang === 'fr') {
-                langBtn.innerHTML = `<svg class="flag-icon" width="24" height="18" viewBox="0 0 24 18" fill="none">
-                    <rect width="24" height="18" fill="#012169"/>
-                    <path d="M0 0L24 18M24 0L0 18" stroke="white" stroke-width="2"/>
-                    <path d="M0 0L24 18M24 0L0 18" stroke="#C8102E" stroke-width="1"/>
-                    <path d="M12 0V18M0 9H24" stroke="white" stroke-width="3"/>
-                    <path d="M12 0V18M0 9H24" stroke="#C8102E" stroke-width="2"/>
-                </svg>`;
+            if (langBtn) {
                 langBtn.title = t.langButtonTitle;
-            } else {
-                langBtn.innerHTML = `<svg class="flag-icon" width="24" height="18" viewBox="0 0 24 18" fill="none">
-                    <rect width="8" height="18" fill="#002654"/>
-                    <rect x="8" width="8" height="18" fill="white"/>
-                    <rect x="16" width="8" height="18" fill="#CE1126"/>
-                </svg>`;
-                langBtn.title = t.langButtonTitle;
+                langBtn.setAttribute('aria-label', t.langAriaLabel);
+                
+                if (lang === 'fr') {
+                    langBtn.innerHTML = `<svg class="flag-icon" width="24" height="18" viewBox="0 0 24 18" fill="none">
+                        <rect width="24" height="18" fill="#012169"/>
+                        <path d="M0 0L24 18M24 0L0 18" stroke="white" stroke-width="2"/>
+                        <path d="M0 0L24 18M24 0L0 18" stroke="#C8102E" stroke-width="1"/>
+                        <path d="M12 0V18M0 9H24" stroke="white" stroke-width="3"/>
+                        <path d="M12 0V18M0 9H24" stroke="#C8102E" stroke-width="2"/>
+                    </svg>`;
+                } else {
+                    langBtn.innerHTML = `<svg class="flag-icon" width="24" height="18" viewBox="0 0 24 18" fill="none">
+                        <rect width="8" height="18" fill="#002654"/>
+                        <rect x="8" width="8" height="18" fill="white"/>
+                        <rect x="16" width="8" height="18" fill="#CE1126"/>
+                    </svg>`;
+                }
             }
         }
 
@@ -358,16 +567,19 @@
             const documentHeight = document.documentElement.scrollHeight;
             const scrollPercentage = (scrollTop + windowHeight) / documentHeight;
 
+            // Afficher le footer
             if (scrollPercentage >= 0.9 || (scrollTop + windowHeight >= documentHeight - 50)) {
                 document.body.classList.add('show-footer');
             } else {
                 document.body.classList.remove('show-footer');
             }
-            const langToggle = document.querySelector('.language-toggle');
+            
+            // Gérer l'affichage des contrôles flottants
+            const floatingControls = document.querySelector('.floating-controls');
             if (scrollTop <= 100) {
-                langToggle.classList.remove('hide-lang');
+                floatingControls.classList.remove('hide-controls');
             } else {
-                langToggle.classList.add('hide-lang');
+                floatingControls.classList.add('hide-controls');
             }
         }
         window.addEventListener('scroll', checkScroll);
