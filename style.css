@@ -1955,3 +1955,350 @@ body.show-footer .page-footer {
 .skip-link:focus {
     top: 6px;
 }
+
+.tron-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.tron-menu {
+    background: linear-gradient(135deg, rgba(138, 43, 226, 0.1), rgba(75, 0, 130, 0.1));
+    border: 2px solid #8A2BE2;
+    border-radius: 0;
+    padding: 3rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 2rem;
+}
+
+.tron-menu::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(138, 43, 226, 0.1), transparent);
+    transition: left 0.8s ease;
+}
+
+.tron-menu:hover::before {
+    left: 100%;
+}
+
+.tron-menu h2 {
+    color: #8A2BE2;
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    font-family: 'Orbitron', monospace;
+    font-weight: 900;
+    text-shadow: 0 0 20px #8A2BE2;
+    letter-spacing: 3px;
+}
+
+.menu-options {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.tron-btn {
+    padding: 1rem 2rem;
+    background: transparent;
+    border: 2px solid #8A2BE2;
+    color: #8A2BE2;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-family: 'Orbitron', monospace;
+    position: relative;
+    overflow: hidden;
+}
+
+.tron-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(138, 43, 226, 0.2), transparent);
+    transition: left 0.5s ease;
+}
+
+.tron-btn:hover::before {
+    left: 100%;
+}
+
+.tron-btn:hover {
+    background: #8A2BE2;
+    color: #fff;
+    box-shadow: 0 0 20px #8A2BE2;
+    transform: translateY(-2px);
+}
+
+.back-btn {
+    background: transparent;
+    border-color: #ff5f56;
+    color: #ff5f56;
+    margin-top: 1rem;
+}
+
+.back-btn:hover {
+    background: #ff5f56;
+    color: #fff;
+    box-shadow: 0 0 20px #ff5f56;
+}
+
+.game-instructions {
+    margin-top: 2rem;
+    text-align: left;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.game-instructions h3 {
+    color: #8A2BE2;
+    font-family: 'Orbitron', monospace;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.game-instructions p {
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 0.5rem;
+    line-height: 1.6;
+}
+
+.game-area {
+    background: linear-gradient(135deg, rgba(138, 43, 226, 0.1), rgba(75, 0, 130, 0.1));
+    border: 2px solid #8A2BE2;
+    border-radius: 0;
+    padding: 2rem;
+    position: relative;
+}
+
+.game-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.score-display {
+    font-family: 'Orbitron', monospace;
+    font-size: 1.2rem;
+    color: #8A2BE2;
+    font-weight: 600;
+}
+
+.game-controls {
+    display: flex;
+    gap: 1rem;
+}
+
+.control-btn {
+    padding: 0.5rem 1rem;
+    background: transparent;
+    border: 2px solid #8A2BE2;
+    color: #8A2BE2;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Orbitron', monospace;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.control-btn:hover {
+    background: #8A2BE2;
+    color: #fff;
+    box-shadow: 0 0 10px #8A2BE2;
+}
+
+#gameCanvas {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    background: #000;
+    border: 2px solid #8A2BE2;
+    display: block;
+    margin: 0 auto;
+    box-shadow: 0 0 30px rgba(138, 43, 226, 0.3);
+}
+
+.pause-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.9);
+    color: #fff;
+    padding: 2rem;
+    text-align: center;
+    border: 2px solid #8A2BE2;
+    box-shadow: 0 0 30px #8A2BE2;
+}
+
+.pause-overlay h2 {
+    color: #8A2BE2;
+    font-family: 'Orbitron', monospace;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    text-shadow: 0 0 10px #8A2BE2;
+}
+
+.pause-overlay p {
+    margin-bottom: 1rem;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.pause-overlay button {
+    padding: 0.75rem 1.5rem;
+    background: transparent;
+    border: 2px solid #8A2BE2;
+    color: #8A2BE2;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Orbitron', monospace;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.pause-overlay button:hover {
+    background: #8A2BE2;
+    color: #fff;
+    box-shadow: 0 0 15px #8A2BE2;
+}
+
+@media (max-width: 768px) {
+    .tron-container {
+        padding: 1rem;
+    }
+    
+    .tron-menu {
+        padding: 2rem;
+    }
+    
+    .tron-menu h2 {
+        font-size: 2.5rem;
+    }
+    
+    .game-area {
+        padding: 1rem;
+    }
+    
+    .game-header {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .score-display {
+        text-align: center;
+    }
+    
+    .game-controls {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .tron-menu {
+        padding: 1.5rem;
+    }
+    
+    .tron-menu h2 {
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .tron-btn {
+        padding: 0.75rem 1.5rem;
+        font-size: 1rem;
+    }
+    
+    .game-controls {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .control-btn {
+        padding: 0.75rem;
+        font-size: 0.9rem;
+    }
+    
+    .pause-overlay {
+        padding: 1.5rem;
+        margin: 0 1rem;
+    }
+    
+    .pause-overlay h2 {
+        font-size: 1.5rem;
+    }
+}
+
+.mobile-controls {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    padding: 1rem;
+}
+
+.control-row {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.mobile-btn {
+    width: 60px;
+    height: 60px;
+    border: 2px solid #8A2BE2;
+    background: rgba(138, 43, 226, 0.1);
+    color: #8A2BE2;
+    font-size: 24px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    user-select: none;
+    touch-action: manipulation;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mobile-btn:hover, .mobile-btn:active {
+    background: rgba(138, 43, 226, 0.3);
+    box-shadow: 0 0 15px rgba(138, 43, 226, 0.5);
+    transform: scale(0.95);
+}
+
+@media (max-width: 768px) {
+    .mobile-controls {
+        display: flex;
+    }
+    
+    #gameCanvas {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .mobile-btn {
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
+    }
+}
