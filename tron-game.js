@@ -25,6 +25,17 @@ class TronGame {
     initEventListeners()
     {
         document.addEventListener('keydown', (key_pressed) => this.handleKeyDown(key_pressed));
+        
+        document.addEventListener('keydown', (e) => {
+            if (this.gameRunning && (
+                e.code === 'ArrowUp' || e.code === 'ArrowDown' || 
+                e.code === 'ArrowLeft' || e.code === 'ArrowRight' ||
+                e.code === 'Space'
+            )) {
+                e.preventDefault();
+            }
+        });
+        
         this.initMobileControls();
     }
 
@@ -121,6 +132,7 @@ class TronGame {
             case 'KeyZ':
             case 'ArrowUp':
             case 'KeyW':
+                key_pressed.preventDefault();
                 if (player.dy !== 1) {
                     player.dx = 0;
                     player.dy = -1;
@@ -129,6 +141,7 @@ class TronGame {
             case 'KeyS':
             case 'ArrowDown':
             case 'KeyX':
+                key_pressed.preventDefault();
                 if (player.dy !== -1) {
                     player.dx = 0;
                     player.dy = 1;
@@ -137,6 +150,7 @@ class TronGame {
             case 'KeyQ':
             case 'ArrowLeft':
             case 'KeyA':
+                key_pressed.preventDefault();
                 if (player.dx !== 1) {
                     player.dx = -1;
                     player.dy = 0;
@@ -145,6 +159,7 @@ class TronGame {
             case 'KeyD':
             case 'ArrowRight':
             case 'KeyE':
+                key_pressed.preventDefault();
                 if (player.dx !== -1) {
                     player.dx = 1;
                     player.dy = 0;
@@ -429,6 +444,9 @@ class TronGame {
         this.draw();
         
         this.initMobileControls();
+        
+        this.canvas.focus();
+        this.canvas.tabIndex = 0;
         
         setTimeout(() => {
             if (this.gameRunning) {
