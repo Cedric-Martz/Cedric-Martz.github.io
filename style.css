@@ -2389,3 +2389,23 @@ body.show-footer .page-footer {
         font-size: 20px;
     }
 }
+
+/* Fond stylisé pour la card Splix */
+.splix-card-bg {
+    position: relative;
+    background: #18181b;
+    overflow: hidden;
+}
+.splix-card-bg::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    background-image: repeating-linear-gradient(45deg, #00fff7 0 2px, transparent 2px 20px), repeating-linear-gradient(-45deg, #ff00c8 0 2px, transparent 2px 20px);
+    opacity: 0.18;
+    pointer-events: none;
+}
+.splix-card-bg > * {
+    position: relative;
+    z-index: 1;
+}

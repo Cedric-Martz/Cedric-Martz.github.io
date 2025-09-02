@@ -282,11 +282,51 @@
                         <span>🌐 Réseau</span>
                         <span>🎮 Multijoueur</span>
                         <span>🧠 IA</span>
+                        <span>🧊 3D</span>
                     </div>
                 </div>
                 <div class="project-links">
                     <a href="https://github.com/Cedric-Martz/zappy" class="project-btn github-btn">
                         <span>💻</span> GitHub
+                    </a>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-header">
+                    <h3>🎮 Splix</h3>
+                </div>
+                <div class="project-tags">
+                    <span class="tag">JS</span>
+                    <span class="tag">Game Dev</span>
+                    <span class="tag">Game Dev</span>
+                    <span class="tag">Game Dev</span>
+                </div>
+                <div class="project-image">
+                    <div class="project-preview">
+                        <div class="game-preview">
+                            <div class="game-screen">
+                                <div class="game-element player"></div>
+                                <div class="game-element enemy"></div>
+                                <div class="game-element power-up"></div>
+                                <div class="game-ui">
+                                    <span class="score">Player 1</span>
+                                    <span class="level">Player 2</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-description">
+                    <p>Célèbre jeu implémenté, jouable jusqu'à 4 joueurs en local.</p>
+                    <div class="project-features">
+                        <span>🟪 Carré</span>
+                        <span>🎯 Collisions</span>
+                        <span>👥 Multijoueur</span>
+                    </div>
+                </div>
+                <div class="project-links">
+                    <a href="splix.html" class="project-btn">
+                        <span>🎮</span> Jouer
                     </a>
                 </div>
             </div>
@@ -344,7 +384,7 @@
                 vidoqPresentation: "📄 Présentation",
                 vidoqFeatures: ["🧐 OSINT", "🛡️ Cybersécurité", "💻 Développement", "📊 Analyse"],
                 project1: "🌐 Portfolio",
-                project1Desc: "Portfolio. The site you are currently visiting. It includes animations and styling enhanced by Copilot AI.",
+                project1Desc: "Portfolio. Le site que vous visitez actuellement. Contient des animations et un style amélioré par l'IA Copilot.",
                 project1Features: ["✨ Animations CSS", "📱 Responsive"],
                 project2: "🔐 Security assessment",
                 project2Desc: "Évaluation de sécurité concernant la vulnérabilité EternalBlue (CVE-2017-0143).",
@@ -359,6 +399,10 @@
                 project5: "🚀 Zappy",
                 project5Desc: "Projet de fin de 2ème année à Epitech. Simulation d'équipes. Client, serveur et équipes IA.",
                 project5Features: ["🌐 Réseau", "🎮 Multijoueur", "🧠 IA"],
+                project6: "🟪 Splix",
+                project6Desc: "Célèbre jeu implémenté, jouable jusqu'à 4 joueurs en local.",
+                project6DescEn: "Famous implemented game, playable up to 4 players locally.",
+                project6Features: ["🟪 Square", "🎯 Collisions", "👥 Multiplayer"],
                 cvText: "CV (FR)",
                 cvAriaLabel: "Télécharger le CV en français",
                 langButtonTitle: "Switch to English",
@@ -393,6 +437,9 @@
                 project5: "🚀 Zappy",
                 project5Desc: "End-of-2nd-year project at Epitech. Network game with server, graphical client and AI teams.",
                 project5Features: ["🌐 Network", "🎮 Multiplayer", "🧠 IA"],
+                project6: "🟪 Splix",
+                project6Desc: "Famous implemented game, playable up to 4 players locally.",
+                project6Features: ["🟪 Square", "🎯 Collisions", "👥 Multiplayer"],
                 cvText: "CV (EN)",
                 cvAriaLabel: "Download CV in English",
                 langButtonTitle: "Passer en français",
@@ -436,7 +483,7 @@
             const projectDescs = document.querySelectorAll('.projects-grid .project-card .project-description p');
             const projectFeatures = document.querySelectorAll('.projects-grid .project-card .project-features');
 
-            if (projectTitles.length >= 5 && projectDescs.length >= 5) {
+            if (projectTitles.length >= 6 && projectDescs.length >= 6) {
                 projectTitles[0].textContent = t.project1;
                 projectDescs[0].textContent = t.project1Desc;
                 if (projectFeatures[0]) {
@@ -497,6 +544,17 @@
                     spans.forEach((span, index) => {
                         if (t.project5Features[index]) {
                             span.textContent = t.project5Features[index];
+                        }
+                    });
+                }
+
+                projectTitles[5].textContent = t.project6;
+                projectDescs[5].textContent = t.project6Desc;
+                if (projectFeatures[5]) {
+                    const spans = projectFeatures[5].querySelectorAll('span');
+                    spans.forEach((span, index) => {
+                        if (t.project6Features[index]) {
+                            span.textContent = t.project6Features[index];
                         }
                     });
                 }
