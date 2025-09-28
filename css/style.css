@@ -1,13 +1,56 @@
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap');
 
+/* Game-specific styles */
+.game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.menu-container {
+    text-align: center;
+    padding: 20px;
+}
+
+.game-btn {
+    margin: 10px;
+    padding: 12px 24px;
+    background-color: #2a1540;
+    border: 2px solid #8a2be2;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.game-btn:hover {
+    background-color: #8a2be2;
+    color: #000;
+}
+
+.score-display {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+#splix-canvas {
+    border: 2px solid #8a2be2;
+    background-color: #000;
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body
-{
+body {
     background: 
         linear-gradient(135deg, #0a0015, #1a0a2a, #2a1540),
         radial-gradient(circle at 25% 25%, rgba(138, 43, 226, 0.08) 0%, transparent 60%),

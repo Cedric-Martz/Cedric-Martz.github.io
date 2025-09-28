@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tron Legacy Game</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="tron.css">
+</head>
+<body>
+    <header>
+        <h1>🏁 Tron Legacy</h1>
+        <nav>
+            <a href="../../index.html" class="nav-button">🏠 Accueil</a>
+            <a href="../../projets.html" class="nav-button">📁 Projets</a>
+            <a href="../splix/" class="nav-button">🎮 Splix</a>
+        </nav>
+    </header>
+
+    <div class="content">
+        <div class="tron-container">
+            <div id="tron-menu" class="tron-menu">
+                <h2>TRON LEGACY</h2>
+                <div class="menu-options">
+                    <button class="tron-btn" onclick="startSinglePlayer()">Mode Solo</button>
+                    <button class="tron-btn" onclick="startMultiplayer()">Mode Multijoueur</button>
+                    <button class="tron-btn" onclick="showControls()">Contrôles</button>
+                </div>
+                <button class="tron-btn back-btn" onclick="window.location.href='../../projets.html'">Retour aux Projets</button>
+            </div>
+
+            <div id="tron-game" class="game-area" style="display: none;">
+                <div class="game-header">
+                    <div class="score-display">
+                        <span id="player1-score">Joueur 1: 0</span>
+                        <span id="game-status">En cours...</span>
+                        <span id="player2-score">Joueur 2: 0</span>
+                    </div>
+                    <div class="game-controls">
+                        <button class="control-btn" onclick="pauseGame()">Pause</button>
+                        <button class="control-btn" onclick="resetGame()">Reset</button>
+                        <button class="control-btn" onclick="showMenu()">Menu</button>
+                    </div>
+                </div>
+                
+                <canvas id="gameCanvas" width="800" height="600"></canvas>
+                
+                <div class="mobile-controls">
+                    <div class="control-row">
+                        <button class="mobile-btn" data-key="ArrowUp">↑</button>
+                    </div>
+                    <div class="control-row">
+                        <button class="mobile-btn" data-key="ArrowLeft">←</button>
+                        <button class="mobile-btn" data-key="ArrowDown">↓</button>
+                        <button class="mobile-btn" data-key="ArrowRight">→</button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="controls-info" class="game-instructions" style="display: none;">
+                <h3>🕹️ Contrôles de jeu</h3>
+                <div class="controls-list">
+                    <div class="control-section">
+                        <h4>Joueur 1 (Bleu)</h4>
+                        <p><strong>↑↓←→</strong> : Flèches directionnelles</p>
+                    </div>
+                    <div class="control-section">
+                        <h4>Joueur 2 (Rouge)</h4>
+                        <p><strong>WASD</strong> : W=Haut, S=Bas, A=Gauche, D=Droite</p>
+                    </div>
+                    <div class="control-section">
+                        <h4>Contrôles généraux</h4>
+                        <p><strong>Espace</strong> : Pause/Resume</p>
+                        <p><strong>R</strong> : Reset game</p>
+                        <p><strong>Échap</strong> : Retour au menu</p>
+                    </div>
+                </div>
+                <button class="tron-btn" onclick="hideControls()">Retour</button>
+            </div>
+
+            <div id="pause-overlay" class="pause-overlay" style="display: none;">
+                <h2>PAUSE</h2>
+                <p>Appuyez sur Espace pour continuer</p>
+                <button class="tron-btn" onclick="resumeGame()">Reprendre</button>
+                <button class="tron-btn" onclick="resetGame()">Nouvelle partie</button>
+                <button class="tron-btn back-btn" onclick="showMenu()">Menu principal</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="tron.js"></script>
+</body>
+</html>

@@ -1,0 +1,13 @@
+# Dépendances Python pour le Portfolio de Cédric Martz
+# Installation: pip install -r requirements.txt
+
+# WebSocket server pour le jeu Splix multijoueur
+websockets>=11.0.3
+
+# Serveur HTTP intégré (inclus dans Python 3.x)
+# http.server - Standard library
+
+# Gestion des processus et signaux (inclus dans Python 3.x)
+# subprocess - Standard library
+# signal - Standard library
+# asyncio - Standard library (Python 3.7+)
