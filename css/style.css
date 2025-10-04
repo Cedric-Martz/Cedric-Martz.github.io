@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap');
 
-/* Game-specific styles */
+ Game-specific styles */
 .game-container {
     display: flex;
     flex-direction: column;
@@ -2433,7 +2433,6 @@ body.show-footer .page-footer {
     }
 }
 
-/* Fond stylisé pour la card Splix */
 .splix-card-bg {
     position: relative;
     background: #18181b;

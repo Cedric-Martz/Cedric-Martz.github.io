@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space Battle - Multiplayer</title>
+    <link rel="stylesheet" href="space-battle.css">
+    <link rel="icon" type="image/svg+xml" href="../../assets/images/favicon.svg">
+</head>
+<body>
+    <div class="game-container">
+        <div class="game-header">
+            <h1>Space Battle</h1>
+            <div class="connection-status">
+                <span id="status">Connecting...</span>
+                <span id="players-count">Players: 0</span>
+            </div>
+        </div>
+        
+        <div class="game-menu" id="menu">
+            <div class="menu-content">
+                <h2>Join the Battle</h2>
+                <input type="text" id="playerName" placeholder="Your name" maxlength="20">
+                <button id="joinBtn" class="btn-primary">Join Game</button>
+                <div class="instructions">
+                    <h3>Controls:</h3>
+                    <p>Arrow keys: Move</p>
+                    <p>Space: Shoot</p>
+                    <p>Goal: Destroy other ships!</p>
+                </div>
+            </div>
+        </div>
+
+        <canvas id="gameCanvas" width="800" height="600"></canvas>
+        
+        <div class="game-ui">
+            <div class="score-board">
+                <div class="player-info">
+                    <span>Health: <span id="health">100</span></span>
+                    <span>Ammo: <span id="ammo">20</span></span>
+                    <span>Score: <span id="score">0</span></span>
+                </div>
+            </div>
+            <div class="leaderboard">
+                <h3>Leaderboard</h3>
+                <div id="leaderboard-list"></div>
+            </div>
+        </div>
+
+        <div class="chat">
+            <div class="chat-messages" id="chatMessages"></div>
+            <div class="chat-input">
+                <input type="text" id="chatInput" placeholder="Type your message..." maxlength="100">
+                <button id="sendBtn">Send</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="space-battle.js"></script>
+</body>
+</html>

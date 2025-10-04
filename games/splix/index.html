@@ -1,87 +1,83 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Splix.io Clone - Multijoueur WebSocket</title>
+    <title>Splix.io Clone - Multiplayer WebSocket</title>
     <link rel="stylesheet" href="../../css/style.css">
     <link rel="stylesheet" href="splix.css">
 </head>
 <body>
     <header>
-        <h1>🎮 Splix WebSocket</h1>
+        <h1>Splix WebSocket</h1>
         <nav>
-            <a href="../../index.html" class="nav-button">🏠 Accueil</a>
-            <a href="../../projets.html" class="nav-button">📁 Projets</a>
-            <a href="../tron/" class="nav-button">🏁 Tron</a>
+            <a href="../../index.html" class="nav-button">Home</a>
+            <a href="../../projets.html" class="nav-button">Projects</a>
+            <a href="../tron/" class="nav-button">Tron</a>
         </nav>
     </header>
 
     <div class="content">
         <div class="game-container">
-            <!-- Statut de connexion -->
             <div id="splix-status" class="status-container">
                 <div class="status-message">
-                    🔄 Connexion au serveur Python...
+                    Connecting to Python server...
                 </div>
             </div>
 
-            <!-- Zone de jeu -->
             <div class="game-area">
                 <canvas id="splix-canvas"></canvas>
             </div>
 
-            <!-- Informations de jeu -->
             <div class="game-info">
                 <div class="info-section">
-                    <h3>🎯 Objectif</h3>
-                    <p>Capturez le maximum de territoire en créant des boucles avec votre trail !</p>
+                    <h3>Objective</h3>
+                    <p>Capture maximum territory by creating loops with your trail!</p>
                 </div>
                 
                 <div class="info-section">
-                    <h3>🕹️ Contrôles</h3>
+                    <h3>Controls</h3>
                     <div class="controls-grid">
                         <div class="control-item">
-                            <kbd>↑</kbd> <kbd>W</kbd> <span>Haut</span>
+                            <kbd>↑</kbd> <kbd>W</kbd> <span>Up</span>
                         </div>
                         <div class="control-item">
-                            <kbd>↓</kbd> <kbd>S</kbd> <span>Bas</span>
+                            <kbd>↓</kbd> <kbd>S</kbd> <span>Down</span>
                         </div>
                         <div class="control-item">
-                            <kbd>←</kbd> <kbd>A</kbd> <span>Gauche</span>
+                            <kbd>←</kbd> <kbd>A</kbd> <span>Left</span>
                         </div>
                         <div class="control-item">
-                            <kbd>→</kbd> <kbd>D</kbd> <span>Droite</span>
+                            <kbd>→</kbd> <kbd>D</kbd> <span>Right</span>
                         </div>
                     </div>
                 </div>
                 
                 <div class="info-section">
-                    <h3>⚠️ Règles</h3>
+                    <h3>Rules</h3>
                     <ul>
-                        <li>🔸 Ne sortez pas de la carte</li>
-                        <li>🔸 Évitez les trails adverses</li>
-                        <li>🔸 Ne touchez pas votre propre trail</li>
-                        <li>🔸 Revenez sur votre territoire pour capturer</li>
+                        <li>Don't exit the map</li>
+                        <li>Avoid enemy trails</li>
+                        <li>Don't touch your own trail</li>
+                        <li>Return to your territory to capture</li>
                     </ul>
                 </div>
             </div>
 
-            <!-- Scores et statistiques -->
             <div id="game-stats" class="stats-container" style="display: none;">
-                <h3>📊 Statistiques</h3>
+                <h3>Statistics</h3>
                 <div id="players-list"></div>
             </div>
         </div>
     </div>
 
     <div class="tech-info">
-        <h4>🔧 Informations techniques</h4>
+        <h4>Technical Information</h4>
         <div class="tech-details">
-            <span class="tech-item">🐍 Serveur: Python WebSocket</span>
-            <span class="tech-item">🌐 Port: localhost:8080</span>
-            <span class="tech-item">👥 Max: 4 joueurs</span>
-            <span class="tech-item">⚡ Temps réel</span>
+            <span class="tech-item">Server: Python WebSocket</span>
+            <span class="tech-item">Port: localhost:8081</span>
+            <span class="tech-item">Max: 4 players</span>
+            <span class="tech-item">Real-time</span>
         </div>
     </div>
 

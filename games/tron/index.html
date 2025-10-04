@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,11 +9,11 @@
 </head>
 <body>
     <header>
-        <h1>🏁 Tron Legacy</h1>
+        <h1>Tron Legacy</h1>
         <nav>
-            <a href="../../index.html" class="nav-button">🏠 Accueil</a>
-            <a href="../../projets.html" class="nav-button">📁 Projets</a>
-            <a href="../splix/" class="nav-button">🎮 Splix</a>
+            <a href="../../index.html" class="nav-button">Home</a>
+            <a href="../../projets.html" class="nav-button">Projects</a>
+            <a href="../splix/" class="nav-button">Splix</a>
         </nav>
     </header>
 
@@ -22,19 +22,19 @@
             <div id="tron-menu" class="tron-menu">
                 <h2>TRON LEGACY</h2>
                 <div class="menu-options">
-                    <button class="tron-btn" onclick="startSinglePlayer()">Mode Solo</button>
-                    <button class="tron-btn" onclick="startMultiplayer()">Mode Multijoueur</button>
-                    <button class="tron-btn" onclick="showControls()">Contrôles</button>
+                    <button class="tron-btn" onclick="startSinglePlayer()">Single Player</button>
+                    <button class="tron-btn" onclick="startMultiplayer()">Multiplayer</button>
+                    <button class="tron-btn" onclick="showControls()">Controls</button>
                 </div>
-                <button class="tron-btn back-btn" onclick="window.location.href='../../projets.html'">Retour aux Projets</button>
+                <button class="tron-btn back-btn" onclick="window.location.href='../../projets.html'">Back to Projects</button>
             </div>
 
             <div id="tron-game" class="game-area" style="display: none;">
                 <div class="game-header">
                     <div class="score-display">
-                        <span id="player1-score">Joueur 1: 0</span>
-                        <span id="game-status">En cours...</span>
-                        <span id="player2-score">Joueur 2: 0</span>
+                        <span id="player1-score">Player 1: 0</span>
+                        <span id="game-status">Running...</span>
+                        <span id="player2-score">Player 2: 0</span>
                     </div>
                     <div class="game-controls">
                         <button class="control-btn" onclick="pauseGame()">Pause</button>

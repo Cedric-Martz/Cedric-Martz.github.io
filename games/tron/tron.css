@@ -1,4 +1,3 @@
-/* Tron Game Specific Styles */
 
 .tron-container {
     max-width: 1000px;
@@ -291,7 +290,6 @@
     transform: scale(0.95);
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
     .tron-container {
         padding: 1rem;
@@ -374,7 +372,6 @@
     }
 }
 
-/* Animations et effets */
 .tron-menu:hover {
     transform: translateY(-2px);
     box-shadow: 0 10px 30px rgba(138, 43, 226, 0.3);
@@ -393,7 +390,6 @@
     transition: box-shadow 0.3s ease;
 }
 
-/* Glow effects pour les éléments actifs */
 .active-player {
     animation: playerGlow 2s ease-in-out infinite alternate;
 }
@@ -403,7 +399,6 @@
     to { text-shadow: 0 0 15px currentColor, 0 0 25px currentColor; }
 }
 
-/* Style pour le statut de jeu */
 #game-status {
     font-weight: 700;
     text-transform: uppercase;
