@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tron Legacy Game</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="../../assets/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../assets/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../assets/images/favicon-16x16.png">
+    <link rel="manifest" href="../../assets/site.webmanifest">
     <link rel="stylesheet" href="../../css/style.css">
     <link rel="stylesheet" href="tron.css">
 </head>
@@ -58,32 +62,32 @@
             </div>
 
             <div id="controls-info" class="game-instructions" style="display: none;">
-                <h3>🕹️ Contrôles de jeu</h3>
+                <h3>Controles</h3>
                 <div class="controls-list">
                     <div class="control-section">
-                        <h4>Joueur 1 (Bleu)</h4>
-                        <p><strong>↑↓←→</strong> : Flèches directionnelles</p>
+                        <h4>Player 1</h4>
+                        <p><strong>↑↓←→</strong> : Directional arrows</p>
                     </div>
                     <div class="control-section">
-                        <h4>Joueur 2 (Rouge)</h4>
-                        <p><strong>WASD</strong> : W=Haut, S=Bas, A=Gauche, D=Droite</p>
+                        <h4>Player 2</h4>
+                        <p><strong>WASD</strong> : W=Up, S=Down, A=Left, D=Right</p>
                     </div>
                     <div class="control-section">
-                        <h4>Contrôles généraux</h4>
-                        <p><strong>Espace</strong> : Pause/Resume</p>
+                        <h4>Generic controls</h4>
+                        <p><strong>Space</strong> : Pause/Resume</p>
                         <p><strong>R</strong> : Reset game</p>
-                        <p><strong>Échap</strong> : Retour au menu</p>
+                        <p><strong>Esc</strong> : Return to menu</p>
                     </div>
                 </div>
-                <button class="tron-btn" onclick="hideControls()">Retour</button>
+                <button class="tron-btn" onclick="hideControls()">Back</button>
             </div>
 
             <div id="pause-overlay" class="pause-overlay" style="display: none;">
                 <h2>PAUSE</h2>
-                <p>Appuyez sur Espace pour continuer</p>
-                <button class="tron-btn" onclick="resumeGame()">Reprendre</button>
-                <button class="tron-btn" onclick="resetGame()">Nouvelle partie</button>
-                <button class="tron-btn back-btn" onclick="showMenu()">Menu principal</button>
+                <p>Press Space to continue</p>
+                <button class="tron-btn" onclick="resumeGame()">Resume</button>
+                <button class="tron-btn" onclick="resetGame()">New Game</button>
+                <button class="tron-btn back-btn" onclick="showMenu()">Main Menu</button>
             </div>
         </div>
     </div>

@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Splix.io Clone - Multiplayer WebSocket</title>
+    <title>Splix - Local Multiplayer</title>
     <link rel="stylesheet" href="../../css/style.css">
     <link rel="stylesheet" href="splix.css">
 </head>
 <body>
     <header>
-        <h1>Splix WebSocket</h1>
+        <h1>Splix Local</h1>
         <nav>
             <a href="../../index.html" class="nav-button">Home</a>
             <a href="../../projets.html" class="nav-button">Projects</a>
@@ -19,11 +19,6 @@
 
     <div class="content">
         <div class="game-container">
-            <div id="splix-status" class="status-container">
-                <div class="status-message">
-                    Connecting to Python server...
-                </div>
-            </div>
 
             <div class="game-area">
                 <canvas id="splix-canvas"></canvas>
@@ -31,32 +26,50 @@
 
             <div class="game-info">
                 <div class="info-section">
-                    <h3>Objective</h3>
-                    <p>Capture maximum territory by creating loops with your trail!</p>
+                    <h3>Goal</h3>
+                    <p>Capture as much territory as possible by creating loops with your trail!</p>
                 </div>
-                
+
                 <div class="info-section">
                     <h3>Controls</h3>
                     <div class="controls-grid">
-                        <div class="control-item">
-                            <kbd>↑</kbd> <kbd>W</kbd> <span>Up</span>
+                        <div class="player-controls">
+                            <h4>Player 1 (Red)</h4>
+                            <div class="control-item">
+                                <kbd>↑</kbd> <span>Up</span>
+                            </div>
+                            <div class="control-item">
+                                <kbd>↓</kbd> <span>Down</span>
+                            </div>
+                            <div class="control-item">
+                                <kbd>←</kbd> <span>Left</span>
+                            </div>
+                            <div class="control-item">
+                                <kbd>→</kbd> <span>Right</span>
+                            </div>
                         </div>
-                        <div class="control-item">
-                            <kbd>↓</kbd> <kbd>S</kbd> <span>Down</span>
-                        </div>
-                        <div class="control-item">
-                            <kbd>←</kbd> <kbd>A</kbd> <span>Left</span>
-                        </div>
-                        <div class="control-item">
-                            <kbd>→</kbd> <kbd>D</kbd> <span>Right</span>
+                        <div class="player-controls">
+                            <h4>Player 2 (Blue)</h4>
+                            <div class="control-item">
+                                <kbd>W</kbd> <span>Up</span>
+                            </div>
+                            <div class="control-item">
+                                <kbd>S</kbd> <span>Down</span>
+                            </div>
+                            <div class="control-item">
+                                <kbd>A</kbd> <span>Left</span>
+                            </div>
+                            <div class="control-item">
+                                <kbd>D</kbd> <span>Right</span>
+                            </div>
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="info-section">
                     <h3>Rules</h3>
                     <ul>
-                        <li>Don't exit the map</li>
+                        <li>Don't go off the map</li>
                         <li>Avoid enemy trails</li>
                         <li>Don't touch your own trail</li>
                         <li>Return to your territory to capture</li>
@@ -71,12 +84,11 @@
         </div>
     </div>
 
-    <div class="tech-info">
-        <h4>Technical Information</h4>
+            <div class="tech-info">
+        <h4>Game Information</h4>
         <div class="tech-details">
-            <span class="tech-item">Server: Python WebSocket</span>
-            <span class="tech-item">Port: localhost:8081</span>
-            <span class="tech-item">Max: 4 players</span>
+            <span class="tech-item">Local Multiplayer</span>
+            <span class="tech-item">2 Players</span>
             <span class="tech-item">Real-time</span>
         </div>
     </div>
