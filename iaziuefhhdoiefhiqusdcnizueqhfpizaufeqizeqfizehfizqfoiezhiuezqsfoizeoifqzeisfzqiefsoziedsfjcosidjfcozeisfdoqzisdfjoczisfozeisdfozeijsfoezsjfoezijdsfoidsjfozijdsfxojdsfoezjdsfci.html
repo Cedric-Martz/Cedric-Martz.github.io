@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random things...</title>
+    <style>
+        body
+        {
+            background-color: #0a0a0a;
+            color: #c0c0c0;
+            font-family: 'Courier New', monospace;
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        .container
+        {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .blog-entry
+        {
+            margin-bottom: 40px;
+            padding: 20px;
+            background-color: #111;
+            border: 1px solid #333;
+            box-shadow: 0 0 10px rgba(255, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .blog-entry:hover
+        {
+            transform: scale(1.01);
+            box-shadow: 0 0 15px rgba(255, 0, 0, 0.2);
+        }
+
+        .blog-entry img
+        {
+            max-width: 100%;
+            height: auto;
+            margin: 10px auto;
+            filter: grayscale(50%) contrast(120%);
+            display: block;
+        }
+
+        h1
+        {
+            color: #ff0000;
+            text-shadow: 2px 2px 4px rgba(255, 0, 0, 0.3);
+            font-size: 2em;
+            margin-bottom: 30px;
+        }
+
+        .date
+        {
+            color: #666;
+            font-size: 0.8em;
+            margin-bottom: 10px;
+        }
+
+        .glitch
+        {
+            animation: glitch 1s linear infinite;
+            opacity: 0.8;
+        }
+
+        @keyframes glitch
+        {
+            2%, 64% {
+                transform: translate(2px,0) skew(0deg);
+            }
+            4%, 60% {
+                transform: translate(-2px,0) skew(0deg);
+            }
+            62% {
+                transform: translate(0,0) skew(5deg);
+            }
+        }
+
+        .hidden-message
+        {
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+
+        .blog-entry:hover .hidden-message
+        {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="glitch">Random things...</h1>
+        <div class="blog-entry">
+            <div class="date">14.10.2025</div>
+            <p>Welcome, welcome... don't be shy, read</p>
+            <img src="assets/images/doors.jpeg" alt="an album that I like">
+            <p class="hidden-message">Congrats, you found me... </p>
+        </div>
+
+        <!--
+        <div class="blog-entry">
+            <div class="date">DATE</div>
+            <p>TEXTE</p>
+            <img src="" alt="description">
+            <p class="hidden-message">a hidden message</p>
+        </div>
+        -->
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const container = document.querySelector('.container');
+            setInterval(() =>
+            {
+                if (Math.random() > 0.99) {
+                    container.style.opacity = '0.7';
+                    setTimeout(() => {
+                        container.style.opacity = '1';
+                    }, 100);
+                }
+            }, 1000);
+        });
+    </script>
+</body>
+</html>
