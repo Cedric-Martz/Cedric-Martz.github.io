@@ -70,7 +70,7 @@
     </div>
     
     <a href="assets/documents/MARTZ_Cédric_CV_fr.pdf" title="CV" target="_blank" class="control-button" id="cvBtn" aria-label="Télécharger le CV">
-      <span id="cvText"> CV</span>
+      <span id="cvText">📄 CV</span>
     </a>
   </div>
 
@@ -86,7 +86,7 @@
                 introText1: "Passionné par la technologie, je vous invite à découvrir mes réalisations. Explorez mes projets et n'hésitez pas à me contacter pour toute collaboration ou question.",
                 aboutTitle: "À propos de moi",
                 aboutText: "Développeur passionné, curieux de la tech, les jeux vidéo et la cybersécurité. Je garde en tête les défis actuels dans mes projets, cherchant à innover.",
-                cvText: "CV (FR)",
+                cvText: "📄 CV",
                 cvAriaLabel: "Télécharger le CV en français",
                 langButtonTitle: "Switch to English",
                 langAriaLabel: "Changer la langue"
@@ -101,7 +101,7 @@
                 introText1: "Passionate about technology, I invite you to discover my work. Explore my projects and don't hesitate to contact me if you have any questions or would like to collaborate.",
                 aboutTitle: "About me",
                 aboutText: "Passionate developer, curious about tech, video games and cybersecurity. I keep current challenges in mind in my projects, seeking to innovate.",
-                cvText: "CV (EN)",
+                cvText: "📄 CV",
                 cvAriaLabel: "Download CV in English",
                 langButtonTitle: "Passer en français",
                 langAriaLabel: "Switch language"
@@ -130,9 +130,9 @@
                 cvText.textContent = t.cvText;
                 cvBtn.setAttribute('aria-label', t.cvAriaLabel);
                 if (lang === 'fr') {
-                    cvBtn.href = 'MARTZ_Cédric_CV_fr.pdf';
+                    cvBtn.href = 'assets/documents/MARTZ_Cédric_CV_fr.pdf';
                 } else {
-                    cvBtn.href = 'MARTZ_Cédric_CV_eng.pdf';
+                    cvBtn.href = 'assets/documents/MARTZ_Cédric_CV_eng.pdf';
                 }
             }
             
@@ -143,17 +143,17 @@
                 
                 if (lang === 'fr') {
                     langBtn.innerHTML = `<svg class="flag-icon" width="24" height="18" viewBox="0 0 24 18" fill="none">
+                        <rect width="8" height="18" fill="#002654"/>
+                        <rect x="8" width="8" height="18" fill="white"/>
+                        <rect x="16" width="8" height="18" fill="#CE1126"/>
+                    </svg>`;
+                } else {
+                    langBtn.innerHTML = `<svg class="flag-icon" width="24" height="18" viewBox="0 0 24 18" fill="none">
                         <rect width="24" height="18" fill="#012169"/>
                         <path d="M0 0L24 18M24 0L0 18" stroke="white" stroke-width="2"/>
                         <path d="M0 0L24 18M24 0L0 18" stroke="#C8102E" stroke-width="1"/>
                         <path d="M12 0V18M0 9H24" stroke="white" stroke-width="3"/>
                         <path d="M12 0V18M0 9H24" stroke="#C8102E" stroke-width="2"/>
-                    </svg>`;
-                } else {
-                    langBtn.innerHTML = `<svg class="flag-icon" width="24" height="18" viewBox="0 0 24 18" fill="none">
-                        <rect width="8" height="18" fill="#002654"/>
-                        <rect x="8" width="8" height="18" fill="white"/>
-                        <rect x="16" width="8" height="18" fill="#CE1126"/>
                     </svg>`;
                 }
             }
