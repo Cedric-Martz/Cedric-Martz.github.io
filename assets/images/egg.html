@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What the??</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        *
+        {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background:
+                linear-gradient(135deg, #0a0015, #1a0a2a, #2a1540),
+                radial-gradient(circle at 25% 25%, rgba(138, 43, 226, 0.08) 0%, transparent 60%),
+                radial-gradient(circle at 75% 75%, rgba(75, 0, 130, 0.06) 0%, transparent 60%);
+            color: #fff;
+            font-family: 'Orbitron', 'Segoe UI', monospace;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+            min-height: 100vh;
+            background-attachment: fixed;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background:
+                radial-gradient(circle at 20% 80%, rgba(138, 43, 226, 0.12) 0%, transparent 40%),
+                radial-gradient(circle at 80% 20%, rgba(75, 0, 130, 0.10) 0%, transparent 40%),
+                radial-gradient(circle at 60% 60%, rgba(255, 0, 255, 0.05) 0%, transparent 30%);
+            pointer-events: none;
+            z-index: -1;
+            animation: backgroundPulse 8s ease-in-out infinite alternate;
+        }
+
+        @keyframes backgroundPulse
+        {
+            0% { opacity: 0.7; }
+            50% { opacity: 1; }
+            100% { opacity: 0.8; }
+        }
+
+        .container
+        {
+            max-width: 1200px;
+            width: 100%;
+            text-align: center;
+            animation: fadeIn 1s ease-in;
+            z-index: 1;
+        }
+
+        h1
+        {
+            font-size: 3rem;
+            color: #fff;
+            text-shadow: 0 0 15px #8A2BE2, 0 0 30px #8A2BE2, 0 0 45px #8A2BE2;
+            animation: cyberpunk-glow 2s ease-in-out infinite alternate;
+            font-family: 'Orbitron', monospace;
+            font-weight: 900;
+            letter-spacing: 3px;
+            margin-bottom: 2rem;
+        }
+
+        @keyframes cyberpunk-glow
+        {
+            from {
+                text-shadow: 0 0 10px #8A2BE2, 0 0 20px #8A2BE2, 0 0 30px #8A2BE2;
+            }
+            to {
+                text-shadow: 0 0 20px #8A2BE2, 0 0 30px #8A2BE2, 0 0 40px #8A2BE2, 0 0 50px #8A2BE2;
+            }
+        }
+
+        .gif-container
+        {
+            margin: 2rem auto;
+            display: inline-block;
+            border: 3px solid #8A2BE2;
+            box-shadow: 0 0 20px rgba(138, 43, 226, 0.5);
+            background: rgba(0, 0, 0, 0.3);
+            padding: 10px;
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        .gif-container img
+        {
+            display: block;
+            max-width: 100%;
+            height: auto;
+        }
+
+        @keyframes pulse
+        {
+            0%, 100%
+            {
+                box-shadow: 0 0 20px rgba(138, 43, 226, 0.5);
+            }
+            50%
+            {
+                box-shadow: 0 0 40px rgba(138, 43, 226, 0.8), 0 0 60px rgba(138, 43, 226, 0.5);
+            }
+        }
+
+        .terminal-container
+        {
+            margin: 2rem auto;
+            max-width: 800px;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            border: 2px solid #8A2BE2;
+            box-shadow: 0 0 20px rgba(138, 43, 226, 0.3);
+            border-radius: 0;
+        }
+
+        .terminal-header
+        {
+            background: linear-gradient(135deg, rgba(138, 43, 226, 0.3), rgba(75, 0, 130, 0.3));
+            padding: 10px 15px;
+            display: flex;
+            align-items: center;
+            border-bottom: 1px solid #8A2BE2;
+        }
+
+        .terminal-buttons
+        {
+            display: flex;
+            gap: 8px;
+        }
+
+        .terminal-button
+        {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #666;
+        }
+
+        .terminal-button.close
+        {
+            background: #ff5f56;
+        }
+
+        .terminal-button.minimize
+        {
+            background: #ffbd2e;
+        }
+
+        .terminal-button.maximize
+        {
+            background: #27c93f;
+        }
+
+        .terminal-title
+        {
+            flex: 1;
+            text-align: center;
+            font-size: 0.9rem;
+            color: #8A2BE2;
+            font-weight: 600;
+        }
+
+        .terminal-body
+        {
+            padding: 20px;
+            min-height: 300px;
+            max-height: 400px;
+            overflow-y: auto;
+            font-family: 'Courier New', monospace;
+        }
+
+        .terminal-output
+        {
+            color: #0f0;
+            margin-bottom: 10px;
+        }
+
+        .terminal-line
+        {
+            margin: 5px 0;
+            line-height: 1.5;
+        }
+
+        .terminal-error
+        {
+            color: #ff5555;
+        }
+
+        .terminal-success
+        {
+            color: #50fa7b;
+        }
+
+        .terminal-info
+        {
+            color: #8be9fd;
+        }
+
+        .terminal-prompt
+     {
+            color: #8A2BE2;
+        }
+
+        .terminal-input-line
+        {
+            display: flex;
+            align-items: center;
+            margin-top: 10px;
+        }
+
+        .terminal-input-line span
+        {
+            color: #8A2BE2;
+            margin-right: 10px;
+            font-weight: bold;
+        }
+
+        #terminalInput
+        {
+            flex: 1;
+            background: transparent;
+            border: none;
+            color: #fff;
+            font-family: 'Courier New', monospace;
+            font-size: 1rem;
+            outline: none;
+            caret-color: #8A2BE2;
+        }
+
+        .nav-button
+        {
+            margin: 2rem 10px 0;
+            padding: 12px 24px;
+            background: linear-gradient(135deg, transparent, rgba(138, 43, 226, 0.1));
+            border: 2px solid #8A2BE2;
+            color: #8A2BE2;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            position: relative;
+            overflow: hidden;
+            text-transform: uppercase;
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+
+        .nav-button::before
+        {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(138, 43, 226, 0.2), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .nav-button:hover::before
+        {
+            left: 100%;
+        }
+
+        .nav-button:hover
+        {
+            background: #8A2BE2;
+            color: #000;
+            box-shadow: 0 0 20px rgba(138, 43, 226, 0.6);
+        }
+
+        @keyframes fadeIn
+        {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .terminal-body::-webkit-scrollbar
+        {
+            width: 8px;
+        }
+
+        .terminal-body::-webkit-scrollbar-track
+        {
+            background: rgba(0, 0, 0, 0.3);
+        }
+
+        .terminal-body::-webkit-scrollbar-thumb
+        {
+            background: #8A2BE2;
+            border-radius: 4px;
+        }
+
+        .terminal-body::-webkit-scrollbar-thumb:hover
+        {
+            background: #9d4edd;
+        }
+
+        @media (max-width: 768px)
+        {
+            h1
+            {
+                font-size: 2rem;
+            }
+
+            .terminal-container
+            {
+                margin: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Hello</h1>
+        <p>You think it's over yet? No, no, it's not</p>
+
+        <div class="gif-container">
+            <img src="egg.gif" alt="Easter Egg Animation">
+        </div>
+
+        <div class="terminal-container">
+            <div class="terminal-header">
+                <div class="terminal-buttons">
+                    <div class="terminal-button close"></div>
+                    <div class="terminal-button minimize"></div>
+                    <div class="terminal-button maximize"></div>
+                </div>
+                <div class="terminal-title">maxwell_terminal v1.0</div>
+            </div>
+            <div class="terminal-body" id="terminalBody">
+                <div class="terminal-line terminal-success">Welcome to Maxwell Terminal!</div>
+                <div class="terminal-line terminal-info">Type 'help' for available commands.</div>
+                <div class="terminal-line terminal-info">Music is playing...</div>
+                <div class="terminal-line"></div>
+            </div>
+            <div class="terminal-input-line">
+                <span class="terminal-prompt">visitor@maxwell:~$</span>
+                <input type="text" id="terminalInput" autofocus autocomplete="off">
+            </div>
+        </div>
+
+        <a href="/index.html" class="nav-button">← Return Home</a>
+    </div>
+
+    <audio id="backgroundMusic" loop>
+        <source src="../songs/maxwell_cat.mp3" type="audio/mpeg">
+        Your browser does not support audio :-/ sad
+    </audio>
+
+    <script>
+        const audio = document.getElementById('backgroundMusic');
+        const terminalBody = document.getElementById('terminalBody');
+        const terminalInput = document.getElementById('terminalInput');
+        let commandHistory = [];
+        let historyIndex = -1;
+
+        const commands = {
+            help:
+            {
+                description: 'Show available commands',
+                execute: () => {
+                    return `<div class="terminal-line terminal-info">Available commands:</div>
+                            <div class="terminal-line">  help     - Show this help message</div>
+                            <div class="terminal-line">  play     - Play music</div>
+                            <div class="terminal-line">  pause    - Pause music</div>
+                            <div class="terminal-line">  volume   - Show current volume</div>
+                            <div class="terminal-line">  vol [0-100] - Set volume (e.g., vol 50)</div>
+                            <div class="terminal-line">  status   - Show music status</div>
+                            <div class="terminal-line">  clear    - Clear terminal</div>
+                            <div class="terminal-line">  about    - About this page</div>
+                            <div class="terminal-line">  cat [file] - Display file contents</div>
+                            <div class="terminal-line">  strings [file] - Print strings in file</div>
+                            <div class="terminal-line">  dance    - Make everything dance!</div>`;
+                }
+            },
+            play:
+            {
+                description: 'Play music',
+                execute: () =>
+                {
+                    audio.play();
+                    return '<div class="terminal-line terminal-success"> Music playing...</div>';
+                }
+            },
+            pause:
+            {
+                description: 'Pause music',
+                execute: () =>
+                {
+                    audio.pause();
+                    return '<div class="terminal-line terminal-info"> Music paused.</div>';
+                }
+            },
+            volume:
+            {
+                description: 'Show current volume',
+                execute: () =>
+                {
+                    const vol = Math.round(audio.volume * 100);
+                    return `<div class="terminal-line terminal-info"> Current volume: ${vol}%</div>`;
+                }
+            },
+            vol:
+            {
+                description: 'Set volume (0-100)',
+                execute: (args) =>
+                {
+                    if (!args || args.length === 0)
+                        return '<div class="terminal-line terminal-error">Usage: vol [0-100]</div>';
+                    const volume = parseInt(args[0]);
+                    if (isNaN(volume) || volume < 0 || volume > 100)
+                        return '<div class="terminal-line terminal-error">Invalid volume. Use a number between 0 and 100.</div>';
+                    audio.volume = volume / 100;
+                    return `<div class="terminal-line terminal-success"> Volume set to ${volume}%</div>`;
+                }
+            },
+            status:
+            {
+                description: 'Show music status',
+                execute: () =>
+                {
+                    const status = audio.paused ? 'Paused' : 'Playing';
+                    const vol = Math.round(audio.volume * 100);
+                    const time = Math.floor(audio.currentTime);
+                    return `<div class="terminal-line terminal-info">Status: ${status}</div>
+                            <div class="terminal-line terminal-info">Volume: ${vol}%</div>
+                            <div class="terminal-line terminal-info">Time: ${time}s</div>`;
+                }
+            },
+            clear:
+            {
+                description: 'Clear terminal',
+                execute: () =>
+                {
+                    terminalBody.innerHTML = '';
+                    return '';
+                }
+            },
+            about:
+            {
+                description: 'About this page',
+                execute: () =>
+                {
+                    return `<div class="terminal-line terminal-success">What is this page?</div>
+                            <div class="terminal-line">Good question</div>
+                            <div class="terminal-line">The cat name is Maxwell.</div>
+                            <div class="terminal-line">The file where Maxwell is located is "https://cedric-martz.github.io/assets/images/egg.gif".</div>
+                            <div class="terminal-line">Did you try to look inside? Like with command "cat /assets/images/egg.gif" or strings "/assets/images/egg.gif"?</div>`;
+                }
+            },
+            dance:
+            {
+                description: 'Make everything dance!',
+                execute: () =>
+                {
+                    document.body.style.animation = 'spin 2s ease-in-out';
+                    setTimeout(() => {
+                        document.body.style.animation = '';
+                    }, 2000);
+                    return '<div class="terminal-line terminal-success"> Let\'s dance! </div>';
+                }
+            },
+            cat:
+            {
+                description: 'Display file contents',
+                execute: (args) =>
+                {
+                    if (!args || args.length === 0) {
+                        return '<div class="terminal-line terminal-error">Usage: cat [file]</div>';
+                    }
+
+                    const file = args.join(' ');
+                    if (file === '/assets/images/egg.gif' || file === 'egg.gif' || file === '/assets/images/egg.gif') {
+                        const randomChars = [
+                            'GIF89a�\x00�\x00�\x00\x00���',
+                            '�ҿ���������������������',
+                            '����������������͹��',
+                            '�������������������',
+                            '\x1b[?25l�K��۵���Q�����',
+                            '��������������������',
+                            '���Ҹ�����������׽��',
+                            '������������������',
+                            '!�\x04\x01\x00\x00\x15\x00,\x00\x00\x00\x00',
+                            '�������������Ͻ����',
+                            '���������������������',
+                            '�������©�ƿ���������',
+                            '!�NETSCAPE2.0\x03\x01\x00\x00\x00;',
+                            '�������������������',
+                            '���������������������',
+                            '�7�DM�,D�,�ɒK�Slt�7����G����t��d',
+                            '��O����$',
+                            '        &l��;Found something ===> https://cedric-martz.github.io/iaziuefhhdoiefhiqusdcnizueqhfpizaufeqizeqfizehfizqfoiezhiuezqsfoizeoifqzeisfzqiefsoziedsfjcosidjfcozeisfdoqzisdfjoczisfozeisdfozeijsfoezsjfoezijdsfoidsjfozijdsfxojdsfoezjdsfci.html'
+                        ];
+
+                        let output = '<div class="terminal-line">';
+                        output += randomChars.join('<br>');
+                        output += '</div>';
+                        return output;
+                    }
+
+                    return `<div class="terminal-line terminal-error">cat: ${file}: No such file or directory</div>`;
+                }
+            },
+            strings:
+            {
+                description: 'Print strings of printable characters in files',
+                execute: (args) =>
+                {
+                    if (!args || args.length === 0) {
+                        return '<div class="terminal-line terminal-error">Usage: strings [file]</div>';
+                    }
+
+                    const file = args.join(' ');
+                    if (file === '/assets/images/egg.gif' || file === 'egg.gif' || file === '/assets/images/egg.gif') {
+                        const meowStrings = [
+                            'GIF89a',
+                            'NETSCAPE2.0',
+                            'meow',
+                            'ImageMagick',
+                            'meow meow',
+                            'meoow',
+                            'meow meow meow',
+                            '!Comment',
+                            'meeeow',
+                            'meow?',
+                            'MEOW',
+                            'meow meow meow meow',
+                            'm30w',
+                            'meow!',
+                            'meow meow meow meow meow',
+                            'mrrrow',
+                            'meow...',
+                            'meow meow!',
+                            'MEOW MEOW',
+                            'me0w',
+                            'meow :3',
+                            'meowmeow',
+                            'meow~',
+                            'mew mew',
+                            'Found something ===> https://cedric-martz.github.io/iaziuefhhdoiefhiqusdcnizueqhfpizaufeqizeqfizehfizqfoiezhiuezqsfoizeoifqzeisfzqiefsoziedsfjcosidjfcozeisfdoqzisdfjoczisfozeisdfozeijsfoezsjfoezijdsfoidsjfozijdsfxojdsfoezjdsfci.html'
+                        ];
+
+                        let output = meowStrings.map(str =>
+                            `<div class="terminal-line">${str}</div>`
+                        ).join('');
+
+                        return output;
+                    }
+
+                    return `<div class="terminal-line terminal-error">strings: '${file}': No such file</div>`;
+                }
+            }
+        };
+
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes spin
+            {
+                0%
+                {
+                    transform: rotate(0deg);
+                }
+                100%
+                {
+                    transform: rotate(360deg);
+                }
+            }
+        `;
+        document.head.appendChild(style);
+
+        document.addEventListener('DOMContentLoaded', () =>
+        {
+            audio.volume = 0.5;
+            const playPromise = audio.play();
+
+            if (playPromise !== undefined) {
+                playPromise.catch(() =>
+                {
+                    addToTerminal('<div class="terminal-line terminal-error"> Autoplay blocked. Type "play" to start music.</div>');
+                });
+            }
+        });
+
+        function addToTerminal(html)
+        {
+            terminalBody.innerHTML += html;
+            terminalBody.scrollTop = terminalBody.scrollHeight;
+        }
+
+        function executeCommand(input)
+        {
+            const parts = input.trim().split(' ');
+            const cmd = parts[0].toLowerCase();
+            const args = parts.slice(1);
+
+            addToTerminal(`<div class="terminal-line terminal-prompt">visitor@maxwell:~$ ${input}</div>`);
+
+            if (!cmd) {
+                return;
+            }
+
+            if (commands[cmd]) {
+                const output = commands[cmd].execute(args);
+                if (output) {
+                    addToTerminal(output);
+                }
+            } else {
+                addToTerminal(`<div class="terminal-line terminal-error">Command not found: ${cmd}</div>`);
+                addToTerminal(`<div class="terminal-line terminal-info">Type 'help' for available commands.</div>`);
+            }
+        }
+
+        terminalInput.addEventListener('keydown', (e) =>
+        {
+            if (e.key === 'Enter') {
+                const input = terminalInput.value;
+                if (input.trim()) {
+                    commandHistory.push(input);
+                    historyIndex = commandHistory.length;
+                    executeCommand(input);
+                }
+                terminalInput.value = '';
+            } else if (e.key === 'ArrowUp') {
+                e.preventDefault();
+                if (historyIndex > 0) {
+                    historyIndex--;
+                    terminalInput.value = commandHistory[historyIndex];
+                }
+            } else if (e.key === 'ArrowDown') {
+                e.preventDefault();
+                if (historyIndex < commandHistory.length - 1) {
+                    historyIndex++;
+                    terminalInput.value = commandHistory[historyIndex];
+                } else {
+                    historyIndex = commandHistory.length;
+                    terminalInput.value = '';
+                }
+            }
+        });
+
+        terminalBody.addEventListener('click', () =>
+        {
+            terminalInput.focus();
+        });
+    </script>
+</body>
+</html>
