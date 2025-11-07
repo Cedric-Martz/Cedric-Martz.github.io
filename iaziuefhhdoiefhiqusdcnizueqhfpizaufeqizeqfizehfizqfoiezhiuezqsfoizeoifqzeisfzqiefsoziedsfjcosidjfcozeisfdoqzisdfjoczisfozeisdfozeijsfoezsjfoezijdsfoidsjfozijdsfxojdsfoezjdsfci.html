@@ -191,19 +191,19 @@
             filter: grayscale(0%) contrast(100%);
         }
 
-        .clickable-album
+        .clickable-picture
         {
             cursor: pointer;
             transition: all 0.3s ease;
         }
 
-        .clickable-album:hover
+        .clickable-picture:hover
         {
             transform: scale(1.05);
             box-shadow: 0 0 30px rgba(255, 0, 0, 0.5);
         }
 
-        .clickable-album.playing
+        .clickable-picture.playing
         {
             animation: pulse 1s ease-in-out infinite;
         }
@@ -504,28 +504,47 @@
     <div class="click-counter">Clics: <span id="clickCount">0</span></div>
 
     <div class="container">
-        <h1 class="glitch" id="mainTitle">Random things...</h1>
+        <h1 class="glitch" id="mainTitle">Des choses...</h1>
         <div class="book">
             <div class="blog-entry active">
-                <p>Welcome, welcome... don't be shy, read</p>
-                <img src="assets/images/doors.jpeg" alt="an album that I like" class="clickable-album">
+                <p>Bonjour, bonjour...</p>
+                <p>Ne soyez pas timide, lisez... Un peu de musique durant votre lecture ? Cliquez l'image</p>
+                <img src="assets/images/doors.jpeg" alt="an album that I like" class="clickable-picture">
                 <audio id="backgroundMusic" src="assets/songs/the_end.mp3" preload="auto"></audio>
-                <p class="hidden-message">Congrats, you found me... did you try the Konami code?</p>
+                <p class="hidden-message">Félicitations, vous m'avez trouvé... avez-vous essayé le code Konami ?</p>
             </div>
 
             <div class="blog-entry">
                 <div class="page-number"></div>
-                <p>Le monde merveilleux des licornes</p>
-                <a href="https://www.youtube.com/watch?v=kBUNGHRsAJE" target="_blank" rel="noopener noreferrer">
-                    <img src="assets/images/monde_merveilleux_des_licornes.jpg" alt="Unicorn video thumbnail" class="clickable-album">
+                <p>MOOC d'OSINTFR</p>
+                <a href="https://mooc.osintfr.com/" target="_blank" rel="noopener noreferrer">
+                    <img src="assets/images/osintfr_mooc.jpg" alt="MMOC OSINTFR thumbnail" class="clickable-picture">
                 </a>
-                <p class="hidden-message">Double-click on the title</p>
+                <p class="hidden-message">Avec notre présence en ligne aujourd'hui, l'osint peut être fait par tous</p>
+            </div>
+
+            <div class="blog-entry">
+                <div class="page-number"></div>
+                <p>Bellingcat</p>
+                <a href="https://www.bellingcat.com/" target="_blank" rel="noopener noreferrer">
+                    <img src="assets/images/bellingcat.jpg" alt="Bellingcat thumbnail" class="clickable-picture">
+                </a>
+                <p class="hidden-message">Toujours développer son esprit critique...</p>
+            </div>
+
+            <div class="blog-entry">
+                <div class="page-number"></div>
+                <p>Forbidden stories</p>
+                <a href="https://forbiddenstories.org/" target="_blank" rel="noopener noreferrer">
+                    <img src="assets/images/forbiddenstories.png" alt="Forbiddenstories thumbnail" class="clickable-picture">
+                </a>
+                <p class="hidden-message">Liberté de la presse, baromètre de la démocratie...</p>
             </div>
 
             <div class="blog-entry">
                 <div class="page-number"></div>
                 <img src="assets/images/thats_all_folks.jpg" alt="Every good things come to an end">
-                <p class="hidden-message">You're the best 😎</p>
+                <p class="hidden-message">Vous êtes les meilleurs 😎</p>
             </div>
         </div>
         <div class="navigation">
@@ -544,7 +563,7 @@
             const prevButton = document.querySelector('.prev-button');
             const nextButton = document.querySelector('.next-button');
             const mainTitle = document.getElementById('mainTitle');
-            const albumImage = document.querySelector('.clickable-album');
+            const albumImage = document.querySelector('.clickable-picture');
             const backgroundMusic = document.getElementById('backgroundMusic');
             let isPlaying = false;
 
@@ -572,7 +591,7 @@
             const konamiSequence = ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight', 'b', 'a'];
             matrixCanvas.width = window.innerWidth;
             matrixCanvas.height = window.innerHeight;
-            const matrix = "01アイウエオカキクケコサシスセソタチツテト";
+            const matrix = "010101010110101011010101010";
             const fontSize = 16;
             const columns = matrixCanvas.width / fontSize;
             const drops = [];
@@ -590,9 +609,8 @@
                     const text = matrix[Math.floor(Math.random() * matrix.length)];
                     ctx.fillText(text, i * fontSize, drops[i] * fontSize);
 
-                    if (drops[i] * fontSize > matrixCanvas.height && Math.random() > 0.975) {
+                    if (drops[i] * fontSize > matrixCanvas.height && Math.random() > 0.975)
                         drops[i] = 0;
-                    }
                     drops[i]++;
                 }
             }
@@ -761,11 +779,10 @@
                 const swipeDistance = touchEndX - touchStartX;
 
                 if (Math.abs(swipeDistance) > 50) {
-                    if (swipeDistance > 0) {
+                    if (swipeDistance > 0)
                         navigateToPage('prev');
-                    } else {
+                    else
                         navigateToPage('next');
-                    }
                 }
             }, { passive: true });
 
