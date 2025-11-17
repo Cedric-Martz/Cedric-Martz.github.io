@@ -456,10 +456,9 @@
             </button>
         </div>
 
-        <a href="assets/documents/MARTZ_Cédric_CV_fr.pdf" title="CV" target="_blank" class="control-button" id="cvBtn"
-            aria-label="Télécharger le CV">
+        <button type="button" class="control-button" id="cvBtn" aria-label="Télécharger le CV">
             <span id="cvText">📄 CV</span>
-        </a>
+        </button>
     </div>
 
     <script>
@@ -488,6 +487,10 @@
                 splixDesc: "Clone de Splix.io avec support multijoueur WebSocket, jouable jusqu'à 4 joueurs.",
                 cvText: "📄 CV",
                 cvAriaLabel: "Télécharger le CV en français",
+                cvModalTitle: "Laisser un message",
+                cvModalMessage: "N'hésitez pas à me laisser un mail via la page Contact — merci !",
+                cvModalContact: "Aller à la page Contact",
+                cvModalClose: "Fermer",
                 langButtonTitle: "Switch to English",
                 langAriaLabel: "Changer la langue"
             },
@@ -515,6 +518,10 @@
                 splixDesc: "Splix.io clone with WebSocket multiplayer support, playable up to 4 players.",
                 cvText: "📄 CV",
                 cvAriaLabel: "Download CV in English",
+                cvModalTitle: "Leave a message",
+                cvModalMessage: "Don't hesitate to leave me an email via the Contact page — thanks!",
+                cvModalContact: "Go to Contact page",
+                cvModalClose: "Close",
                 langButtonTitle: "Passer en français",
                 langAriaLabel: "Switch language"
             }
@@ -574,11 +581,7 @@
             if (cvBtn && cvText) {
                 cvText.textContent = t.cvText;
                 cvBtn.setAttribute('aria-label', t.cvAriaLabel);
-                if (lang === 'fr') {
-                    cvBtn.href = 'assets/documents/MARTZ_Cédric_CV_fr.pdf';
-                } else {
-                    cvBtn.href = 'assets/documents/MARTZ_Cédric_CV_eng.pdf';
-                }
+                // CV download removed — button shows a message instead
             }
 
             const langBtn = document.getElementById('langBtn');
@@ -607,6 +610,14 @@
         window.addEventListener('load', function () {
             updateContent(currentLang);
 
+            // Attach click handler to CV button to show a message instead of downloading CV
+            const cvBtn = document.getElementById('cvBtn');
+            if (cvBtn) {
+                cvBtn.addEventListener('click', function() {
+                    showCvModal();
+                });
+            }
+
             const projectCards = document.querySelectorAll('.project-card');
             projectCards.forEach((card) => {
                 card.style.opacity = '0';
@@ -621,6 +632,56 @@
                 }, index * 200);
             });
         });
+    <!-- CV modal -->
+    <style>
+    .cv-modal { position: fixed; inset: 0; display: none; align-items: center; justify-content: center; z-index: 2000; }
+    .cv-modal.show { display: flex; }
+    .cv-modal-backdrop { position: absolute; inset: 0; background: rgba(0,0,0,0.6); }
+    .cv-modal-content { position: relative; background: rgba(10,10,10,0.98); border: 2px solid #8A2BE2; padding: 20px; width: 90%; max-width: 520px; color: #fff; box-shadow: 0 10px 40px rgba(0,0,0,0.6); }
+    .cv-modal-content h3 { margin: 0 0 10px; color: #fff; }
+    .cv-modal-actions { margin-top: 18px; display:flex; gap:12px; justify-content:flex-end; }
+    .cv-modal-close-btn, .cv-modal-contact-btn { padding: 10px 16px; border: 2px solid #8A2BE2; background: linear-gradient(135deg, transparent, rgba(138,43,226,0.08)); color: #8A2BE2; cursor: pointer; }
+    .cv-modal-contact-btn { background: #8A2BE2; color: #000; }
+    .cv-modal-close { position:absolute; top:8px; right:8px; background:transparent; border:none; color:#8A2BE2; font-size:20px; cursor:pointer; }
+    </style>
+
+    <div id="cvModal" class="cv-modal" aria-hidden="true">
+        <div class="cv-modal-backdrop" data-close></div>
+        <div class="cv-modal-content" role="dialog" aria-modal="true" aria-labelledby="cvModalTitle">
+            <button class="cv-modal-close" aria-label="Close" data-close>&times;</button>
+            <h3 id="cvModalTitle"></h3>
+            <p id="cvModalMessage"></p>
+            <div class="cv-modal-actions">
+                <a id="cvModalContact" class="cv-modal-contact-btn nav-button" href="contact.html"></a>
+                <button id="cvModalCloseBtn" class="cv-modal-close-btn">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+    function showCvModal() {
+        const modal = document.getElementById('cvModal');
+        const title = document.getElementById('cvModalTitle');
+        const msg = document.getElementById('cvModalMessage');
+        const contactBtn = document.getElementById('cvModalContact');
+        const closeBtn = document.getElementById('cvModalCloseBtn');
+        const t = (typeof translations !== 'undefined' && translations[currentLang]) ? translations[currentLang] : null;
+        title.textContent = t && t.cvModalTitle ? t.cvModalTitle : 'Leave a message';
+        msg.textContent = t && t.cvModalMessage ? t.cvModalMessage : "Don't hesitate to leave me an email via the Contact page — thanks!";
+        contactBtn.textContent = t && t.cvModalContact ? t.cvModalContact : 'Go to Contact page';
+        closeBtn.textContent = t && t.cvModalClose ? t.cvModalClose : 'Close';
+        modal.classList.add('show');
+        modal.setAttribute('aria-hidden','false');
+        closeBtn.focus();
+
+        function hide() { modal.classList.remove('show'); modal.setAttribute('aria-hidden','true'); document.removeEventListener('keydown', escHandler); }
+        function escHandler(e) { if (e.key === 'Escape') hide(); }
+
+        document.querySelectorAll('[data-close]').forEach(el => el.onclick = hide);
+        closeBtn.onclick = hide;
+        document.addEventListener('keydown', escHandler);
+    }
+    </script>
 
         document.addEventListener('DOMContentLoaded', function () {
             const langBtn = document.getElementById('langBtn');
