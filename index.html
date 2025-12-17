@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Site de Cédric Martz - Découvrez mes projets.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accueil - Cédric Martz</title>
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Cédric Martz</h1>
+        <nav>
+            <a href="index.html" class="nav-button active">Accueil</a>
+            <a href="projets.html" class="nav-button">Projets</a>
+            <a href="contact.html" class="nav-button">Contact</a>
+        </nav>
+    </header>
+    <main class="content">
+        <section class="intro-section">
+            <h2>Bienvenue</h2>
+            <p>
+                Passionné par la technologie, je vous invite à découvrir mes réalisations.
+                Explorez mes projets et n'hésitez pas à me contacter pour toute collaboration ou question.
+            </p>
+
+            <h3>À propos de moi</h3>
+            <p>
+                Développeur passionné, curieux de la tech, les jeux vidéo et la cybersécurité.
+                Je garde en tête les défis actuels dans mes projets, cherchant à innover.
+            </p>
+        </section>
+    </main>
+
+  <footer class="page-footer">
+    <a href="https://github.com/Cedric-Martz" target="_blank" rel="noopener noreferrer">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+        <path
+          d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.2 11.4.6.1.8-.26.8-.58v-2.02c-3.34.72-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.1-.75.08-.73.08-.73 1.21.09 1.85 1.25 1.85 1.25 1.08 1.85 2.83 1.31 3.52 1 .11-.78.42-1.31.77-1.61-2.67-.3-5.47-1.34-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.12-.3-.54-1.52.12-3.18 0 0 1.01-.32 3.3 1.23.96-.27 1.98-.4 3-.4s2.04.13 3 .4c2.29-1.55 3.3-1.23 3.3-1.23.66 1.66.24 2.88.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.61-2.8 5.63-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.2.69.82.57C20.57 21.8 24 17.3 24 12c0-6.63-5.37-12-12-12z" />
+      </svg>
+      GitHub
+    </a>
+    <a href="https://www.linkedin.com/in/c%C3%A9dric-m-2b2240259/" target="_blank" rel="noopener noreferrer">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+        <path
+          d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+      </svg>
+      LinkedIn
+    </a>
+  </footer>
+
+  <div class="floating-controls">
+    <div class="language-toggle">
+      <button id="langBtn" class="lang-button" title="Switch to English" aria-label="Changer la langue">
+        <svg class="flag-icon" width="24" height="18" viewBox="0 0 24 18" fill="none">
+          <rect width="24" height="18" fill="#012169"/>
+          <path d="M0 0L24 18M24 0L0 18" stroke="white" stroke-width="2"/>
+          <path d="M0 0L24 18M24 0L0 18" stroke="#C8102E" stroke-width="1"/>
+          <path d="M12 0V18M0 9H24" stroke="white" stroke-width="3"/>
+          <path d="M12 0V18M0 9H24" stroke="#C8102E" stroke-width="2"/>
+        </svg>
+      </button>
+    </div>
+    
+                <button type="button" class="control-button" id="cvBtn" aria-label="Télécharger le CV">
+            <span id="cvText">📄 CV</span>
+        </button>
+  </div>
+
+    <script>
+        const translations = {
+            fr: {
+                title: "Accueil - Cédric Martz",
+                headerTitle: "Cédric Martz",
+                navHome: "Accueil",
+                navProjects: "Projets",
+                navContact: "Contact",
+                introTitle: "Bienvenue",
+                introText1: "Passionné par la technologie, je vous invite à découvrir mes réalisations. Explorez mes projets et n'hésitez pas à me contacter pour toute collaboration ou question.",
+                aboutTitle: "À propos de moi",
+                aboutText: "Développeur passionné, curieux de la tech, les jeux vidéo et la cybersécurité. Je garde en tête les défis actuels dans mes projets, cherchant à innover.",
+                cvText: "📄 CV",
+                cvAriaLabel: "Télécharger le CV en français",
+                cvModalTitle: "Laisser un message",
+                cvModalMessage: "N'hésitez pas à me laisser un mail via la page Contact — merci !",
+                cvModalContact: "Aller à la page Contact",
+                cvModalClose: "Fermer",
+                langButtonTitle: "Switch to English",
+                langAriaLabel: "Changer la langue"
+            },
+            en: {
+                title: "Home - Cédric Martz",
+                headerTitle: "Cédric Martz - Portfolio",
+                navHome: "Home",
+                navProjects: "Projects",
+                navContact: "Contact",
+                introTitle: "Welcome to my Portfolio",
+                introText1: "Passionate about technology, I invite you to discover my work. Explore my projects and don't hesitate to contact me if you have any questions or would like to collaborate.",
+                aboutTitle: "About me",
+                aboutText: "Passionate developer, curious about tech, video games and cybersecurity. I keep current challenges in mind in my projects, seeking to innovate.",
+                cvText: "📄 CV",
+                cvAriaLabel: "Download CV in English",
+                cvModalTitle: "Leave a message",
+                cvModalMessage: "Don't hesitate to leave me an email via the Contact page — thanks!",
+                cvModalContact: "Go to Contact page",
+                cvModalClose: "Close",
+                langButtonTitle: "Passer en français",
+                langAriaLabel: "Switch language"
+            }
+        };
+
+        let currentLang = localStorage.getItem('language') || 'fr';
+
+        function updateContent(lang)
+        {
+            const t = translations[lang];
+            
+            document.title = t.title;
+            document.querySelector('header h1').textContent = t.headerTitle;
+            document.querySelector('nav a[href="index.html"]').textContent = t.navHome;
+            document.querySelector('nav a[href="projets.html"]').textContent = t.navProjects;
+            document.querySelector('nav a[href="contact.html"]').textContent = t.navContact;
+            document.querySelector('.intro-section h2').textContent = t.introTitle;
+            document.querySelector('.intro-section p:first-of-type').textContent = t.introText1;
+            document.querySelector('.intro-section h3').textContent = t.aboutTitle;
+            document.querySelector('.intro-section p:last-of-type').textContent = t.aboutText;
+            
+            const cvBtn = document.getElementById('cvBtn');
+            const cvText = document.getElementById('cvText');
+            if (cvBtn && cvText) {
+                cvText.textContent = t.cvText;
+                cvBtn.setAttribute('aria-label', t.cvAriaLabel);
+                // CV download removed — button shows a message instead (see DOMContentLoaded handler)
+            }
+            
+            const langBtn = document.getElementById('langBtn');
+            if (langBtn) {
+                langBtn.title = t.langButtonTitle;
+                langBtn.setAttribute('aria-label', t.langAriaLabel);
+                
+                if (lang === 'fr') {
+                    langBtn.innerHTML = `<svg class="flag-icon" width="24" height="18" viewBox="0 0 24 18" fill="none">
+                        <rect width="8" height="18" fill="#002654"/>
+                        <rect x="8" width="8" height="18" fill="white"/>
+                        <rect x="16" width="8" height="18" fill="#CE1126"/>
+                    </svg>`;
+                } else {
+                    langBtn.innerHTML = `<svg class="flag-icon" width="24" height="18" viewBox="0 0 24 18" fill="none">
+                        <rect width="24" height="18" fill="#012169"/>
+                        <path d="M0 0L24 18M24 0L0 18" stroke="white" stroke-width="2"/>
+                        <path d="M0 0L24 18M24 0L0 18" stroke="#C8102E" stroke-width="1"/>
+                        <path d="M12 0V18M0 9H24" stroke="white" stroke-width="3"/>
+                        <path d="M12 0V18M0 9H24" stroke="#C8102E" stroke-width="2"/>
+                    </svg>`;
+                }
+            }
+        }
+
+        window.addEventListener('load', function ()
+        {
+            updateContent(currentLang);
+            
+            const introSection = document.querySelector('.intro-section');
+            const introElements = introSection.querySelectorAll('h2, h3, p');
+            introSection.style.opacity = '0';
+            introSection.style.transform = 'translateY(30px)';
+            setTimeout(() => {
+                introSection.style.transition = 'all 0.8s ease-out';
+                introSection.style.opacity = '1';
+                introSection.style.transform = 'translateY(0)';
+            }, 200);
+            introElements.forEach((element, index) => {
+                element.style.opacity = '0';
+                element.style.transform = 'translateY(20px)';
+                setTimeout(() => {
+                    element.style.transition = 'all 0.6s ease-out';
+                    element.style.opacity = '1';
+                    element.style.transform = 'translateY(0)';
+                }, 600 + (index * 300));
+            });
+        });
+
+        document.addEventListener('DOMContentLoaded', function()
+        {
+            const langBtn = document.getElementById('langBtn');
+            
+            langBtn.addEventListener('click', function()
+            {
+                this.style.transform = 'scale(0.9)';
+                this.style.boxShadow = '0 0 20px #8A2BE2';
+                
+                setTimeout(() => {
+                    this.style.transform = 'scale(1)';
+                    currentLang = currentLang === 'fr' ? 'en' : 'fr';
+                    localStorage.setItem('language', currentLang);
+                    updateContent(currentLang);
+                }, 150);
+            });
+            // CV button: show modal message instead of downloading CV
+            const cvBtn = document.getElementById('cvBtn');
+            if (cvBtn) {
+                cvBtn.addEventListener('click', function() {
+                    showCvModal();
+                });
+            }
+        });
+
+        function checkScroll()
+        {
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            const windowHeight = window.innerHeight;
+            const documentHeight = document.documentElement.scrollHeight;
+
+            if (scrollTop + windowHeight >= documentHeight * 0.9) {
+                document.body.classList.add('show-footer');
+            } else {
+                document.body.classList.remove('show-footer');
+            }
+
+            const floatingControls = document.querySelector('.floating-controls');
+            if (scrollTop <= 100) {
+                floatingControls.classList.remove('hide-controls');
+            } else {
+                floatingControls.classList.add('hide-controls');
+            }
+        }
+        window.addEventListener('scroll', checkScroll);
+        window.addEventListener('load', checkScroll);
+    </script>
+    <!-- CV modal -->
+    <style>
+    /* simple modal matching site style */
+    .cv-modal { position: fixed; inset: 0; display: none; align-items: center; justify-content: center; z-index: 2000; }
+    .cv-modal.show { display: flex; }
+    .cv-modal-backdrop { position: absolute; inset: 0; background: rgba(0,0,0,0.6); }
+    .cv-modal-content { position: relative; background: rgba(10,10,10,0.98); border: 2px solid #8A2BE2; padding: 20px; width: 90%; max-width: 520px; color: #fff; box-shadow: 0 10px 40px rgba(0,0,0,0.6); }
+    .cv-modal-content h3 { margin: 0 0 10px; color: #fff; }
+    .cv-modal-actions { margin-top: 18px; display:flex; gap:12px; justify-content:flex-end; }
+    .cv-modal-close-btn, .cv-modal-contact-btn { padding: 10px 16px; border: 2px solid #8A2BE2; background: linear-gradient(135deg, transparent, rgba(138,43,226,0.08)); color: #8A2BE2; cursor: pointer; }
+    .cv-modal-contact-btn { background: #8A2BE2; color: #000; }
+    .cv-modal-close { position:absolute; top:8px; right:8px; background:transparent; border:none; color:#8A2BE2; font-size:20px; cursor:pointer; }
+    </style>
+
+    <div id="cvModal" class="cv-modal" aria-hidden="true">
+        <div class="cv-modal-backdrop" data-close></div>
+        <div class="cv-modal-content" role="dialog" aria-modal="true" aria-labelledby="cvModalTitle">
+            <button class="cv-modal-close" aria-label="Close" data-close>&times;</button>
+            <h3 id="cvModalTitle"></h3>
+            <p id="cvModalMessage"></p>
+            <div class="cv-modal-actions">
+                <a id="cvModalContact" class="cv-modal-contact-btn nav-button" href="contact.html"></a>
+                <button id="cvModalCloseBtn" class="cv-modal-close-btn">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+    function showCvModal() {
+        const modal = document.getElementById('cvModal');
+        const title = document.getElementById('cvModalTitle');
+        const msg = document.getElementById('cvModalMessage');
+        const contactBtn = document.getElementById('cvModalContact');
+        const closeBtn = document.getElementById('cvModalCloseBtn');
+        const t = (typeof translations !== 'undefined' && translations[currentLang]) ? translations[currentLang] : null;
+        title.textContent = t && t.cvModalTitle ? t.cvModalTitle : 'Leave a message';
+        msg.textContent = t && t.cvModalMessage ? t.cvModalMessage : "Don't hesitate to leave me an email via the Contact page — thanks!";
+        contactBtn.textContent = t && t.cvModalContact ? t.cvModalContact : 'Go to Contact page';
+        closeBtn.textContent = t && t.cvModalClose ? t.cvModalClose : 'Close';
+        modal.classList.add('show');
+        modal.setAttribute('aria-hidden','false');
+        // focus management
+        closeBtn.focus();
+
+        function hide() { modal.classList.remove('show'); modal.setAttribute('aria-hidden','true'); document.removeEventListener('keydown', escHandler); }
+        function escHandler(e) { if (e.key === 'Escape') hide(); }
+
+        // close handlers
+        document.querySelectorAll('[data-close]').forEach(el => el.onclick = hide);
+        closeBtn.onclick = hide;
+        document.addEventListener('keydown', escHandler);
+    }
+    </script>
+</body>
+
+</html>

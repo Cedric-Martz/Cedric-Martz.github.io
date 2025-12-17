@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Page not found</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <style>
+        .error-container
+        {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: #1a1a1a;
+            font-family: 'Orbitron', sans-serif;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .error-code
+        {
+            font-size: 120px;
+            color: #8a2be2;
+            text-shadow: 0 0 10px #8a2be2;
+            margin-bottom: 20px;
+            animation: glitch 1s infinite;
+        }
+
+        .error-message
+        {
+            font-size: 24px;
+            margin-bottom: 30px;
+            color: #fff;
+        }
+
+        .home-link
+        {
+            padding: 12px 24px;
+            background-color: #2a1540;
+            border: 2px solid #8a2be2;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 16px;
+            transition: all 0.3s ease;
+        }
+
+        .home-link:hover
+        {
+            background-color: #8a2be2;
+            color: #000;
+        }
+
+        @keyframes glitch
+        {
+            0% {
+                text-shadow: 0.05em 0 0 #ff00c1, -0.05em -0.025em 0 #8a2be2,
+                            -0.025em 0.05em 0 #00ffff;
+            }
+            14% {
+                text-shadow: 0.05em 0 0 #ff00c1, -0.05em -0.025em 0 #8a2be2,
+                            -0.025em 0.05em 0 #00ffff;
+            }
+            15% {
+                text-shadow: -0.05em -0.025em 0 #ff00c1, 0.025em 0.025em 0 #8a2be2,
+                            -0.05em -0.05em 0 #00ffff;
+            }
+            49% {
+                text-shadow: -0.05em -0.025em 0 #ff00c1, 0.025em 0.025em 0 #8a2be2,
+                            -0.05em -0.05em 0 #00ffff;
+            }
+            50% {
+                text-shadow: 0.025em 0.05em 0 #ff00c1, 0.05em 0 0 #8a2be2,
+                            0 -0.05em 0 #00ffff;
+            }
+            99% {
+                text-shadow: 0.025em 0.05em 0 #ff00c1, 0.05em 0 0 #8a2be2,
+                            0 -0.05em 0 #00ffff;
+            }
+            100% {
+                text-shadow: -0.025em 0 0 #ff00c1, -0.025em -0.025em 0 #8a2be2,
+                            -0.025em -0.05em 0 #00ffff;
+            }
+        }
+
+        .morse-hint
+        {
+            font-family: monospace;
+            color: #666;
+            font-size: 12px;
+            margin-top: 50px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="error-container">
+        <div class="error-code">404</div>
+        <div class="error-message">Oops! The page you're looking for doesn't exist.</div>
+        <a href="/" class="home-link">Return to Home page</a>
+        <p class="morse-hint">
+            ... . .- .-. -.-. .... / .. -. ... .. -.. . / - .... . / . --. --. .-.-.- --. .. ..-. / .... . / .-- .- ... / .-.. .- ... - / ... . . -. / -.. .- -. -.-. .. -. --. / .. -. / -..-. .- ... ... . - ... / -..-. .. -- .- --. . ... / -..-. . --. --. .-.-.- .... - -- .-..
+        </p>
+    </div>
+</body>
+</html>

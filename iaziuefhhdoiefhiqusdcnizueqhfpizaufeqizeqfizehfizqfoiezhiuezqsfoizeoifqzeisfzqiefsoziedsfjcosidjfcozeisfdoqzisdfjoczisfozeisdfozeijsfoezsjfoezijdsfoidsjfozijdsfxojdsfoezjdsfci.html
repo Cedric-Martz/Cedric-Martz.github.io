@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random things...</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root
+        {
+            --bg-color: #0a0a0a;
+            --text-color: #c0c0c0;
+            --accent-color: #ff0000;
+            --border-color: #333;
+            --animation-duration: 0.8s;
+        }
+
+        *
+        {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body
+        {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: 'Space Mono', monospace;
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .particle
+        {
+            position: fixed;
+            width: 2px;
+            height: 2px;
+            background: var(--accent-color);
+            pointer-events: none;
+            opacity: 0;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float
+        {
+            0%,
+            100%
+            {
+                opacity: 0;
+                transform: translateY(0) translateX(0);
+            }
+
+            50%
+            {
+                opacity: 0.5;
+            }
+
+            100%
+            {
+                transform: translateY(-100vh) translateX(calc(var(--drift) * 20px));
+            }
+        }
+
+        .secret-unlocked
+        {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: rgba(255, 0, 0, 0.2);
+            border: 1px solid var(--accent-color);
+            padding: 10px 20px;
+            border-radius: 4px;
+            opacity: 0;
+            transform: translateY(-20px);
+            transition: all 0.5s ease;
+            z-index: 1000;
+            font-size: 0.9em;
+        }
+
+        .secret-unlocked.show
+        {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .container
+        {
+            max-width: 800px;
+            width: 100%;
+            position: relative;
+            z-index: 1;
+        }
+
+        .book
+        {
+            position: relative;
+            height: 600px;
+            perspective: 1500px;
+            margin: 0 auto;
+        }
+
+        .blog-entry
+        {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            padding: 2rem;
+            background-color: rgba(17, 17, 17, 0.95);
+            border: 1px solid var(--border-color);
+            box-shadow: 0 0 20px rgba(255, 0, 0, 0.1);
+            transition: transform var(--animation-duration) cubic-bezier(0.4, 0, 0.2, 1);
+            transform-style: preserve-3d;
+            backface-visibility: hidden;
+            transform-origin: left center;
+            display: none;
+            overflow-y: auto;
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+        }
+
+        .blog-entry::-webkit-scrollbar
+        {
+            display: none;
+        }
+
+        .blog-entry.active
+        {
+            display: block;
+        }
+
+        .blog-entry.flipping
+        {
+            animation: flipPage var(--animation-duration) cubic-bezier(0.4, 0, 0.2, 1) forwards;
+        }
+
+        .blog-entry.flipping-back
+        {
+            animation: flipPageBack var(--animation-duration) cubic-bezier(0.4, 0, 0.2, 1) forwards;
+        }
+
+        @keyframes flipPage
+        {
+            from {
+                transform: rotateY(0);
+            }
+
+            to {
+                transform: rotateY(-180deg);
+            }
+        }
+
+        @keyframes flipPageBack
+        {
+            from {
+                transform: rotateY(180deg);
+            }
+
+            to {
+                transform: rotateY(0);
+            }
+        }
+
+        .blog-entry img,
+        .blog-entry iframe,
+        .blog-entry video,
+        .blog-entry audio
+        {
+            max-width: 90%;
+            width: auto;
+            height: auto;
+            margin: 1.5rem auto;
+            display: block;
+            border-radius: 4px;
+            filter: grayscale(50%) contrast(120%);
+            transition: filter 0.3s ease;
+        }
+
+        .blog-entry img:hover,
+        .blog-entry video:hover
+        {
+            filter: grayscale(0%) contrast(100%);
+        }
+
+        .clickable-picture
+        {
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .clickable-picture:hover
+        {
+            transform: scale(1.05);
+            box-shadow: 0 0 30px rgba(255, 0, 0, 0.5);
+        }
+
+        .clickable-picture.playing
+        {
+            animation: pulse 1s ease-in-out infinite;
+        }
+
+        @keyframes pulse
+        {
+            0%,
+            100%
+            {
+                transform: scale(1);
+                filter: grayscale(50%) contrast(120%) brightness(1);
+            }
+
+            50%
+            {
+                transform: scale(1.03);
+                filter: grayscale(0%) contrast(100%) brightness(1.2);
+            }
+        }
+
+        .blog-entry iframe
+        {
+            aspect-ratio: 16/9;
+            border: none;
+            box-shadow: 0 0 15px rgba(255, 0, 0, 0.2);
+        }
+
+        .blog-entry audio
+        {
+            width: 80%;
+        }
+
+        .blog-entry p
+        {
+            margin: 1rem auto;
+            max-width: 600px;
+            text-align: justify;
+            line-height: 1.8;
+        }
+
+        h1
+        {
+            color: var(--accent-color);
+            text-shadow: 2px 2px 4px rgba(255, 0, 0, 0.3);
+            font-size: 2.5em;
+            margin-bottom: 2rem;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        h1:hover
+        {
+            transform: scale(1.05);
+            text-shadow: 0 0 20px rgba(255, 0, 0, 0.6);
+        }
+
+        .glitch
+        {
+            animation: glitch 1s linear infinite;
+            opacity: 0.9;
+        }
+
+        @keyframes glitch
+        {
+
+            2%,
+            64%
+            {
+                transform: translate(2px, 0) skew(0deg);
+            }
+
+            4%,
+            60%
+            {
+                transform: translate(-2px, 0) skew(0deg);
+            }
+
+            62%
+            {
+                transform: translate(0, 0) skew(5deg);
+            }
+        }
+
+        .hidden-message
+        {
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            color: var(--accent-color);
+            font-style: italic;
+            cursor: default;
+        }
+
+        .blog-entry:hover .hidden-message
+        {
+            opacity: 0.8;
+        }
+
+        .navigation
+        {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: calc(100% + 120px);
+            z-index: 100;
+            pointer-events: none;
+        }
+
+        .nav-button
+        {
+            position: absolute;
+            padding: 1rem;
+            background: none;
+            border: none;
+            color: var(--accent-color);
+            font-size: 2.5em;
+            cursor: pointer;
+            pointer-events: auto;
+            transition: all 0.3s ease;
+            opacity: 0.6;
+            text-shadow: 0 0 10px rgba(255, 0, 0, 0.3);
+        }
+
+        .nav-button:hover
+        {
+            opacity: 1;
+            transform: scale(1.1);
+        }
+
+        .nav-button:active
+        {
+            transform: scale(0.95);
+        }
+
+        .prev-button
+        {
+            left: 0;
+        }
+
+        .next-button
+        {
+            right: 0;
+        }
+
+        .page-counter
+        {
+            position: absolute;
+            bottom: -50px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: var(--accent-color);
+            font-size: 0.9em;
+            opacity: 0.6;
+            cursor: pointer;
+            user-select: none;
+        }
+
+        .page-counter:hover
+        {
+            opacity: 1;
+        }
+
+        .page-input
+        {
+            position: absolute;
+            bottom: -50px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--bg-color);
+            border: 1px solid var(--accent-color);
+            color: var(--accent-color);
+            font-family: 'Space Mono', monospace;
+            font-size: 0.9em;
+            width: 50px;
+            padding: 2px 5px;
+            text-align: center;
+            display: none;
+        }
+
+        .page-input:focus
+        {
+            outline: none;
+            box-shadow: 0 0 10px rgba(255, 0, 0, 0.3);
+        }
+
+        .click-counter
+        {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            font-size: 0.8em;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            color: var(--accent-color);
+        }
+
+        .click-counter.show
+        {
+            opacity: 0.5;
+        }
+
+        .matrix-rain
+        {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+            opacity: 0;
+            transition: opacity 1s ease;
+        }
+
+        .matrix-rain.active
+        {
+            opacity: 0.3;
+        }
+
+        @media (max-width: 768px)
+        {
+            .navigation
+            {
+                width: calc(100% + 60px);
+            }
+
+            .nav-button
+            {
+                font-size: 2em;
+                padding: 0.5rem;
+            }
+
+            .blog-entry
+            {
+                padding: 1rem;
+                height: 500px;
+            }
+
+            .book
+            {
+                height: 500px;
+            }
+
+            h1
+            {
+                font-size: 1.8em;
+            }
+
+            .blog-entry p
+            {
+                font-size: 0.9em;
+            }
+
+            .blog-entry iframe
+            {
+                width: 100%;
+                height: auto;
+            }
+
+            .secret-unlocked
+            {
+                font-size: 0.75em;
+                padding: 8px 15px;
+            }
+        }
+
+        @media (max-width: 480px)
+        {
+            .blog-entry {
+                padding: 0.75rem;
+                height: 450px;
+            }
+
+            .book {
+                height: 450px;
+            }
+
+            h1 {
+                font-size: 1.5em;
+                margin-bottom: 1rem;
+            }
+
+            .nav-button {
+                font-size: 1.5em;
+            }
+
+            .navigation {
+                width: calc(100% + 40px);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <canvas class="matrix-rain"></canvas>
+    <div class="secret-unlocked">Konami yay!</div>
+    <div class="click-counter">Clics: <span id="clickCount">0</span></div>
+
+    <div class="container">
+        <h1 class="glitch" id="mainTitle">Des choses...</h1>
+        <div class="book">
+            <div class="blog-entry active">
+                <p>Bonjour, bonjour...</p>
+                <p>Ne soyez pas timide, lisez... Un peu de musique durant votre lecture ? Cliquez l'image</p>
+                <img src="assets/images/doors.jpeg" alt="an album that I like" class="clickable-picture">
+                <audio id="backgroundMusic" src="assets/songs/the_end.mp3" preload="auto"></audio>
+                <p class="hidden-message">Félicitations, vous m'avez trouvé... avez-vous essayé le code Konami ?</p>
+            </div>
+
+            <div class="blog-entry">
+                <div class="page-number"></div>
+                <p>MOOC d'OSINTFR</p>
+                <a href="https://mooc.osintfr.com/" target="_blank" rel="noopener noreferrer">
+                    <img src="assets/images/osintfr_mooc.jpg" alt="MMOC OSINTFR thumbnail" class="clickable-picture">
+                </a>
+                <p class="hidden-message">Avec notre présence en ligne aujourd'hui, l'osint peut être fait par tous</p>
+            </div>
+
+            <div class="blog-entry">
+                <div class="page-number"></div>
+                <p>Bellingcat</p>
+                <a href="https://www.bellingcat.com/" target="_blank" rel="noopener noreferrer">
+                    <img src="assets/images/bellingcat.jpg" alt="Bellingcat thumbnail" class="clickable-picture">
+                </a>
+                <p class="hidden-message">Toujours développer son esprit critique...</p>
+            </div>
+
+            <div class="blog-entry">
+                <div class="page-number"></div>
+                <p>Forbidden stories</p>
+                <a href="https://forbiddenstories.org/" target="_blank" rel="noopener noreferrer">
+                    <img src="assets/images/forbiddenstories.png" alt="Forbiddenstories thumbnail" class="clickable-picture">
+                </a>
+                <p class="hidden-message">Liberté de la presse, baromètre de la démocratie...</p>
+            </div>
+
+            <div class="blog-entry">
+                <div class="page-number"></div>
+                <img src="assets/images/thats_all_folks.jpg" alt="Every good things come to an end">
+                <p class="hidden-message">Vous êtes les meilleurs 😎</p>
+            </div>
+        </div>
+        <div class="navigation">
+            <button class="nav-button prev-button" aria-label="Page précédente">←</button>
+            <button class="nav-button next-button" aria-label="Page suivante">→</button>
+        </div>
+        <div class="page-counter"><span id="currentPage">1</span> / <span id="totalPages">3</span></div>
+        <input type="number" class="page-input" min="1" max="3" style="display: none;">
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function ()
+        {
+            const container = document.querySelector('.container');
+            const entries = document.querySelectorAll('.blog-entry');
+            const prevButton = document.querySelector('.prev-button');
+            const nextButton = document.querySelector('.next-button');
+            const mainTitle = document.getElementById('mainTitle');
+            const albumImage = document.querySelector('.clickable-picture');
+            const backgroundMusic = document.getElementById('backgroundMusic');
+            let isPlaying = false;
+
+            albumImage.addEventListener('click', () =>
+            {
+                if (!isPlaying) {
+                    backgroundMusic.play();
+                    albumImage.classList.add('playing');
+                } else {
+                    backgroundMusic.pause();
+                    backgroundMusic.currentTime = 0;
+                    albumImage.classList.remove('playing');
+                }
+                isPlaying = !isPlaying;
+            });
+
+            const clickCounter = document.querySelector('.click-counter');
+            const clickCount = document.getElementById('clickCount');
+            const secretUnlocked = document.querySelector('.secret-unlocked');
+            const matrixCanvas = document.querySelector('.matrix-rain');
+            const ctx = matrixCanvas.getContext('2d');
+            let currentPage = 0;
+            let clicks = 0;
+            let konamiCode = [];
+            const konamiSequence = ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight', 'b', 'a'];
+            matrixCanvas.width = window.innerWidth;
+            matrixCanvas.height = window.innerHeight;
+            const matrix = "010101010110101011010101010";
+            const fontSize = 16;
+            const columns = matrixCanvas.width / fontSize;
+            const drops = [];
+            for (let i = 0; i < columns; i++)
+                drops[i] = 1;
+
+            function drawMatrix()
+            {
+                ctx.fillStyle = 'rgba(10, 10, 10, 0.05)';
+                ctx.fillRect(0, 0, matrixCanvas.width, matrixCanvas.height);
+                ctx.fillStyle = '#ff0000';
+                ctx.font = fontSize + 'px monospace';
+
+                for (let i = 0; i < drops.length; i++) {
+                    const text = matrix[Math.floor(Math.random() * matrix.length)];
+                    ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+
+                    if (drops[i] * fontSize > matrixCanvas.height && Math.random() > 0.975)
+                        drops[i] = 0;
+                    drops[i]++;
+                }
+            }
+
+            let matrixInterval;
+
+            setInterval(() =>
+            {
+                if (Math.random() > 0.99) {
+                    container.style.opacity = '0.7';
+                    setTimeout(() => {
+                        container.style.opacity = '1';
+                    }, 100);
+                }
+            }, 1000);
+
+            function createParticle()
+            {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                particle.style.left = Math.random() * window.innerWidth + 'px';
+                particle.style.top = window.innerHeight + 'px';
+                particle.style.setProperty('--drift', Math.random() * 2 - 1);
+                particle.style.animationDelay = Math.random() * 2 + 's';
+                document.body.appendChild(particle);
+
+                setTimeout(() => {
+                    particle.remove();
+                }, 3000);
+            }
+
+            setInterval(createParticle, 300);
+
+            const pageCounter = document.querySelector('.page-counter');
+            const pageInput = document.querySelector('.page-input');
+
+            pageCounter.addEventListener('click', () =>
+            {
+                pageCounter.style.display = 'none';
+                pageInput.style.display = 'block';
+                pageInput.value = currentPage + 1;
+                pageInput.focus();
+            });
+
+            pageInput.addEventListener('blur', () => {
+                pageInput.style.display = 'none';
+                pageCounter.style.display = 'block';
+            });
+
+            pageInput.addEventListener('keypress', (e) =>
+            {
+                if (e.key === 'Enter') {
+                    const targetPage = parseInt(pageInput.value);
+                    if (targetPage <= 0) {
+                        navigateToSpecificPage(0);
+                    } else if (targetPage > entries.length) {
+                        navigateToSpecificPage(entries.length - 1);
+                    } else {
+                        navigateToSpecificPage(targetPage - 1);
+                    }
+                    pageInput.blur();
+                }
+            });
+
+            function navigateToSpecificPage(newPage)
+            {
+                if (newPage === currentPage)
+                    return;
+
+                const direction = newPage > currentPage ? 'next' : 'prev';
+                entries[currentPage].classList.add(direction === 'next' ? 'flipping' : 'flipping-back');
+
+                setTimeout(() =>
+                {
+                    entries[currentPage].classList.remove('active', 'flipping', 'flipping-back');
+                    currentPage = newPage;
+                    entries[currentPage].classList.add('active');
+                    updatePageCounter();
+                }, 400);
+            }
+
+            function updatePageCounter()
+            {
+                document.getElementById('currentPage').textContent = currentPage + 1;
+                document.getElementById('totalPages').textContent = entries.length;
+                pageInput.max = entries.length;
+            }
+
+            function navigateToPage(direction)
+            {
+                if (direction === 'next' && currentPage < entries.length - 1) {
+                    entries[currentPage].classList.add('flipping');
+                    setTimeout(() => {
+                        entries[currentPage].classList.remove('active', 'flipping');
+                        currentPage++;
+                        entries[currentPage].classList.add('active');
+                        updatePageCounter();
+                    }, 400);
+                } else if (direction === 'prev' && currentPage > 0) {
+                    entries[currentPage].classList.remove('active');
+                    currentPage--;
+                    entries[currentPage].classList.add('active', 'flipping-back');
+                    setTimeout(() => {
+                        entries[currentPage].classList.remove('flipping-back');
+                        updatePageCounter();
+                    }, 400);
+                }
+            }
+
+            nextButton.addEventListener('click', () => navigateToPage('next'), { passive: true });
+            prevButton.addEventListener('click', () => navigateToPage('prev'), { passive: true });
+
+            mainTitle.addEventListener('dblclick', () =>
+            {
+                clicks++;
+                clickCount.textContent = clicks;
+                clickCounter.classList.add('show');
+
+                if (clicks === 5) {
+                    mainTitle.textContent = 'You found the secret!';
+                    document.body.style.setProperty('--accent-color', '#00ff00');
+                } else if (clicks === 10) {
+                    mainTitle.textContent = 'Rainbow mode!';
+                    const colors = ['#ff0000', '#ff7700', '#ffff00', '#00ff00', '#0000ff', '#8b00ff'];
+                    let colorIndex = 0;
+                    setInterval(() => {
+                        document.body.style.setProperty('--accent-color', colors[colorIndex % colors.length]);
+                        colorIndex++;
+                    }, 500);
+                }
+            });
+
+            document.addEventListener('keydown', (e) =>
+            {
+                konamiCode.push(e.key);
+                konamiCode = konamiCode.slice(-10);
+
+                if (konamiCode.join('') === konamiSequence.join('')) {
+                    secretUnlocked.classList.add('show');
+                    matrixCanvas.classList.add('active');
+                    matrixInterval = setInterval(drawMatrix, 33);
+
+                    setTimeout(() => {
+                        secretUnlocked.classList.remove('show');
+                    }, 3000);
+                }
+
+                if (e.key === 'ArrowRight') {
+                    navigateToPage('next');
+                } else if (e.key === 'ArrowLeft') {
+                    navigateToPage('prev');
+                }
+            }, { passive: true });
+
+            let touchStartX = 0;
+            let touchEndX = 0;
+
+            document.addEventListener('touchstart', (e) =>
+            {
+                touchStartX = e.touches[0].clientX;
+            }, { passive: true });
+
+            document.addEventListener('touchend', (e) =>
+            {
+                touchEndX = e.changedTouches[0].clientX;
+                const swipeDistance = touchEndX - touchStartX;
+
+                if (Math.abs(swipeDistance) > 50) {
+                    if (swipeDistance > 0)
+                        navigateToPage('prev');
+                    else
+                        navigateToPage('next');
+                }
+            }, { passive: true });
+
+            window.addEventListener('resize', () =>
+            {
+                matrixCanvas.width = window.innerWidth;
+                matrixCanvas.height = window.innerHeight;
+            });
+
+            updatePageCounter();
+        });
+    </script>
+</body>
+
+</html>
