@@ -296,6 +296,49 @@
                         </a>
                     </div>
                 </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>CVE-2025-36911</h3>
+                    </div>
+                    <div class="project-tags">
+                        <span class="tag">CVE-2025-36911</span>
+                    </div>
+                    <div class="project-image">
+                        <div class="project-preview">
+                            <div class="terminal-preview">
+                                <div class="terminal-header">
+                                    <div class="terminal-buttons">
+                                        <span class="btn red"></span>
+                                        <span class="btn yellow"></span>
+                                        <span class="btn green"></span>
+                                    </div>
+                                    <span class="terminal-title">CVE-2025-36911 Scanner</span>
+                                </div>
+                                <div class="terminal-body">
+                                    <div class="terminal-line">$ ./CVE-2025-36911.py</div>
+                                    <div class="terminal-line text-yellow">[!] Scanning</div>
+                                    <div class="terminal-line text-green">[✓] Scan Complete</div>
+                                    <div class="terminal-line text-purple">[INFO] Vulnerability Found</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-description">
+                        <p>Outil de détection et d'analyse de la vulnérabilité CVE-2025-36911.</p>
+                        <div class="project-features">
+                            <span>🛡️ CVE Detection</span>
+                            <span>🔍 Analysis</span>
+                            <span>📊 Scanning</span>
+                        </div>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/Cedric-Martz/CVE-2025-36911_scan" target="_blank"
+                            rel="noopener noreferrer" class="project-btn github-btn">
+                            <span>💻</span> GitHub
+                        </a>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
@@ -357,6 +400,7 @@
                 deviceCodeDesc: "Wrapper Python pour automatiser les attaques Device Code Phishing sur les flux OAuth.",
                 raytracerDesc: "Moteur de rendu 3D utilisant la technique de raytracing pour générer des formes.",
                 zappyDesc: "Projet de fin de 2ème année à Epitech. Simulation d'équipes. Jeu en réseau avec serveur, client graphique et IA.",
+                cveDesc: "Outil de détection et d'analyse de la vulnérabilité CVE-2025-36911.",
                 cvText: "📄 CV",
                 cvAriaLabel: "Télécharger le CV en français",
                 cvModalTitle: "Laisser un message",
@@ -386,6 +430,7 @@
                 deviceCodeDesc: "Python wrapper to automate Device Code Phishing attacks on OAuth flows.",
                 raytracerDesc: "3D rendering engine using raytracing technique to generate shapes.",
                 zappyDesc: "Second-year final project at Epitech. Team simulation. Network game with server, graphical client, and AI.",
+                cveDesc: "Detection and analysis tool for CVE-2025-36911 vulnerability.",
                 cvText: "📄 CV",
                 cvAriaLabel: "Download CV in English",
                 cvModalTitle: "Leave a message",
@@ -438,6 +483,8 @@
                         description.textContent = t.raytracerDesc;
                     } else if (titleText.includes('Zappy')) {
                         description.textContent = t.zappyDesc;
+                    } else if (titleText.includes('CVE-2025-36911')) {
+                        description.textContent = t.cveDesc;
                     }
                 }
             });
