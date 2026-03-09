@@ -68,8 +68,10 @@
                     </div>
                     <div class="project-tags">
                         <span class="tag">Python</span>
-                        <span class="tag">Shell</span>
-                        <span class="tag">Open Source</span>
+                        <span class="tag">ScyllaDB</span>
+                        <span class="tag">Cassandra</span>
+                        <span class="tag">Rust</span>
+                        <span class="tag">Open Source AI</span>
                         <span class="tag">Web</span>
                     </div>
                     <div class="featured-content">
@@ -79,25 +81,54 @@
                                     empreinte numérique.</p>
                                 <div class="project-features">
                                     <span>🧐 OSINT</span>
-                                    <span>🛡️ Cybersecurity</span>
-                                    <span>💻 Development</span>
-                                    <span>📊 Analysis</span>
+                                    <span>🛡️ Cybersécurité</span>
+                                    <span>💻 Développement</span>
+                                    <span>📊 Analyse</span>
                                 </div>
                             </div>
                             <div class="project-links">
                                 <a href="assets/documents/Vidoq Public Presentation.pdf" target="_blank"
                                     class="project-btn demo-btn" aria-label="Voir la présentation VIDOQ (PDF)">
-                                    <span>📄</span> <span>Présentation</span>
+                                    <span>📄</span> <span id="vidoqPresentationBtn">Présentation</span>
                                 </a>
-                                <a href="https://vidoq.fr"
-                                    class="project-btn demo-btn" aria-label="Tester Vidoq">
-                                    <span>📋</span> <span>Test Vidoq</span>
+                                <a href="https://vidoq.fr" target="_blank"
+                                    rel="noopener noreferrer" class="project-btn demo-btn" aria-label="Essayer VIDOQ">
+                                    <span>🚀</span> <span id="vidoqTryItBtn">ESSAYEZ</span>
                                 </a>
                             </div>
                         </div>
                         <div class="project-image">
                             <img src="assets/images/final_logo.png" alt="Logo du projet VIDOQ">
                         </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>Quotes Game</h3>
+                    </div>
+                    <div class="project-tags">
+                        <span class="tag">JSON</span>
+                        <span class="tag">CSS</span>
+                        <span class="tag">JavaScript</span>
+                    </div>
+                    <div class="project-image">
+                        <div class="project-preview">
+                            <img src="assets/images/quote-game.png" alt="quote game logo"
+                                style="width:100%; height:100%; object-fit:cover; display:block; background-position:center;">
+                        </div>
+                    </div>
+                    <div class="project-description">
+                        <p>Devinez qui a dit ça !</p>
+                        <div class="project-features">
+                            <span>📖 Culture</span>
+                            <span>📱 Gamified</span>
+                        </div>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://cedric-martz.github.io/quote-game/" class="project-btn demo-btn">
+                            <span>🎮</span> PLAY
+                        </a>
                     </div>
                 </div>
 
@@ -390,9 +421,10 @@
                 vidoqTitle: "🔎 VIDOQ",
                 vidoqDesc: "Vidoq représente l'aboutissement de mes études. Vidoq vous permet d'auditer votre empreinte numérique.",
                 vidoqPresentation: "Présentation",
-                vidoqGetInvolved: "Get Involved",
-                vidoqFeatures: ["🧐 OSINT", "🛡️ Cybersecurity", "💻 DDevelopment", "📊 Analysis"],
+                vidoqTryIt: "ESSAYEZ",
+                vidoqFeatures: ["🧐 OSINT", "🛡️ Cybersécurité", "💻 Développement", "📊 Analyse"],
                 portfolioDesc: "Le site que vous consultez actuellement. Avez-vous trouvé l'Easter Egg ? Parfois, il faut ne pas trouver pour le trouver.",
+                quoteGameDesc: "Devinez qui a dit ça !",
                 vibefoxDesc: "Un site de vibe coding. Vous pouvez demander à l'IA de faire du code",
                 securityAssessmentDesc: "Rapport d'évaluation de sécurité sur EternalBlue.",
                 deviceCodeDesc: "Wrapper Python pour automatiser les attaques Device Code Phishing sur les flux OAuth.",
@@ -420,9 +452,10 @@
                 vidoqTitle: "🔎 VIDOQ",
                 vidoqDesc: "Vidoq is the culmination of my studies. Vidoq allows you to audit your digital footprint.",
                 vidoqPresentation: "Presentation",
-                vidoqGetInvolved: "Get Involved",
+                vidoqTryIt: "TRY IT",
                 vidoqFeatures: ["🧐 OSINT", "🛡️ Cybersecurity", "💻 Development", "📊 Analysis"],
                 portfolioDesc: "The website you are currently visiting. Did you found the Easter Egg? Sometimes, you need to not found to find it.",
+                quoteGameDesc: "Guess who said that!",
                 vibefoxDesc: "A vibe coding website. You can ask the AI to write code",
                 securityAssessmentDesc: "Security assessment report on EternalBlue.",
                 deviceCodeDesc: "Python wrapper to automate Device Code Phishing attacks on OAuth flows.",
@@ -465,12 +498,20 @@
                 }
             });
 
+            const vidoqPresentationBtn = document.getElementById('vidoqPresentationBtn');
+            if (vidoqPresentationBtn) vidoqPresentationBtn.textContent = t.vidoqPresentation;
+            
+            const vidoqTryItBtn = document.getElementById('vidoqTryItBtn');
+            if (vidoqTryItBtn) vidoqTryItBtn.textContent = t.vidoqTryIt;
+
             document.querySelectorAll('.project-card').forEach(card => {
                 const description = card.querySelector('.project-description p');
                 if (description) {
                     const titleText = card.querySelector('.project-header h3').textContent.trim();
                     if (titleText.includes('Portfolio')) {
                         description.textContent = t.portfolioDesc;
+                    } else if (titleText.includes('Quotes Game')) {
+                        description.textContent = t.quoteGameDesc;
                     } else if (titleText.includes('VibeFoxes')) {
                         description.textContent = t.vibefoxDesc;
                     } else if (titleText.includes('Security assessment')) {

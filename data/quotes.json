@@ -1,0 +1,115 @@
+{
+  "translations": {
+    "en": {
+      "title": "Quote Guessing Game",
+      "startButton": "Start",
+      "rulesButton": "Rules",
+      "languageButton": "Language",
+      "nextButton": "Next →",
+      "backToMenu": "← Menu",
+      "rulesTitle": "How to Play",
+      "rulesText": "You will see a quote and two people. Your task is to guess who actually said the quote. Click on the card you think is correct. Green means you were right, red means you were wrong. Use the arrow button to continue.",
+      "sourceLabel": "Source",
+      "correctFeedback": "Correct! ✓",
+      "incorrectFeedback": "Wrong! ✗",
+      "selectLanguage": "Select Language"
+    },
+    "fr": {
+      "title": "Jeu de Devinettes de Citations",
+      "startButton": "Commencer",
+      "rulesButton": "Règles",
+      "languageButton": "Langue",
+      "nextButton": "Suivant →",
+      "backToMenu": "← Menu",
+      "rulesTitle": "Comment Jouer",
+      "rulesText": "Vous verrez une citation et deux personnes. Votre tâche est de deviner qui a vraiment dit la citation. Cliquez sur la carte que vous pensez être correcte. Vert signifie que vous aviez raison, rouge signifie que vous aviez tort. Utilisez le bouton fléché pour continuer.",
+      "sourceLabel": "Source",
+      "correctFeedback": "Correct ! ✓",
+      "incorrectFeedback": "Faux ! ✗",
+      "selectLanguage": "Choisir la Langue"
+    }
+  },
+  "quotes": [
+    {
+      "quote": "The press is the enemy of the people.",
+      "author": "Donald Trump",
+      "source": "https://twitter.com/realDonaldTrump/status/832708293516632065",
+      "opponents": ["Joseph Stalin", "Adolf Hitler", "Benito Mussolini"],
+      "image": "assets/images/trump.jpg"
+    },
+    {
+      "quote": "I have a dream that one day this nation will rise up and live out the true meaning of its creed.",
+      "author": "Martin Luther King Jr.",
+      "source": "https://www.archives.gov/files/press/exhibits/dream-speech.pdf",
+      "opponents": ["Malcolm X", "Nelson Mandela", "Barack Obama"],
+      "image": "assets/images/mlk.jpg"
+    },
+    {
+      "quote": "That's one small step for man, one giant leap for mankind.",
+      "author": "Neil Armstrong",
+      "source": "https://www.nasa.gov/mission_pages/apollo/apollo11.html",
+      "opponents": ["Buzz Aldrin", "Yuri Gagarin", "John Glenn"],
+      "image": "assets/images/armstrong.jpg"
+    },
+    {
+      "quote": "The only thing we have to fear is fear itself.",
+      "author": "Franklin D. Roosevelt",
+      "source": "https://www.loc.gov/item/afccal000483/",
+      "opponents": ["Winston Churchill", "Theodore Roosevelt", "Harry Truman"],
+      "image": "assets/images/fdr.jpg"
+    },
+    {
+      "quote": "I think, therefore I am.",
+      "author": "René Descartes",
+      "source": "https://plato.stanford.edu/entries/descartes/",
+      "opponents": ["Immanuel Kant", "Jean-Paul Sartre", "Friedrich Nietzsche"],
+      "image": "assets/images/descartes.jpg"
+    },
+    {
+      "quote": "Be the change that you wish to see in the world.",
+      "author": "Mahatma Gandhi",
+      "source": "https://www.gandhiheritageportal.org/",
+      "opponents": ["Mother Teresa", "Dalai Lama", "Nelson Mandela"],
+      "image": "assets/images/gandhi.jpg"
+    },
+    {
+      "quote": "In the future, everyone will be world-famous for 15 minutes.",
+      "author": "Andy Warhol",
+      "source": "https://www.moma.org/artists/6246",
+      "opponents": ["Pablo Picasso", "Salvador Dalí", "Marcel Duchamp"],
+      "image": "assets/images/warhol.jpg"
+    },
+    {
+      "quote": "The only way to do great work is to love what you do.",
+      "author": "Steve Jobs",
+      "source": "https://news.stanford.edu/2005/06/14/jobs-061505/",
+      "opponents": ["Bill Gates", "Elon Musk", "Mark Zuckerberg"],
+      "image": "assets/images/jobs.jpg"
+    }
+  ],
+  "opponents": {
+    "Joseph Stalin": "assets/images/stalin.jpg",
+    "Adolf Hitler": "assets/images/hitler.jpg",
+    "Benito Mussolini": "assets/images/mussolini.jpg",
+    "Malcolm X": "assets/images/malcolmx.jpg",
+    "Nelson Mandela": "assets/images/mandela.jpg",
+    "Barack Obama": "assets/images/obama.jpg",
+    "Buzz Aldrin": "assets/images/aldrin.jpg",
+    "Yuri Gagarin": "assets/images/gagarin.jpg",
+    "John Glenn": "assets/images/glenn.jpg",
+    "Winston Churchill": "assets/images/churchill.jpg",
+    "Theodore Roosevelt": "assets/images/teddy.jpg",
+    "Harry Truman": "assets/images/truman.jpg",
+    "Immanuel Kant": "assets/images/kant.jpg",
+    "Jean-Paul Sartre": "assets/images/sartre.jpg",
+    "Friedrich Nietzsche": "assets/images/nietzsche.jpg",
+    "Mother Teresa": "assets/images/teresa.jpg",
+    "Dalai Lama": "assets/images/dalai.jpg",
+    "Pablo Picasso": "assets/images/picasso.jpg",
+    "Salvador Dalí": "assets/images/dali.jpg",
+    "Marcel Duchamp": "assets/images/duchamp.jpg",
+    "Bill Gates": "assets/images/gates.jpg",
+    "Elon Musk": "assets/images/musk.jpg",
+    "Mark Zuckerberg": "assets/images/zuckerberg.jpg"
+  }
+}
