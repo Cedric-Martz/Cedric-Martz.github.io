@@ -1,4 +1,10 @@
 {
+  "game": {
+    "name": "Quote Clash",
+    "version": "2.0",
+    "shuffleQuotes": true,
+    "showFunFacts": true
+  },
   "translations": {
     "en": {
       "title": "Quote Guessing Game",
@@ -8,11 +14,11 @@
       "nextButton": "Next →",
       "backToMenu": "← Menu",
       "rulesTitle": "How to Play",
-      "rulesText": "You will see a quote and two people. Your task is to guess who actually said the quote. Click on the card you think is correct. Green means you were right, red means you were wrong. Use the arrow button to continue.",
+      "rulesText": "You will see a quote and two people. Your task is to guess who actually said the quote.",
       "sourceLabel": "Source",
       "correctFeedback": "Correct! ✓",
       "incorrectFeedback": "Wrong! ✗",
-      "selectLanguage": "Select Language"
+      "funFact": "Fun fact"
     },
     "fr": {
       "title": "Jeu de Devinettes de Citations",
@@ -22,94 +28,294 @@
       "nextButton": "Suivant →",
       "backToMenu": "← Menu",
       "rulesTitle": "Comment Jouer",
-      "rulesText": "Vous verrez une citation et deux personnes. Votre tâche est de deviner qui a vraiment dit la citation. Cliquez sur la carte que vous pensez être correcte. Vert signifie que vous aviez raison, rouge signifie que vous aviez tort. Utilisez le bouton fléché pour continuer.",
+      "rulesText": "Une citation apparaît avec deux personnes. Devinez qui l'a réellement dite.",
       "sourceLabel": "Source",
       "correctFeedback": "Correct ! ✓",
       "incorrectFeedback": "Faux ! ✗",
-      "selectLanguage": "Choisir la Langue"
+      "funFact": "Le saviez-vous ?"
     }
   },
   "quotes": [
     {
       "quote": "The press is the enemy of the people.",
       "author": "Donald Trump",
-      "source": "https://twitter.com/realDonaldTrump/status/832708293516632065",
-      "opponents": ["Joseph Stalin", "Adolf Hitler", "Benito Mussolini"],
-      "image": "assets/images/trump.jpg"
+      "difficulty": 1,
+      "tags": [
+        "politics"
+      ],
+      "fact": "Trump tweeted this phrase multiple times during his presidency.",
+      "source": "https://www.bbc.com/news/world-us-canada-38980969",
+      "opponents": [
+        "Joseph Stalin",
+        "Adolf Hitler",
+        "Benito Mussolini"
+      ]
     },
     {
-      "quote": "I have a dream that one day this nation will rise up and live out the true meaning of its creed.",
+      "quote": "I have a dream that one day this nation will rise up.",
       "author": "Martin Luther King Jr.",
+      "difficulty": 1,
+      "tags": [
+        "history"
+      ],
+      "fact": "The speech was delivered in 1963 to over 250,000 people.",
       "source": "https://www.archives.gov/files/press/exhibits/dream-speech.pdf",
-      "opponents": ["Malcolm X", "Nelson Mandela", "Barack Obama"],
-      "image": "assets/images/mlk.jpg"
+      "opponents": [
+        "Malcolm X",
+        "Nelson Mandela",
+        "Barack Obama"
+      ]
     },
     {
       "quote": "That's one small step for man, one giant leap for mankind.",
       "author": "Neil Armstrong",
-      "source": "https://www.nasa.gov/mission_pages/apollo/apollo11.html",
-      "opponents": ["Buzz Aldrin", "Yuri Gagarin", "John Glenn"],
-      "image": "assets/images/armstrong.jpg"
+      "difficulty": 1,
+      "tags": [
+        "science"
+      ],
+      "fact": "The quote was spoken on July 20, 1969 during Apollo 11.",
+      "source": "https://history.nasa.gov/ap11ann/firststep.html",
+      "opponents": [
+        "Buzz Aldrin",
+        "Yuri Gagarin",
+        "John Glenn"
+      ]
     },
     {
       "quote": "The only thing we have to fear is fear itself.",
       "author": "Franklin D. Roosevelt",
-      "source": "https://www.loc.gov/item/afccal000483/",
-      "opponents": ["Winston Churchill", "Theodore Roosevelt", "Harry Truman"],
-      "image": "assets/images/fdr.jpg"
+      "difficulty": 1,
+      "tags": [
+        "history"
+      ],
+      "fact": "This line opened Roosevelt's 1933 inaugural speech.",
+      "source": "https://www.presidency.ucsb.edu/documents/inaugural-address-1933",
+      "opponents": [
+        "Winston Churchill",
+        "Theodore Roosevelt",
+        "Harry Truman"
+      ]
     },
     {
       "quote": "I think, therefore I am.",
       "author": "René Descartes",
+      "difficulty": 1,
+      "tags": [
+        "philosophy"
+      ],
+      "fact": "Originally written in Latin: Cogito, ergo sum.",
       "source": "https://plato.stanford.edu/entries/descartes/",
-      "opponents": ["Immanuel Kant", "Jean-Paul Sartre", "Friedrich Nietzsche"],
-      "image": "assets/images/descartes.jpg"
+      "opponents": [
+        "Immanuel Kant",
+        "Friedrich Nietzsche",
+        "Jean-Paul Sartre"
+      ]
     },
     {
-      "quote": "Be the change that you wish to see in the world.",
-      "author": "Mahatma Gandhi",
-      "source": "https://www.gandhiheritageportal.org/",
-      "opponents": ["Mother Teresa", "Dalai Lama", "Nelson Mandela"],
-      "image": "assets/images/gandhi.jpg"
+      "quote": "Stay hungry. Stay foolish.",
+      "author": "Steve Jobs",
+      "difficulty": 2,
+      "tags": [
+        "technology"
+      ],
+      "fact": "Jobs used this phrase in his famous Stanford speech.",
+      "source": "https://news.stanford.edu/stories/2005/06/youve-got-find-what-you-love-jobs-says",
+      "opponents": [
+        "Bill Gates",
+        "Elon Musk",
+        "Mark Zuckerberg"
+      ]
     },
     {
       "quote": "In the future, everyone will be world-famous for 15 minutes.",
       "author": "Andy Warhol",
-      "source": "https://www.moma.org/artists/6246",
-      "opponents": ["Pablo Picasso", "Salvador Dalí", "Marcel Duchamp"],
-      "image": "assets/images/warhol.jpg"
+      "difficulty": 2,
+      "tags": [
+        "culture"
+      ],
+      "fact": "Warhol predicted influencer culture decades early.",
+      "source": "https://www.tate.org.uk/art/artists/andy-warhol-2121",
+      "opponents": [
+        "Salvador Dalí",
+        "Pablo Picasso",
+        "Marcel Duchamp"
+      ]
     },
     {
-      "quote": "The only way to do great work is to love what you do.",
-      "author": "Steve Jobs",
-      "source": "https://news.stanford.edu/2005/06/14/jobs-061505/",
-      "opponents": ["Bill Gates", "Elon Musk", "Mark Zuckerberg"],
-      "image": "assets/images/jobs.jpg"
+      "quote": "Knowledge is power.",
+      "author": "Francis Bacon",
+      "difficulty": 3,
+      "tags": [
+        "philosophy"
+      ],
+      "fact": "Often misattributed to Thomas Hobbes.",
+      "source": "https://plato.stanford.edu/entries/francis-bacon/",
+      "opponents": [
+        "Thomas Hobbes",
+        "John Locke",
+        "Voltaire"
+      ]
+    },
+    {
+      "quote": "If you judge people, you have no time to love them.",
+      "author": "Mother Teresa",
+      "difficulty": 2,
+      "tags": [
+        "inspiration"
+      ],
+      "fact": "She received the Nobel Peace Prize in 1979.",
+      "source": "https://www.nobelprize.org/prizes/peace/1979/teresa/biographical/",
+      "opponents": [
+        "Dalai Lama",
+        "Nelson Mandela",
+        "Desmond Tutu"
+      ]
+    },
+    {
+      "quote": "Life is what happens when you're busy making other plans.",
+      "author": "John Lennon",
+      "difficulty": 2,
+      "tags": [
+        "music"
+      ],
+      "fact": "Appeared in the song Beautiful Boy.",
+      "source": "https://www.beatlesbible.com/people/john-lennon/",
+      "opponents": [
+        "Paul McCartney",
+        "Bob Dylan",
+        "Freddie Mercury"
+      ]
+    },
+    {
+      "quote": "Imagination is more important than knowledge.",
+      "author": "Albert Einstein",
+      "difficulty": 1,
+      "tags": [
+        "science"
+      ],
+      "fact": "Einstein believed creativity drives discovery.",
+      "source": "https://einsteinpapers.press.princeton.edu/",
+      "opponents": [
+        "Isaac Newton",
+        "Nikola Tesla",
+        "Stephen Hawking"
+      ]
+    },
+    {
+      "quote": "Man is condemned to be free.",
+      "author": "Jean-Paul Sartre",
+      "difficulty": 4,
+      "tags": [
+        "philosophy"
+      ],
+      "fact": "From his existentialist work 'Being and Nothingness'.",
+      "source": "https://plato.stanford.edu/entries/sartre/",
+      "opponents": [
+        "Albert Camus",
+        "Simone de Beauvoir",
+        "Friedrich Nietzsche"
+      ]
+    },
+    {
+      "quote": "If I have seen further it is by standing on the shoulders of giants.",
+      "author": "Isaac Newton",
+      "difficulty": 2,
+      "tags": [
+        "science"
+      ],
+      "fact": "Written in a 1675 letter to Robert Hooke.",
+      "source": "https://royalsociety.org/",
+      "opponents": [
+        "Galileo Galilei",
+        "Albert Einstein",
+        "Johannes Kepler"
+      ]
+    },
+    {
+      "quote": "The unexamined life is not worth living.",
+      "author": "Socrates",
+      "difficulty": 2,
+      "tags": [
+        "philosophy"
+      ],
+      "fact": "Recorded by Plato in Apology.",
+      "source": "https://plato.stanford.edu/entries/socrates/",
+      "opponents": [
+        "Plato",
+        "Aristotle",
+        "Diogenes"
+      ]
+    },
+    {
+      "quote": "Talk is cheap. Show me the code.",
+      "author": "Linus Torvalds",
+      "difficulty": 2,
+      "tags": [
+        "technology"
+      ],
+      "fact": "Torvalds created Linux in 1991.",
+      "source": "https://lkml.org/",
+      "opponents": [
+        "Richard Stallman",
+        "Bill Gates",
+        "Dennis Ritchie"
+      ]
     }
   ],
-  "opponents": {
-    "Joseph Stalin": "assets/images/stalin.jpg",
-    "Adolf Hitler": "assets/images/hitler.jpg",
-    "Benito Mussolini": "assets/images/mussolini.jpg",
-    "Malcolm X": "assets/images/malcolmx.jpg",
-    "Nelson Mandela": "assets/images/mandela.jpg",
-    "Barack Obama": "assets/images/obama.jpg",
-    "Buzz Aldrin": "assets/images/aldrin.jpg",
-    "Yuri Gagarin": "assets/images/gagarin.jpg",
-    "John Glenn": "assets/images/glenn.jpg",
-    "Winston Churchill": "assets/images/churchill.jpg",
-    "Theodore Roosevelt": "assets/images/teddy.jpg",
-    "Harry Truman": "assets/images/truman.jpg",
-    "Immanuel Kant": "assets/images/kant.jpg",
-    "Jean-Paul Sartre": "assets/images/sartre.jpg",
-    "Friedrich Nietzsche": "assets/images/nietzsche.jpg",
-    "Mother Teresa": "assets/images/teresa.jpg",
-    "Dalai Lama": "assets/images/dalai.jpg",
-    "Pablo Picasso": "assets/images/picasso.jpg",
-    "Salvador Dalí": "assets/images/dali.jpg",
-    "Marcel Duchamp": "assets/images/duchamp.jpg",
-    "Bill Gates": "assets/images/gates.jpg",
-    "Elon Musk": "assets/images/musk.jpg",
-    "Mark Zuckerberg": "assets/images/zuckerberg.jpg"
+  "people": {
+    "Adolf Hitler": "https://upload.wikimedia.org/wikipedia/commons/8/8c/Adolf_Hitler_1935.jpg",
+    "Albert Camus": "https://upload.wikimedia.org/wikipedia/commons/d/d1/Albert_Camus%2C_gognac%2C_1957.jpg",
+    "Albert Einstein": "https://upload.wikimedia.org/wikipedia/commons/d/d3/Albert_Einstein_Head.jpg",
+    "Andy Warhol": "https://upload.wikimedia.org/wikipedia/commons/a/a2/Andy_Warhol_1975.jpg",
+    "Aristotle": "https://upload.wikimedia.org/wikipedia/commons/1/11/Aristotle_Altemps_Inv8575.jpg",
+    "Barack Obama": "https://upload.wikimedia.org/wikipedia/commons/8/8d/Barack_Obama_2012_portrait.jpg",
+    "Benito Mussolini": "https://upload.wikimedia.org/wikipedia/commons/2/2c/Benito_Mussolini_1920s.jpg",
+    "Bill Gates": "https://upload.wikimedia.org/wikipedia/commons/a/a0/Bill_Gates_2018.jpg",
+    "Bob Dylan": "https://upload.wikimedia.org/wikipedia/commons/3/35/Bob_Dylan_-_Malibu_1986.jpg",
+    "Buzz Aldrin": "https://upload.wikimedia.org/wikipedia/commons/9/9c/Buzz_Aldrin.jpg",
+    "Dalai Lama": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Dalai_Lama_2012.jpg",
+    "Dennis Ritchie": "https://upload.wikimedia.org/wikipedia/commons/2/23/Dennis_Ritchie_2011.jpg",
+    "Desmond Tutu": "https://upload.wikimedia.org/wikipedia/commons/1/1c/Desmond_Tutu_2008.jpg",
+    "Diogenes": "https://upload.wikimedia.org/wikipedia/commons/0/0a/Diogenes_Louvre.jpg",
+    "Donald Trump": "https://upload.wikimedia.org/wikipedia/commons/5/56/Donald_Trump_official_portrait.jpg",
+    "Elon Musk": "https://upload.wikimedia.org/wikipedia/commons/e/e8/Elon_Musk_Royal_Society.jpg",
+    "Francis Bacon": "https://upload.wikimedia.org/wikipedia/commons/a/a6/Francis_Bacon_1_6.jpg",
+    "Franklin D. Roosevelt": "https://upload.wikimedia.org/wikipedia/commons/6/6d/FDR_in_1933.jpg",
+    "Freddie Mercury": "https://upload.wikimedia.org/wikipedia/commons/d/d8/Freddie_Mercury_1975.jpg",
+    "Friedrich Nietzsche": "https://upload.wikimedia.org/wikipedia/commons/1/1b/Friedrich_Nietzsche_1882.jpg",
+    "Galileo Galilei": "https://upload.wikimedia.org/wikipedia/commons/d/d2/Galileo_Galilei.jpg",
+    "Harry Truman": "https://upload.wikimedia.org/wikipedia/commons/5/5c/Harry_S._Truman.jpg",
+    "Immanuel Kant": "https://upload.wikimedia.org/wikipedia/commons/4/4a/Immanuel_Kant_%28painted_portrait%29.jpg",
+    "Isaac Newton": "https://upload.wikimedia.org/wikipedia/commons/d/d4/Sir_Isaac_Newton.jpg",
+    "Jean-Paul Sartre": "https://upload.wikimedia.org/wikipedia/commons/6/6e/Jean-Paul_Sartre_1965.jpg",
+    "Johannes Kepler": "https://upload.wikimedia.org/wikipedia/commons/4/48/Johannes_Kepler_1627.jpg",
+    "John Glenn": "https://upload.wikimedia.org/wikipedia/commons/7/7c/John_Glenn.jpg",
+    "John Lennon": "https://upload.wikimedia.org/wikipedia/commons/a/ac/John_Lennon_1969.jpg",
+    "John Locke": "https://upload.wikimedia.org/wikipedia/commons/d/d4/John_Locke-white.jpg",
+    "Joseph Stalin": "https://upload.wikimedia.org/wikipedia/commons/6/6c/Joseph_Stalin_in_1936.jpg",
+    "Linus Torvalds": "https://upload.wikimedia.org/wikipedia/commons/0/01/Linus_Torvalds.jpeg",
+    "Malcolm X": "https://upload.wikimedia.org/wikipedia/commons/6/66/Malcolm_X_NYWTS_2.jpg",
+    "Marcel Duchamp": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Marcel_Duchamp_1967.jpg",
+    "Mark Zuckerberg": "https://upload.wikimedia.org/wikipedia/commons/0/0b/Mark_Zuckerberg_F8_2019_Keynote_%28cropped%29.jpg",
+    "Martin Luther King Jr.": "https://upload.wikimedia.org/wikipedia/commons/2/24/Martin_Luther_King_Jr_NYWTS.jpg",
+    "Mother Teresa": "https://upload.wikimedia.org/wikipedia/commons/6/6c/Mother_Teresa_1986.jpg",
+    "Neil Armstrong": "https://upload.wikimedia.org/wikipedia/commons/9/9e/Neil_Armstrong_pose.jpg",
+    "Nelson Mandela": "https://upload.wikimedia.org/wikipedia/commons/0/0c/Nelson_Mandela-2008.jpg",
+    "Nikola Tesla": "https://upload.wikimedia.org/wikipedia/commons/d/d4/N.Tesla.jpg",
+    "Pablo Picasso": "https://upload.wikimedia.org/wikipedia/commons/9/99/Pablo_picasso_1.jpg",
+    "Paul McCartney": "https://upload.wikimedia.org/wikipedia/commons/3/37/Paul_McCartney_2012.jpg",
+    "Plato": "https://upload.wikimedia.org/wikipedia/commons/8/88/Plato_Silanion_Musei_Capitolini.jpg",
+    "René Descartes": "https://upload.wikimedia.org/wikipedia/commons/6/f/Frans_Hals_-_Portret_van_Ren%C3%A9_Descartes.jpg",
+    "Richard Stallman": "https://upload.wikimedia.org/wikipedia/commons/4/4a/Richard_Stallman_2019_%28cropped%29.jpg",
+    "Salvador Dalí": "https://upload.wikimedia.org/wikipedia/commons/6/c/Salvador_Dal%C3%AD_1939.jpg",
+    "Simone de Beauvoir": "https://upload.wikimedia.org/wikipedia/commons/1/1b/Simone_de_Beauvoir%2C_1948.jpg",
+    "Socrates": "https://upload.wikimedia.org/wikipedia/commons/a/a4/Socrates_Louvre.jpg",
+    "Stephen Hawking": "https://upload.wikimedia.org/wikipedia/commons/8/8f/Stephen_Hawking.StarChild.jpg",
+    "Steve Jobs": "https://upload.wikimedia.org/wikipedia/commons/8/8d/Steve_Jobs_Headshot_2010-CROP.jpg",
+    "Theodore Roosevelt": "https://upload.wikimedia.org/wikipedia/commons/1/19/Theodore_Roosevelt_cph.3a53236.jpg",
+    "Thomas Hobbes": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Thomas_Hobbes_%28portrait%29.jpg",
+    "Voltaire": "https://upload.wikimedia.org/wikipedia/commons/a/a3/Francois_Marie_Arouet_Voltaire_Houdon.jpg",
+    "Winston Churchill": "https://upload.wikimedia.org/wikipedia/commons/1/1e/Sir_Winston_Churchill_-_19086236948.jpg",
+    "Yuri Gagarin": "https://upload.wikimedia.org/wikipedia/commons/6/6f/Yuri_Gagarin_1961.jpg"
   }
 }

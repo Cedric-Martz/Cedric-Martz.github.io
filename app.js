@@ -21,7 +21,7 @@ async function loadData() {
     gameData = await response.json();
     quotes = gameData.quotes;
     translations = gameData.translations;
-    opponentImages = gameData.opponents;
+    opponentImages = gameData.people;
     updateLanguage();
   } catch (error) {
     console.error('Error loading data:', error);
@@ -88,7 +88,7 @@ function loadNewQuote() {
     source: randomQuote.source,
     correct: {
       name: randomQuote.author,
-      image: randomQuote.image,
+      image: opponentImages[randomQuote.author],
       position: correctPosition
     },
     incorrect: {
@@ -103,7 +103,7 @@ function loadNewQuote() {
 
 // Get opponent image
 function getOpponentImage(name) {
-  return opponentImages[name] || 'assets/images/placeholder.jpg';
+  return opponentImages[name] || 'https://upload.wikimedia.org/wikipedia/commons/6/65/No_image_available_400_x_400.svg';
 }
 
 // Render quote
