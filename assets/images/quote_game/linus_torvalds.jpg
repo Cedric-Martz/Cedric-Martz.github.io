@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html class="client-nojs vector-feature-language-in-header-disabled vector-feature-language-in-main-page-header-disabled vector-feature-page-tools-pinned-disabled vector-feature-toc-pinned-clientpref-1 vector-feature-main-menu-pinned-disabled vector-feature-limited-width-clientpref-1 vector-feature-limited-width-content-disabled vector-feature-custom-font-size-clientpref--excluded vector-feature-appearance-pinned-clientpref-1 skin-theme-clientpref-day vector-sticky-header-enabled vector-toc-not-available skin-theme-clientpref-thumb-standard" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<title>Search results for "Linus Torvalds" - Wikimedia Commons</title>
+<script>(function(){var className="client-js vector-feature-language-in-header-disabled vector-feature-language-in-main-page-header-disabled vector-feature-page-tools-pinned-disabled vector-feature-toc-pinned-clientpref-1 vector-feature-main-menu-pinned-disabled vector-feature-limited-width-clientpref-1 vector-feature-limited-width-content-disabled vector-feature-custom-font-size-clientpref--excluded vector-feature-appearance-pinned-clientpref-1 skin-theme-clientpref-day vector-sticky-header-enabled vector-toc-not-available skin-theme-clientpref-thumb-standard";var cookie=document.cookie.match(/(?:^|; )commonswikimwclientpreferences=([^;]+)/);if(cookie){cookie[1].split('%2C').forEach(function(pref){className=className.replace(new RegExp('(^| )'+pref.replace(/-clientpref-\w+$|[^\w-]+/g,'')+'-clientpref-\\w+( |$)'),'$1'+pref+'$2');});}document.documentElement.className=className;}());RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"14ea29f1-f9a7-4541-80de-6620c0c2155a","wgCanonicalNamespace":"Special","wgCanonicalSpecialPageName":"Search","wgNamespaceNumber":-1,"wgPageName":"Special:Search","wgTitle":"Search","wgCurRevisionId":0,"wgRevisionId":0,"wgArticleId":0,"wgIsArticle":false,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgPageViewLanguage":"en","wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"Special:Search","wgRelevantArticleId":0,"wgTempUserName":null,"wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgNoticeProject":"commons","wgMediaViewerOnClick":true,"wgMediaViewerEnabledByDefault":false,"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","pageVariantFallbacks":"en"},"wgMFDisplayWikibaseDescriptions":{"search":true,"watchlist":true,"tagline":true,"nearby":true},"wgWMESchemaEditAttemptStepOversample":false,"wgWMEPageLength":0,"advancedSearch.mimeTypes":{"tiff":"image/tiff","png":"image/png","gif":"image/gif","jpg":"image/jpeg","webp":"image/webp","xcf":"image/x-xcf","pdf":"application/pdf","mid":"audio/midi","ogg":"application/ogg","svg":"image/svg+xml","djvu":"image/vnd.djvu","stl":"application/sla","flac":"audio/x-flac","wav":"audio/x-wav","webm":"video/webm","mp3":"audio/mpeg","mpg":"video/mpeg"},"advancedSearch.tooltips":{"advancedsearch-help-plain":"\u003Cdl\u003E\u003Cdt\u003EDescription\u003C/dt\u003E\n\u003Cdd\u003ESearches for these words in the title or text.\u003C/dd\u003E\n\u003Cdt\u003EBe aware of the following\u003C/dt\u003E\n\u003Cdd\u003E\n\u003Cul\u003E\u003Cli\u003EMultiple words can be entered here.\u003C/li\u003E\n\u003Cli\u003EPunctuation marks and other non-alphanumeric characters (with exception of the colon and comma) will be ignored.\u003C/li\u003E\n\u003Cli\u003EThere may be results that do not contain one or more of your search terms.\u003C/li\u003E\n\u003Cli\u003EWord stemming is applied. Example: If \u003Ci\u003Ecar\u003C/i\u003E is entered, the search will also consider \u003Ci\u003Ecars\u003C/i\u003E. The word stemming is language-specific.\u003C/li\u003E\u003C/ul\u003E\u003C/dd\u003E\u003C/dl\u003E\n\u003Cdl\u003E\u003Cdt\u003EHelp page\u003C/dt\u003E\n\u003Cdd\u003E\u003Ca class=\"external text\" href=\"https://www.mediawiki.org/wiki/Special:MyLanguage/Help:CirrusSearch#Full_text_search\"\u003EFull text search\u003C/a\u003E\u003C/dd\u003E\n\u003Cdt\u003ESyntax-equivalent in the normal search\u003C/dt\u003E\n\u003Cdd\u003E\u003Ccode\u003Esesame street car\u003C/code\u003E\u003C/dd\u003E\u003C/dl\u003E","advancedsearch-help-phrase":"\u003Cdl\u003E\u003Cdt\u003EDescription\u003C/dt\u003E\n\u003Cdd\u003ESearches for a specific sequence of characters. Punctuation marks are ignored.\u003C/dd\u003E\n\u003Cdt\u003EBe aware of the following\u003C/dt\u003E\n\u003Cdd\u003E(only valid when using quotation marks, see example below)\n\u003Cul\u003E\u003Cli\u003ESeparate the search phrases by comma or space e.g. \u003Ccode\u003E\"good morning\"\u003C/code\u003E, \u003Ccode\u003E\"hello friend!\"\u003C/code\u003E.\u003C/li\u003E\n\u003Cli\u003EPunctuation marks and other non-alphanumeric characters (with exception of the colon and comma) will be ignored.\u003C/li\u003E\n\u003Cli\u003ESearch is not case-sensitive.\u003C/li\u003E\n\u003Cli\u003EWord stemming is not applied.\u003C/li\u003E\u003C/ul\u003E\u003C/dd\u003E\u003C/dl\u003E\n\u003Cdl\u003E\u003Cdt\u003EHelp page\u003C/dt\u003E\n\u003Cdd\u003E\u003Ca class=\"external text\" href=\"https://www.mediawiki.org/wiki/Special:MyLanguage/Help:CirrusSearch#Words.2C_phrases.2C_and_modifiers\"\u003EWords, phrases, and modifiers\u003C/a\u003E\u003C/dd\u003E\n\u003Cdt\u003ESyntax-equivalent in the normal search\u003C/dt\u003E\n\u003Cdd\u003EWords in quotation marks, for example \u003Ccode\u003E\"Begin at the beginning\"\u003C/code\u003E.\u003C/dd\u003E\u003C/dl\u003E","advancedsearch-help-or":"\u003Cdl\u003E\u003Cdt\u003EDescription\u003C/dt\u003E\n\u003Cdd\u003EAt least one of the search terms has to be included in the page.\u003C/dd\u003E\n\u003Cdt\u003EHelp page\u003C/dt\u003E\n\u003Cdd\u003E\u003Ca class=\"external text\" href=\"https://www.mediawiki.org/wiki/Special:MyLanguage/Help:CirrusSearch#Words.2C_phrases.2C_and_modifiers\"\u003EWords, phrases, and modifiers\u003C/a\u003E\u003C/dd\u003E\n\u003Cdt\u003ESyntax-equivalent in the normal search\u003C/dt\u003E\n\u003Cdd\u003EWords with \u003Ccode\u003EOR\u003C/code\u003E in between them like \u003Ccode\u003ELaptop OR Notebook\u003C/code\u003E.\u003C/dd\u003E\u003C/dl\u003E","advancedsearch-help-not":"\u003Cdl\u003E\u003Cdt\u003EDescription\u003C/dt\u003E\n\u003Cdd\u003EExcludes pages containing these words from the search.\u003C/dd\u003E\n\u003Cdt\u003EBe aware of the following\u003C/dt\u003E\n\u003Cdd\u003E\n\u003Cul\u003E\u003Cli\u003EWord stemming is applied. Example: If \u003Ci\u003Ecar\u003C/i\u003E is entered, the search will also consider \u003Ci\u003Ecars\u003C/i\u003E. The word stemming is language-specific.\u003C/li\u003E\u003C/ul\u003E\u003C/dd\u003E\u003C/dl\u003E\n\u003Cdl\u003E\u003Cdt\u003EHelp page\u003C/dt\u003E\n\u003Cdd\u003E\u003Ca class=\"external text\" href=\"https://www.mediawiki.org/wiki/Special:MyLanguage/Help:CirrusSearch#Words.2C_phrases.2C_and_modifiers\"\u003EWords, phrases, and modifiers\u003C/a\u003E\u003C/dd\u003E\n\u003Cdt\u003ESyntax-equivalent in the normal search\u003C/dt\u003E\n\u003Cdd\u003EWords with \u003Ccode\u003E-\u003C/code\u003E before them, for example \u003Ccode\u003E-elephant\u003C/code\u003E.\u003C/dd\u003E\u003C/dl\u003E","advancedsearch-help-incategory":"\u003Cdl\u003E\u003Cdt\u003EDescription\u003C/dt\u003E\n\u003Cdd\u003ESearches for pages that are in these categories.\u003C/dd\u003E\n\u003Cdt\u003EBe aware of the following\u003C/dt\u003E\n\u003Cdd\u003E\n\u003Cul\u003E\u003Cli\u003EPages in subcategories will not be included in your search.\u003C/li\u003E\n\u003Cli\u003EThe number of categories is limited to 256.\u003C/li\u003E\n\u003Cli\u003EYou can look for pages in multiple categories.\u003C/li\u003E\u003C/ul\u003E\u003C/dd\u003E\u003C/dl\u003E\n\u003Cdl\u003E\u003Cdt\u003EHelp page\u003C/dt\u003E\n\u003Cdd\u003E\u003Ca class=\"external text\" href=\"https://www.mediawiki.org/wiki/Special:MyLanguage/Help:CirrusSearch#Intitle_and_incategory\"\u003EIncategory\u003C/a\u003E\u003C/dd\u003E\n\u003Cdt\u003ESyntax-equivalent in the normal search\u003C/dt\u003E\n\u003Cdd\u003E\u003Ccode\u003Eincategory:\u003C/code\u003E followed by a category name like \u003Ccode\u003Eincategory:Help\u003C/code\u003E. Use double quotes if the name contains spaces: \u003Ccode\u003Eincategory:\"Hidden categories\"\u003C/code\u003E.\u003C/dd\u003E\u003C/dl\u003E","advancedsearch-help-deepcategory":"\u003Cdl\u003E\u003Cdt\u003EDescription\u003C/dt\u003E\n\u003Cdd\u003ESearches for pages that are in these categories and subcategories.\u003C/dd\u003E\n\u003Cdt\u003EBe aware of the following\u003C/dt\u003E\n\u003Cdd\u003E\n\u003Cul\u003E\u003Cli\u003EOnly the first 5 subcategory levels will be included in your search.\u003C/li\u003E\n\u003Cli\u003EThe number of categories is limited to 256.\u003C/li\u003E\n\u003Cli\u003EYou can look for pages in multiple categories.\u003C/li\u003E\u003C/ul\u003E\u003C/dd\u003E\u003C/dl\u003E\n\u003Cdl\u003E\u003Cdt\u003EHelp page\u003C/dt\u003E\n\u003Cdd\u003E\u003Ca class=\"external text\" href=\"https://www.mediawiki.org/wiki/Special:MyLanguage/Help:CirrusSearch#Deepcategory\"\u003EDeepcategory\u003C/a\u003E\u003C/dd\u003E\n\u003Cdt\u003ESyntax-equivalent in the normal search\u003C/dt\u003E\n\u003Cdd\u003E\u003Ccode\u003Edeepcategory:\u003C/code\u003E followed by a category name like \u003Ccode\u003Edeepcategory:Help\u003C/code\u003E. Use double quotes if the name contains spaces: \u003Ccode\u003Edeepcategory:\"Hidden categories\"\u003C/code\u003E.\u003C/dd\u003E\u003C/dl\u003E","advancedsearch-help-hastemplate":"\u003Cdl\u003E\u003Cdt\u003EDescription\u003C/dt\u003E\n\u003Cdd\u003ESearches for pages that contain exactly these templates.\u003C/dd\u003E\n\u003Cdt\u003EBe aware of the following\u003C/dt\u003E\n\u003Cdd\u003E\n\u003Cul\u003E\u003Cli\u003EYou can find transcluded templates (templates consisting of other templates).\u003C/li\u003E\n\u003Cli\u003EThe autosuggest function can only find templates which start the same way as your search e.g. a search for \u003Ccode\u003E\"com...\"\u003C/code\u003E will suggest \u003Ci\u003E\"commons\"\u003C/i\u003E but not \u003Ci\u003E\"nowcommons\"\u003C/i\u003E.\u003C/li\u003E\u003C/ul\u003E\u003C/dd\u003E\u003C/dl\u003E\n\u003Cdl\u003E\u003Cdt\u003EHelp page\u003C/dt\u003E\n\u003Cdd\u003E\u003Ca class=\"external text\" href=\"https://www.mediawiki.org/wiki/Special:MyLanguage/Help:CirrusSearch#Hastemplate\"\u003EHastemplate\u003C/a\u003E\u003C/dd\u003E\n\u003Cdt\u003ESyntax-equivalent in the normal search\u003C/dt\u003E\n\u003Cdd\u003EWords in quotation marks with \u003Ccode\u003Ehastemplate:\u003C/code\u003E before them like \u003Ccode\u003Ehastemplate:\"missing information\"\u003C/code\u003E.\u003C/dd\u003E\u003C/dl\u003E","advancedsearch-help-inlanguage":"\u003Cdl\u003E\u003Cdt\u003EDescription\u003C/dt\u003E\n\u003Cdd\u003EWill only search in the language you choose.\u003C/dd\u003E\n\u003Cdt\u003EBe aware of the following\u003C/dt\u003E\n\u003Cdd\u003E\n\u003Cul\u003E\u003Cli\u003EYou can only search for pages in one language.\u003C/li\u003E\n\u003Cli\u003EThis field will only be visible in wikis that have the translatewiki extension enabled.\u003C/li\u003E\u003C/ul\u003E\u003C/dd\u003E\u003C/dl\u003E\n\u003Cdl\u003E\u003Cdt\u003EHelp page\u003C/dt\u003E\n\u003Cdd\u003E\u003Ca class=\"external text\" href=\"https://www.mediawiki.org/wiki/Special:MyLanguage/Help:CirrusSearch#Inlanguage\"\u003EInlanguage\u003C/a\u003E\u003C/dd\u003E\n\u003Cdt\u003ESyntax-equivalent in the normal search\u003C/dt\u003E\n\u003Cdd\u003E\u003Ccode\u003Einlanguage:\u003C/code\u003E followed by a language code like \u003Ccode\u003Einlanguage:es\u003C/code\u003E. You can exclude languages by adding a \u003Ccode\u003E-\u003C/code\u003E in front of the keyword e.g. \u003Ccode\u003E-inlanguage:en\u003C/code\u003E.\u003C/dd\u003E\u003C/dl\u003E","advancedsearch-help-intitle":"\u003Cdl\u003E\u003Cdt\u003EDescription\u003C/dt\u003E\n\u003Cdd\u003ESearches for pages with titles that contain this word\u003C/dd\u003E\n\u003Cdt\u003EBe aware of the following\u003C/dt\u003E\n\u003Cdd\u003E\n\u003Cul\u003E\u003Cli\u003EThe search includes redirects.\u003C/li\u003E\n\u003Cli\u003EWord stemming is applied. Example: If \u003Ci\u003Ecar\u003C/i\u003E is entered, the search will also consider \u003Ci\u003Ecars\u003C/i\u003E. The word stemming is language-specific.\u003C/li\u003E\u003C/ul\u003E\u003C/dd\u003E\u003C/dl\u003E\n\u003Cdl\u003E\u003Cdt\u003EHelp page\u003C/dt\u003E\n\u003Cdd\u003E\u003Ca class=\"external text\" href=\"https://www.mediawiki.org/wiki/Special:MyLanguage/Help:CirrusSearch#Intitle_and_incategory\"\u003EIntitle and incategory\u003C/a\u003E\u003C/dd\u003E\n\u003Cdt\u003ESyntax-equivalent in the normal search\u003C/dt\u003E\n\u003Cdd\u003EWords with \u003Ccode\u003Eintitle:\u003C/code\u003E before them like \u003Ccode\u003Eintitle:queen\u003C/code\u003E.\u003C/dd\u003E\u003C/dl\u003E","advancedsearch-help-subpageof":"\u003Cdl\u003E\u003Cdt\u003EDescription\u003C/dt\u003E\n\u003Cdd\u003ESearches for pages that are subpages of this page.\u003C/dd\u003E\n\u003Cdt\u003EBe aware of the following\u003C/dt\u003E\n\u003Cdd\u003E\n\u003Cul\u003E\u003Cli\u003EYou can only search for subpages of one page at a time.\u003C/li\u003E\n\u003Cli\u003EDon’t forget to enable the namespaces you want to limit your search to in the namespace filter.\u003C/li\u003E\n\u003Cli\u003EDo not include the namespace in front of the page name like this: \u003Cdel\u003E\u003Ccode\u003ECommons:Redirect\u003C/code\u003E\u003C/del\u003E.\u003C/li\u003E\u003C/ul\u003E\u003C/dd\u003E\u003C/dl\u003E\n\u003Cdl\u003E\u003Cdt\u003EHelp page\u003C/dt\u003E\n\u003Cdd\u003E\u003Ca class=\"external text\" href=\"https://www.mediawiki.org/wiki/Special:MyLanguage/Help:CirrusSearch#subpageof\"\u003ESubpageof\u003C/a\u003E\u003C/dd\u003E\n\u003Cdt\u003ESyntax-equivalent in the normal search\u003C/dt\u003E\n\u003Cdd\u003E\u003Ccode\u003Esubpageof:\u003C/code\u003E followed by a page name like \u003Ccode\u003Esubpageof:Redirect\u003C/code\u003E. Use double quotes if the parent page contains spaces: \u003Ccode\u003Esubpageof:\"Requests for comment\"\u003C/code\u003E.\u003C/dd\u003E\u003C/dl\u003E","advancedsearch-help-filetype":"\u003Cdl\u003E\u003Cdt\u003EDescription\u003C/dt\u003E\n\u003Cdd\u003ESearches only for files of the selected type.\u003C/dd\u003E\n\u003Cdt\u003EBe aware of the following\u003C/dt\u003E\n\u003Cdd\u003E\n\u003Cul\u003E\u003Cli\u003EYou can only search for one file type.\u003C/li\u003E\n\u003Cli\u003EYou can only select the given file types from the drop-down menu.\u003C/li\u003E\u003C/ul\u003E\u003C/dd\u003E\u003C/dl\u003E\n\u003Cdl\u003E\u003Cdt\u003EHelp pages\u003C/dt\u003E\n\u003Cdd\u003E\u003Ca class=\"external text\" href=\"https://www.mediawiki.org/wiki/Special:MyLanguage/Help:CirrusSearch#filetype\"\u003EFiletype\u003C/a\u003E and \u003Ca class=\"external text\" href=\"https://www.mediawiki.org/wiki/Special:MyLanguage/Help:CirrusSearch#filemime\"\u003Efilemime\u003C/a\u003E\u003C/dd\u003E\n\u003Cdt\u003ESyntax-equivalent in the normal search\u003C/dt\u003E\n\u003Cdd\u003EWords with \u003Ccode\u003Efiletype:\u003C/code\u003E before them like \u003Ccode\u003Efiletype:ogg\u003C/code\u003E.\u003C/dd\u003E\u003C/dl\u003E","advancedsearch-help-filew":"\u003Cdl\u003E\u003Cdt\u003EDescription\u003C/dt\u003E\n\u003Cdd\u003EThese fields allow you to specify the width of the file.\u003C/dd\u003E\n\u003Cdt\u003EBe aware of the following\u003C/dt\u003E\n\u003Cdd\u003E\n\u003Cul\u003E\u003Cli\u003EThis is only applicable to file types that have width and height, like videos and images.\u003C/li\u003E\u003C/ul\u003E\u003C/dd\u003E\u003C/dl\u003E\n\u003Cdl\u003E\u003Cdt\u003EHelp page\u003C/dt\u003E\n\u003Cdd\u003E\u003Ca class=\"external text\" href=\"https://www.mediawiki.org/wiki/Special:MyLanguage/Help:CirrusSearch#File_measures\"\u003EFilemeasures\u003C/a\u003E\u003C/dd\u003E\n\u003Cdt\u003ESyntax-equivalent in the normal search\u003C/dt\u003E\n\u003Cdd\u003ENumbers with \u003Ccode\u003Efilew\u003C/code\u003E before them like \u003Ccode\u003Efilew:\u0026gt;800\u003C/code\u003E.\u003C/dd\u003E\u003C/dl\u003E","advancedsearch-help-fileh":"\u003Cdl\u003E\u003Cdt\u003EDescription\u003C/dt\u003E\n\u003Cdd\u003EThese fields allow you to specify the height of the file.\u003C/dd\u003E\n\u003Cdt\u003EBe aware of the following\u003C/dt\u003E\n\u003Cdd\u003E\n\u003Cul\u003E\u003Cli\u003EThis is only applicable to file types that have width and height, like videos and images.\u003C/li\u003E\u003C/ul\u003E\u003C/dd\u003E\u003C/dl\u003E\n\u003Cdl\u003E\u003Cdt\u003EHelp page\u003C/dt\u003E\n\u003Cdd\u003E\u003Ca class=\"external text\" href=\"https://www.mediawiki.org/wiki/Special:MyLanguage/Help:CirrusSearch#File_measures\"\u003EFilemeasures\u003C/a\u003E\u003C/dd\u003E\n\u003Cdt\u003ESyntax-equivalent in the normal search\u003C/dt\u003E\n\u003Cdd\u003ENumbers with \u003Ccode\u003Efileh\u003C/code\u003E before them like \u003Ccode\u003Efileh:\u0026gt;600\u003C/code\u003E.\u003C/dd\u003E\u003C/dl\u003E","advancedsearch-help-sort":"\u003Cdl\u003E\u003Cdt\u003EDescription\u003C/dt\u003E\n\u003Cdd\u003EChange the sorting order of results. The standard is that most relevant pages are placed on top of the results.\u003C/dd\u003E\n\u003Cdt\u003EHelp page\u003C/dt\u003E\n\u003Cdd\u003E\u003Ca class=\"external text\" href=\"https://www.mediawiki.org/wiki/Special:MyLanguage/Help:CirrusSearch#Explicit_sort_orders\"\u003EExplicit sort orders\u003C/a\u003E\u003C/dd\u003E\n\u003Cdt\u003ESyntax-equivalent in the normal search\u003C/dt\u003E\n\u003Cdd\u003EThis feature has no keyword that you can type in the search input field since the function is specified via a parameter in the URL.\u003C/dd\u003E\u003C/dl\u003E"},"advancedSearch.namespacePresets":{"defaultNamespaces":{"enabled":true,"provider":"defaultNamespaces","label":"advancedsearch-namespaces-preset-default"},"discussion":{"enabled":true,"provider":"discussion","label":"advancedsearch-namespaces-preset-discussion"},"generalHelp":{"enabled":true,"namespaces":["4","12"],"label":"advancedsearch-namespaces-preset-general-help"},"all":{"enabled":true,"provider":"all","label":"advancedsearch-namespaces-preset-all"}},"advancedSearch.deepcategoryEnabled":true,"advancedSearch.searchableNamespaces":{"0":"(Gallery)","1":"Talk","2":"User","3":"User talk","4":"Commons","5":"Commons talk","6":"File","7":"File talk","8":"MediaWiki","9":"MediaWiki talk","10":"Template","11":"Template talk","12":"Help","13":"Help talk","14":"Category","15":"Category talk","100":"Creator","101":"Creator talk","102":"TimedText","103":"TimedText talk","104":"Sequence","105":"Sequence talk","106":"Institution","107":"Institution talk","460":"Campaign","461":"Campaign talk","486":"Data","487":"Data talk","828":"Module","829":"Module talk","1198":"Translations","1199":"Translations talk","1728":"Event","1729":"Event talk"},"advancedSearch.languages":{"aa":"Qafár af","aae":"Arbërisht","ab":"аԥсшәа","abr":"Abron","abs":"bahasa ambon","ace":"Acèh","acf":"Kwéyòl Sent Lisi","acm":"عراقي","ady":"адыгабзэ","ady-cyrl":"адыгабзэ","aeb":"تونسي / Tûnsî","aeb-arab":"تونسي","aeb-latn":"Tûnsî","af":"Afrikaans","agq":"Aghem","aig":"Aanteegan an' Baabyuudan","ak":"Akan","aln":"Gegë","als":"Alemannisch","alt":"алтай тил","am":"አማርኛ","ami":"Pangcah","an":"aragonés","ang":"Ænglisc","ann":"Obolo","anp":"अंगिका","apc":"شامي","ar":"العربية","arc":"ܐܪܡܝܐ","arn":"mapudungun","arq":"جازايرية","ary":"الدارجة","arz":"مصرى","as":"অসমীয়া","ase":"American sign language","ast":"asturianu","atj":"Atikamekw","av":"авар","avk":"Kotava","awa":"अवधी","ay":"Aymar aru","az":"azərbaycanca","azb":"تۆرکجه","ba":"башҡортса","bag":"Tuki","ban":"Basa Bali","ban-bali":"ᬩᬲᬩᬮᬶ","bar":"Boarisch","bas":"Basaa","bat-smg":"žemaitėška","bax":"Bamum","bbc":"Batak Toba","bbc-latn":"Batak Toba","bbj":"Ghomála'","bcc":"جهلسری بلوچی","bci":"wawle","bcl":"Bikol Central","bdr":"Bajau Sama","be":"беларуская","be-tarask":"беларуская (тарашкевіца)","be-x-old":"беларуская (тарашкевіца)","bew":"Betawi","bfd":"Bafut","bfw":"ରେମସାମ୍","bg":"български","bgc":"हरियाणवी","bgn":"روچ کپتین بلوچی","bh":"भोजपुरी","bho":"भोजपुरी","bi":"Bislama","bjn":"Banjar","bkc":"Baka","bkh":"Bakoko","bkm":"Kom","blk":"ပအိုဝ်ႏဘာႏသာႏ","bm":"bamanankan","bn":"বাংলা","bo":"བོད་ཡིག","bol":"bòo pìkkà","bpy":"বিষ্ণুপ্রিয়া মণিপুরী","bqi":"بختیاری","bqz":"Mka'a","br":"brezhoneg","brh":"Bráhuí","bs":"bosanski","btm":"Batak Mandailing","bto":"Iriga Bicolano","bug":"Basa Ugi","bug-bugi":"ᨅᨔ ᨕᨘᨁᨗ","bxr":"буряад","byv":"Medumba","ca":"català","cak":"Kaqchikel","cal":"Carolinian","cbk-zam":"Chavacano de Zamboanga","ccp":"𑄌𑄋𑄴𑄟𑄳𑄦","cdo":"閩東語 / Mìng-dĕ̤ng-ngṳ̄","cdo-hant":"閩東語（傳統漢字）","cdo-latn":"Mìng-dĕ̤ng-ngṳ̄ (Bàng-uâ-cê)","ce":"нохчийн","ceb":"Cebuano","ch":"Chamoru","chn":"chinuk wawa","cho":"Chahta anumpa","chr":"ᏣᎳᎩ","chy":"Tsetsêhestâhese","ckb":"کوردی","cnh":"Hakha Chin","co":"corsu","cop":"ϯⲙⲉⲧⲣⲉⲙⲛ̀ⲭⲏⲙⲓ","cps":"Capiceño","cpx":"莆仙語 / Pó-sing-gṳ̂","cpx-hans":"莆仙语（简体）","cpx-hant":"莆仙語（繁體）","cpx-latn":"Pó-sing-gṳ̂ (Báⁿ-uā-ci̍)","cr":"Nēhiyawēwin / ᓀᐦᐃᔭᐍᐏᐣ","crh":"qırımtatarca","crh-cyrl":"къырымтатарджа (Кирилл)","crh-latn":"qırımtatarca (Latin)","crh-ro":"tatarşa","cs":"čeština","csb":"kaszëbsczi","cu":"словѣньскъ / ⰔⰎⰑⰂⰡⰐⰠⰔⰍⰟ","cv":"чӑвашла","cy":"Cymraeg","da":"dansk","dag":"dagbanli","de":"Deutsch","de-at":"Österreichisches Deutsch","de-ch":"Schweizer Hochdeutsch","de-formal":"Deutsch (Sie-Form)","dga":"Dagaare","din":"Thuɔŋjäŋ","diq":"Zazaki","dlg":"долган тыла","dsb":"dolnoserbski","dso":"ଦେଶିଆ","dtp":"Kadazandusun","dty":"डोटेली","dua":"Duala","dv":"ދިވެހިބަސް","dz":"ཇོང་ཁ","ee":"eʋegbe","efi":"Efịk","egl":"Emiliàn","el":"Ελληνικά","eml":"emiliàn e rumagnòl","en":"English","en-ca":"Canadian English","en-gb":"British English","en-us":"American English","eo":"Esperanto","es":"español","es-419":"español de América Latina","es-formal":"español (formal)","et":"eesti","eto":"Eton","etu":"Ejagham","eu":"euskara","ewo":"Ewondo","ext":"estremeñu","fa":"فارسی","fat":"mfantse","ff":"Fulfulde","fi":"suomi","fit":"meänkieli","fiu-vro":"võro","fj":"Na Vosa Vakaviti","fkv":"kvääni","fmp":"Fe'fe'","fo":"føroyskt","fon":"fɔ̀ngbè","fr":"français","frc":"français cadien","frp":"arpetan","frr":"Nordfriisk","fur":"furlan","fvr":"poor’íŋ belé’ŋ","fy":"Frysk","ga":"Gaeilge","gaa":"Ga","gag":"Gagauz","gan":"贛語","gan-hans":"赣语（简体）","gan-hant":"贛語（繁體）","gcf":"kréyòl Gwadloup","gcr":"kriyòl gwiyannen","gd":"Gàidhlig","gju-arab":"گوجری","gju-deva":"गुज्जरी","gl":"galego","gld":"на̄ни","glk":"گیلکی","gn":"Avañe'ẽ","gom":"गोंयची कोंकणी / Gõychi Konknni","gom-deva":"गोंयची कोंकणी","gom-latn":"Gõychi Konknni","gor":"Bahasa Hulontalo","got":"𐌲𐌿𐍄𐌹𐍃𐌺","gpe":"Ghanaian Pidgin","grc":"Ἀρχαία ἑλληνικὴ","gsw":"Alemannisch","gu":"ગુજરાતી","guc":"wayuunaiki","gur":"farefare","guw":"gungbe","gv":"Gaelg","gya":"Gbaya","ha":"Hausa","hak":"客家語 / Hak-kâ-ngî","hak-hans":"客家语（简体）","hak-hant":"客家語（繁體）","hak-latn":"Hak-kâ-ngî (Pha̍k-fa-sṳ)","haw":"Hawaiʻi","he":"עברית","hi":"हिन्दी","hif":"Fiji Hindi","hif-latn":"Fiji Hindi","hil":"Ilonggo","hke":"kihunde","hno":"ہندکو","ho":"Hiri Motu","hoc":"𑢹𑣉𑣉 𑣎𑣋𑣜","hoc-latn":"Ho","hr":"hrvatski","hrx":"Hunsrik","hsb":"hornjoserbsce","hsn":"湘語","ht":"Kreyòl ayisyen","hu":"magyar","hu-formal":"magyar (formal)","hy":"հայերեն","hyw":"Արեւմտահայերէն","hz":"Otsiherero","ia":"interlingua","iba":"Jaku Iban","ibb":"ibibio","id":"Bahasa Indonesia","ie":"Interlingue","ig":"Igbo","igl":"Igala","ii":"ꆇꉙ","ik":"Iñupiatun","ike-cans":"ᐃᓄᒃᑎᑐᑦ","ike-latn":"inuktitut","ilo":"Ilokano","inh":"гӀалгӀай","io":"Ido","is":"íslenska","isu":"Isu","isv-cyrl":"меджусловјанскы","isv-latn":"medžuslovjansky","it":"italiano","iu":"ᐃᓄᒃᑎᑐᑦ / inuktitut","ja":"日本語","jam":"Patois","jbo":"la .lojban.","jut":"jysk","jv":"Jawa","jv-java":"ꦗꦮ","ka":"ქართული","kaa":"Qaraqalpaqsha","kab":"Taqbaylit","kai":"Karai-karai","kaj":"Jju","kbd":"адыгэбзэ","kbd-cyrl":"адыгэбзэ","kbp":"Kabɩyɛ","kcg":"Tyap","kea":"kabuverdianu","ker":"Kera","kg":"Kongo","kge":"Kumoring","kgg":"गेम्येहाक़ गिपन","khw":"کھوار","ki":"Gĩkũyũ","kiu":"Kırmancki","kj":"Kwanyama","kjh":"хакас","kjp":"ဖၠုံလိက်","kk":"қазақша","kk-arab":"قازاقشا (تٴوتە)","kk-cn":"قازاقشا (جۇنگو)","kk-cyrl":"қазақша (кирил)","kk-kz":"қазақша (Қазақстан)","kk-latn":"qazaqşa (latın)","kk-tr":"qazaqşa (Türkïya)","kl":"kalaallisut","km":"ភាសាខ្មែរ","kn":"ಕನ್ನಡ","knc":"Yerwa Kanuri","ko":"한국어","ko-kp":"조선말","koi":"перем коми","kr":"kanuri","krc":"къарачай-малкъар","kri":"Krio","krj":"Kinaray-a","krl":"karjal","ks":"کٲشُر","ks-arab":"کٲشُر","ks-deva":"कॉशुर","ksf":"Bafia","ksh":"Ripoarisch","ksw":"စှီၤ","ku":"kurdî","ku-arab":"کوردی (عەرەبی)","ku-latn":"kurdî (latînî)","kum":"къумукъ","kus":"Kʋsaal","kv":"коми","kw":"kernowek","ky":"кыргызча","la":"Latina","lad":"Ladino","lb":"Lëtzebuergesch","lbe":"лакку","lem":"Nomaande","lez":"лезги","lfn":"Lingua Franca Nova","lg":"Luganda","li":"Limburgs","lij":"Ligure","liv":"Līvõ kēļ","ljp":"Lampung Api","lki":"لەکی","lld":"Ladin","lmo":"lombard","ln":"lingála","lns":"Lamnso'","lo":"ລາວ","loz":"Silozi","lrc":"لۊری شومالی","lt":"lietuvių","ltg":"latgaļu","lua":"ciluba","lus":"Mizo ţawng","luz":"لئری دوٙمینی","lv":"latviešu","lzh":"文言","lzz":"Lazuri","mad":"Madhurâ","mag":"मगही","mai":"मैथिली","map-bms":"Basa Banyumasan","mcn":"vùn màsànà","mcp":"Maka","mdf":"мокшень","mg":"Malagasy","mh":"Ebon","mhr":"олык марий","mi":"Māori","min":"Minangkabau","mk":"македонски","ml":"മലയാളം","mn":"монгол","mnc":"manju gisun","mnc-latn":"manju gisun","mnc-mong":"ᠮᠠᠨᠵᡠ ᡤᡳᠰᡠᠨ","mni":"ꯃꯤꯇꯩ ꯂꯣꯟ","mnw":"ဘာသာမန်","mo":"молдовеняскэ","mos":"moore","mr":"मराठी","mrh":"Mara","mrj":"кырык мары","ms":"Bahasa Melayu","ms-arab":"بهاس ملايو","mt":"Malti","mua":"Mundang","mui":"Baso Palembang","mus":"Mvskoke","mwl":"Mirandés","my":"မြန်မာဘာသာ","myv":"эрзянь","mzn":"مازِرونی","na":"Dorerin Naoero","nah":"Nāhuatl","nan":"閩南語 / Bân-lâm-gí","nan-hani":"閩南語","nan-hant":"閩南語（傳統漢字）","nan-latn-pehoeji":"Bân-lâm-gí (Pe̍h-ōe-jī)","nan-latn-tailo":"Bân-lâm-gí (Tâi-lô)","nap":"Napulitano","nb":"norsk bokmål","nds":"Plattdüütsch","nds-nl":"Nedersaksies","ne":"नेपाली","new":"नेपाल भाषा","ng":"Oshiwambo","nge":"Ngémba","nia":"Li Niha","nit":"కొలామి","niu":"Niuē","nl":"Nederlands","nl-informal":"Nederlands (informeel)","nla":"Ngombala","nmg":"Kwasio","nmz":"nawdm","nn":"norsk nynorsk","nnh":"Ngiemboon","nnz":"Nda'nda'","no":"norsk","nod":"ᨣᩤᩴᨾᩮᩬᩥᨦ","nog":"ногайша","nov":"Novial","nqo":"ߒߞߏ","nr":"isiNdebele seSewula","nrm":"Nouormand","nso":"Sesotho sa Leboa","nup":"Nupe","nv":"Diné bizaad","ny":"Chi-Chewa","nyn":"runyankore","nyo":"Orunyoro","nys":"Nyunga","oc":"occitan","ojb":"Ojibwemowin","olo":"livvinkarjala","om":"Oromoo","or":"ଓଡ଼ିଆ","os":"ирон","osa-latn":"Wažáže íe","ota":"لسان عثمانى","pa":"ਪੰਜਾਬੀ","pag":"Pangasinan","pam":"Kapampangan","pap":"Papiamentu","pap-aw":"Papiamento","pcd":"Picard","pcm":"Naijá","pdc":"Deitsch","pdt":"Plautdietsch","pfl":"Pälzisch","pi":"पालि","pih":"Norfuk / Pitkern","pl":"polski","pms":"Piemontèis","pnb":"پنجابی","pnt":"Ποντιακά","ppl":"Nawat","prg":"prūsiskan","ps":"پښتو","pt":"português","pt-br":"português do Brasil","pwn":"pinayuanan","qu":"Runa Simi","quc":"Qatzijob\\ʼal","qug":"Runa shimi","rgn":"Rumagnôl","rif":"Tarifit","rki":"ရခိုင်","rm":"rumantsch","rmc":"romaňi čhib","rmf":"kaalengo tšimb","rmy":"romani čhib","rn":"ikirundi","ro":"română","roa-rup":"armãneashti","roa-tara":"tarandíne","rsk":"руски","ru":"русский","rue":"русиньскый","rup":"armãneashti","ruq":"Vlăheşte","ruq-cyrl":"Влахесте","ruq-latn":"Vlăheşte","rut":"мыхаӀбишды","rw":"Ikinyarwanda","rwr":"मारवाड़ी","ryu":"沖縄口","sa":"संस्कृतम्","sah":"саха тыла","sas":"Sasak","sat":"ᱥᱟᱱᱛᱟᱲᱤ","sc":"sardu","scn":"sicilianu","sco":"Scots","sd":"سنڌي","sdc":"Sassaresu","sdh":"کوردی خوارگ","se":"davvisámegiella","se-fi":"davvisámegiella (Suoma bealde)","se-no":"davvisámegiella (Norgga bealde)","se-se":"davvisámegiella (Ruoŧa bealde)","sei":"Cmique Itom","ses":"Koyraboro Senni","sg":"Sängö","sgs":"žemaitėška","sh":"srpskohrvatski / српскохрватски","sh-cyrl":"српскохрватски (ћирилица)","sh-latn":"srpskohrvatski (latinica)","shi":"Taclḥit","shi-latn":"Taclḥit","shi-tfng":"ⵜⴰⵛⵍⵃⵉⵜ","shn":"တႆး","shy":"tacawit","shy-latn":"tacawit","si":"සිංහල","simple":"Simple English","sjd":"кӣллт са̄мь кӣлл","sje":"bidumsámegiella","sju":"ubmejesámiengiälla","sk":"slovenčina","skr":"سرائیکی","skr-arab":"سرائیکی","sl":"slovenščina","sli":"Schläsch","sm":"Gagana Samoa","sma":"åarjelsaemien","smj":"julevsámegiella","smn":"anarâškielâ","sms":"nuõrttsääʹmǩiõll","sn":"chiShona","so":"Soomaaliga","sq":"shqip","sr":"српски / srpski","sr-ec":"српски (ћирилица)","sr-el":"srpski (latinica)","srn":"Sranantongo","sro":"sardu campidanesu","srq":"mbia cheë","ss":"SiSwati","st":"Sesotho","stq":"Seeltersk","sty":"себертатар","su":"Sunda","sv":"svenska","sw":"Kiswahili","syl":"ꠍꠤꠟꠐꠤ","szl":"ślůnski","szy":"Sakizaya","ta":"தமிழ்","tay":"Tayal","tcy":"ತುಳು","tdd":"ᥖᥭᥰ ᥖᥬᥲ ᥑᥨᥒᥰ","te":"తెలుగు","tet":"tetun","tg":"тоҷикӣ","tg-cyrl":"тоҷикӣ","tg-latn":"tojikī","th":"ไทย","thq":"काेचिला थारु","ti":"ትግርኛ","tig":"ትግሬ","tk":"Türkmençe","tl":"Tagalog","tly":"tolışi","tly-cyrl":"толыши","tn":"Setswana","to":"lea faka-Tonga","tok":"toki pona","tpi":"Tok Pisin","tpv":"Tanapag","tr":"Türkçe","tru":"Ṫuroyo","trv":"Seediq","ts":"Xitsonga","tt":"татарча / tatarça","tt-cyrl":"татарча","tt-latn":"tatarça","ttj":"Orutooro","tum":"chiTumbuka","tvu":"Tunen","tw":"Twi","ty":"reo tahiti","tyv":"тыва дыл","tzm":"ⵜⴰⵎⴰⵣⵉⵖⵜ","udm":"удмурт","ug":"ئۇيغۇرچە / Uyghurche","ug-arab":"ئۇيغۇرچە","ug-latn":"Uyghurche","uk":"українська","ur":"اردو","uz":"oʻzbekcha / ўзбекча","uz-cyrl":"ўзбекча","uz-latn":"oʻzbekcha","ve":"Tshivenda","vec":"vèneto","vep":"vepsän kel’","vi":"Tiếng Việt","vls":"West-Vlams","vmf":"Mainfränkisch","vmw":"emakhuwa","vo":"Volapük","vot":"Vaďďa","vro":"võro","vut":"Vute","wa":"walon","wal":"wolaytta","war":"Winaray","wes":"Pidgin (Cameroon)","wls":"Fakaʻuvea","wlx":"waale","wo":"Wolof","wuu":"吴语","wuu-hans":"吴语（简体）","wuu-hant":"吳語（正體）","wya":"Wyandot","xal":"хальмг","xh":"isiXhosa","xmf":"მარგალური","xsy":"saisiyat","yas":"Nugunu","yat":"Yambeta","yav":"Yangben","ybb":"Yemba","yi":"ייִדיש","yo":"Yorùbá","yrl":"Nhẽẽgatú","yua":"maaya t’aan","yue":"粵語","yue-hans":"粵语（简体）","yue-hant":"粵語（繁體）","za":"Vahcuengh","zea":"Zeêuws","zgh":"ⵜⴰⵎⴰⵣⵉⵖⵜ ⵜⴰⵏⴰⵡⴰⵢⵜ","zgh-latn":"tamaziɣt tanawayt","zh":"中文","zh-classical":"文言","zh-cn":"中文（中国大陆）","zh-hans":"中文（简体）","zh-hant":"中文（繁體）","zh-hk":"中文（香港）","zh-min-nan":"Bân-lâm-gú","zh-mo":"中文（澳門）","zh-my":"中文（马来西亚）","zh-sg":"中文（新加坡）","zh-tw":"中文（臺灣）","zh-yue":"粵語","zu":"isiZulu"},"searchTerm":"Linus Torvalds","wgCirrusSearchRequestSetToken":"bm8kl24iwpm71rzigrnwip6cw","wgIsSearchResultPage":true,"wgCodexTablePagerLimit":50,"wgCirrusTookMs":104,"wgCirrusElasticTime":92,"wgCirrusSearchFallback":{"mainResults":{"name":"__main__","action":null},"querySuggestion":null,"responseMetrics":[]},"upwizPropertyTitles":{"P180":"Main subjects visible in this work"},"upwizPropertyPlaceholders":{"P180":"e.g., Angolan giraffe"},"upwizPropertyCopyLabels":{"P180":"Main subjects"},"wgEditSubmitButtonLabelPublish":true,"wgVisualEditorPageIsDisambiguation":false,"wgULSPosition":"personal","wgULSisCompactLinksEnabled":true,"wgVector2022LanguageInHeader":false,"wgULSisLanguageSelectorEmpty":true,"wbmiDefaultProperties":["P180"],"wbmiPropertyTitles":{"P180":"Items portrayed in this file"},"wbmiPropertyTypes":{"P180":"wikibase-item"},"wbmiRepoApiUrl":"/w/api.php","wbmiHelpUrls":{"P180":"https://commons.wikimedia.org/wiki/Special:MyLanguage/Commons:Depicts"},"wbmiExternalEntitySearchBaseUri":"https://www.wikidata.org/w/api.php","wbmiSupportedDataTypes":["wikibase-item","string","quantity","time","monolingualtext","external-id","globe-coordinate","url"],"wgCheckUserClientHintsHeadersJsApi":["brands","architecture","bitness","fullVersionList","mobile","model","platform","platformVersion"],"wgTestKitchenUserExperiments":{"active_experiments":[],"overrides":[],"enrolled":[],"assigned":[],"subject_ids":[],"sampling_units":[],"coordinator":[]}};
+RLSTATE={"ext.gadget.Long-Image-Names-in-Categories":"ready","ext.globalCssJs.user.styles":"ready","site.styles":"ready","user.styles":"ready","ext.advancedSearch.searchtoken":"loading","ext.globalCssJs.user":"ready","user":"ready","user.options":"loading","ext.advancedSearch.initialstyles":"ready","ext.wikimediamessages.styles":"ready","mediawiki.helplink":"ready","mediawiki.special":"ready","mediawiki.special.search.styles":"ready","mediawiki.widgets.SearchInputWidget.styles":"ready","mediawiki.codex.messagebox.styles":"ready","oojs-ui-core.styles":"ready","oojs-ui.styles.indicators":"ready","mediawiki.widgets.styles":"ready","oojs-ui-core.icons":"ready","mediawiki.pager.codex.styles":"ready","skins.vector.search.codex.styles":"ready","skins.vector.styles":"ready","skins.vector.icons":"ready","ext.tmh.player.styles":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready","ext.uls.pt":"ready"};RLPAGEMODULES=["ext.advancedSearch.init","mediawiki.special.search","ext.cirrus.serp","mediawiki.pager.codex","site","mediawiki.page.ready","skins.vector.js","ext.centralNotice.geoIP","ext.gadget.Slideshow","ext.gadget.ZoomViewer","ext.gadget.CollapsibleTemplates","ext.gadget.Stockphoto","ext.gadget.WatchlistNotice","ext.gadget.AjaxQuickDelete","ext.gadget.WikiMiniAtlas","ext.gadget.LanguageSelect","ext.gadget.PictureOfTheYearEnhancements","ext.tmh.player","ext.urlShortener.toolbar","ext.centralauth.centralautologin","mmv.bootstrap","ext.visualEditor.desktopArticleTarget.init","ext.echo.centralauth","ext.eventLogging","ext.wikimediaEvents","ext.wikimediaEvents.wikibase","ext.navigationTiming","ext.uls.compactlinks","ext.uls.interface","wikibase.databox.fromWikidata","ext.checkUser.clientHints","ext.testKitchen"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.impl(function(){return["ext.advancedSearch.searchtoken@1vhat",function($,jQuery,require,module){mw.user.tokens.set("searchnamespaceToken","+\\");
+}];});
+mw.loader.impl(function(){return["user.options@12s5i",function($,jQuery,require,module){mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+}];});});</script>
+<link rel="stylesheet" href="/w/load.php?lang=en&amp;modules=ext.advancedSearch.initialstyles%7Cext.tmh.player.styles%7Cext.uls.pt%7Cext.visualEditor.desktopArticleTarget.noscript%7Cext.wikimediamessages.styles%7Cmediawiki.codex.messagebox.styles%7Cmediawiki.helplink%2Cspecial%7Cmediawiki.pager.codex.styles%7Cmediawiki.special.search.styles%7Cmediawiki.widgets.SearchInputWidget.styles%7Cmediawiki.widgets.styles%7Coojs-ui-core.icons%2Cstyles%7Coojs-ui.styles.indicators%7Cskins.vector.icons%2Cstyles%7Cskins.vector.search.codex.styles&amp;only=styles&amp;skin=vector-2022">
+<script async="" src="/w/load.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=vector-2022"></script>
+<meta name="ResourceLoaderDynamicStyles" content="">
+<link rel="stylesheet" href="/w/load.php?lang=en&amp;modules=ext.gadget.Long-Image-Names-in-Categories&amp;only=styles&amp;skin=vector-2022">
+<link rel="stylesheet" href="/w/load.php?lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector-2022">
+<meta name="generator" content="MediaWiki 1.46.0-wmf.18">
+<meta name="referrer" content="origin">
+<meta name="referrer" content="origin-when-cross-origin">
+<meta name="robots" content="noindex,nofollow,max-image-preview:standard">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=1120">
+<meta property="og:title" content="Search results for &quot;Linus Torvalds&quot; - Wikimedia Commons">
+<meta property="og:type" content="website">
+<link rel="apple-touch-icon" href="/static/apple-touch/commons.png">
+<link rel="icon" href="/static/favicon/commons.ico">
+<link rel="search" type="application/opensearchdescription+xml" href="/w/rest.php/v1/search" title="Wikimedia Commons">
+<link rel="EditURI" type="application/rsd+xml" href="//commons.wikimedia.org/w/api.php?action=rsd">
+<link rel="canonical" href="https://commons.wikimedia.org/w/index.php?ns0=1&amp;ns100=1&amp;ns106=1&amp;ns12=1&amp;ns14=1&amp;ns6=1&amp;search=Linus+Torvalds&amp;title=Special:Search">
+<link rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">
+<link rel="alternate" type="application/atom+xml" title="Wikimedia Commons Atom feed" href="/w/index.php?title=Special:RecentChanges&amp;feed=atom">
+<link rel="dns-prefetch" href="auth.wikimedia.org">
+</head>
+<body class="skin--responsive skin-vector skin-vector-search-vue mediawiki ltr sitedir-ltr mw-hide-empty-elt ns--1 ns-special mw-special-Search page-Special_Search rootpage-Special_Search skin-vector-2022 action-view">
+<div id="mw-aria-live-region" class="mw-aria-live-region" aria-live="polite"></div><a class="mw-jump-link" href="#bodyContent">Jump to content</a>
+<div class="vector-header-container">
+	<header class="vector-header mw-header no-font-mode-scale">
+		<div class="vector-header-start">
+			<nav class="vector-main-menu-landmark" aria-label="Site">
+				
+<div id="vector-main-menu-dropdown" class="vector-dropdown vector-main-menu-dropdown vector-button-flush-left vector-button-flush-right"  title="Main menu" >
+	<input type="checkbox" id="vector-main-menu-dropdown-checkbox" role="button" aria-haspopup="true" data-event-name="ui.dropdown-vector-main-menu-dropdown" class="vector-dropdown-checkbox "  aria-label="Main menu"  >
+	<label id="vector-main-menu-dropdown-label" for="vector-main-menu-dropdown-checkbox" class="vector-dropdown-label cdx-button cdx-button--fake-button cdx-button--fake-button--enabled cdx-button--weight-quiet cdx-button--icon-only " aria-hidden="true"  ><span class="vector-icon mw-ui-icon-menu mw-ui-icon-wikimedia-menu"></span>
+
+<span class="vector-dropdown-label-text">Main menu</span>
+	</label>
+	<div class="vector-dropdown-content">
+
+
+				<div id="vector-main-menu-unpinned-container" class="vector-unpinned-container">
+		
+<div id="vector-main-menu" class="vector-main-menu vector-pinnable-element">
+	<div
+	class="vector-pinnable-header vector-main-menu-pinnable-header vector-pinnable-header-unpinned"
+	data-feature-name="main-menu-pinned"
+	data-pinnable-element-id="vector-main-menu"
+	data-pinned-container-id="vector-main-menu-pinned-container"
+	data-unpinned-container-id="vector-main-menu-unpinned-container"
+>
+	<div class="vector-pinnable-header-label">Main menu</div>
+	<button class="vector-pinnable-header-toggle-button vector-pinnable-header-pin-button" data-event-name="pinnable-header.vector-main-menu.pin">move to sidebar</button>
+	<button class="vector-pinnable-header-toggle-button vector-pinnable-header-unpin-button" data-event-name="pinnable-header.vector-main-menu.unpin">hide</button>
+</div>
+
+	
+<div id="p-navigation" class="vector-menu mw-portlet mw-portlet-navigation"  >
+	<div class="vector-menu-heading">
+		Navigate
+	</div>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="n-mainpage-description" class="mw-list-item"><a href="/wiki/Main_Page" title="Visit the main page [z]" accesskey="z"><span>Main page</span></a></li><li id="n-welcome" class="mw-list-item"><a href="/wiki/Commons:Welcome"><span>Welcome</span></a></li><li id="n-portal" class="mw-list-item"><a href="/wiki/Commons:Community_portal" title="About the project, what you can do, where to find things"><span>Community portal</span></a></li><li id="n-village-pump" class="mw-list-item"><a href="/wiki/Commons:Village_pump"><span>Village pump</span></a></li><li id="n-help" class="mw-list-item"><a href="/wiki/Special:MyLanguage/Help:Contents" title="The place to find out"><span>Help center</span></a></li>
+		</ul>
+		
+	</div>
+</div>
+
+	
+<div id="p-participate" class="vector-menu mw-portlet mw-portlet-participate"  >
+	<div class="vector-menu-heading">
+		Participate
+	</div>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="n-uploadbtn" class="mw-list-item"><a href="/wiki/Special:UploadWizard"><span>Upload file</span></a></li><li id="n-recentchanges" class="mw-list-item"><a href="/wiki/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r"><span>Recent changes</span></a></li><li id="n-latestfiles" class="mw-list-item"><a href="/wiki/Special:NewFiles"><span>Latest files</span></a></li><li id="n-randomimage" class="mw-list-item"><a href="/wiki/Special:Random/File" title="Load a random file [x]" accesskey="x"><span>Random file</span></a></li><li id="n-contact" class="mw-list-item"><a href="/wiki/Commons:Contact_us"><span>Contact us</span></a></li><li id="n-specialpages" class="mw-list-item"><a href="/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q"><span>Special pages</span></a></li>
+		</ul>
+		
+	</div>
+</div>
+
+	
+<div id="vector-main-menu" class="vector-menu "  >
+	<div class="vector-menu-heading">
+		
+	</div>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			
+		</ul>
+		
+	</div>
+</div>
+
+</div>
+
+				</div>
+
+	</div>
+</div>
+
+		</nav>
+			
+<a href="/wiki/Main_Page" class="mw-logo">
+	<img class="mw-logo-icon" src="/static/images/icons/commonswiki.svg" alt="" aria-hidden="true" height="50" width="50">
+	<span class="mw-logo-container skin-invert">
+		<img class="mw-logo-wordmark" alt="Wikimedia Commons" src="/static/images/mobile/copyright/commonswiki-wordmark.svg" style="width: 7.1875em; height: 2em;">
+	</span>
+</a>
+
+		</div>
+		<div class="vector-header-end">
+			
+<div id="p-search" role="search" class="vector-search-box-vue  vector-search-box-collapses vector-search-box">
+	<a href="/wiki/Special:MediaSearch" class="cdx-button cdx-button--fake-button cdx-button--fake-button--enabled cdx-button--weight-quiet cdx-button--icon-only search-toggle" title="Search Wikimedia Commons [f]" accesskey="f"><span class="vector-icon mw-ui-icon-search mw-ui-icon-wikimedia-search"></span>
+
+<span>Search</span>
+	</a>
+	<div class="vector-typeahead-search-container">
+		<div class="cdx-typeahead-search">
+			<form action="/w/index.php" id="searchform" class="cdx-search-input cdx-search-input--has-end-button">
+				<div id="simpleSearch" class="cdx-search-input__input-wrapper"  data-search-loc="header-moved">
+					<div class="cdx-text-input cdx-text-input--has-start-icon">
+						<input
+							class="cdx-text-input__input mw-searchInput" autocomplete="off"
+							 type="search" name="search" placeholder="Search Wikimedia Commons" aria-label="Search Wikimedia Commons" autocapitalize="none" spellcheck="false" title="Search Wikimedia Commons [f]" accesskey="f" id="searchInput"
+							>
+						<span class="cdx-text-input__icon cdx-text-input__start-icon"></span>
+					</div>
+					<input type="hidden" name="title" value="Special:MediaSearch">
+				</div>
+				<button class="cdx-button cdx-search-input__end-button">Search</button>
+			</form>
+		</div>
+	</div>
+</div>
+
+			<nav class="vector-user-links vector-user-links-wide" aria-label="Personal tools">
+	<div class="vector-user-links-main">
+	
+<div id="p-vector-user-menu-preferences" class="vector-menu mw-portlet"  >
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			<li id="ca-uls" class="mw-list-item active user-links-collapsible-item"><a data-mw-interface  href="#" class="uls-trigger cdx-button cdx-button--fake-button cdx-button--fake-button--enabled cdx-button--weight-quiet"><span class="vector-icon mw-ui-icon-wikimedia-language mw-ui-icon-wikimedia-wikimedia-language"></span>
+
+<span>English</span></a>
+</li>
+
+			
+		</ul>
+		
+	</div>
+</div>
+
+	
+<div id="p-vector-user-menu-userpage" class="vector-menu mw-portlet emptyPortlet"  >
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			
+		</ul>
+		
+	</div>
+</div>
+
+	<nav class="vector-appearance-landmark" aria-label="Appearance">
+		
+<div id="vector-appearance-dropdown" class="vector-dropdown "  title="Change the appearance of the page&#039;s font size, width, and color" >
+	<input type="checkbox" id="vector-appearance-dropdown-checkbox" role="button" aria-haspopup="true" data-event-name="ui.dropdown-vector-appearance-dropdown" class="vector-dropdown-checkbox "  aria-label="Appearance"  >
+	<label id="vector-appearance-dropdown-label" for="vector-appearance-dropdown-checkbox" class="vector-dropdown-label cdx-button cdx-button--fake-button cdx-button--fake-button--enabled cdx-button--weight-quiet cdx-button--icon-only " aria-hidden="true"  ><span class="vector-icon mw-ui-icon-appearance mw-ui-icon-wikimedia-appearance"></span>
+
+<span class="vector-dropdown-label-text">Appearance</span>
+	</label>
+	<div class="vector-dropdown-content">
+
+
+			<div id="vector-appearance-unpinned-container" class="vector-unpinned-container">
+				
+			</div>
+		
+	</div>
+</div>
+
+	</nav>
+	
+<div id="p-vector-user-menu-notifications" class="vector-menu mw-portlet emptyPortlet"  >
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			
+		</ul>
+		
+	</div>
+</div>
+
+	
+<div id="p-vector-user-menu-overflow" class="vector-menu mw-portlet"  >
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			<li id="pt-sitesupport-2" class="user-links-collapsible-item mw-list-item user-links-collapsible-item"><a data-mw-interface  href="https://donate.wikimedia.org/?wmf_source=donate&amp;wmf_medium=sidebar&amp;wmf_campaign=commons.wikimedia.org&amp;uselang=en" class=""><span>Donate</span></a>
+</li>
+<li id="pt-createaccount-2" class="user-links-collapsible-item mw-list-item user-links-collapsible-item"><a data-mw-interface  href="/w/index.php?title=Special:CreateAccount&amp;returnto=Special%3ASearch&amp;returntoquery=ns0%3D1%26ns100%3D1%26ns106%3D1%26ns12%3D1%26ns14%3D1%26ns6%3D1%26search%3DLinus%2BTorvalds" title="You are encouraged to create an account and log in; however, it is not mandatory" class=""><span>Create account</span></a>
+</li>
+<li id="pt-login-2" class="user-links-collapsible-item mw-list-item user-links-collapsible-item"><a data-mw-interface  href="/w/index.php?title=Special:UserLogin&amp;returnto=Special%3ASearch&amp;returntoquery=ns0%3D1%26ns100%3D1%26ns106%3D1%26ns12%3D1%26ns14%3D1%26ns6%3D1%26search%3DLinus%2BTorvalds" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o" class=""><span>Log in</span></a>
+</li>
+
+			
+		</ul>
+		
+	</div>
+</div>
+
+	</div>
+	
+<div id="vector-user-links-dropdown" class="vector-dropdown vector-user-menu vector-button-flush-right vector-user-menu-logged-out user-links-collapsible-item"  title="More options" >
+	<input type="checkbox" id="vector-user-links-dropdown-checkbox" role="button" aria-haspopup="true" data-event-name="ui.dropdown-vector-user-links-dropdown" class="vector-dropdown-checkbox "  aria-label="Personal tools"  >
+	<label id="vector-user-links-dropdown-label" for="vector-user-links-dropdown-checkbox" class="vector-dropdown-label cdx-button cdx-button--fake-button cdx-button--fake-button--enabled cdx-button--weight-quiet cdx-button--icon-only " aria-hidden="true"  ><span class="vector-icon mw-ui-icon-ellipsis mw-ui-icon-wikimedia-ellipsis"></span>
+
+<span class="vector-dropdown-label-text">Personal tools</span>
+	</label>
+	<div class="vector-dropdown-content">
+
+
+		
+<div id="p-personal" class="vector-menu mw-portlet mw-portlet-personal user-links-collapsible-item"  title="User menu" >
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="pt-sitesupport" class="user-links-collapsible-item mw-list-item"><a href="https://donate.wikimedia.org/?wmf_source=donate&amp;wmf_medium=sidebar&amp;wmf_campaign=commons.wikimedia.org&amp;uselang=en"><span>Donate</span></a></li><li id="pt-createaccount" class="user-links-collapsible-item mw-list-item"><a href="/w/index.php?title=Special:CreateAccount&amp;returnto=Special%3ASearch&amp;returntoquery=ns0%3D1%26ns100%3D1%26ns106%3D1%26ns12%3D1%26ns14%3D1%26ns6%3D1%26search%3DLinus%2BTorvalds" title="You are encouraged to create an account and log in; however, it is not mandatory"><span class="vector-icon mw-ui-icon-userAdd mw-ui-icon-wikimedia-userAdd"></span> <span>Create account</span></a></li><li id="pt-login" class="user-links-collapsible-item mw-list-item"><a href="/w/index.php?title=Special:UserLogin&amp;returnto=Special%3ASearch&amp;returntoquery=ns0%3D1%26ns100%3D1%26ns106%3D1%26ns12%3D1%26ns14%3D1%26ns6%3D1%26search%3DLinus%2BTorvalds" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o"><span class="vector-icon mw-ui-icon-logIn mw-ui-icon-wikimedia-logIn"></span> <span>Log in</span></a></li>
+		</ul>
+		
+	</div>
+</div>
+
+	
+	</div>
+</div>
+
+</nav>
+
+		</div>
+	</header>
+</div>
+<div class="mw-page-container">
+	<div class="mw-page-container-inner">
+		<div class="vector-sitenotice-container">
+			<div id="siteNotice"><!-- CentralNotice --></div>
+		</div>
+		<div class="vector-column-start">
+			<div class="vector-main-menu-container">
+		<div id="mw-navigation">
+			<nav id="mw-panel" class="vector-main-menu-landmark" aria-label="Site">
+				<div id="vector-main-menu-pinned-container" class="vector-pinned-container">
+				
+				</div>
+		</nav>
+		</div>
+	</div>
+</div>
+		<div class="mw-content-container">
+			<main id="content" class="mw-body">
+				<header class="mw-body-header vector-page-titlebar no-font-mode-scale">
+					<h1 id="firstHeading" class="firstHeading mw-first-heading">Search results</h1>
+						<div class="mw-indicators">
+		<div id="mw-indicator-mediasearchlink" class="mw-indicator"><a href="/wiki/Special:MediaSearch" title="Special:MediaSearch">Switch to MediaSearch</a>&#160;|</div>
+		<div id="mw-indicator-mw-helplink" class="mw-indicator"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/Help:CirrusSearch" target="_blank" class="mw-helplink"><span class="mw-helplink-icon"></span>Help</a></div>
+		</div>
+</header>
+				<div class="vector-page-toolbar vector-feature-custom-font-size-clientpref--excluded">
+					<div class="vector-page-toolbar-container">
+						<div id="left-navigation">
+							<nav aria-label="Namespaces">
+								
+<div id="p-associated-pages" class="vector-menu vector-menu-tabs mw-portlet mw-portlet-associated-pages emptyPortlet"  >
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			
+		</ul>
+		
+	</div>
+</div>
+
+								
+<div id="vector-variants-dropdown" class="vector-dropdown emptyPortlet"  >
+	<input type="checkbox" id="vector-variants-dropdown-checkbox" role="button" aria-haspopup="true" data-event-name="ui.dropdown-vector-variants-dropdown" class="vector-dropdown-checkbox " aria-label="Change language variant"   >
+	<label id="vector-variants-dropdown-label" for="vector-variants-dropdown-checkbox" class="vector-dropdown-label cdx-button cdx-button--fake-button cdx-button--fake-button--enabled cdx-button--weight-quiet" aria-hidden="true"  ><span class="vector-dropdown-label-text">English</span>
+	</label>
+	<div class="vector-dropdown-content">
+
+
+					
+<div id="p-variants" class="vector-menu mw-portlet mw-portlet-variants emptyPortlet"  >
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			
+		</ul>
+		
+	</div>
+</div>
+
+				
+	</div>
+</div>
+
+							</nav>
+						</div>
+						<div id="right-navigation" class="vector-collapsible">
+							<nav aria-label="Views">
+								
+<div id="p-views" class="vector-menu vector-menu-tabs mw-portlet mw-portlet-views emptyPortlet"  >
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			
+		</ul>
+		
+	</div>
+</div>
+
+							</nav>
+				
+							<nav class="vector-page-tools-landmark" aria-label="Page tools">
+								
+<div id="vector-page-tools-dropdown" class="vector-dropdown vector-page-tools-dropdown"  >
+	<input type="checkbox" id="vector-page-tools-dropdown-checkbox" role="button" aria-haspopup="true" data-event-name="ui.dropdown-vector-page-tools-dropdown" class="vector-dropdown-checkbox "  aria-label="Tools"  >
+	<label id="vector-page-tools-dropdown-label" for="vector-page-tools-dropdown-checkbox" class="vector-dropdown-label cdx-button cdx-button--fake-button cdx-button--fake-button--enabled cdx-button--weight-quiet" aria-hidden="true"  ><span class="vector-dropdown-label-text">Tools</span>
+	</label>
+	<div class="vector-dropdown-content">
+
+
+									<div id="vector-page-tools-unpinned-container" class="vector-unpinned-container">
+						
+<div id="vector-page-tools" class="vector-page-tools vector-pinnable-element">
+	<div
+	class="vector-pinnable-header vector-page-tools-pinnable-header vector-pinnable-header-unpinned"
+	data-feature-name="page-tools-pinned"
+	data-pinnable-element-id="vector-page-tools"
+	data-pinned-container-id="vector-page-tools-pinned-container"
+	data-unpinned-container-id="vector-page-tools-unpinned-container"
+>
+	<div class="vector-pinnable-header-label">Tools</div>
+	<button class="vector-pinnable-header-toggle-button vector-pinnable-header-pin-button" data-event-name="pinnable-header.vector-page-tools.pin">move to sidebar</button>
+	<button class="vector-pinnable-header-toggle-button vector-pinnable-header-unpin-button" data-event-name="pinnable-header.vector-page-tools.unpin">hide</button>
+</div>
+
+	
+<div id="p-cactions" class="vector-menu mw-portlet mw-portlet-cactions emptyPortlet"  title="More options" >
+	<div class="vector-menu-heading">
+		Actions
+	</div>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			
+		</ul>
+		
+	</div>
+</div>
+
+<div id="p-tb" class="vector-menu mw-portlet mw-portlet-tb"  >
+	<div class="vector-menu-heading">
+		General
+	</div>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="t-print" class="mw-list-item"><a href="javascript:print();" rel="alternate" title="Printable version of this page [p]" accesskey="p"><span>Printable version</span></a></li><li id="t-urlshortener" class="mw-list-item"><a href="/w/index.php?title=Special:UrlShortener&amp;url=https%3A%2F%2Fcommons.wikimedia.org%2Fw%2Findex.php%3Ftitle%3DSpecial%3ASearch%26ns0%3D1%26ns100%3D1%26ns106%3D1%26ns12%3D1%26ns14%3D1%26ns6%3D1%26search%3DLinus%2BTorvalds"><span>Get shortened URL</span></a></li>
+		</ul>
+		
+	</div>
+</div>
+
+<div id="p-wikibase-otherprojects" class="vector-menu mw-portlet mw-portlet-wikibase-otherprojects emptyPortlet"  >
+	<div class="vector-menu-heading">
+		In other projects
+	</div>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			
+		</ul>
+		
+	</div>
+</div>
+
+</div>
+
+									</div>
+				
+	</div>
+</div>
+
+							</nav>
+						</div>
+					</div>
+				</div>
+				<div class="vector-column-end no-font-mode-scale">
+					<div class="vector-sticky-pinned-container">
+						<div class="wp25eastereggs-vector-sitenotice-landmark"></div>
+						<nav class="vector-page-tools-landmark" aria-label="Page tools">
+							<div id="vector-page-tools-pinned-container" class="vector-pinned-container">
+				
+							</div>
+		</nav>
+						<nav class="vector-appearance-landmark" aria-label="Appearance">
+							<div id="vector-appearance-pinned-container" class="vector-pinned-container">
+				<div id="vector-appearance" class="vector-appearance vector-pinnable-element">
+	<div
+	class="vector-pinnable-header vector-appearance-pinnable-header vector-pinnable-header-pinned"
+	data-feature-name="appearance-pinned"
+	data-pinnable-element-id="vector-appearance"
+	data-pinned-container-id="vector-appearance-pinned-container"
+	data-unpinned-container-id="vector-appearance-unpinned-container"
+>
+	<div class="vector-pinnable-header-label">Appearance</div>
+	<button class="vector-pinnable-header-toggle-button vector-pinnable-header-pin-button" data-event-name="pinnable-header.vector-appearance.pin">move to sidebar</button>
+	<button class="vector-pinnable-header-toggle-button vector-pinnable-header-unpin-button" data-event-name="pinnable-header.vector-appearance.unpin">hide</button>
+</div>
+
+
+</div>
+
+							</div>
+		</nav>
+					</div>
+				</div>
+				<div id="bodyContent" class="vector-body" aria-labelledby="firstHeading" data-mw-ve-target-container>
+					<div class="vector-body-before-content">
+					
+						
+					</div>
+					<div id="contentSub"><div id="mw-content-subtitle"></div></div>
+					
+					
+					<div id="mw-content-text" class="mw-body-content"><div class="mw-specialpage-summary">
+</div><div class="mw-search-spinner"><div class="mw-search-spinner-bounce"></div></div><div class="mw-search-form-wrapper"><form id="search" method="get" action="/w/index.php"><div id="mw-search-top-table"><div class='oo-ui-layout oo-ui-fieldLayout oo-ui-fieldLayout-align-top oo-ui-actionFieldLayout'><div class='oo-ui-fieldLayout-body'><span class='oo-ui-fieldLayout-header'><label for='ooui-php-1' class='oo-ui-labelElement-label'></label></span><div class='oo-ui-fieldLayout-field'><div class='oo-ui-actionFieldLayout-input'><div id='searchText' class='oo-ui-widget oo-ui-widget-enabled oo-ui-inputWidget oo-ui-iconElement oo-ui-textInputWidget oo-ui-textInputWidget-type-text oo-ui-textInputWidget-php mw-widget-titleInputWidget mw-widget-searchInputWidget' data-ooui='{"_":"mw.widgets.SearchInputWidget","performSearchOnClick":true,"dataLocation":"content","$overlay":true,"highlightFirst":false,"validateTitle":false,"name":"search","value":"Linus Torvalds","inputId":"ooui-php-1","title":"Search Wikimedia Commons","icon":"search","required":false}'><input type='search' tabindex='0' title='Search Wikimedia Commons' name='search' value='Linus Torvalds' autocapitalize='none' id='ooui-php-1' class='oo-ui-inputWidget-input' /><span class='oo-ui-iconElement-icon oo-ui-icon-search'></span><span class='oo-ui-indicatorElement-indicator oo-ui-indicatorElement-noIndicator'></span></div></div><span class='oo-ui-actionFieldLayout-button'><span class='oo-ui-widget oo-ui-widget-enabled oo-ui-inputWidget oo-ui-buttonElement oo-ui-buttonElement-framed oo-ui-labelElement oo-ui-flaggedElement-progressive oo-ui-flaggedElement-primary oo-ui-buttonInputWidget'><button type='submit' tabindex='0' value='' class='oo-ui-inputWidget-input oo-ui-buttonElement-button'><span class='oo-ui-iconElement-icon oo-ui-iconElement-noIcon oo-ui-image-invert'></span><span class='oo-ui-labelElement-label'>Search</span><span class='oo-ui-indicatorElement-indicator oo-ui-indicatorElement-noIndicator oo-ui-image-invert'></span></button></span></span></div></div></div><div class="results-info" data-mw-num-results-offset="0" data-mw-num-results-total="191" data-mw-num-results-approximate-total="false">Results <strong>1 – 20</strong> of <strong>191</strong></div><input type="hidden" value="Special:Search" name="title"><input type="hidden" value="default" name="profile"><input type="hidden" value="1" name="fulltext"></div><div class="mw-search-visualclear"></div><div class="mw-search-profile-tabs"><div class="search-types"><ul><li class="current"><a href="/w/index.php?title=Special:Search&amp;profile=default&amp;search=Linus+Torvalds&amp;fulltext=1" title="Search in File, Help, Category, Creator, Institution, (Gallery)">Content pages</a></li><li class="normal"><a href="/w/index.php?title=Special:Search&amp;profile=images&amp;search=Linus+Torvalds&amp;fulltext=1" title="Search for files">Multimedia</a></li><li class="normal"><a href="/w/index.php?title=Special:Search&amp;profile=translation&amp;search=Linus+Torvalds&amp;fulltext=1" title="Search from all translations">Translations</a></li><li class="normal"><a href="/w/index.php?title=Special:Search&amp;profile=all&amp;search=Linus+Torvalds&amp;fulltext=1" title="Search all of content (including talk pages)">Everything</a></li><li class="normal"><a href="/w/index.php?title=Special:Search&amp;profile=advanced&amp;search=Linus+Torvalds&amp;fulltext=1" title="Search in custom namespaces">Advanced</a></li></ul></div><div style="clear:both"></div></div></form></div><div class="searchresults"><div class="mw-search-results-info"></div><div class="mw-search-visualclear"></div><div class='mw-search-pager-top'><div class="cdx-table-pager">
+<div class="cdx-table-pager__start"><form method="get" action="/w/index.php" class="cdx-table-pager__limit-form">
+<select name="limit" class="cdx-select"><option value="20" selected="">20 items</option><option value="50">50 items</option><option value="100">100 items</option><option value="250">250 items</option><option value="500">500 items</option></select>
+<button class="cdx-button cdx-table-pager__limit-form__submit" type="submit">Go</button>
+<input type="hidden" value="1" name="ns0">
+<input type="hidden" value="1" name="ns100">
+<input type="hidden" value="1" name="ns106">
+<input type="hidden" value="1" name="ns12">
+<input type="hidden" value="1" name="ns14">
+<input type="hidden" value="1" name="ns6">
+<input type="hidden" value="Linus Torvalds" name="search">
+<input type="hidden" value="Special:Search" name="title">
+<input type="hidden" value="default" name="profile">
+</form>
+</div>
+<div class="cdx-table-pager__end"><a class="cdx-button cdx-button--fake-button cdx-button--fake-button--disabled cdx-button--weight-quiet cdx-button--icon-only" role="button" aria-label="First page" title="First page" disabled="" rel="first"><span class="cdx-button__icon cdx-table-pager__icon--first"></span></a><a class="cdx-button cdx-button--fake-button cdx-button--fake-button--disabled cdx-button--weight-quiet cdx-button--icon-only" role="button" aria-label="Previous page" title="Previous page" disabled="" rel="prev"><span class="cdx-button__icon cdx-table-pager__icon--previous"></span></a><a class="cdx-button cdx-button--fake-button cdx-button--fake-button--enabled cdx-button--weight-quiet cdx-button--icon-only" role="button" aria-label="Next page" title="Next page" href="/w/index.php?title=Special:Search&amp;limit=20&amp;offset=20&amp;profile=default&amp;search=Linus+Torvalds" rel="next"><span class="cdx-button__icon cdx-table-pager__icon--next"></span></a></div>
+</div></div>
+<div class="mw-search-results-container"><ul class='mw-search-results'><li class="mw-search-result mw-search-result-ns-0"><div class="mw-search-result-heading"><a href="/wiki/Linus_Torvalds" title="Linus Torvalds" data-serp-pos="0"><span class="searchmatch">Linus</span> <span class="searchmatch">Torvalds</span></a>    </div><div class="searchresult">Торвальдс; <span class="searchmatch">Linus</span> <span class="searchmatch">Torvalds</span>; ลินุส โตร์วัลดส์; <span class="searchmatch">Linus</span> <span class="searchmatch">Torvalds</span>; jan <span class="searchmatch">Linu</span> Tuwa; <span class="searchmatch">Linus</span> <span class="searchmatch">Torvalds</span>; Линус Торвалдс; <span class="searchmatch">Linus</span> <span class="searchmatch">Torvalds</span>; 林納斯·托瓦茲; <span class="searchmatch">Linus</span> <span class="searchmatch">Torvalds</span>; <span class="searchmatch">Linus</span> Torvalds;...</div> <div class='mw-search-result-data'>5 KB (1,608 words) - 20:50, 7 March 2025</div></li><li class="mw-search-result mw-search-result-ns-6"><div class="searchResultImage"><div class="searchResultImage-thumbnail"><a href="/wiki/File:Linus_Torvalds_(cropped).jpg" class="mw-file-description"><img alt="Thumbnail for File:Linus Torvalds (cropped).jpg" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Linus_Torvalds_%28cropped%29.jpg/120px-Linus_Torvalds_%28cropped%29.jpg" decoding="async" loading="lazy" width="120" height="153" data-file-width="234" data-file-height="298"></a></div><div class="searchResultImage-text"><div class="mw-search-result-heading"><a href="/wiki/File:Linus_Torvalds_(cropped).jpg" title="File:Linus Torvalds (cropped).jpg" data-serp-pos="1">File:<span class="searchmatch">Linus</span> <span class="searchmatch">Torvalds</span> (cropped).jpg</a>    </div><div class="searchresult">Image:<span class="searchmatch">Linus</span>_<span class="searchmatch">Torvalds</span>.jpeg licensed with GFDL 2004-11-25T17:51:02Z Ævar Arnfjörð Bjarmason 600x920 (96338 Bytes) Uploaded with derivativeFX English <span class="searchmatch">Linus</span> Torvalds...</div> <div class='mw-search-result-data'>(234 × 298 (15 KB)) - 07:54, 10 November 2025</div></div></div></li><li class="mw-search-result mw-search-result-ns-6"><div class="searchResultImage"><div class="searchResultImage-thumbnail"><a href="/wiki/File:Linus_Torvalds.jpeg" class="mw-file-description"><img alt="Thumbnail for File:Linus Torvalds.jpeg" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Linus_Torvalds.jpeg/250px-Linus_Torvalds.jpeg" decoding="async" loading="lazy" width="150" height="205" data-file-width="600" data-file-height="819"></a></div><div class="searchResultImage-text"><div class="mw-search-result-heading"><a href="/wiki/File:Linus_Torvalds.jpeg" title="File:Linus Torvalds.jpeg" data-serp-pos="2">File:<span class="searchmatch">Linus</span> <span class="searchmatch">Torvalds</span>.jpeg</a>    </div><div class="searchresult">English <span class="searchmatch">Linus</span> <span class="searchmatch">Torvalds</span> in December 2002 German <span class="searchmatch">Linus</span> <span class="searchmatch">Torvalds</span>...</div> <div class='mw-search-result-data'>(600 × 819 (245 KB)) - 07:54, 10 November 2025</div></div></div></li><li class="mw-search-result mw-search-result-ns-6"><div class="searchResultImage"><div class="searchResultImage-thumbnail"><a href="/wiki/File:LinuxCon_Europe_Linus_Torvalds_03.jpg" class="mw-file-description"><img alt="Thumbnail for File:LinuxCon Europe Linus Torvalds 03.jpg" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/LinuxCon_Europe_Linus_Torvalds_03.jpg/250px-LinuxCon_Europe_Linus_Torvalds_03.jpg" decoding="async" loading="lazy" width="150" height="225" data-file-width="3282" data-file-height="4922"></a></div><div class="searchResultImage-text"><div class="mw-search-result-heading"><a href="/wiki/File:LinuxCon_Europe_Linus_Torvalds_03.jpg" title="File:LinuxCon Europe Linus Torvalds 03.jpg" data-serp-pos="3">File:LinuxCon Europe <span class="searchmatch">Linus</span> <span class="searchmatch">Torvalds</span> 03.jpg</a>    </div><div class="searchresult">Attribution-Share Alike 4.0 truetrue English <span class="searchmatch">Linus</span> <span class="searchmatch">Torvalds</span> Austrian German <span class="searchmatch">Linus</span> <span class="searchmatch">Torvalds</span> Portuguese <span class="searchmatch">Linus</span> <span class="searchmatch">Torvalds</span> discursando na LinuxCon 2014, Europa, em...</div> <div class='mw-search-result-data'>(3,282 × 4,922 (7.08 MB)) - 12:40, 25 February 2026</div></div></div></li><li class="mw-search-result mw-search-result-ns-6"><div class="searchResultImage"><div class="searchResultImage-thumbnail"><a href="/wiki/File:Open_Source_Summit_Europe_-_Linus_Torvalds_-_Dirk_Hohndel_-_2024.jpg" class="mw-file-description"><img alt="Thumbnail for File:Open Source Summit Europe - Linus Torvalds - Dirk Hohndel - 2024.jpg" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Open_Source_Summit_Europe_-_Linus_Torvalds_-_Dirk_Hohndel_-_2024.jpg/250px-Open_Source_Summit_Europe_-_Linus_Torvalds_-_Dirk_Hohndel_-_2024.jpg" decoding="async" loading="lazy" width="150" height="236" data-file-width="720" data-file-height="1134"></a></div><div class="searchResultImage-text"><div class="mw-search-result-heading"><a href="/wiki/File:Open_Source_Summit_Europe_-_Linus_Torvalds_-_Dirk_Hohndel_-_2024.jpg" title="File:Open Source Summit Europe - Linus Torvalds - Dirk Hohndel - 2024.jpg" data-serp-pos="4">File:Open Source Summit Europe - <span class="searchmatch">Linus</span> <span class="searchmatch">Torvalds</span> - Dirk Hohndel - 2024.jpg</a>    </div><div class="searchresult">English From left to right: <span class="searchmatch">Linus</span> <span class="searchmatch">Torvalds</span> (creator of Linux and git) and Dirk Hohndel (Head of Open Source Program Office, Verizon) during the Open Source...</div> <div class='mw-search-result-data'>(720 × 1,134 (167 KB)) - 11:43, 25 October 2025</div></div></div></li><li class="mw-search-result mw-search-result-ns-6"><div class="searchResultImage"><div class="searchResultImage-thumbnail"><a href="/wiki/File:LinuxCon_Europe_Linus_Torvalds_03_(cropped).jpg" class="mw-file-description"><img alt="Thumbnail for File:LinuxCon Europe Linus Torvalds 03 (cropped).jpg" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/LinuxCon_Europe_Linus_Torvalds_03_%28cropped%29.jpg/250px-LinuxCon_Europe_Linus_Torvalds_03_%28cropped%29.jpg" decoding="async" loading="lazy" width="150" height="209" data-file-width="975" data-file-height="1357"></a></div><div class="searchResultImage-text"><div class="mw-search-result-heading"><a href="/wiki/File:LinuxCon_Europe_Linus_Torvalds_03_(cropped).jpg" title="File:LinuxCon Europe Linus Torvalds 03 (cropped).jpg" data-serp-pos="5">File:LinuxCon Europe <span class="searchmatch">Linus</span> <span class="searchmatch">Torvalds</span> 03 (cropped).jpg</a>    </div><div class="searchresult">Attribution-Share Alike 4.0 truetrue English <span class="searchmatch">Linus</span> <span class="searchmatch">Torvalds</span> Burmese လင်းနပ်စ်‌တရော်ဘဲ German <span class="searchmatch">Linus</span> <span class="searchmatch">Torvalds</span> Persian یک نسخه برش خورده و چرخانده شده از تصویری...</div> <div class='mw-search-result-data'>(975 × 1,357 (565 KB)) - 13:49, 20 January 2025</div></div></div></li><li class="mw-search-result mw-search-result-ns-6"><div class="searchResultImage"><div class="searchResultImage-thumbnail"><span><video id="mwe_player_0" poster="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Keynote%2C_A_Conversation_with_Linus_Torvalds_%28Efi9wa4Fwds%29.webm/180px--Keynote%2C_A_Conversation_with_Linus_Torvalds_%28Efi9wa4Fwds%29.webm.jpg" controls="" preload="none" data-mw-tmh="" width="180" height="101" data-durationhint="1509" data-mwtitle="Keynote,_A_Conversation_with_Linus_Torvalds_(Efi9wa4Fwds).webm" data-mwprovider="local"><source src="https://upload.wikimedia.org/wikipedia/commons/transcoded/c/cc/Keynote%2C_A_Conversation_with_Linus_Torvalds_%28Efi9wa4Fwds%29.webm/Keynote%2C_A_Conversation_with_Linus_Torvalds_%28Efi9wa4Fwds%29.webm.480p.vp9.webm" type="video/webm; codecs=&quot;vp9, opus&quot;" data-transcodekey="480p.vp9.webm" data-width="854" data-height="480"><source src="https://upload.wikimedia.org/wikipedia/commons/c/cc/Keynote%2C_A_Conversation_with_Linus_Torvalds_%28Efi9wa4Fwds%29.webm" type="video/webm; codecs=&quot;vp9, opus&quot;" data-width="1280" data-height="720"><source src="https://upload.wikimedia.org/wikipedia/commons/transcoded/c/cc/Keynote%2C_A_Conversation_with_Linus_Torvalds_%28Efi9wa4Fwds%29.webm/Keynote%2C_A_Conversation_with_Linus_Torvalds_%28Efi9wa4Fwds%29.webm.144p.mjpeg.mov" type="video/quicktime" data-transcodekey="144p.mjpeg.mov" data-width="256" data-height="144"><source src="https://upload.wikimedia.org/wikipedia/commons/transcoded/c/cc/Keynote%2C_A_Conversation_with_Linus_Torvalds_%28Efi9wa4Fwds%29.webm/Keynote%2C_A_Conversation_with_Linus_Torvalds_%28Efi9wa4Fwds%29.webm.240p.vp9.webm" type="video/webm; codecs=&quot;vp9, opus&quot;" data-transcodekey="240p.vp9.webm" data-width="426" data-height="240"><source src="https://upload.wikimedia.org/wikipedia/commons/transcoded/c/cc/Keynote%2C_A_Conversation_with_Linus_Torvalds_%28Efi9wa4Fwds%29.webm/Keynote%2C_A_Conversation_with_Linus_Torvalds_%28Efi9wa4Fwds%29.webm.360p.webm" type="video/webm; codecs=&quot;vp8, vorbis&quot;" data-transcodekey="360p.webm" data-width="640" data-height="360"></video></span></div><div class="searchResultImage-text"><div class="mw-search-result-heading"><a href="/wiki/File:Keynote,_A_Conversation_with_Linus_Torvalds_(Efi9wa4Fwds).webm" title="File:Keynote, A Conversation with Linus Torvalds (Efi9wa4Fwds).webm" data-serp-pos="6">File:Keynote, A Conversation with <span class="searchmatch">Linus</span> <span class="searchmatch">Torvalds</span> (Efi9wa4Fwds).webm</a>    </div><div class="searchresult">org/licenses/by/4.0CC BY 4.0 Creative Commons Attribution 4.0 truetrue English Keynote:A Conversation with <span class="searchmatch">Linus</span> <span class="searchmatch">Torvalds</span>, Open Source Leadership Summit 2017...</div> <div class='mw-search-result-data'>(WebM VP9/Opus video file, 25 min 8 s) - 23:50, 19 February 2025</div></div></div></li><li class="mw-search-result mw-search-result-ns-14"><div class="mw-search-result-heading"><a href="/wiki/Category:Linus_Torvalds" title="Category:Linus Torvalds" data-serp-pos="7">Category:<span class="searchmatch">Linus</span> <span class="searchmatch">Torvalds</span></a>    </div><div class="searchresult">Торвальдс; <span class="searchmatch">Linus</span> <span class="searchmatch">Torvalds</span>; ลินุส โตร์วัลดส์; <span class="searchmatch">Linus</span> <span class="searchmatch">Torvalds</span>; jan <span class="searchmatch">Linu</span> Tuwa; <span class="searchmatch">Linus</span> <span class="searchmatch">Torvalds</span>; Линус Торвалдс; <span class="searchmatch">Linus</span> <span class="searchmatch">Torvalds</span>; 林納斯·托瓦茲; <span class="searchmatch">Linus</span> <span class="searchmatch">Torvalds</span>; <span class="searchmatch">Linus</span> Torvalds;...</div> <div class='mw-search-result-data'>65 members (1 subcategory, 63 files) - 20:11, 28 May 2025</div></li><li class="mw-search-result mw-search-result-ns-6"><div class="searchResultImage"><div class="searchResultImage-thumbnail"><a href="/wiki/File:Linus_Torvalds_in_Conversation_with_Dirk_Hohndel_2025.jpg" class="mw-file-description"><img alt="Thumbnail for File:Linus Torvalds in Conversation with Dirk Hohndel 2025.jpg" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Linus_Torvalds_in_Conversation_with_Dirk_Hohndel_2025.jpg/250px-Linus_Torvalds_in_Conversation_with_Dirk_Hohndel_2025.jpg" decoding="async" loading="lazy" width="180" height="101" data-file-width="3012" data-file-height="1691"></a></div><div class="searchResultImage-text"><div class="mw-search-result-heading"><a href="/wiki/File:Linus_Torvalds_in_Conversation_with_Dirk_Hohndel_2025.jpg" title="File:Linus Torvalds in Conversation with Dirk Hohndel 2025.jpg" data-serp-pos="8">File:<span class="searchmatch">Linus</span> <span class="searchmatch">Torvalds</span> in Conversation with Dirk Hohndel 2025.jpg</a>    </div><div class="searchresult">org/licenses/by/4.0CC BY 4.0 Creative Commons Attribution 4.0 truetrue English <span class="searchmatch">Linus</span> <span class="searchmatch">Torvalds</span> in Conversation with Dirk Hohndel 2025 at the Open Source Summit Korea...</div> <div class='mw-search-result-data'>(3,012 × 1,691 (254 KB)) - 17:45, 15 February 2026</div></div></div></li><li class="mw-search-result mw-search-result-ns-6"><div class="searchResultImage"><div class="searchResultImage-thumbnail"><span><audio id="mwe_player_1" controls="" preload="none" data-mw-tmh="" width="90" style="width:90px;" data-durationhint="4" data-mwtitle="Linus-linux.ogg" data-mwprovider="local"><source src="https://upload.wikimedia.org/wikipedia/commons/0/03/Linus-linux.ogg" type="audio/ogg; codecs=&quot;vorbis&quot;" data-width="0" data-height="0"><source src="https://upload.wikimedia.org/wikipedia/commons/transcoded/0/03/Linus-linux.ogg/Linus-linux.ogg.mp3" type="audio/mpeg" data-transcodekey="mp3" data-width="0" data-height="0"><track src="/w/api.php?action=timedtext&amp;title=File%3ALinus-linux.ogg&amp;lang=ar&amp;trackformat=vtt" kind="subtitles" type="text/vtt" srclang="ar" label="العربية ‪(ar)‬" data-dir="rtl"><track src="/w/api.php?action=timedtext&amp;title=File%3ALinus-linux.ogg&amp;lang=en&amp;trackformat=vtt" kind="subtitles" type="text/vtt" srclang="en" label="English ‪(en)‬" data-dir="ltr"><track src="/w/api.php?action=timedtext&amp;title=File%3ALinus-linux.ogg&amp;lang=hi&amp;trackformat=vtt" kind="subtitles" type="text/vtt" srclang="hi" label="हिन्दी ‪(hi)‬" data-dir="ltr"><track src="/w/api.php?action=timedtext&amp;title=File%3ALinus-linux.ogg&amp;lang=ja&amp;trackformat=vtt" kind="subtitles" type="text/vtt" srclang="ja" label="日本語 ‪(ja)‬" data-dir="ltr"><track src="/w/api.php?action=timedtext&amp;title=File%3ALinus-linux.ogg&amp;lang=pt&amp;trackformat=vtt" kind="subtitles" type="text/vtt" srclang="pt" label="português ‪(pt)‬" data-dir="ltr"><track src="/w/api.php?action=timedtext&amp;title=File%3ALinus-linux.ogg&amp;lang=ru&amp;trackformat=vtt" kind="subtitles" type="text/vtt" srclang="ru" label="русский ‪(ru)‬" data-dir="ltr"><track src="/w/api.php?action=timedtext&amp;title=File%3ALinus-linux.ogg&amp;lang=sa&amp;trackformat=vtt" kind="subtitles" type="text/vtt" srclang="sa" label="संस्कृतम् ‪(sa)‬" data-dir="ltr"><track src="/w/api.php?action=timedtext&amp;title=File%3ALinus-linux.ogg&amp;lang=sv&amp;trackformat=vtt" kind="subtitles" type="text/vtt" srclang="sv" label="svenska ‪(sv)‬" data-dir="ltr"><track src="/w/api.php?action=timedtext&amp;title=File%3ALinus-linux.ogg&amp;lang=tr&amp;trackformat=vtt" kind="subtitles" type="text/vtt" srclang="tr" label="Türkçe ‪(tr)‬" data-dir="ltr"></audio></span></div><div class="searchResultImage-text"><div class="mw-search-result-heading"><a href="/wiki/File:Linus-linux.ogg" title="File:Linus-linux.ogg" data-serp-pos="9">File:<span class="searchmatch">Linus</span>-linux.ogg</a>    </div><div class="searchresult">bytes) {{Information |Description = <span class="searchmatch">Linus</span> says Linux |Source = linux kernel |Date = 1994 |Author = <span class="searchmatch">Linus</span> <span class="searchmatch">Torvalds</span> |Permission = GPL |other_versions =...</div> <div class='mw-search-result-data'>(Ogg Vorbis sound file, 4.0 s) - 22:18, 17 March 2025</div></div></div></li><li class="mw-search-result mw-search-result-ns-6"><div class="searchResultImage"><div class="searchResultImage-thumbnail"><span><audio id="mwe_player_2" controls="" preload="none" data-mw-tmh="" width="90" style="width:90px;" data-durationhint="2" data-mwtitle="En-us-Linus_Torvalds.oga" data-mwprovider="local"><source src="https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b7/En-us-Linus_Torvalds.oga/En-us-Linus_Torvalds.oga.mp3" type="audio/mpeg" data-transcodekey="mp3" data-width="0" data-height="0"><source src="https://upload.wikimedia.org/wikipedia/commons/b/b7/En-us-Linus_Torvalds.oga" type="audio/ogg; codecs=&quot;vorbis&quot;" data-width="0" data-height="0"></audio></span></div><div class="searchResultImage-text"><div class="mw-search-result-heading"><a href="/wiki/File:En-us-Linus_Torvalds.oga" title="File:En-us-Linus Torvalds.oga" data-serp-pos="10">File:En-us-<span class="searchmatch">Linus</span> <span class="searchmatch">Torvalds</span>.oga</a>    </div><div class="searchresult">Commons Attribution 4.0 truetrue English Audio pronunciation of the name &quot;<span class="searchmatch">Linus</span> <span class="searchmatch">Torvalds</span>&quot; in U.S. English (Midwestern accent). author name string: Paul2520 Wikimedia...</div> <div class='mw-search-result-data'>(Ogg Vorbis sound file, 1.4 s) - 16:57, 29 October 2024</div></div></div></li><li class="mw-search-result mw-search-result-ns-6"><div class="searchResultImage"><div class="searchResultImage-thumbnail"><span><audio id="mwe_player_3" controls="" preload="none" data-mw-tmh="" width="90" style="width:90px;" data-durationhint="2" data-mwtitle="Sv-Linus_Torvalds2.ogg" data-mwprovider="local"><source src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Sv-Linus_Torvalds2.ogg" type="audio/ogg; codecs=&quot;vorbis&quot;" data-width="0" data-height="0"><source src="https://upload.wikimedia.org/wikipedia/commons/transcoded/3/3c/Sv-Linus_Torvalds2.ogg/Sv-Linus_Torvalds2.ogg.mp3" type="audio/mpeg" data-transcodekey="mp3" data-width="0" data-height="0"></audio></span></div><div class="searchResultImage-text"><div class="mw-search-result-heading"><a href="/wiki/File:Sv-Linus_Torvalds2.ogg" title="File:Sv-Linus Torvalds2.ogg" data-serp-pos="11">File:Sv-<span class="searchmatch">Linus</span> Torvalds2.ogg</a>    </div><div class="searchresult">(17370 bytes) English: The Finland-Swedish pronunciation of the name <span class="searchmatch">Linus</span> <span class="searchmatch">Torvalds</span> Русский: Финляндско-шведское произношение имени Линус Торвальдс Українська:...</div> <div class='mw-search-result-data'>(Ogg Vorbis sound file, 1.3 s) - 05:56, 8 October 2025</div></div></div></li><li class="mw-search-result mw-search-result-ns-6"><div class="searchResultImage"><div class="searchResultImage-thumbnail"><a href="/wiki/File:Linus_Torvalds,_2002,_Australian_Linux_conference2.jpg" class="mw-file-description"><img alt="Thumbnail for File:Linus Torvalds, 2002, Australian Linux conference2.jpg" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Linus_Torvalds%2C_2002%2C_Australian_Linux_conference2.jpg/120px-Linus_Torvalds%2C_2002%2C_Australian_Linux_conference2.jpg" decoding="async" loading="lazy" width="120" height="147" data-file-width="942" data-file-height="1152"></a></div><div class="searchResultImage-text"><div class="mw-search-result-heading"><a href="/wiki/File:Linus_Torvalds,_2002,_Australian_Linux_conference2.jpg" title="File:Linus Torvalds, 2002, Australian Linux conference2.jpg" data-serp-pos="12">File:<span class="searchmatch">Linus</span> <span class="searchmatch">Torvalds</span>, 2002, Australian Linux conference2.jpg</a>    </div><div class="searchresult">truetrue This image is a derivative work of the following images: File:<span class="searchmatch">Linus</span>_<span class="searchmatch">Torvalds</span>,_2002,_Australian_Linux_conference.jpg licensed with Cc-by-sa-2.0 2009-03-12T13:03:58Z...</div> <div class='mw-search-result-data'>(942 × 1,152 (378 KB)) - 05:11, 23 October 2025</div></div></div></li><li class="mw-search-result mw-search-result-ns-6"><div class="searchResultImage"><div class="searchResultImage-thumbnail"><a href="/wiki/File:Pocock-torvalds.png" class="mw-file-description"><img alt="Thumbnail for File:Pocock-torvalds.png" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/Pocock-torvalds.png/250px-Pocock-torvalds.png" decoding="async" loading="lazy" width="150" height="106" data-file-width="1024" data-file-height="722"></a></div><div class="searchResultImage-text"><div class="mw-search-result-heading"><a href="/wiki/File:Pocock-torvalds.png" title="File:Pocock-torvalds.png" data-serp-pos="13">File:Pocock-<span class="searchmatch">torvalds</span>.png</a>    </div><div class="searchresult">org/licenses/by-sa/4.0CC BY-SA 4.0 Creative Commons Attribution-Share Alike 4.0 truetrue English <span class="searchmatch">Linus</span> <span class="searchmatch">Torvalds</span> and Daniel Pocock determination method or standard: SHA-1...</div> <div class='mw-search-result-data'>(1,024 × 722 (1.12 MB)) - 19:23, 10 February 2026</div></div></div></li><li class="mw-search-result mw-search-result-ns-6"><div class="searchResultImage"><div class="searchResultImage-thumbnail"><a href="/wiki/File:Lc3_2018_(263682303)_(cropped).jpeg" class="mw-file-description"><img alt="Thumbnail for File:Lc3 2018 (263682303) (cropped).jpeg" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Lc3_2018_%28263682303%29_%28cropped%29.jpeg/250px-Lc3_2018_%28263682303%29_%28cropped%29.jpeg" decoding="async" loading="lazy" width="150" height="205" data-file-width="476" data-file-height="650"></a></div><div class="searchResultImage-text"><div class="mw-search-result-heading"><a href="/wiki/File:Lc3_2018_(263682303)_(cropped).jpeg" title="File:Lc3 2018 (263682303) (cropped).jpeg" data-serp-pos="14">File:Lc3 2018 (263682303) (cropped).jpeg</a>  <span class='searchalttitle'>(category <span class="searchmatch">Linus</span> <span class="searchmatch">Torvalds</span>)</span>  </div><div class="searchresult">English a camera portrait of <span class="searchmatch">Linus</span> <span class="searchmatch">Torvald</span> German ein Bild von Linis <span class="searchmatch">Torvald</span> Nepali लाइनस टोर्भाल्डको पोर्टेट...</div> <div class='mw-search-result-data'>(476 × 650 (64 KB)) - 12:56, 26 December 2025</div></div></div></li><li class="mw-search-result mw-search-result-ns-6"><div class="searchResultImage"><div class="searchResultImage-thumbnail"><a href="/wiki/File:Keith_Curtis_with_Linus_Torvalds.jpg" class="mw-file-description"><img alt="Thumbnail for File:Keith Curtis with Linus Torvalds.jpg" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Keith_Curtis_with_Linus_Torvalds.jpg/120px-Keith_Curtis_with_Linus_Torvalds.jpg" decoding="async" loading="lazy" width="120" height="128" data-file-width="384" data-file-height="410"></a></div><div class="searchResultImage-text"><div class="mw-search-result-heading"><a href="/wiki/File:Keith_Curtis_with_Linus_Torvalds.jpg" title="File:Keith Curtis with Linus Torvalds.jpg" data-serp-pos="15">File:Keith Curtis with <span class="searchmatch">Linus</span> <span class="searchmatch">Torvalds</span>.jpg</a>    </div><div class="searchresult">DescriptionKeith Curtis with <span class="searchmatch">Linus</span> <span class="searchmatch">Torvalds</span>.jpg English: Author of &quot;Software Wars&quot; with creator of &quot;Linux&quot; Date 21 October 2011 Source http://keithcu.com...</div> <div class='mw-search-result-data'>(384 × 410 (56 KB)) - 08:08, 15 December 2021</div></div></div></li><li class="mw-search-result mw-search-result-ns-6"><div class="searchResultImage"><div class="searchResultImage-thumbnail"><a href="/wiki/File:Linus_Torvalds_talking.jpeg" class="mw-file-description"><img alt="Thumbnail for File:Linus Torvalds talking.jpeg" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Linus_Torvalds_talking.jpeg/250px-Linus_Torvalds_talking.jpeg" decoding="async" loading="lazy" width="150" height="227" data-file-width="600" data-file-height="909"></a></div><div class="searchResultImage-text"><div class="mw-search-result-heading"><a href="/wiki/File:Linus_Torvalds_talking.jpeg" title="File:Linus Torvalds talking.jpeg" data-serp-pos="16">File:<span class="searchmatch">Linus</span> <span class="searchmatch">Torvalds</span> talking.jpeg</a>    </div><div class="searchresult">Description<span class="searchmatch">Linus</span> <span class="searchmatch">Torvalds</span> talking.jpeg English: <span class="searchmatch">Linus</span> <span class="searchmatch">Torvalds</span>, creator of the Linux kernel. Suomi: <span class="searchmatch">Linus</span> <span class="searchmatch">Torvalds</span>, Linux-ytimen kehittäjä. Italiano: <span class="searchmatch">Linus</span> Torvalds...</div> <div class='mw-search-result-data'>(600 × 909 (300 KB)) - 08:35, 29 April 2024</div></div></div></li><li class="mw-search-result mw-search-result-ns-6"><div class="searchResultImage"><div class="searchResultImage-thumbnail"><a href="/wiki/File:Linus_torvalds_bh.jpg" class="mw-file-description"><img alt="Thumbnail for File:Linus torvalds bh.jpg" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Linus_torvalds_bh.jpg/120px-Linus_torvalds_bh.jpg" decoding="async" loading="lazy" width="120" height="90" data-file-width="640" data-file-height="480"></a></div><div class="searchResultImage-text"><div class="mw-search-result-heading"><a href="/wiki/File:Linus_torvalds_bh.jpg" title="File:Linus torvalds bh.jpg" data-serp-pos="17">File:<span class="searchmatch">Linus</span> <span class="searchmatch">torvalds</span> bh.jpg</a>    </div><div class="searchresult">Description<span class="searchmatch">Linus</span> <span class="searchmatch">torvalds</span> bh.jpg Čeština: <span class="searchmatch">Linus</span> <span class="searchmatch">Torvalds</span> na Linuxworldu 2000 v New Yorku. English: <span class="searchmatch">Linus</span> <span class="searchmatch">Torvalds</span> at Linuxworld 2000 in NewYork City. Italiano:...</div> <div class='mw-search-result-data'>(640 × 480 (50 KB)) - 08:07, 15 December 2021</div></div></div></li><li class="mw-search-result mw-search-result-ns-6"><div class="searchResultImage"><div class="searchResultImage-thumbnail"><a href="/wiki/File:Linus_Torvalds_lks08.jpg" class="mw-file-description"><img alt="Thumbnail for File:Linus Torvalds lks08.jpg" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Linus_Torvalds_lks08.jpg/250px-Linus_Torvalds_lks08.jpg" decoding="async" loading="lazy" width="150" height="100" data-file-width="656" data-file-height="436"></a></div><div class="searchResultImage-text"><div class="mw-search-result-heading"><a href="/wiki/File:Linus_Torvalds_lks08.jpg" title="File:Linus Torvalds lks08.jpg" data-serp-pos="18">File:<span class="searchmatch">Linus</span> <span class="searchmatch">Torvalds</span> lks08.jpg</a>    </div><div class="searchresult">Description<span class="searchmatch">Linus</span> <span class="searchmatch">Torvalds</span> lks08.jpg English: <span class="searchmatch">Linus</span> <span class="searchmatch">Torvalds</span> at Linux Kernel Developers Summit 2008 at Portland, Oregon Français : <span class="searchmatch">Linus</span> <span class="searchmatch">Torvalds</span> au sommet...</div> <div class='mw-search-result-data'>(656 × 436 (27 KB)) - 15:43, 7 December 2025</div></div></div></li><li class="mw-search-result mw-search-result-ns-6"><div class="searchResultImage"><div class="searchResultImage-thumbnail"><a href="/wiki/File:Linus_Torvalds_-_Linuxcon2011.jpg" class="mw-file-description"><img alt="Thumbnail for File:Linus Torvalds - Linuxcon2011.jpg" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Linus_Torvalds_-_Linuxcon2011.jpg/250px-Linus_Torvalds_-_Linuxcon2011.jpg" decoding="async" loading="lazy" width="150" height="224" data-file-width="2592" data-file-height="3872"></a></div><div class="searchResultImage-text"><div class="mw-search-result-heading"><a href="/wiki/File:Linus_Torvalds_-_Linuxcon2011.jpg" title="File:Linus Torvalds - Linuxcon2011.jpg" data-serp-pos="19">File:<span class="searchmatch">Linus</span> <span class="searchmatch">Torvalds</span> - Linuxcon2011.jpg</a>    </div><div class="searchresult">Description<span class="searchmatch">Linus</span> <span class="searchmatch">Torvalds</span> - Linuxcon2011.jpg Linuxcon2011 - São Paulo / Brazil <span class="searchmatch">Linus</span> <span class="searchmatch">Torvalds</span> - Linux kernel creator Date 17 November 2011, 08:42 Source <span class="searchmatch">Linus</span> Torvalds...</div> <div class='mw-search-result-data'>(2,592 × 3,872 (4.05 MB)) - 16:37, 17 January 2026</div></div></div></li></ul></div><div class="mw-search-visualclear"></div><div class='mw-search-pager-bottom'><div class="cdx-table-pager">
+<div class="cdx-table-pager__start"><form method="get" action="/w/index.php" class="cdx-table-pager__limit-form">
+<select name="limit" class="cdx-select"><option value="20" selected="">20 items</option><option value="50">50 items</option><option value="100">100 items</option><option value="250">250 items</option><option value="500">500 items</option></select>
+<button class="cdx-button cdx-table-pager__limit-form__submit" type="submit">Go</button>
+<input type="hidden" value="1" name="ns0">
+<input type="hidden" value="1" name="ns100">
+<input type="hidden" value="1" name="ns106">
+<input type="hidden" value="1" name="ns12">
+<input type="hidden" value="1" name="ns14">
+<input type="hidden" value="1" name="ns6">
+<input type="hidden" value="Linus Torvalds" name="search">
+<input type="hidden" value="Special:Search" name="title">
+<input type="hidden" value="default" name="profile">
+</form>
+</div>
+<div class="cdx-table-pager__end"><a class="cdx-button cdx-button--fake-button cdx-button--fake-button--disabled cdx-button--weight-quiet cdx-button--icon-only" role="button" aria-label="First page" title="First page" disabled="" rel="first"><span class="cdx-button__icon cdx-table-pager__icon--first"></span></a><a class="cdx-button cdx-button--fake-button cdx-button--fake-button--disabled cdx-button--weight-quiet cdx-button--icon-only" role="button" aria-label="Previous page" title="Previous page" disabled="" rel="prev"><span class="cdx-button__icon cdx-table-pager__icon--previous"></span></a><a class="cdx-button cdx-button--fake-button cdx-button--fake-button--enabled cdx-button--weight-quiet cdx-button--icon-only" role="button" aria-label="Next page" title="Next page" href="/w/index.php?title=Special:Search&amp;limit=20&amp;offset=20&amp;profile=default&amp;search=Linus+Torvalds" rel="next"><span class="cdx-button__icon cdx-table-pager__icon--next"></span></a></div>
+</div></div>
+</div><noscript><img src="https://commons.wikimedia.org/wiki/Special:CentralAutoLogin/start?useformat=desktop&amp;type=1x1&amp;usesul3=1" alt="" width="1" height="1" style="border: none; position: absolute;"></noscript>
+<div class="printfooter" data-nosnippet="">Retrieved from "<a dir="ltr" href="https://commons.wikimedia.org/wiki/Special:Search">https://commons.wikimedia.org/wiki/Special:Search</a>"</div></div>
+					<div id="catlinks" class="catlinks catlinks-allhidden" data-mw-interface=""></div>
+				</div>
+			</main>
+			
+		</div>
+		<div class="mw-footer-container">
+			
+<footer id="footer" class="mw-footer" >
+	<ul id="footer-info">
+</ul>
+
+	<ul id="footer-places">
+	<li id="footer-places-privacy"><a href="https://foundation.wikimedia.org/wiki/Special:MyLanguage/Policy:Privacy_policy">Privacy policy</a></li>
+	<li id="footer-places-about"><a href="/wiki/Commons:Welcome">About Wikimedia Commons</a></li>
+	<li id="footer-places-disclaimers"><a href="/wiki/Commons:General_disclaimer">Disclaimers</a></li>
+	<li id="footer-places-wm-codeofconduct"><a href="https://foundation.wikimedia.org/wiki/Special:MyLanguage/Policy:Universal_Code_of_Conduct">Code of Conduct</a></li>
+	<li id="footer-places-developers"><a href="https://developer.wikimedia.org">Developers</a></li>
+	<li id="footer-places-statslink"><a href="https://stats.wikimedia.org/#/commons.wikimedia.org">Statistics</a></li>
+	<li id="footer-places-cookiestatement"><a href="https://foundation.wikimedia.org/wiki/Special:MyLanguage/Policy:Cookie_statement">Cookie statement</a></li>
+	<li id="footer-places-mobileview"><a href="//commons.wikimedia.org/w/index.php?title=Special:Search&amp;ns0=1&amp;ns100=1&amp;ns106=1&amp;ns12=1&amp;ns14=1&amp;ns6=1&amp;search=Linus+Torvalds&amp;mobileaction=toggle_view_mobile" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+</ul>
+
+	<ul id="footer-icons" class="noprint">
+	<li id="footer-copyrightico"><a href="https://www.wikimedia.org/" class="cdx-button cdx-button--fake-button cdx-button--size-large cdx-button--fake-button--enabled"><picture><source media="(min-width: 500px)" srcset="/static/images/footer/wikimedia-button.svg" width="84" height="29"><img src="/static/images/footer/wikimedia.svg" width="25" height="25" alt="Wikimedia Foundation" lang="en" loading="lazy"></picture></a></li>
+	<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/" class="cdx-button cdx-button--fake-button cdx-button--size-large cdx-button--fake-button--enabled"><picture><source media="(min-width: 500px)" srcset="/w/resources/assets/poweredby_mediawiki.svg" width="88" height="31"><img src="/w/resources/assets/mediawiki_compact.svg" alt="Powered by MediaWiki" lang="en" width="25" height="25" loading="lazy"></picture></a></li>
+</ul>
+
+</footer>
+
+		</div>
+	</div> 
+</div> 
+<div class="vector-header-container vector-sticky-header-container no-font-mode-scale">
+	<div id="vector-sticky-header" class="vector-sticky-header">
+		<div class="vector-sticky-header-start">
+			<div class="vector-sticky-header-icon-start vector-button-flush-left" aria-hidden="true">
+				<button class="cdx-button cdx-button--weight-quiet cdx-button--icon-only vector-sticky-header-search-toggle" tabindex="-1" data-event-name="ui.vector-sticky-search-form.icon"><span class="vector-icon mw-ui-icon-search mw-ui-icon-wikimedia-search"></span>
+
+<span>Search</span>
+			</button>
+		</div>
+			
+		<div role="search" class="vector-search-box-vue vector-search-box">
+			<div class="vector-typeahead-search-container">
+				<div class="cdx-typeahead-search">
+					<form action="/w/index.php" id="vector-sticky-search-form" class="cdx-search-input cdx-search-input--has-end-button">
+						<div  class="cdx-search-input__input-wrapper"  data-search-loc="header-moved">
+							<div class="cdx-text-input cdx-text-input--has-start-icon">
+								<input
+									class="cdx-text-input__input mw-searchInput" autocomplete="off"
+									
+									type="search" name="search" placeholder="Search Wikimedia Commons">
+								<span class="cdx-text-input__icon cdx-text-input__start-icon"></span>
+							</div>
+							<input type="hidden" name="title" value="Special:MediaSearch">
+						</div>
+						<button class="cdx-button cdx-search-input__end-button">Search</button>
+					</form>
+				</div>
+			</div>
+		</div>
+		<div class="vector-sticky-header-context-bar">
+				<div class="vector-sticky-header-context-bar-primary" aria-hidden="true" >Search results</div>
+			</div>
+		</div>
+		<div class="vector-sticky-header-end" aria-hidden="true">
+			<div class="vector-sticky-header-icons">
+				<a href="#" class="cdx-button cdx-button--fake-button cdx-button--fake-button--enabled cdx-button--weight-quiet cdx-button--icon-only" id="ca-talk-sticky-header" tabindex="-1" data-event-name="talk-sticky-header"><span class="vector-icon mw-ui-icon-speechBubbles mw-ui-icon-wikimedia-speechBubbles"></span>
+
+<span></span>
+			</a>
+			<a href="#" class="cdx-button cdx-button--fake-button cdx-button--fake-button--enabled cdx-button--weight-quiet cdx-button--icon-only" id="ca-subject-sticky-header" tabindex="-1" data-event-name="subject-sticky-header"><span class="vector-icon mw-ui-icon-article mw-ui-icon-wikimedia-article"></span>
+
+<span></span>
+			</a>
+			<a href="#" class="cdx-button cdx-button--fake-button cdx-button--fake-button--enabled cdx-button--weight-quiet cdx-button--icon-only" id="ca-history-sticky-header" tabindex="-1" data-event-name="history-sticky-header"><span class="vector-icon mw-ui-icon-wikimedia-history mw-ui-icon-wikimedia-wikimedia-history"></span>
+
+<span></span>
+			</a>
+			<a href="#" class="cdx-button cdx-button--fake-button cdx-button--fake-button--enabled cdx-button--weight-quiet cdx-button--icon-only mw-watchlink" id="ca-watchstar-sticky-header" tabindex="-1" data-event-name="watch-sticky-header"><span class="vector-icon mw-ui-icon-wikimedia-star mw-ui-icon-wikimedia-wikimedia-star"></span>
+
+<span></span>
+			</a>
+			<a href="#" class="cdx-button cdx-button--fake-button cdx-button--fake-button--enabled cdx-button--weight-quiet cdx-button--icon-only" id="ca-edit-sticky-header" tabindex="-1" data-event-name="wikitext-edit-sticky-header"><span class="vector-icon mw-ui-icon-wikimedia-wikiText mw-ui-icon-wikimedia-wikimedia-wikiText"></span>
+
+<span></span>
+			</a>
+			<a href="#" class="cdx-button cdx-button--fake-button cdx-button--fake-button--enabled cdx-button--weight-quiet cdx-button--icon-only" id="ca-ve-edit-sticky-header" tabindex="-1" data-event-name="ve-edit-sticky-header"><span class="vector-icon mw-ui-icon-wikimedia-edit mw-ui-icon-wikimedia-wikimedia-edit"></span>
+
+<span></span>
+			</a>
+			<a href="#" class="cdx-button cdx-button--fake-button cdx-button--fake-button--enabled cdx-button--weight-quiet cdx-button--icon-only" id="ca-viewsource-sticky-header" tabindex="-1" data-event-name="ve-edit-protected-sticky-header"><span class="vector-icon mw-ui-icon-wikimedia-editLock mw-ui-icon-wikimedia-wikimedia-editLock"></span>
+
+<span></span>
+			</a>
+		</div>
+			<div class="vector-sticky-header-buttons">
+				<a href="#" class="cdx-button cdx-button--fake-button cdx-button--fake-button--enabled cdx-button--weight-quiet cdx-button--action-progressive" id="ca-addsection-sticky-header" tabindex="-1" data-event-name="addsection-sticky-header"><span class="vector-icon mw-ui-icon-speechBubbleAdd-progressive mw-ui-icon-wikimedia-speechBubbleAdd-progressive"></span>
+
+<span>Add topic</span>
+			</a>
+		</div>
+			<div class="vector-sticky-header-icon-end">
+				<div class="vector-user-links">
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="mw-portlet mw-portlet-dock-bottom emptyPortlet" id="p-dock-bottom">
+	<ul>
+		
+	</ul>
+</div>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgHostname":"mw-web.eqiad.main-5dbdbb59b6-54xjk","wgBackendResponseTime":277});});</script>
+</body>
+</html>

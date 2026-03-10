@@ -49,7 +49,8 @@
         "Joseph Stalin",
         "Adolf Hitler",
         "Benito Mussolini"
-      ]
+      ],
+      "quote_fr": "La presse est l'ennemie du peuple."
     },
     {
       "quote": "I have a dream that one day this nation will rise up.",
@@ -64,7 +65,8 @@
         "Malcolm X",
         "Nelson Mandela",
         "Barack Obama"
-      ]
+      ],
+      "quote_fr": "Je fais le rêve qu'un jour cette nation se lèvera."
     },
     {
       "quote": "That's one small step for man, one giant leap for mankind.",
@@ -79,7 +81,8 @@
         "Buzz Aldrin",
         "Yuri Gagarin",
         "John Glenn"
-      ]
+      ],
+      "quote_fr": "C'est un petit pas pour l'homme, un bond de géant pour l'humanité."
     },
     {
       "quote": "The only thing we have to fear is fear itself.",
@@ -94,7 +97,8 @@
         "Winston Churchill",
         "Theodore Roosevelt",
         "Harry Truman"
-      ]
+      ],
+      "quote_fr": "La seule chose que nous devons craindre, c'est la crainte elle-même."
     },
     {
       "quote": "I think, therefore I am.",
@@ -109,7 +113,8 @@
         "Immanuel Kant",
         "Friedrich Nietzsche",
         "Jean-Paul Sartre"
-      ]
+      ],
+      "quote_fr": "Je pense, donc je suis."
     },
     {
       "quote": "Stay hungry. Stay foolish.",
@@ -124,7 +129,8 @@
         "Bill Gates",
         "Elon Musk",
         "Mark Zuckerberg"
-      ]
+      ],
+      "quote_fr": "Restez affamés. Restez fous."
     },
     {
       "quote": "In the future, everyone will be world-famous for 15 minutes.",
@@ -139,7 +145,8 @@
         "Salvador Dalí",
         "Pablo Picasso",
         "Marcel Duchamp"
-      ]
+      ],
+      "quote_fr": "À l'avenir, chacun sera mondialement célèbre pendant 15 minutes."
     },
     {
       "quote": "Knowledge is power.",
@@ -154,7 +161,8 @@
         "Thomas Hobbes",
         "John Locke",
         "Voltaire"
-      ]
+      ],
+      "quote_fr": "Le savoir, c'est le pouvoir."
     },
     {
       "quote": "If you judge people, you have no time to love them.",
@@ -169,7 +177,8 @@
         "Dalai Lama",
         "Nelson Mandela",
         "Desmond Tutu"
-      ]
+      ],
+      "quote_fr": "Si vous jugez les gens, vous n'avez pas le temps de les aimer."
     },
     {
       "quote": "Life is what happens when you're busy making other plans.",
@@ -184,7 +193,8 @@
         "Paul McCartney",
         "Bob Dylan",
         "Freddie Mercury"
-      ]
+      ],
+      "quote_fr": "La vie, c'est ce qui arrive pendant que vous êtes occupé à faire d'autres projets."
     },
     {
       "quote": "Imagination is more important than knowledge.",
@@ -199,7 +209,8 @@
         "Isaac Newton",
         "Nikola Tesla",
         "Stephen Hawking"
-      ]
+      ],
+      "quote_fr": "L'imagination est plus importante que le savoir."
     },
     {
       "quote": "Man is condemned to be free.",
@@ -214,7 +225,8 @@
         "Albert Camus",
         "Simone de Beauvoir",
         "Friedrich Nietzsche"
-      ]
+      ],
+      "quote_fr": "L'homme est condamné à être libre."
     },
     {
       "quote": "If I have seen further it is by standing on the shoulders of giants.",
@@ -229,7 +241,8 @@
         "Galileo Galilei",
         "Albert Einstein",
         "Johannes Kepler"
-      ]
+      ],
+      "quote_fr": "Si j'ai vu plus loin, c'est en me tenant sur les épaules de géants."
     },
     {
       "quote": "The unexamined life is not worth living.",
@@ -244,7 +257,8 @@
         "Plato",
         "Aristotle",
         "Diogenes"
-      ]
+      ],
+      "quote_fr": "Une vie sans examen ne vaut pas la peine d'être vécue."
     },
     {
       "quote": "Talk is cheap. Show me the code.",
@@ -259,63 +273,64 @@
         "Richard Stallman",
         "Bill Gates",
         "Dennis Ritchie"
-      ]
+      ],
+      "quote_fr": "Les paroles sont faciles. Montre-moi le code."
     }
   ],
   "people": {
-    "Adolf Hitler": "https://upload.wikimedia.org/wikipedia/commons/8/8c/Adolf_Hitler_1935.jpg",
-    "Albert Camus": "https://upload.wikimedia.org/wikipedia/commons/d/d1/Albert_Camus%2C_gognac%2C_1957.jpg",
-    "Albert Einstein": "https://upload.wikimedia.org/wikipedia/commons/d/d3/Albert_Einstein_Head.jpg",
-    "Andy Warhol": "https://upload.wikimedia.org/wikipedia/commons/a/a2/Andy_Warhol_1975.jpg",
-    "Aristotle": "https://upload.wikimedia.org/wikipedia/commons/1/11/Aristotle_Altemps_Inv8575.jpg",
-    "Barack Obama": "https://upload.wikimedia.org/wikipedia/commons/8/8d/Barack_Obama_2012_portrait.jpg",
-    "Benito Mussolini": "https://upload.wikimedia.org/wikipedia/commons/2/2c/Benito_Mussolini_1920s.jpg",
-    "Bill Gates": "https://upload.wikimedia.org/wikipedia/commons/a/a0/Bill_Gates_2018.jpg",
-    "Bob Dylan": "https://upload.wikimedia.org/wikipedia/commons/3/35/Bob_Dylan_-_Malibu_1986.jpg",
-    "Buzz Aldrin": "https://upload.wikimedia.org/wikipedia/commons/9/9c/Buzz_Aldrin.jpg",
-    "Dalai Lama": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Dalai_Lama_2012.jpg",
-    "Dennis Ritchie": "https://upload.wikimedia.org/wikipedia/commons/2/23/Dennis_Ritchie_2011.jpg",
-    "Desmond Tutu": "https://upload.wikimedia.org/wikipedia/commons/1/1c/Desmond_Tutu_2008.jpg",
-    "Diogenes": "https://upload.wikimedia.org/wikipedia/commons/0/0a/Diogenes_Louvre.jpg",
-    "Donald Trump": "https://upload.wikimedia.org/wikipedia/commons/5/56/Donald_Trump_official_portrait.jpg",
-    "Elon Musk": "https://upload.wikimedia.org/wikipedia/commons/e/e8/Elon_Musk_Royal_Society.jpg",
-    "Francis Bacon": "https://upload.wikimedia.org/wikipedia/commons/a/a6/Francis_Bacon_1_6.jpg",
-    "Franklin D. Roosevelt": "https://upload.wikimedia.org/wikipedia/commons/6/6d/FDR_in_1933.jpg",
-    "Freddie Mercury": "https://upload.wikimedia.org/wikipedia/commons/d/d8/Freddie_Mercury_1975.jpg",
-    "Friedrich Nietzsche": "https://upload.wikimedia.org/wikipedia/commons/1/1b/Friedrich_Nietzsche_1882.jpg",
-    "Galileo Galilei": "https://upload.wikimedia.org/wikipedia/commons/d/d2/Galileo_Galilei.jpg",
-    "Harry Truman": "https://upload.wikimedia.org/wikipedia/commons/5/5c/Harry_S._Truman.jpg",
-    "Immanuel Kant": "https://upload.wikimedia.org/wikipedia/commons/4/4a/Immanuel_Kant_%28painted_portrait%29.jpg",
-    "Isaac Newton": "https://upload.wikimedia.org/wikipedia/commons/d/d4/Sir_Isaac_Newton.jpg",
-    "Jean-Paul Sartre": "https://upload.wikimedia.org/wikipedia/commons/6/6e/Jean-Paul_Sartre_1965.jpg",
-    "Johannes Kepler": "https://upload.wikimedia.org/wikipedia/commons/4/48/Johannes_Kepler_1627.jpg",
-    "John Glenn": "https://upload.wikimedia.org/wikipedia/commons/7/7c/John_Glenn.jpg",
-    "John Lennon": "https://upload.wikimedia.org/wikipedia/commons/a/ac/John_Lennon_1969.jpg",
-    "John Locke": "https://upload.wikimedia.org/wikipedia/commons/d/d4/John_Locke-white.jpg",
-    "Joseph Stalin": "https://upload.wikimedia.org/wikipedia/commons/6/6c/Joseph_Stalin_in_1936.jpg",
-    "Linus Torvalds": "https://upload.wikimedia.org/wikipedia/commons/0/01/Linus_Torvalds.jpeg",
-    "Malcolm X": "https://upload.wikimedia.org/wikipedia/commons/6/66/Malcolm_X_NYWTS_2.jpg",
-    "Marcel Duchamp": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Marcel_Duchamp_1967.jpg",
-    "Mark Zuckerberg": "https://upload.wikimedia.org/wikipedia/commons/0/0b/Mark_Zuckerberg_F8_2019_Keynote_%28cropped%29.jpg",
-    "Martin Luther King Jr.": "https://upload.wikimedia.org/wikipedia/commons/2/24/Martin_Luther_King_Jr_NYWTS.jpg",
-    "Mother Teresa": "https://upload.wikimedia.org/wikipedia/commons/6/6c/Mother_Teresa_1986.jpg",
-    "Neil Armstrong": "https://upload.wikimedia.org/wikipedia/commons/9/9e/Neil_Armstrong_pose.jpg",
-    "Nelson Mandela": "https://upload.wikimedia.org/wikipedia/commons/0/0c/Nelson_Mandela-2008.jpg",
-    "Nikola Tesla": "https://upload.wikimedia.org/wikipedia/commons/d/d4/N.Tesla.jpg",
-    "Pablo Picasso": "https://upload.wikimedia.org/wikipedia/commons/9/99/Pablo_picasso_1.jpg",
-    "Paul McCartney": "https://upload.wikimedia.org/wikipedia/commons/3/37/Paul_McCartney_2012.jpg",
-    "Plato": "https://upload.wikimedia.org/wikipedia/commons/8/88/Plato_Silanion_Musei_Capitolini.jpg",
-    "René Descartes": "https://upload.wikimedia.org/wikipedia/commons/6/f/Frans_Hals_-_Portret_van_Ren%C3%A9_Descartes.jpg",
-    "Richard Stallman": "https://upload.wikimedia.org/wikipedia/commons/4/4a/Richard_Stallman_2019_%28cropped%29.jpg",
-    "Salvador Dalí": "https://upload.wikimedia.org/wikipedia/commons/6/c/Salvador_Dal%C3%AD_1939.jpg",
-    "Simone de Beauvoir": "https://upload.wikimedia.org/wikipedia/commons/1/1b/Simone_de_Beauvoir%2C_1948.jpg",
-    "Socrates": "https://upload.wikimedia.org/wikipedia/commons/a/a4/Socrates_Louvre.jpg",
-    "Stephen Hawking": "https://upload.wikimedia.org/wikipedia/commons/8/8f/Stephen_Hawking.StarChild.jpg",
-    "Steve Jobs": "https://upload.wikimedia.org/wikipedia/commons/8/8d/Steve_Jobs_Headshot_2010-CROP.jpg",
-    "Theodore Roosevelt": "https://upload.wikimedia.org/wikipedia/commons/1/19/Theodore_Roosevelt_cph.3a53236.jpg",
-    "Thomas Hobbes": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Thomas_Hobbes_%28portrait%29.jpg",
-    "Voltaire": "https://upload.wikimedia.org/wikipedia/commons/a/a3/Francois_Marie_Arouet_Voltaire_Houdon.jpg",
-    "Winston Churchill": "https://upload.wikimedia.org/wikipedia/commons/1/1e/Sir_Winston_Churchill_-_19086236948.jpg",
-    "Yuri Gagarin": "https://upload.wikimedia.org/wikipedia/commons/6/6f/Yuri_Gagarin_1961.jpg"
+    "Adolf Hitler": "assets/images/quote_game/adolf_hitler.jpg",
+    "Albert Camus": "assets/images/quote_game/albert_camus.jpg",
+    "Albert Einstein": "assets/images/quote_game/albert_einstein.jpg",
+    "Andy Warhol": "assets/images/quote_game/andy_warhol.jpg",
+    "Aristotle": "assets/images/quote_game/aristotle.jpg",
+    "Barack Obama": "assets/images/quote_game/barack_obama.jpg",
+    "Benito Mussolini": "assets/images/quote_game/benito_mussolini.jpg",
+    "Bill Gates": "assets/images/quote_game/bill_gates.jpg",
+    "Bob Dylan": "assets/images/quote_game/bob_dylan.jpg",
+    "Buzz Aldrin": "assets/images/quote_game/buzz_aldrin.jpg",
+    "Dalai Lama": "assets/images/quote_game/dalai_lama.jpg",
+    "Dennis Ritchie": "assets/images/quote_game/dennis_ritchie.jpg",
+    "Desmond Tutu": "assets/images/quote_game/desmond_tutu.jpg",
+    "Diogenes": "assets/images/quote_game/diogenes.jpg",
+    "Donald Trump": "assets/images/quote_game/donald_trump.jpg",
+    "Elon Musk": "assets/images/quote_game/elon_musk.jpg",
+    "Francis Bacon": "assets/images/quote_game/francis_bacon.jpg",
+    "Franklin D. Roosevelt": "assets/images/quote_game/franklin_d_roosevelt.jpg",
+    "Freddie Mercury": "assets/images/quote_game/freddie_mercury.jpg",
+    "Friedrich Nietzsche": "assets/images/quote_game/friedrich_nietzsche.jpg",
+    "Galileo Galilei": "assets/images/quote_game/galileo_galilei.jpg",
+    "Harry Truman": "assets/images/quote_game/harry_truman.jpg",
+    "Immanuel Kant": "assets/images/quote_game/immanuel_kant.jpg",
+    "Isaac Newton": "assets/images/quote_game/isaac_newton.jpg",
+    "Jean-Paul Sartre": "assets/images/quote_game/jean_paul_sartre.jpg",
+    "Johannes Kepler": "assets/images/quote_game/johannes_kepler.jpg",
+    "John Glenn": "assets/images/quote_game/john_glenn.jpg",
+    "John Lennon": "assets/images/quote_game/john_lennon.jpg",
+    "John Locke": "assets/images/quote_game/john_locke.jpg",
+    "Joseph Stalin": "assets/images/quote_game/joseph_stalin.jpg",
+    "Linus Torvalds": "assets/images/quote_game/linus_torvalds.jpg",
+    "Malcolm X": "assets/images/quote_game/malcolm_x.jpg",
+    "Marcel Duchamp": "assets/images/quote_game/marcel_duchamp.jpg",
+    "Mark Zuckerberg": "assets/images/quote_game/mark_zuckerberg.jpg",
+    "Martin Luther King Jr.": "assets/images/quote_game/martin_luther_king_jr.jpg",
+    "Mother Teresa": "assets/images/quote_game/mother_teresa.jpg",
+    "Neil Armstrong": "assets/images/quote_game/neil_armstrong.jpg",
+    "Nelson Mandela": "assets/images/quote_game/nelson_mandela.jpg",
+    "Nikola Tesla": "assets/images/quote_game/nikola_tesla.jpg",
+    "Pablo Picasso": "assets/images/quote_game/pablo_picasso.jpg",
+    "Paul McCartney": "assets/images/quote_game/paul_mccartney.jpg",
+    "Plato": "assets/images/quote_game/plato.jpg",
+    "René Descartes": "assets/images/quote_game/rene_descartes.jpg",
+    "Richard Stallman": "assets/images/quote_game/richard_stallman.jpg",
+    "Salvador Dalí": "assets/images/quote_game/salvador_dali.jpg",
+    "Simone de Beauvoir": "assets/images/quote_game/simone_de_beauvoir.png",
+    "Socrates": "assets/images/quote_game/socrates.jpg",
+    "Stephen Hawking": "assets/images/quote_game/stephen_hawking.jpg",
+    "Steve Jobs": "assets/images/quote_game/steve_jobs.jpg",
+    "Theodore Roosevelt": "assets/images/quote_game/theodore_roosevelt.jpg",
+    "Thomas Hobbes": "assets/images/quote_game/thomas_hobbes.jpg",
+    "Voltaire": "assets/images/quote_game/voltaire.jpg",
+    "Winston Churchill": "assets/images/quote_game/winston_churchill.jpg",
+    "Yuri Gagarin": "assets/images/quote_game/yuri_gagarin.jpg"
   }
 }

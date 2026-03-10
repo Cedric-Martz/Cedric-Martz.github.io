@@ -1,4 +1,4 @@
-// Quote Guessing Game - Main Logic
+
 let gameData = null;
 let quotes = [];
 let translations = {};
@@ -8,13 +8,11 @@ let currentQuote = null;
 let selectedAnswer = null;
 let isAnswered = false;
 
-// DOM Elements
 const mainMenu = document.getElementById('main-menu');
 const gameScreen = document.getElementById('game-screen');
 const rulesScreen = document.getElementById('rules-screen');
 const langScreen = document.getElementById('lang-screen');
 
-// Load data
 async function loadData() {
   try {
     const response = await fetch('data/quotes.json');
@@ -29,7 +27,6 @@ async function loadData() {
   }
 }
 
-// Update UI language
 function updateLanguage() {
   const t = translations[currentLang];
 
@@ -48,9 +45,12 @@ function updateLanguage() {
   if (document.getElementById('lang-title')) {
     document.getElementById('lang-title').textContent = t.selectLanguage;
   }
+
+  if (currentQuote) {
+    renderQuote();
+  }
 }
 
-// Show screen
 function showScreen(screen) {
   [mainMenu, gameScreen, rulesScreen, langScreen].forEach(s => {
     if (s) s.style.display = 'none';
@@ -58,33 +58,28 @@ function showScreen(screen) {
   if (screen) screen.style.display = 'flex';
 }
 
-// Start game
 function startGame() {
   loadNewQuote();
   showScreen(gameScreen);
 }
 
-// Load new quote
 function loadNewQuote() {
   if (quotes.length === 0) return;
 
-  // Reset state
   isAnswered = false;
   selectedAnswer = null;
 
-  // Pick random quote
   const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
 
-  // Pick random opponent
   const randomOpponent = randomQuote.opponents[
     Math.floor(Math.random() * randomQuote.opponents.length)
   ];
 
-  // Randomly assign left/right positions
   const correctPosition = Math.random() < 0.5 ? 'left' : 'right';
 
   currentQuote = {
     quote: randomQuote.quote,
+    quoteFr: randomQuote.quote_fr,
     source: randomQuote.source,
     correct: {
       name: randomQuote.author,
@@ -101,20 +96,18 @@ function loadNewQuote() {
   renderQuote();
 }
 
-// Get opponent image
 function getOpponentImage(name) {
-  return opponentImages[name] || 'https://upload.wikimedia.org/wikipedia/commons/6/65/No_image_available_400_x_400.svg';
 }
 
-// Render quote
 function renderQuote() {
   const t = translations[currentLang];
+  const displayedQuote = currentLang === 'fr' && currentQuote.quoteFr
+    ? currentQuote.quoteFr
+    : currentQuote.quote;
 
-  // Quote text
-  document.getElementById('quote-text').textContent = `"${currentQuote.quote}"`;
+  document.getElementById('quote-text').textContent = `"${displayedQuote}"`;
   document.getElementById('quote-source').innerHTML = `<a href="${currentQuote.source}" target="_blank" rel="noopener" class="disabled">${t.sourceLabel}</a>`;
 
-  // Left card
   const leftPerson = currentQuote.correct.position === 'left' ? currentQuote.correct : currentQuote.incorrect;
   const leftCard = document.getElementById('person-left');
   leftCard.innerHTML = `
@@ -123,7 +116,6 @@ function renderQuote() {
   `;
   leftCard.classList.remove('selected', 'correct', 'incorrect');
 
-  // Right card
   const rightPerson = currentQuote.correct.position === 'right' ? currentQuote.correct : currentQuote.incorrect;
   const rightCard = document.getElementById('person-right');
   rightCard.innerHTML = `
@@ -132,17 +124,13 @@ function renderQuote() {
   `;
   rightCard.classList.remove('selected', 'correct', 'incorrect');
 
-  // Remove background overlay
   document.getElementById('game-screen').classList.remove('correct-answer', 'incorrect-answer');
 
-  // Hide next button
   document.getElementById('next-btn').style.display = 'none';
 
-  // Show back button
   document.getElementById('back-to-menu-game').style.display = 'inline-block';
 }
 
-// Handle card selection
 function selectCard(position) {
   if (isAnswered) return;
 
@@ -154,19 +142,15 @@ function selectCard(position) {
   const rightCard = document.getElementById('person-right');
   const selectedCard = position === 'left' ? leftCard : rightCard;
 
-  // Mark selected
   selectedCard.classList.add('selected');
 
-  // Check if correct
   const isCorrect = position === currentQuote.correct.position;
 
-  // Enable source link
   const sourceLink = document.querySelector('#quote-source a');
   if (sourceLink) {
     sourceLink.classList.remove('disabled');
   }
-  
-  // Apply feedback
+
   setTimeout(() => {
     if (isCorrect) {
       selectedCard.classList.add('correct');
@@ -175,39 +159,30 @@ function selectCard(position) {
       selectedCard.classList.add('incorrect');
       document.getElementById('game-screen').classList.add('incorrect-answer');
 
-      // Highlight correct answer
       const correctCard = currentQuote.correct.position === 'left' ? leftCard : rightCard;
       correctCard.classList.add('correct');
     }
 
-    // Show next button
     document.getElementById('next-btn').style.display = 'inline-block';
   }, 300);
 }
 
-// Event listeners
 document.addEventListener('DOMContentLoaded', () => {
   loadData();
 
-  // Menu buttons
   document.getElementById('start-btn').addEventListener('click', startGame);
   document.getElementById('rules-btn').addEventListener('click', () => showScreen(rulesScreen));
   document.getElementById('lang-btn').addEventListener('click', () => showScreen(langScreen));
 
-  // Rules back button
   document.getElementById('back-to-menu-rules').addEventListener('click', () => showScreen(mainMenu));
 
-  // Game back button
   document.getElementById('back-to-menu-game').addEventListener('click', () => showScreen(mainMenu));
 
-  // Next button
   document.getElementById('next-btn').addEventListener('click', loadNewQuote);
 
-  // Person cards
   document.getElementById('person-left').addEventListener('click', () => selectCard('left'));
   document.getElementById('person-right').addEventListener('click', () => selectCard('right'));
 
-  // Language selection
   document.querySelectorAll('.lang-option').forEach(btn => {
     btn.addEventListener('click', (e) => {
       const lang = e.target.dataset.lang;
