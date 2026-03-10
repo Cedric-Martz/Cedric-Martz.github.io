@@ -7,6 +7,7 @@ let currentLang = localStorage.getItem('quoteGameLang') || 'en';
 let currentQuote = null;
 let selectedAnswer = null;
 let isAnswered = false;
+const DEFAULT_PERSON_IMAGE = 'assets/images/default_picture.jpg';
 
 const mainMenu = document.getElementById('main-menu');
 const gameScreen = document.getElementById('game-screen');
@@ -83,7 +84,7 @@ function loadNewQuote() {
     source: randomQuote.source,
     correct: {
       name: randomQuote.author,
-      image: opponentImages[randomQuote.author],
+      image: getSafePersonImage(opponentImages[randomQuote.author]),
       position: correctPosition
     },
     incorrect: {
@@ -97,6 +98,11 @@ function loadNewQuote() {
 }
 
 function getOpponentImage(name) {
+  return getSafePersonImage(opponentImages[name]);
+}
+
+function getSafePersonImage(imagePath) {
+  return imagePath && imagePath.trim() ? imagePath : DEFAULT_PERSON_IMAGE;
 }
 
 function renderQuote() {
