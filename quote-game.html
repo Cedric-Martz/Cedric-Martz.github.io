@@ -328,11 +328,139 @@
         min-height: 230px;
       }
     }
+
+
+    .score-bar {
+      display: flex;
+      align-items: stretch;
+      background: rgba(0, 0, 0, 0.75);
+      border-radius: 12px;
+      color: white;
+      font-weight: 700;
+      width: 100%;
+      max-width: 600px;
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .score-item {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 10px 16px;
+      border-right: 1px solid rgba(255,255,255,0.15);
+    }
+
+    .score-label-text {
+      font-size: 0.62rem;
+      letter-spacing: 0.18em;
+      color: rgba(255,255,255,0.5);
+      text-transform: uppercase;
+    }
+
+    .score-number {
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: #6aaa64;
+      line-height: 1.2;
+    }
+
+    .streak-number {
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: #ffaa00;
+      line-height: 1.2;
+    }
+
+    #mute-btn {
+      flex: 0 0 auto;
+      background: transparent !important;
+      border: none !important;
+      font-size: 1.3rem !important;
+      cursor: pointer;
+      padding: 0 16px !important;
+      box-shadow: none !important;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.15s ease !important;
+    }
+
+    #mute-btn:hover {
+      transform: scale(1.25) !important;
+      background: transparent !important;
+    }
+
+    #streak-announcement {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(0);
+      text-align: center;
+      pointer-events: none;
+      z-index: 999;
+      opacity: 0;
+    }
+
+    #streak-announcement.show {
+      animation: streakPop 0.45s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+    }
+
+    #streak-announcement.hide {
+      animation: streakFade 0.4s ease forwards;
+    }
+
+    #streak-announcement-label {
+      font-size: 3.5rem;
+      font-weight: 900;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      text-shadow: 0 0 30px currentColor, 3px 3px 0 rgba(0,0,0,0.65);
+      line-height: 1;
+    }
+
+    #streak-announcement-points {
+      font-size: 2rem;
+      font-weight: 700;
+      color: white;
+      text-shadow: 2px 2px 0 rgba(0,0,0,0.7);
+      margin-top: 8px;
+    }
+
+    @keyframes streakPop {
+      0%   { opacity: 0; transform: translate(-50%, -50%) scale(0.3) rotate(-8deg); }
+      60%  { opacity: 1; transform: translate(-50%, -50%) scale(1.15) rotate(2deg); }
+      100% { opacity: 1; transform: translate(-50%, -50%) scale(1) rotate(0deg); }
+    }
+
+    @keyframes streakFade {
+      0%   { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+      100% { opacity: 0; transform: translate(-50%, -65%) scale(0.7); }
+    }
+
+    .points-popup {
+      position: fixed;
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: #6aaa64;
+      text-shadow: 1px 1px 0 rgba(0,0,0,0.4);
+      pointer-events: none;
+      z-index: 500;
+      animation: pointsFloat 1s ease forwards;
+      transform: translateX(-50%);
+    }
+
+    @keyframes pointsFloat {
+      0%   { opacity: 1; transform: translateX(-50%) translateY(0); }
+      100% { opacity: 0; transform: translateX(-50%) translateY(-60px); }
+    }
   </style>
 </head>
 <body>
   <div class="container">
-    <!-- Main Menu -->
+
     <div id="main-menu">
       <h1 id="game-title">Quote Guessing Game</h1>
       <div class="menu-buttons">
@@ -342,8 +470,25 @@
       </div>
     </div>
 
-    <!-- Game Screen -->
+
     <div id="game-screen">
+
+      <div class="score-bar">
+        <div class="score-item">
+          <div class="score-label-text">Score</div>
+          <div class="score-number" id="score-value">0</div>
+        </div>
+        <div class="score-item">
+          <div class="score-label-text">Streak</div>
+          <div class="streak-number" id="streak-value">0</div>
+        </div>
+        <div class="score-item">
+          <div class="score-label-text">Best</div>
+          <div class="score-number" id="best-value">0</div>
+        </div>
+        <button id="mute-btn" title="Toggle sound">🔊</button>
+      </div>
+
       <div class="quote-card">
         <p id="quote-text">"Quote text goes here"</p>
         <div id="quote-source"></div>
@@ -366,15 +511,12 @@
         <button id="next-btn">Next →</button>
       </div>
     </div>
-
-    <!-- Rules Screen -->
     <div id="rules-screen">
       <h2 id="rules-title">How to Play</h2>
       <p id="rules-text">You will see a quote and two people. Your task is to guess who actually said the quote. Click on the card you think is correct. Green means you were right, red means you were wrong. Use the arrow button to continue.</p>
       <button id="back-to-menu-rules">← Back to Menu</button>
     </div>
 
-    <!-- Language Selection Screen -->
     <div id="lang-screen">
       <h2 id="lang-title">Select Language</h2>
       <div class="lang-options">
@@ -382,6 +524,11 @@
         <button class="lang-option" data-lang="fr">🇫🇷 Français</button>
       </div>
     </div>
+  </div>
+
+  <div id="streak-announcement">
+    <div id="streak-announcement-label"></div>
+    <div id="streak-announcement-points"></div>
   </div>
 
   <script src="app.js"></script>
