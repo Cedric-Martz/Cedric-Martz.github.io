@@ -1,8 +1,8 @@
-
-let gameData = null;
 let quotes = [];
 let translations = {};
-let opponentImages = {};
+let allAuthors = [];
+const imageCache = {};
+let isLoadingQuote = false;
 let currentLang = localStorage.getItem('quoteGameLang') || 'en';
 let currentQuote = null;
 let selectedAnswer = null;
@@ -16,19 +16,60 @@ let streakTimer = null;
 let score = 0;
 let streak = 0;
 let highScore = parseInt(localStorage.getItem('quoteGameHighScore') || '0');
+let currentBgTrack = 'elevator'; // 'elevator', 'doom', 'offline'
+const AUDIO_PATHS = {
+  elevator: 'assets/songs/Elevator Music (Kevin MacLeod) - Gaming Background Music (HD).mp3',
+  doom: 'assets/songs/Doom Eternal OST - The Only Thing They Fear Is You (Mick Gordon).mp3',
+  nelson: 'assets/songs/Nelson - ha ha.mp3'
+};
 
 const mainMenu = document.getElementById('main-menu');
 const gameScreen = document.getElementById('game-screen');
 const rulesScreen = document.getElementById('rules-screen');
 const langScreen = document.getElementById('lang-screen');
 
+async function getAuthorImage(name) {
+  if (imageCache[name] !== undefined) return imageCache[name];
+  try {
+    const res = await fetch(
+      `https://en.wikipedia.org/api/rest_v1/page/summary/${encodeURIComponent(name)}`
+    );
+    if (!res.ok) throw new Error('Not found');
+    const data = await res.json();
+    const url = data.thumbnail?.source ?? DEFAULT_PERSON_IMAGE;
+    imageCache[name] = url;
+    return url;
+  } catch {
+    imageCache[name] = DEFAULT_PERSON_IMAGE;
+    return DEFAULT_PERSON_IMAGE;
+  }
+}
+
+function showPersonCardsLoading() {
+  const loadingHTML = `
+    <div class="person-image" style="display:flex;align-items:center;justify-content:center;">
+      <div class="loading-spinner"></div>
+    </div>
+    <div class="person-name">...</div>
+  `;
+  document.getElementById('person-left').innerHTML = loadingHTML;
+  document.getElementById('person-right').innerHTML = loadingHTML;
+  document.getElementById('quote-text').textContent = '...';
+  document.getElementById('quote-source').innerHTML = '';
+  document.getElementById('next-btn').style.display = 'none';
+}
+
 async function loadData() {
   try {
-    const response = await fetch('data/quotes.json');
-    gameData = await response.json();
-    quotes = gameData.quotes;
-    translations = gameData.translations;
-    opponentImages = gameData.people;
+    const [localRes, apiRes] = await Promise.all([
+      fetch('data/quotes.json'),
+      fetch('https://dummyjson.com/quotes?limit=150')
+    ]);
+    const localData = await localRes.json();
+    const apiData = await apiRes.json();
+    translations = localData.translations;
+    quotes = apiData.quotes;
+    allAuthors = [...new Set(quotes.map(q => q.author))];
     updateLanguage();
   } catch (error) {
     console.error('Error loading data:', error);
@@ -51,10 +92,6 @@ function updateLanguage() {
     document.getElementById('back-to-menu-rules').textContent = t.backToMenu;
   }
 
-  if (document.getElementById('lang-title')) {
-    document.getElementById('lang-title').textContent = t.selectLanguage;
-  }
-
   if (currentQuote) {
     renderQuote();
   }
@@ -72,59 +109,55 @@ function startGame() {
   score = 0;
   streak = 0;
   updateScoreDisplay();
-  loadNewQuote();
   showScreen(gameScreen);
   startBgMusic();
+  loadNewQuote();
 }
 
-function loadNewQuote() {
-  if (quotes.length === 0) return;
-
+async function loadNewQuote() {
+  if (quotes.length === 0 || isLoadingQuote) return;
+  isLoadingQuote = true;
   isAnswered = false;
   selectedAnswer = null;
 
-  const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
+  showPersonCardsLoading();
 
-  const randomOpponent = randomQuote.opponents[
-    Math.floor(Math.random() * randomQuote.opponents.length)
-  ];
+  const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
+  const correctAuthor = randomQuote.author;
+
+  const otherAuthors = allAuthors.filter(a => a !== correctAuthor);
+  const opponentAuthor = otherAuthors[Math.floor(Math.random() * otherAuthors.length)];
 
   const correctPosition = Math.random() < 0.5 ? 'left' : 'right';
 
+  const [correctImage, opponentImage] = await Promise.all([
+    getAuthorImage(correctAuthor),
+    getAuthorImage(opponentAuthor)
+  ]);
+
   currentQuote = {
     quote: randomQuote.quote,
-    quoteFr: randomQuote.quote_fr,
-    source: randomQuote.source,
+    source: `https://en.wikipedia.org/wiki/${encodeURIComponent(correctAuthor.replace(/ /g, '_'))}`,
     correct: {
-      name: randomQuote.author,
-      image: getSafePersonImage(opponentImages[randomQuote.author]),
+      name: correctAuthor,
+      image: correctImage,
       position: correctPosition
     },
     incorrect: {
-      name: randomOpponent,
-      image: getOpponentImage(randomOpponent),
+      name: opponentAuthor,
+      image: opponentImage,
       position: correctPosition === 'left' ? 'right' : 'left'
     }
   };
 
+  isLoadingQuote = false;
   renderQuote();
-}
-
-function getOpponentImage(name) {
-  return getSafePersonImage(opponentImages[name]);
-}
-
-function getSafePersonImage(imagePath) {
-  return imagePath && imagePath.trim() ? imagePath : DEFAULT_PERSON_IMAGE;
 }
 
 function renderQuote() {
   const t = translations[currentLang];
-  const displayedQuote = currentLang === 'fr' && currentQuote.quoteFr
-    ? currentQuote.quoteFr
-    : currentQuote.quote;
 
-  document.getElementById('quote-text').textContent = `"${displayedQuote}"`;
+  document.getElementById('quote-text').textContent = `"${currentQuote.quote}"`;
   document.getElementById('quote-source').innerHTML = `<a href="${currentQuote.source}" target="_blank" rel="noopener" class="disabled">${t.sourceLabel}</a>`;
 
   const leftPerson = currentQuote.correct.position === 'left' ? currentQuote.correct : currentQuote.incorrect;
@@ -144,9 +177,7 @@ function renderQuote() {
   rightCard.classList.remove('selected', 'correct', 'incorrect');
 
   document.getElementById('game-screen').classList.remove('correct-answer', 'incorrect-answer');
-
   document.getElementById('next-btn').style.display = 'none';
-
   document.getElementById('back-to-menu-game').style.display = 'inline-block';
 }
 
@@ -156,7 +187,6 @@ function selectCard(position) {
   isAnswered = true;
   selectedAnswer = position;
 
-  const t = translations[currentLang];
   const leftCard = document.getElementById('person-left');
   const rightCard = document.getElementById('person-right');
   const selectedCard = position === 'left' ? leftCard : rightCard;
@@ -185,9 +215,16 @@ function selectCard(position) {
       const rect = selectedCard.getBoundingClientRect();
       showPointsPopup(info.points, rect.left + rect.width / 2, rect.top - 10);
     }
+    // Switch to Doom Eternal if max streak reached
+    if (streak >= 7) {
+      switchBgMusic('doom');
+    }
   } else {
+    // Wrong answer: play Nelson haha then return to elevator
+    playNelsonSfx();
     streak = 0;
     playWrongSound();
+    switchBgMusic('elevator');
   }
   updateScoreDisplay();
 
@@ -252,11 +289,36 @@ function playWrongSound() {
   } catch (e) {}
 }
 
+function playNelsonSfx() {
+  if (isMuted) return;
+  try {
+    const nelson = new Audio(AUDIO_PATHS.nelson);
+    nelson.volume = 0.5;
+    nelson.play().catch(() => {});
+  } catch (e) {}
+}
+
 function initBgMusic() {
   if (!bgMusic) {
-    bgMusic = new Audio('assets/songs/maxwell_cat.mp3');
+    bgMusic = new Audio(AUDIO_PATHS.elevator);
     bgMusic.loop = true;
     bgMusic.volume = 0.25;
+  }
+}
+
+function switchBgMusic(track) {
+  if (currentBgTrack === track) return; // Already on this track
+  if (!bgMusic) initBgMusic();
+  
+  const wasPlaying = !bgMusic.paused;
+  bgMusic.pause();
+  bgMusic.currentTime = 0;
+  
+  bgMusic.src = AUDIO_PATHS[track];
+  currentBgTrack = track;
+  
+  if (wasPlaying && !isMuted) {
+    bgMusic.play().catch(() => {});
   }
 }
 
@@ -336,7 +398,6 @@ function updateScoreDisplay() {
 document.addEventListener('DOMContentLoaded', () => {
   loadData();
 
-
   const muteBtn = document.getElementById('mute-btn');
   if (muteBtn) {
     muteBtn.textContent = isMuted ? '🔇' : '🔊';
@@ -350,9 +411,7 @@ document.addEventListener('DOMContentLoaded', () => {
   document.getElementById('lang-btn').addEventListener('click', () => showScreen(langScreen));
 
   document.getElementById('back-to-menu-rules').addEventListener('click', () => showScreen(mainMenu));
-
   document.getElementById('back-to-menu-game').addEventListener('click', () => showScreen(mainMenu));
-
   document.getElementById('next-btn').addEventListener('click', loadNewQuote);
 
   document.getElementById('person-left').addEventListener('click', () => selectCard('left'));

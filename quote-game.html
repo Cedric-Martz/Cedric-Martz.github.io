@@ -1,11 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Quote Guessing Game</title>
   <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
     body.quote-game-bg {
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
@@ -32,10 +37,11 @@
       background: white;
       border-radius: 16px;
       padding: 48px 32px;
-      box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+      box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
       text-align: center;
       width: 100%;
       max-width: 400px;
+      position: relative;
     }
 
     #game-title {
@@ -57,11 +63,11 @@
       font-weight: 600;
       border: 2px solid #e0e0e0;
       border-radius: 8px;
-      background: rgba(255,255,255,0.92);
+      background: rgba(255, 255, 255, 0.92);
       color: #1a1a1a;
       cursor: pointer;
       transition: all 0.2s ease;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
     }
 
     button:hover {
@@ -96,7 +102,7 @@
       background: white;
       border-radius: 16px;
       padding: 32px;
-      box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+      box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
       max-width: 600px;
       text-align: center;
     }
@@ -120,7 +126,7 @@
     #quote-source a:hover {
       text-decoration: underline;
     }
-    
+
     #quote-source a.disabled {
       color: #999;
       pointer-events: none;
@@ -141,7 +147,7 @@
       background: white;
       border-radius: 12px;
       padding: 24px;
-      box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+      box-shadow: 0 2px 16px rgba(0, 0, 0, 0.08);
       cursor: pointer;
       transition: all 0.3s ease;
       flex: 1;
@@ -156,7 +162,7 @@
 
     .person-card:hover {
       transform: translateY(-8px);
-      box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
     }
 
     .person-card.selected {
@@ -170,7 +176,7 @@
       box-shadow: 0 4px 32px rgba(106, 170, 100, 0.25);
     }
 
-        .person-card.incorrect {
+    .person-card.incorrect {
       border-color: #dc4444;
       background: rgba(220, 68, 68, 0.85);
       color: #fff;
@@ -236,7 +242,7 @@
       background: white;
       border-radius: 16px;
       padding: 48px 32px;
-      box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+      box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
       max-width: 600px;
       width: 100%;
     }
@@ -271,7 +277,7 @@
       background: white;
       border-radius: 16px;
       padding: 48px 32px;
-      box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+      box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
       max-width: 400px;
       width: 100%;
       text-align: center;
@@ -340,7 +346,7 @@
       width: 100%;
       max-width: 600px;
       overflow: hidden;
-      border: 1px solid rgba(255,255,255,0.1);
+      border: 1px solid rgba(255, 255, 255, 0.1);
     }
 
     .score-item {
@@ -349,13 +355,13 @@
       flex-direction: column;
       align-items: center;
       padding: 10px 16px;
-      border-right: 1px solid rgba(255,255,255,0.15);
+      border-right: 1px solid rgba(255, 255, 255, 0.15);
     }
 
     .score-label-text {
       font-size: 0.62rem;
       letter-spacing: 0.18em;
-      color: rgba(255,255,255,0.5);
+      color: rgba(255, 255, 255, 0.5);
       text-transform: uppercase;
     }
 
@@ -417,7 +423,7 @@
       font-weight: 900;
       letter-spacing: 0.04em;
       text-transform: uppercase;
-      text-shadow: 0 0 30px currentColor, 3px 3px 0 rgba(0,0,0,0.65);
+      text-shadow: 0 0 30px currentColor, 3px 3px 0 rgba(0, 0, 0, 0.65);
       line-height: 1;
     }
 
@@ -425,19 +431,37 @@
       font-size: 2rem;
       font-weight: 700;
       color: white;
-      text-shadow: 2px 2px 0 rgba(0,0,0,0.7);
+      text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.7);
       margin-top: 8px;
     }
 
     @keyframes streakPop {
-      0%   { opacity: 0; transform: translate(-50%, -50%) scale(0.3) rotate(-8deg); }
-      60%  { opacity: 1; transform: translate(-50%, -50%) scale(1.15) rotate(2deg); }
-      100% { opacity: 1; transform: translate(-50%, -50%) scale(1) rotate(0deg); }
+      0% {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0.3) rotate(-8deg);
+      }
+
+      60% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1.15) rotate(2deg);
+      }
+
+      100% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1) rotate(0deg);
+      }
     }
 
     @keyframes streakFade {
-      0%   { opacity: 1; transform: translate(-50%, -50%) scale(1); }
-      100% { opacity: 0; transform: translate(-50%, -65%) scale(0.7); }
+      0% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+      }
+
+      100% {
+        opacity: 0;
+        transform: translate(-50%, -65%) scale(0.7);
+      }
     }
 
     .points-popup {
@@ -445,7 +469,7 @@
       font-size: 1.5rem;
       font-weight: 800;
       color: #6aaa64;
-      text-shadow: 1px 1px 0 rgba(0,0,0,0.4);
+      text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.4);
       pointer-events: none;
       z-index: 500;
       animation: pointsFloat 1s ease forwards;
@@ -453,16 +477,54 @@
     }
 
     @keyframes pointsFloat {
-      0%   { opacity: 1; transform: translateX(-50%) translateY(0); }
-      100% { opacity: 0; transform: translateX(-50%) translateY(-60px); }
+      0% {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
+      }
+
+      100% {
+        opacity: 0;
+        transform: translateX(-50%) translateY(-60px);
+      }
+    }
+
+    .loading-spinner {
+      width: 36px;
+      height: 36px;
+      border: 4px solid rgba(0, 0, 0, 0.08);
+      border-top-color: #6aaa64;
+      border-radius: 50%;
+      animation: spin 0.7s linear infinite;
+    }
+
+    @keyframes spin {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    .better-than-doom {
+      position: absolute;
+      top: 20px;
+      right: 25px;
+      font-size: 1rem;
+      color: #9d4edd;
+      font-weight: 700;
+      transform: rotate(-12deg) skewX(-8deg);
+      text-shadow: 0 0 10px rgba(157, 78, 221, 0.5);
+      letter-spacing: 0.5px;
+      pointer-events: none;
+      z-index: 10;
     }
   </style>
 </head>
+
 <body>
   <div class="container">
 
     <div id="main-menu">
       <h1 id="game-title">Quote Guessing Game</h1>
+      <span class="better-than-doom">better than Doom</span>
       <div class="menu-buttons">
         <button id="start-btn">Start</button>
         <button id="rules-btn">Rules</button>
@@ -513,7 +575,9 @@
     </div>
     <div id="rules-screen">
       <h2 id="rules-title">How to Play</h2>
-      <p id="rules-text">You will see a quote and two people. Your task is to guess who actually said the quote. Click on the card you think is correct. Green means you were right, red means you were wrong. Use the arrow button to continue.</p>
+      <p id="rules-text">You will see a quote and two people. Your task is to guess who actually said the quote. Click
+        on the card you think is correct. Green means you were right, red means you were wrong. Use the arrow button to
+        continue.</p>
       <button id="back-to-menu-rules">← Back to Menu</button>
     </div>
 
@@ -533,9 +597,10 @@
 
   <script src="app.js"></script>
   <script>
-    document.addEventListener('DOMContentLoaded', function() {
+    document.addEventListener('DOMContentLoaded', function () {
       document.body.classList.add('quote-game-bg');
     });
   </script>
 </body>
+
 </html>

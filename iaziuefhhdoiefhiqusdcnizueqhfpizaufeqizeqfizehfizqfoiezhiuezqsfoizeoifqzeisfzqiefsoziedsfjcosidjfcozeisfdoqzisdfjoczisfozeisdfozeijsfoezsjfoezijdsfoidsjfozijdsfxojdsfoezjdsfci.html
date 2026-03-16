@@ -9,8 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        :root
-        {
+        :root {
             --bg-color: #0a0a0a;
             --text-color: #c0c0c0;
             --accent-color: #ff0000;
@@ -18,15 +17,13 @@
             --animation-duration: 0.8s;
         }
 
-        *
-        {
+        * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
-        body
-        {
+        body {
             background-color: var(--bg-color);
             color: var(--text-color);
             font-family: 'Space Mono', monospace;
@@ -40,8 +37,7 @@
             position: relative;
         }
 
-        .particle
-        {
+        .particle {
             position: fixed;
             width: 2px;
             height: 2px;
@@ -51,28 +47,24 @@
             animation: float 3s ease-in-out infinite;
         }
 
-        @keyframes float
-        {
+        @keyframes float {
+
             0%,
-            100%
-            {
+            100% {
                 opacity: 0;
                 transform: translateY(0) translateX(0);
             }
 
-            50%
-            {
+            50% {
                 opacity: 0.5;
             }
 
-            100%
-            {
+            100% {
                 transform: translateY(-100vh) translateX(calc(var(--drift) * 20px));
             }
         }
 
-        .secret-unlocked
-        {
+        .secret-unlocked {
             position: fixed;
             top: 20px;
             right: 20px;
@@ -87,30 +79,26 @@
             font-size: 0.9em;
         }
 
-        .secret-unlocked.show
-        {
+        .secret-unlocked.show {
             opacity: 1;
             transform: translateY(0);
         }
 
-        .container
-        {
+        .container {
             max-width: 800px;
             width: 100%;
             position: relative;
             z-index: 1;
         }
 
-        .book
-        {
+        .book {
             position: relative;
             height: 600px;
             perspective: 1500px;
             margin: 0 auto;
         }
 
-        .blog-entry
-        {
+        .blog-entry {
             position: absolute;
             width: 100%;
             height: 100%;
@@ -128,28 +116,23 @@
             -ms-overflow-style: none;
         }
 
-        .blog-entry::-webkit-scrollbar
-        {
+        .blog-entry::-webkit-scrollbar {
             display: none;
         }
 
-        .blog-entry.active
-        {
+        .blog-entry.active {
             display: block;
         }
 
-        .blog-entry.flipping
-        {
+        .blog-entry.flipping {
             animation: flipPage var(--animation-duration) cubic-bezier(0.4, 0, 0.2, 1) forwards;
         }
 
-        .blog-entry.flipping-back
-        {
+        .blog-entry.flipping-back {
             animation: flipPageBack var(--animation-duration) cubic-bezier(0.4, 0, 0.2, 1) forwards;
         }
 
-        @keyframes flipPage
-        {
+        @keyframes flipPage {
             from {
                 transform: rotateY(0);
             }
@@ -159,8 +142,7 @@
             }
         }
 
-        @keyframes flipPageBack
-        {
+        @keyframes flipPageBack {
             from {
                 transform: rotateY(180deg);
             }
@@ -173,8 +155,7 @@
         .blog-entry img,
         .blog-entry iframe,
         .blog-entry video,
-        .blog-entry audio
-        {
+        .blog-entry audio {
             max-width: 90%;
             width: auto;
             height: auto;
@@ -186,66 +167,56 @@
         }
 
         .blog-entry img:hover,
-        .blog-entry video:hover
-        {
+        .blog-entry video:hover {
             filter: grayscale(0%) contrast(100%);
         }
 
-        .clickable-picture
-        {
+        .clickable-picture {
             cursor: pointer;
             transition: all 0.3s ease;
         }
 
-        .clickable-picture:hover
-        {
+        .clickable-picture:hover {
             transform: scale(1.05);
             box-shadow: 0 0 30px rgba(255, 0, 0, 0.5);
         }
 
-        .clickable-picture.playing
-        {
+        .clickable-picture.playing {
             animation: pulse 1s ease-in-out infinite;
         }
 
-        @keyframes pulse
-        {
+        @keyframes pulse {
+
             0%,
-            100%
-            {
+            100% {
                 transform: scale(1);
                 filter: grayscale(50%) contrast(120%) brightness(1);
             }
 
-            50%
-            {
+            50% {
                 transform: scale(1.03);
                 filter: grayscale(0%) contrast(100%) brightness(1.2);
             }
         }
 
-        .blog-entry iframe
-        {
+        .blog-entry iframe {
             aspect-ratio: 16/9;
             border: none;
             box-shadow: 0 0 15px rgba(255, 0, 0, 0.2);
         }
 
-        .blog-entry audio
-        {
+        .blog-entry audio {
             width: 80%;
         }
 
-        .blog-entry p
-        {
+        .blog-entry p {
             margin: 1rem auto;
             max-width: 600px;
             text-align: justify;
             line-height: 1.8;
         }
 
-        h1
-        {
+        h1 {
             color: var(--accent-color);
             text-shadow: 2px 2px 4px rgba(255, 0, 0, 0.3);
             font-size: 2.5em;
@@ -255,41 +226,34 @@
             transition: all 0.3s ease;
         }
 
-        h1:hover
-        {
+        h1:hover {
             transform: scale(1.05);
             text-shadow: 0 0 20px rgba(255, 0, 0, 0.6);
         }
 
-        .glitch
-        {
+        .glitch {
             animation: glitch 1s linear infinite;
             opacity: 0.9;
         }
 
-        @keyframes glitch
-        {
+        @keyframes glitch {
 
             2%,
-            64%
-            {
+            64% {
                 transform: translate(2px, 0) skew(0deg);
             }
 
             4%,
-            60%
-            {
+            60% {
                 transform: translate(-2px, 0) skew(0deg);
             }
 
-            62%
-            {
+            62% {
                 transform: translate(0, 0) skew(5deg);
             }
         }
 
-        .hidden-message
-        {
+        .hidden-message {
             opacity: 0;
             transition: opacity 0.3s ease;
             color: var(--accent-color);
@@ -297,13 +261,11 @@
             cursor: default;
         }
 
-        .blog-entry:hover .hidden-message
-        {
+        .blog-entry:hover .hidden-message {
             opacity: 0.8;
         }
 
-        .navigation
-        {
+        .navigation {
             position: absolute;
             top: 50%;
             left: 50%;
@@ -313,8 +275,7 @@
             pointer-events: none;
         }
 
-        .nav-button
-        {
+        .nav-button {
             position: absolute;
             padding: 1rem;
             background: none;
@@ -328,29 +289,24 @@
             text-shadow: 0 0 10px rgba(255, 0, 0, 0.3);
         }
 
-        .nav-button:hover
-        {
+        .nav-button:hover {
             opacity: 1;
             transform: scale(1.1);
         }
 
-        .nav-button:active
-        {
+        .nav-button:active {
             transform: scale(0.95);
         }
 
-        .prev-button
-        {
+        .prev-button {
             left: 0;
         }
 
-        .next-button
-        {
+        .next-button {
             right: 0;
         }
 
-        .page-counter
-        {
+        .page-counter {
             position: absolute;
             bottom: -50px;
             left: 50%;
@@ -362,13 +318,11 @@
             user-select: none;
         }
 
-        .page-counter:hover
-        {
+        .page-counter:hover {
             opacity: 1;
         }
 
-        .page-input
-        {
+        .page-input {
             position: absolute;
             bottom: -50px;
             left: 50%;
@@ -384,14 +338,12 @@
             display: none;
         }
 
-        .page-input:focus
-        {
+        .page-input:focus {
             outline: none;
             box-shadow: 0 0 10px rgba(255, 0, 0, 0.3);
         }
 
-        .click-counter
-        {
+        .click-counter {
             position: fixed;
             bottom: 20px;
             left: 20px;
@@ -401,13 +353,11 @@
             color: var(--accent-color);
         }
 
-        .click-counter.show
-        {
+        .click-counter.show {
             opacity: 0.5;
         }
 
-        .matrix-rain
-        {
+        .matrix-rain {
             position: fixed;
             top: 0;
             left: 0;
@@ -419,60 +369,49 @@
             transition: opacity 1s ease;
         }
 
-        .matrix-rain.active
-        {
+        .matrix-rain.active {
             opacity: 0.3;
         }
 
-        @media (max-width: 768px)
-        {
-            .navigation
-            {
+        @media (max-width: 768px) {
+            .navigation {
                 width: calc(100% + 60px);
             }
 
-            .nav-button
-            {
+            .nav-button {
                 font-size: 2em;
                 padding: 0.5rem;
             }
 
-            .blog-entry
-            {
+            .blog-entry {
                 padding: 1rem;
                 height: 500px;
             }
 
-            .book
-            {
+            .book {
                 height: 500px;
             }
 
-            h1
-            {
+            h1 {
                 font-size: 1.8em;
             }
 
-            .blog-entry p
-            {
+            .blog-entry p {
                 font-size: 0.9em;
             }
 
-            .blog-entry iframe
-            {
+            .blog-entry iframe {
                 width: 100%;
                 height: auto;
             }
 
-            .secret-unlocked
-            {
+            .secret-unlocked {
                 font-size: 0.75em;
                 padding: 8px 15px;
             }
         }
 
-        @media (max-width: 480px)
-        {
+        @media (max-width: 480px) {
             .blog-entry {
                 padding: 0.75rem;
                 height: 450px;
@@ -534,9 +473,26 @@
 
             <div class="blog-entry">
                 <div class="page-number"></div>
+                <p>System of a Down - System of a Down album</p>
+                <a href="https://www.systemofadown.com/" target="_blank" rel="noopener noreferrer">
+                    <img src="assets/images/soad_album.jpg" alt="System of a Down album cover" class="clickable-picture">
+                </a>
+                <p class="hidden-message">
+                    Le groupe System of a Down a utilisé l'affiche <i>5 Finger hat die Hand</i> de
+                    l'artiste John Heartfield comme pochette de son premier album.
+                </p>
+                <p class="hidden-message">
+                    John Heartfield était un artiste allemand connu pour ses photomontages
+                    satiriques et engagés politiquement, notamment contre le régime nazi. L'affiche <i>5 Finger hat die Hand</i> (5 doigts a la main) critique la montée du fascisme en Allemagne dans les années 1930.
+                </p>
+            </div>
+
+            <div class="blog-entry">
+                <div class="page-number"></div>
                 <p>Forbidden stories</p>
                 <a href="https://forbiddenstories.org/" target="_blank" rel="noopener noreferrer">
-                    <img src="assets/images/forbiddenstories.png" alt="Forbiddenstories thumbnail" class="clickable-picture">
+                    <img src="assets/images/forbiddenstories.png" alt="Forbiddenstories thumbnail"
+                        class="clickable-picture">
                 </a>
                 <p class="hidden-message">Liberté de la presse, baromètre de la démocratie...</p>
             </div>
@@ -563,8 +519,7 @@
     </div>
 
     <script>
-        document.addEventListener('DOMContentLoaded', function ()
-        {
+        document.addEventListener('DOMContentLoaded', function () {
             const container = document.querySelector('.container');
             const entries = document.querySelectorAll('.blog-entry');
             const prevButton = document.querySelector('.prev-button');
@@ -574,8 +529,7 @@
             const backgroundMusic = document.getElementById('backgroundMusic');
             let isPlaying = false;
 
-            albumImage.addEventListener('click', () =>
-            {
+            albumImage.addEventListener('click', () => {
                 if (!isPlaying) {
                     backgroundMusic.play();
                     albumImage.classList.add('playing');
@@ -605,8 +559,7 @@
             for (let i = 0; i < columns; i++)
                 drops[i] = 1;
 
-            function drawMatrix()
-            {
+            function drawMatrix() {
                 ctx.fillStyle = 'rgba(10, 10, 10, 0.05)';
                 ctx.fillRect(0, 0, matrixCanvas.width, matrixCanvas.height);
                 ctx.fillStyle = '#ff0000';
@@ -624,8 +577,7 @@
 
             let matrixInterval;
 
-            setInterval(() =>
-            {
+            setInterval(() => {
                 if (Math.random() > 0.99) {
                     container.style.opacity = '0.7';
                     setTimeout(() => {
@@ -634,8 +586,7 @@
                 }
             }, 1000);
 
-            function createParticle()
-            {
+            function createParticle() {
                 const particle = document.createElement('div');
                 particle.className = 'particle';
                 particle.style.left = Math.random() * window.innerWidth + 'px';
@@ -654,8 +605,7 @@
             const pageCounter = document.querySelector('.page-counter');
             const pageInput = document.querySelector('.page-input');
 
-            pageCounter.addEventListener('click', () =>
-            {
+            pageCounter.addEventListener('click', () => {
                 pageCounter.style.display = 'none';
                 pageInput.style.display = 'block';
                 pageInput.value = currentPage + 1;
@@ -667,8 +617,7 @@
                 pageCounter.style.display = 'block';
             });
 
-            pageInput.addEventListener('keypress', (e) =>
-            {
+            pageInput.addEventListener('keypress', (e) => {
                 if (e.key === 'Enter') {
                     const targetPage = parseInt(pageInput.value);
                     if (targetPage <= 0) {
@@ -682,16 +631,14 @@
                 }
             });
 
-            function navigateToSpecificPage(newPage)
-            {
+            function navigateToSpecificPage(newPage) {
                 if (newPage === currentPage)
                     return;
 
                 const direction = newPage > currentPage ? 'next' : 'prev';
                 entries[currentPage].classList.add(direction === 'next' ? 'flipping' : 'flipping-back');
 
-                setTimeout(() =>
-                {
+                setTimeout(() => {
                     entries[currentPage].classList.remove('active', 'flipping', 'flipping-back');
                     currentPage = newPage;
                     entries[currentPage].classList.add('active');
@@ -699,15 +646,13 @@
                 }, 400);
             }
 
-            function updatePageCounter()
-            {
+            function updatePageCounter() {
                 document.getElementById('currentPage').textContent = currentPage + 1;
                 document.getElementById('totalPages').textContent = entries.length;
                 pageInput.max = entries.length;
             }
 
-            function navigateToPage(direction)
-            {
+            function navigateToPage(direction) {
                 if (direction === 'next' && currentPage < entries.length - 1) {
                     entries[currentPage].classList.add('flipping');
                     setTimeout(() => {
@@ -730,8 +675,7 @@
             nextButton.addEventListener('click', () => navigateToPage('next'), { passive: true });
             prevButton.addEventListener('click', () => navigateToPage('prev'), { passive: true });
 
-            mainTitle.addEventListener('dblclick', () =>
-            {
+            mainTitle.addEventListener('dblclick', () => {
                 clicks++;
                 clickCount.textContent = clicks;
                 clickCounter.classList.add('show');
@@ -750,8 +694,7 @@
                 }
             });
 
-            document.addEventListener('keydown', (e) =>
-            {
+            document.addEventListener('keydown', (e) => {
                 konamiCode.push(e.key);
                 konamiCode = konamiCode.slice(-10);
 
@@ -775,13 +718,11 @@
             let touchStartX = 0;
             let touchEndX = 0;
 
-            document.addEventListener('touchstart', (e) =>
-            {
+            document.addEventListener('touchstart', (e) => {
                 touchStartX = e.touches[0].clientX;
             }, { passive: true });
 
-            document.addEventListener('touchend', (e) =>
-            {
+            document.addEventListener('touchend', (e) => {
                 touchEndX = e.changedTouches[0].clientX;
                 const swipeDistance = touchEndX - touchStartX;
 
@@ -793,8 +734,7 @@
                 }
             }, { passive: true });
 
-            window.addEventListener('resize', () =>
-            {
+            window.addEventListener('resize', () => {
                 matrixCanvas.width = window.innerWidth;
                 matrixCanvas.height = window.innerHeight;
             });

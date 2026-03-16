@@ -68,10 +68,8 @@
                     </div>
                     <div class="project-tags">
                         <span class="tag">Python</span>
-                        <span class="tag">ScyllaDB</span>
-                        <span class="tag">Cassandra</span>
+                        <span class="tag">CI/CD</span>
                         <span class="tag">Rust</span>
-                        <span class="tag">Open Source AI</span>
                         <span class="tag">Web</span>
                     </div>
                     <div class="featured-content">
@@ -91,8 +89,8 @@
                                     class="project-btn demo-btn" aria-label="Voir la présentation VIDOQ (PDF)">
                                     <span>📄</span> <span id="vidoqPresentationBtn">Présentation</span>
                                 </a>
-                                <a href="https://vidoq.fr" target="_blank"
-                                    rel="noopener noreferrer" class="project-btn demo-btn" aria-label="Essayer VIDOQ">
+                                <a href="https://vidoq.fr" target="_blank" rel="noopener noreferrer"
+                                    class="project-btn demo-btn" aria-label="Essayer VIDOQ">
                                     <span>🚀</span> <span id="vidoqTryItBtn">ESSAYER</span>
                                 </a>
                             </div>
@@ -100,6 +98,34 @@
                         <div class="project-image">
                             <img src="assets/images/final_logo.png" alt="Logo du projet VIDOQ">
                         </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>Wave Survivor</h3>
+                    </div>
+                    <div class="project-tags">
+                        <span class="tag">Canvas 2D</span>
+                        <span class="tag">JavaScript</span>
+                    </div>
+                    <div class="project-image">
+                        <div class="project-preview">
+                            <img src="assets/images/waves_game_icon.png" alt="wave game logo"
+                                style="width:100%; height:100%; object-fit:cover; display:block; background-position:center;">
+                        </div>
+                    </div>
+                    <div class="project-description">
+                        <p id="waveGameDesc">Survivez les vagues d'ennemis !</p>
+                        <div class="project-features">
+                            <span>🎯 Tir</span>
+                            <span>💣 Stratagèmes</span>
+                            <span>🔥 Super Armes</span>
+                        </div>
+                    </div>
+                    <div class="project-links">
+                        <a href="wave-game/index.html" class="project-btn demo-btn">
+                            <span>🎮</span> <span id="waveGamePlayBtn">JOUER</span>
+                        </a>
                     </div>
                 </div>
 
@@ -143,7 +169,8 @@
                     </div>
                     <div class="project-image">
                         <div class="project-preview">
-                            <img src="assets/images/fox.png" alt="VibeFoxes logo" style="width:100%; height:100%; object-fit:cover; display:block;">
+                            <img src="assets/images/fox.png" alt="VibeFoxes logo"
+                                style="width:100%; height:100%; object-fit:cover; display:block;">
                         </div>
                     </div>
                     <div class="project-description">
@@ -181,7 +208,7 @@
                                 <div class="terminal-body">
                                     <div class="terminal-line">CVE-2017-0143 Analysis</div>
                                     <div class="terminal-line text-yellow">[!] EternalBlue Vulnerability</div>
-                                    <div class="terminal-line text-green">[✓] Assessment Complete</div>
+                                    <div class="terminal-line text-green">[ ] Assessment Complete</div>
                                     <div class="terminal-line text-purple">[INFO] Report Generated</div>
                                 </div>
                             </div>
@@ -224,7 +251,7 @@
                                 <div class="terminal-body">
                                     <div class="terminal-line">$ python device_code_wrapper.py</div>
                                     <div class="terminal-line text-yellow">[!] OAuth Device Flow Attack</div>
-                                    <div class="terminal-line text-green">[✓] Token Acquired</div>
+                                    <div class="terminal-line text-green">[o] Token Acquired</div>
                                     <div class="terminal-line text-purple">[INFO] Wrapper Active</div>
                                 </div>
                             </div>
@@ -301,7 +328,7 @@
                                 </div>
                                 <div class="terminal-body">
                                     <div class="terminal-line">$ ./zappy_server</div>
-                                    <div class="terminal-line text-green">[✓] Server started</div>
+                                    <div class="terminal-line text-green">[ ] Server started</div>
                                     <div class="terminal-line text-yellow">[!] Client connected</div>
                                     <div class="terminal-line text-purple">[INFO] Game running...</div>
                                 </div>
@@ -347,7 +374,7 @@
                                 <div class="terminal-body">
                                     <div class="terminal-line">$ ./CVE-2025-36911.py</div>
                                     <div class="terminal-line text-yellow">[!] Scanning</div>
-                                    <div class="terminal-line text-green">[✓] Scan Complete</div>
+                                    <div class="terminal-line text-green">[ ] Scan Complete</div>
                                     <div class="terminal-line text-purple">[INFO] Vulnerability Found</div>
                                 </div>
                             </div>
@@ -425,6 +452,8 @@
                 vidoqFeatures: ["🧐 OSINT", "🛡️ Cybersécurité", "💻 Développement", "📊 Analyse"],
                 portfolioDesc: "Le site que vous consultez actuellement. Avez-vous trouvé l'Easter Egg ? Parfois, il faut ne pas trouver pour le trouver.",
                 quoteGameDesc: "Devinez qui a dit ça !",
+                waveSurvivorDesc: "Survivez les vagues d'ennemis !",
+                waveSurvivorPlayBtn: "JOUER",
                 vibefoxDesc: "Un site de vibe coding. Vous pouvez demander à l'IA de faire du code",
                 securityAssessmentDesc: "Rapport d'évaluation de sécurité sur EternalBlue.",
                 deviceCodeDesc: "Wrapper Python pour automatiser les attaques Device Code Phishing sur les flux OAuth.",
@@ -456,6 +485,8 @@
                 vidoqFeatures: ["🧐 OSINT", "🛡️ Cybersecurity", "💻 Development", "📊 Analysis"],
                 portfolioDesc: "The website you are currently visiting. Did you found the Easter Egg? Sometimes, you need to not found to find it.",
                 quoteGameDesc: "Guess who said that!",
+                waveSurvivorDesc: "Survive the waves of enemies!",
+                waveSurvivorPlayBtn: "PLAY",
                 vibefoxDesc: "A vibe coding website. You can ask the AI to write code",
                 securityAssessmentDesc: "Security assessment report on EternalBlue.",
                 deviceCodeDesc: "Python wrapper to automate Device Code Phishing attacks on OAuth flows.",
@@ -500,7 +531,7 @@
 
             const vidoqPresentationBtn = document.getElementById('vidoqPresentationBtn');
             if (vidoqPresentationBtn) vidoqPresentationBtn.textContent = t.vidoqPresentation;
-            
+
             const vidoqTryItBtn = document.getElementById('vidoqTryItBtn');
             if (vidoqTryItBtn) vidoqTryItBtn.textContent = t.vidoqTryIt;
 
@@ -512,6 +543,8 @@
                         description.textContent = t.portfolioDesc;
                     } else if (titleText.includes('Quotes Game')) {
                         description.textContent = t.quoteGameDesc;
+                    } else if (titleText.includes('Wave Survivor')) {
+                        description.textContent = t.waveSurvivorDesc;
                     } else if (titleText.includes('VibeFoxes')) {
                         description.textContent = t.vibefoxDesc;
                     } else if (titleText.includes('Security assessment')) {
@@ -525,6 +558,11 @@
                     } else if (titleText.includes('CVE-2025-36911')) {
                         description.textContent = t.cveDesc;
                     }
+                }
+
+                const playBtn = card.querySelector('#waveGamePlayBtn');
+                if (playBtn) {
+                    playBtn.textContent = t.waveSurvivorPlayBtn;
                 }
             });
 
@@ -558,8 +596,7 @@
             }
         }
 
-        function showCvModal()
-        {
+        function showCvModal() {
             const modal = document.getElementById('cvModal');
             const title = document.getElementById('cvModalTitle');
             const msg = document.getElementById('cvModalMessage');
@@ -571,10 +608,10 @@
             contactBtn.textContent = choosenTranslation && choosenTranslation.cvModalContact ? choosenTranslation.cvModalContact : 'Go to Contact page';
             closeBtn.textContent = choosenTranslation && choosenTranslation.cvModalClose ? choosenTranslation.cvModalClose : 'Close';
             modal.classList.add('show');
-            modal.setAttribute('aria-hidden','false');
+            modal.setAttribute('aria-hidden', 'false');
             closeBtn.focus();
 
-            function hide() { modal.classList.remove('show'); modal.setAttribute('aria-hidden','true'); document.removeEventListener('keydown', escHandler); }
+            function hide() { modal.classList.remove('show'); modal.setAttribute('aria-hidden', 'true'); document.removeEventListener('keydown', escHandler); }
             function escHandler(e) { if (e.key === 'Escape') hide(); }
 
             document.querySelectorAll('[data-close]').forEach(el => el.onclick = hide);
@@ -582,13 +619,12 @@
             document.addEventListener('keydown', escHandler);
         }
 
-        window.addEventListener('load', function ()
-        {
+        window.addEventListener('load', function () {
             updateContent(currentLang);
 
             const cvBtn = document.getElementById('cvBtn');
             if (cvBtn)
-                cvBtn.addEventListener('click', function() {
+                cvBtn.addEventListener('click', function () {
                     showCvModal();
                 });
             const projectCards = document.querySelectorAll('.project-card');
@@ -645,15 +681,72 @@
     </script>
 
     <style>
-    .cv-modal { position: fixed; inset: 0; display: none; align-items: center; justify-content: center; z-index: 2000; }
-    .cv-modal.show { display: flex; }
-    .cv-modal-backdrop { position: absolute; inset: 0; background: rgba(0,0,0,0.6); }
-    .cv-modal-content { position: relative; background: rgba(10,10,10,0.98); border: 2px solid #8A2BE2; padding: 20px; width: 90%; max-width: 520px; color: #fff; box-shadow: 0 10px 40px rgba(0,0,0,0.6); }
-    .cv-modal-content h3 { margin: 0 0 10px; color: #fff; }
-    .cv-modal-actions { margin-top: 18px; display:flex; gap:12px; justify-content:flex-end; }
-    .cv-modal-close-btn, .cv-modal-contact-btn { padding: 10px 16px; border: 2px solid #8A2BE2; background: linear-gradient(135deg, transparent, rgba(138,43,226,0.08)); color: #8A2BE2; cursor: pointer; }
-    .cv-modal-contact-btn { background: #8A2BE2; color: #000; }
-    .cv-modal-close { position:absolute; top:8px; right:8px; background:transparent; border:none; color:#8A2BE2; font-size:20px; cursor:pointer; }
+        .cv-modal {
+            position: fixed;
+            inset: 0;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 2000;
+        }
+
+        .cv-modal.show {
+            display: flex;
+        }
+
+        .cv-modal-backdrop {
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.6);
+        }
+
+        .cv-modal-content {
+            position: relative;
+            background: rgba(10, 10, 10, 0.98);
+            border: 2px solid #8A2BE2;
+            padding: 20px;
+            width: 90%;
+            max-width: 520px;
+            color: #fff;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
+        }
+
+        .cv-modal-content h3 {
+            margin: 0 0 10px;
+            color: #fff;
+        }
+
+        .cv-modal-actions {
+            margin-top: 18px;
+            display: flex;
+            gap: 12px;
+            justify-content: flex-end;
+        }
+
+        .cv-modal-close-btn,
+        .cv-modal-contact-btn {
+            padding: 10px 16px;
+            border: 2px solid #8A2BE2;
+            background: linear-gradient(135deg, transparent, rgba(138, 43, 226, 0.08));
+            color: #8A2BE2;
+            cursor: pointer;
+        }
+
+        .cv-modal-contact-btn {
+            background: #8A2BE2;
+            color: #000;
+        }
+
+        .cv-modal-close {
+            position: absolute;
+            top: 8px;
+            right: 8px;
+            background: transparent;
+            border: none;
+            color: #8A2BE2;
+            font-size: 20px;
+            cursor: pointer;
+        }
     </style>
 
     <div id="cvModal" class="cv-modal" aria-hidden="true">
@@ -669,4 +762,5 @@
         </div>
     </div>
 </body>
+
 </html>
