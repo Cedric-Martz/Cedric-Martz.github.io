@@ -1,4 +1,10 @@
 {
+  "game": {
+    "name": "Quote Clash",
+    "version": "2.0",
+    "shuffleQuotes": true,
+    "showFunFacts": true
+  },
   "translations": {
     "en": {
       "title": "Quote Guessing Game",

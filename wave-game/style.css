@@ -1,0 +1,303 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: #000;
+    color: #fff;
+    overflow: hidden;
+}
+
+/* MENU */
+.menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.menu.hidden {
+    display: none;
+}
+
+.menu-container {
+    text-align: center;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 40px;
+    border-radius: 10px;
+    border: 2px solid #00ff00;
+}
+
+.menu-container h1 {
+    font-size: 48px;
+    margin-bottom: 40px;
+    color: #00ff00;
+    text-shadow: 0 0 10px #00ff00;
+}
+
+.menu-container h2 {
+    font-size: 32px;
+    margin-bottom: 30px;
+    color: #00ff00;
+}
+
+.menu-btn {
+    display: block;
+    width: 250px;
+    padding: 12px;
+    margin: 15px auto;
+    font-size: 18px;
+    background: #00ff00;
+    color: #000;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.menu-btn:hover {
+    background: #00cc00;
+    transform: scale(1.05);
+    box-shadow: 0 0 15px #00ff00;
+}
+
+.menu-btn:active {
+    transform: scale(0.95);
+}
+
+.rules-content {
+    text-align: left;
+    margin: 20px 0;
+    color: #ccc;
+    font-size: 16px;
+}
+
+.rules-content p {
+    margin: 10px 0;
+}
+
+.controls-list {
+    text-align: left;
+    margin: 20px 0;
+    color: #ccc;
+    font-size: 14px;
+}
+
+.control-item {
+    margin: 12px 0;
+    padding: 8px;
+    background: rgba(0, 255, 0, 0.1);
+    border-left: 3px solid #00ff00;
+}
+
+.control-item input {
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid #00ff00;
+    border-radius: 3px;
+    font-family: 'Courier New', monospace;
+}
+
+/* GAME CONTAINER */
+.game-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: #000;
+}
+
+.game-container.hidden {
+    display: none;
+}
+
+#gameCanvas {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+/* UI ELEMENTS */
+.ui-element {
+    position: absolute;
+    color: #00ff00;
+    font-family: 'Courier New', monospace;
+    text-shadow: 0 0 5px #00ff00;
+}
+
+.ui-stratagems {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: rgba(0, 0, 0, 0.8);
+    border: 2px solid #00ff00;
+    padding: 15px;
+    border-radius: 5px;
+    font-size: 12px;
+}
+
+.ui-stratagems h3 {
+    color: #00ff00;
+    margin-bottom: 10px;
+}
+
+.stratagem-list {
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.stratagem-item {
+    padding: 10px;
+    margin: 8px 0;
+    background: rgba(0, 255, 0, 0.1);
+    border-left: 3px solid #00ff00;
+    font-size: 18px;
+    line-height: 1.4;
+}
+
+.stratagem-item.ready {
+    background: rgba(255, 255, 0, 0.3);
+    border-left: 4px solid #ffff00;
+    animation: pulse 0.5s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { background: rgba(255, 255, 0, 0.3); }
+    50% { background: rgba(255, 255, 0, 0.5); }
+}
+
+.ui-health {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background: rgba(0, 0, 0, 0.8);
+    border: 2px solid #ff4444;
+    padding: 12px;
+    border-radius: 5px;
+    min-width: 150px;
+}
+
+.health-bar {
+    width: 130px;
+    height: 20px;
+    background: #333;
+    border: 1px solid #ff4444;
+    margin-bottom: 8px;
+    overflow: hidden;
+    border-radius: 3px;
+}
+
+.health-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #ff4444, #ff8844);
+    width: 100%;
+    transition: width 0.2s ease;
+}
+
+#healthText {
+    font-size: 12px;
+    color: #ff8844;
+}
+
+.ui-weapon {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background: rgba(0, 0, 0, 0.8);
+    border: 2px solid #4444ff;
+    padding: 15px;
+    border-radius: 5px;
+    min-width: 150px;
+}
+
+.current-weapon {
+    text-align: center;
+    font-size: 14px;
+}
+
+.current-weapon p {
+    margin: 5px 0;
+    color: #4444ff;
+}
+
+#ammoCount {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.ui-wave {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.8);
+    border: 2px solid #ffff00;
+    padding: 12px 25px;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.ui-wave p {
+    margin: 3px 0;
+    color: #ffff00;
+}
+
+/* ZONES DE FRAPPE */
+.strike-zone {
+    position: absolute;
+    border: 2px dashed #ff0000;
+    background: rgba(255, 0, 0, 0.2);
+    animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 0.5; }
+    50% { opacity: 1; }
+}
+
+/* Game Over */
+#gameOverMenu {
+    z-index: 999;
+}
+
+#gameOverTitle {
+    color: #ff4444;
+}
+
+#gameOverStats {
+    color: #ccc;
+    margin: 20px 0;
+    font-size: 16px;
+}
+
+/* Responsif */
+@media (max-width: 768px) {
+    .menu-container {
+        padding: 25px;
+    }
+
+    .menu-btn {
+        width: 200px;
+        font-size: 16px;
+    }
+
+    .ui-stratagems {
+        font-size: 10px;
+        top: 10px;
+        left: 10px;
+    }
+
+    .ui-health, .ui-weapon {
+        font-size: 12px;
+        padding: 10px;
+    }
+}

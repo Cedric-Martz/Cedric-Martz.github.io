@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wave Survivor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Menu Principal -->
+    <div id="mainMenu" class="menu">
+        <div class="menu-container">
+            <h1 id="title">WAVES SURVIVOR</h1>
+            <button id="playBtn" class="menu-btn">Play</button>
+            <button id="rulesBtn" class="menu-btn">Rules</button>
+            <button id="controlsBtn" class="menu-btn">Controls</button>
+            <button id="languageBtn" class="menu-btn">français</button>
+        </div>
+    </div>
+
+    <!-- Menu Règles -->
+    <div id="rulesMenu" class="menu hidden">
+        <div class="menu-container">
+            <h2 id="rulesTitle">Rules</h2>
+            <div id="rulesContent" class="rules-content">
+                <p id="rules1">Survive enemy waves</p>
+                <p id="rules2">Collect stratagem drops (crates)</p>
+                <p id="rules3">Use strategies to eliminate enemies</p>
+                <p id="rules4">Manage your super weapons wisely</p>
+            </div>
+            <button id="backFromRulesBtn" class="menu-btn">Back</button>
+        </div>
+    </div>
+
+    <!-- Menu Touches -->
+    <div id="controlsMenu" class="menu hidden">
+        <div class="menu-container">
+            <h2 id="controlsTitle">Controls</h2>
+            <div id="controlsList" class="controls-list">
+                <div class="control-item">
+                    <span id="moveLabel">Move (ZQSD/Arrows)</span>
+                </div>
+                <div class="control-item">
+                    <span id="shootLabel">Shoot (Left Click)</span>
+                </div>
+                <div class="control-item">
+                    <span id="grenadeLabel">Grenade (G)</span>
+                </div>
+                <div class="control-item">
+                    <span id="superWeaponLabel">Super Weapon (Q)</span>
+                </div>
+                <div class="control-item">
+                    <span id="dropWeaponLabel">Drop Weapon (F)</span>
+                </div>
+                <div class="control-item">
+                    <span id="fullscreenLabel">Fullscreen (ESC)</span>
+                </div>
+            </div>
+            <button id="stratagemConfigBtn" class="menu-btn" style="margin-top: 20px;">Configure Controls</button>
+            <button id="backFromControlsBtn" class="menu-btn">Back</button>
+        </div>
+    </div>
+
+    <!-- Menu Configuration des Touches -->
+    <div id="stratagemConfigMenu" class="menu hidden">
+        <div class="menu-container">
+            <h2 id="stratagemConfigTitle">Controls</h2>
+            <div id="stratagemConfigList" class="controls-list">
+                <!-- Sera rempli dynamiquement -->
+            </div>
+            <button id="backFromStratagemConfigBtn" class="menu-btn">Back</button>
+        </div>
+    </div>
+
+    <!-- Jeu -->
+    <div id="gameContainer" class="game-container hidden">
+        <canvas id="gameCanvas"></canvas>
+
+        <!-- UI Haut Gauche - Stratagèmes -->
+        <div id="strategemUI" class="ui-stratagems">
+            <h3 id="strategemTitle">Stratagems</h3>
+            <div id="strategemList" class="stratagem-list"></div>
+        </div>
+
+        <!-- UI Bas Gauche - Santé -->
+        <div id="healthUI" class="ui-health">
+            <div id="healthBar" class="health-bar">
+                <div id="healthFill" class="health-fill"></div>
+            </div>
+            <span id="healthText">100/100</span>
+        </div>
+
+        <!-- UI Bas Droite - Arme -->
+        <div id="weaponUI" class="ui-weapon">
+            <div id="currentWeapon" class="current-weapon">
+                <p id="weaponName">Rifle</p>
+                <p id="ammoCount">30/120</p>
+            </div>
+        </div>
+
+        <!-- UI Centre - Informations Vague -->
+        <div id="waveUI" class="ui-wave">
+            <p id="waveInfo">Wave 1</p>
+            <p id="enemyCount">Enemies: 5</p>
+        </div>
+
+        <!-- Zone de Frappe (rouge) -->
+        <div id="strikeZones"></div>
+    </div>
+
+    <!-- Fin de Partie -->
+    <div id="gameOverMenu" class="menu hidden">
+        <div class="menu-container">
+            <h2 id="gameOverTitle">Mission Failed</h2>
+            <p id="gameOverStats"></p>
+            <button id="mainMenuBtn" class="menu-btn">Main Menu</button>
+        </div>
+    </div>
+
+    <!-- Écran de Chargement -->
+    <div id="loadingScreen" class="menu" style="background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);">
+        <div class="menu-container" style="text-align: center;">
+            <h1 style="color: #00ff00; margin-bottom: 40px;">WAVE SURVIVOR</h1>
+            <p style="color: #00ff00; font-size: 24px; margin-bottom: 20px;">Loading assets...</p>
+            <div style="width: 300px; height: 20px; background: #333; border: 2px solid #00ff00; margin: 20px auto; padding: 5px; border-radius: 5px;">
+                <div id="loadingBar" style="height: 100%; background: #00ff00; width: 0%; transition: width 0.3s; border-radius: 3px;"></div>
+            </div>
+            <p id="loadingText" style="color: #aaa; font-size: 14px; margin-top: 20px;">Initializing...</p>
+        </div>
+    </div>
+
+    <script src="assets.js"></script>
+    <script src="game.js"></script>
+</body>
+</html>

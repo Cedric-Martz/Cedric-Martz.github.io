@@ -1,0 +1,12 @@
+# Sprites folder
+
+Place your sprite images here:
+- player.png
+- enemy.png
+- projectile.png
+- fireball.png
+- grenade.png
+- crate.png
+- etc.
+
+Recommended: PNG with transparency (32-bit)
