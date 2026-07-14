@@ -102,87 +102,45 @@
                 </div>
                 <div class="project-card">
                     <div class="project-header">
-                        <h3>Wave Survivor</h3>
+                        <h3>systemd-backdoor</h3>
                     </div>
                     <div class="project-tags">
-                        <span class="tag">Canvas 2D</span>
-                        <span class="tag">JavaScript</span>
+                        <span class="tag">Linux</span>
+                        <span class="tag">systemd</span>
+                        <span class="tag">Red Team</span>
                     </div>
                     <div class="project-image">
                         <div class="project-preview">
-                            <img src="assets/images/waves_games_logo.png" alt="wave game logo"
-                                style="width:100%; height:100%; object-fit:cover; display:block; background-position:center;">
+                            <div class="terminal-preview">
+                                <div class="terminal-header">
+                                    <div class="terminal-buttons">
+                                        <span class="btn red"></span>
+                                        <span class="btn yellow"></span>
+                                        <span class="btn green"></span>
+                                    </div>
+                                    <span class="terminal-title">systemd-backdoor</span>
+                                </div>
+                                <div class="terminal-body">
+                                    <div class="terminal-line">$ systemctl status updater.service</div>
+                                    <div class="terminal-line text-yellow">[!] Persistence enabled</div>
+                                    <div class="terminal-line text-green">[ ] Service installed</div>
+                                    <div class="terminal-line text-purple">[INFO] Callback ready</div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="project-description">
-                        <p id="waveGameDesc">Survivez les vagues d'ennemis !</p>
+                        <p>Backdoor Linux basée sur systemd pour explorer les mécanismes de persistance.</p>
                         <div class="project-features">
-                            <span>🎯 Tir</span>
-                            <span>💣 Stratagèmes</span>
-                            <span>🔥 Super Armes</span>
+                            <span>🛡️ Persistence</span>
+                            <span>⚙️ Linux</span>
+                            <span>🔍 Red Team</span>
                         </div>
                     </div>
                     <div class="project-links">
-                        <a href="wave-game/index.html" class="project-btn demo-btn">
-                            <span>🎮</span> <span id="waveGamePlayBtn">JOUER</span>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-header">
-                        <h3>Quotes Game</h3>
-                    </div>
-                    <div class="project-tags">
-                        <span class="tag">JSON</span>
-                        <span class="tag">CSS</span>
-                        <span class="tag">JavaScript</span>
-                    </div>
-                    <div class="project-image">
-                        <div class="project-preview">
-                            <img src="assets/images/quote_game_icon.png" alt="quote game logo"
-                                style="width:100%; height:100%; object-fit:cover; display:block; background-position:center;">
-                        </div>
-                    </div>
-                    <div class="project-description">
-                        <p>Devinez qui a dit ça !</p>
-                        <div class="project-features">
-                            <span>📖 Culture</span>
-                            <span>📱 Gamified</span>
-                        </div>
-                    </div>
-                    <div class="project-links">
-                        <a href="quote-game.html" class="project-btn demo-btn">
-                            <span>🎮</span> PLAY
-                        </a>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-header">
-                        <h3> VibeFoxes</h3>
-                    </div>
-                    <div class="project-tags">
-                        <span class="tag">HTML</span>
-                        <span class="tag">CSS</span>
-                        <span class="tag">JavaScript</span>
-                    </div>
-                    <div class="project-image">
-                        <div class="project-preview">
-                            <img src="assets/images/fox.png" alt="VibeFoxes logo"
-                                style="width:100%; height:100%; object-fit:cover; display:block;">
-                        </div>
-                    </div>
-                    <div class="project-description">
-                        <p>Un site de vibe coding. Vous pouvez demander à l'IA de faire du code</p>
-                        <div class="project-features">
-                            <span>✨ Vibe Coding</span>
-                            <span>📱 Gamified</span>
-                        </div>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://cedric-martz.github.io/VibeFoxes/" class="project-btn demo-btn">
-                            <span>🎮</span> Test
+                        <a href="https://github.com/Cedric-Martz/systemd-backdoor" target="_blank"
+                            rel="noopener noreferrer" class="project-btn github-btn">
+                            <span>💻</span> GitHub
                         </a>
                     </div>
                 </div>
@@ -274,6 +232,107 @@
 
                 <div class="project-card">
                     <div class="project-header">
+                        <h3>CVE-2025-36911</h3>
+                    </div>
+                    <div class="project-tags">
+                        <span class="tag">CVE-2025-36911</span>
+                    </div>
+                    <div class="project-image">
+                        <div class="project-preview">
+                            <div class="terminal-preview">
+                                <div class="terminal-header">
+                                    <div class="terminal-buttons">
+                                        <span class="btn red"></span>
+                                        <span class="btn yellow"></span>
+                                        <span class="btn green"></span>
+                                    </div>
+                                    <span class="terminal-title">CVE-2025-36911 Scanner</span>
+                                </div>
+                                <div class="terminal-body">
+                                    <div class="terminal-line">$ ./CVE-2025-36911.py</div>
+                                    <div class="terminal-line text-yellow">[!] Scanning</div>
+                                    <div class="terminal-line text-green">[ ] Scan Complete</div>
+                                    <div class="terminal-line text-purple">[INFO] Vulnerability Found</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-description">
+                        <p>Outil de détection et d'analyse de la vulnérabilité CVE-2025-36911.</p>
+                        <div class="project-features">
+                            <span>🛡️ CVE Detection</span>
+                            <span>🔍 Analysis</span>
+                            <span>📊 Scanning</span>
+                        </div>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/Cedric-Martz/CVE-2025-36911_scan" target="_blank"
+                            rel="noopener noreferrer" class="project-btn github-btn">
+                            <span>💻</span> GitHub
+                        </a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>Quotes Game</h3>
+                    </div>
+                    <div class="project-tags">
+                        <span class="tag">JSON</span>
+                        <span class="tag">CSS</span>
+                        <span class="tag">JavaScript</span>
+                    </div>
+                    <div class="project-image">
+                        <div class="project-preview">
+                            <img src="assets/images/quote_game_icon.png" alt="quote game logo"
+                                style="width:100%; height:100%; object-fit:cover; display:block; background-position:center;">
+                        </div>
+                    </div>
+                    <div class="project-description">
+                        <p>Devinez qui a dit ça !</p>
+                        <div class="project-features">
+                            <span>📖 Culture</span>
+                            <span>📱 Gamified</span>
+                        </div>
+                    </div>
+                    <div class="project-links">
+                        <a href="quote-game.html" class="project-btn demo-btn">
+                            <span>🎮</span> PLAY
+                        </a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3> VibeFoxes</h3>
+                    </div>
+                    <div class="project-tags">
+                        <span class="tag">HTML</span>
+                        <span class="tag">CSS</span>
+                        <span class="tag">JavaScript</span>
+                    </div>
+                    <div class="project-image">
+                        <div class="project-preview">
+                            <img src="assets/images/fox.png" alt="VibeFoxes logo"
+                                style="width:100%; height:100%; object-fit:cover; display:block;">
+                        </div>
+                    </div>
+                    <div class="project-description">
+                        <p>Un site de vibe coding. Vous pouvez demander à l'IA de faire du code</p>
+                        <div class="project-features">
+                            <span>✨ Vibe Coding</span>
+                            <span>📱 Gamified</span>
+                        </div>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://cedric-martz.github.io/VibeFoxes/" class="project-btn demo-btn">
+                            <span>🎮</span> Test
+                        </a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
                         <h3>Raytracer 3D</h3>
                     </div>
                     <div class="project-tags">
@@ -352,49 +411,6 @@
                         </a>
                     </div>
                 </div>
-
-                <div class="project-card">
-                    <div class="project-header">
-                        <h3>CVE-2025-36911</h3>
-                    </div>
-                    <div class="project-tags">
-                        <span class="tag">CVE-2025-36911</span>
-                    </div>
-                    <div class="project-image">
-                        <div class="project-preview">
-                            <div class="terminal-preview">
-                                <div class="terminal-header">
-                                    <div class="terminal-buttons">
-                                        <span class="btn red"></span>
-                                        <span class="btn yellow"></span>
-                                        <span class="btn green"></span>
-                                    </div>
-                                    <span class="terminal-title">CVE-2025-36911 Scanner</span>
-                                </div>
-                                <div class="terminal-body">
-                                    <div class="terminal-line">$ ./CVE-2025-36911.py</div>
-                                    <div class="terminal-line text-yellow">[!] Scanning</div>
-                                    <div class="terminal-line text-green">[ ] Scan Complete</div>
-                                    <div class="terminal-line text-purple">[INFO] Vulnerability Found</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-description">
-                        <p>Outil de détection et d'analyse de la vulnérabilité CVE-2025-36911.</p>
-                        <div class="project-features">
-                            <span>🛡️ CVE Detection</span>
-                            <span>🔍 Analysis</span>
-                            <span>📊 Scanning</span>
-                        </div>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://github.com/Cedric-Martz/CVE-2025-36911_scan" target="_blank"
-                            rel="noopener noreferrer" class="project-btn github-btn">
-                            <span>💻</span> GitHub
-                        </a>
-                    </div>
-                </div>
             </div>
         </section>
     </main>
@@ -428,10 +444,6 @@
                 </svg>
             </button>
         </div>
-
-        <button type="button" class="control-button" id="cvBtn" aria-label="Télécharger le CV">
-            <span id="cvText">📄 CV</span>
-        </button>
     </div>
 
     <script>
@@ -452,20 +464,13 @@
                 vidoqFeatures: ["🧐 OSINT", "🛡️ Cybersécurité", "💻 Développement", "📊 Analyse"],
                 portfolioDesc: "Le site que vous consultez actuellement. Avez-vous trouvé l'Easter Egg ? Parfois, il faut ne pas trouver pour le trouver.",
                 quoteGameDesc: "Devinez qui a dit ça !",
-                waveSurvivorDesc: "Survivez les vagues d'ennemis !",
-                waveSurvivorPlayBtn: "JOUER",
+                systemdBackdoorDesc: "Backdoor Linux basée sur systemd pour explorer les mécanismes de persistance.",
                 vibefoxDesc: "Un site de vibe coding. Vous pouvez demander à l'IA de faire du code",
                 securityAssessmentDesc: "Rapport d'évaluation de sécurité sur EternalBlue.",
                 deviceCodeDesc: "Wrapper Python pour automatiser les attaques Device Code Phishing sur les flux OAuth.",
                 raytracerDesc: "Moteur de rendu 3D utilisant la technique de raytracing pour générer des formes.",
                 zappyDesc: "Projet de fin de 2ème année à Epitech. Simulation d'équipes. Jeu en réseau avec serveur, client graphique et IA.",
                 cveDesc: "Outil de détection et d'analyse de la vulnérabilité CVE-2025-36911.",
-                cvText: "📄 CV",
-                cvAriaLabel: "Télécharger le CV en français",
-                cvModalTitle: "Laisser un message",
-                cvModalMessage: "N'hésitez pas à me laisser un mail via la page Contact — merci !",
-                cvModalContact: "Aller à la page Contact",
-                cvModalClose: "Fermer",
                 langButtonTitle: "Switch to English",
                 langAriaLabel: "Changer la langue"
             },
@@ -485,20 +490,13 @@
                 vidoqFeatures: ["🧐 OSINT", "🛡️ Cybersecurity", "💻 Development", "📊 Analysis"],
                 portfolioDesc: "The website you are currently visiting. Did you found the Easter Egg? Sometimes, you need to not found to find it.",
                 quoteGameDesc: "Guess who said that!",
-                waveSurvivorDesc: "Survive the waves of enemies!",
-                waveSurvivorPlayBtn: "PLAY",
+                systemdBackdoorDesc: "Linux backdoor based on systemd to explore persistence mechanisms.",
                 vibefoxDesc: "A vibe coding website. You can ask the AI to write code",
                 securityAssessmentDesc: "Security assessment report on EternalBlue.",
                 deviceCodeDesc: "Python wrapper to automate Device Code Phishing attacks on OAuth flows.",
                 raytracerDesc: "3D rendering engine using raytracing technique to generate shapes.",
                 zappyDesc: "Second-year final project at Epitech. Team simulation. Network game with server, graphical client, and AI.",
                 cveDesc: "Detection and analysis tool for CVE-2025-36911 vulnerability.",
-                cvText: "📄 CV",
-                cvAriaLabel: "Download CV in English",
-                cvModalTitle: "Leave a message",
-                cvModalMessage: "Don't hesitate to leave me an email via the Contact page — thanks!",
-                cvModalContact: "Go to Contact page",
-                cvModalClose: "Close",
                 langButtonTitle: "Passer en français",
                 langAriaLabel: "Switch language"
             }
@@ -543,8 +541,8 @@
                         description.textContent = t.portfolioDesc;
                     } else if (titleText.includes('Quotes Game')) {
                         description.textContent = t.quoteGameDesc;
-                    } else if (titleText.includes('Wave Survivor')) {
-                        description.textContent = t.waveSurvivorDesc;
+                    } else if (titleText.includes('systemd-backdoor')) {
+                        description.textContent = t.systemdBackdoorDesc;
                     } else if (titleText.includes('VibeFoxes')) {
                         description.textContent = t.vibefoxDesc;
                     } else if (titleText.includes('Security assessment')) {
@@ -559,19 +557,7 @@
                         description.textContent = t.cveDesc;
                     }
                 }
-
-                const playBtn = card.querySelector('#waveGamePlayBtn');
-                if (playBtn) {
-                    playBtn.textContent = t.waveSurvivorPlayBtn;
-                }
             });
-
-            const cvBtn = document.getElementById('cvBtn');
-            const cvText = document.getElementById('cvText');
-            if (cvBtn && cvText) {
-                cvText.textContent = t.cvText;
-                cvBtn.setAttribute('aria-label', t.cvAriaLabel);
-            }
 
             const langBtn = document.getElementById('langBtn');
             if (langBtn) {
@@ -596,37 +582,8 @@
             }
         }
 
-        function showCvModal() {
-            const modal = document.getElementById('cvModal');
-            const title = document.getElementById('cvModalTitle');
-            const msg = document.getElementById('cvModalMessage');
-            const contactBtn = document.getElementById('cvModalContact');
-            const closeBtn = document.getElementById('cvModalCloseBtn');
-            const choosenTranslation = (typeof translations !== 'undefined' && translations[currentLang]) ? translations[currentLang] : null;
-            title.textContent = choosenTranslation && choosenTranslation.cvModalTitle ? choosenTranslation.cvModalTitle : 'Leave a message';
-            msg.textContent = choosenTranslation && choosenTranslation.cvModalMessage ? choosenTranslation.cvModalMessage : "Don'choosenTranslation hesitate to leave me an email via the Contact page — thanks!";
-            contactBtn.textContent = choosenTranslation && choosenTranslation.cvModalContact ? choosenTranslation.cvModalContact : 'Go to Contact page';
-            closeBtn.textContent = choosenTranslation && choosenTranslation.cvModalClose ? choosenTranslation.cvModalClose : 'Close';
-            modal.classList.add('show');
-            modal.setAttribute('aria-hidden', 'false');
-            closeBtn.focus();
-
-            function hide() { modal.classList.remove('show'); modal.setAttribute('aria-hidden', 'true'); document.removeEventListener('keydown', escHandler); }
-            function escHandler(e) { if (e.key === 'Escape') hide(); }
-
-            document.querySelectorAll('[data-close]').forEach(el => el.onclick = hide);
-            closeBtn.onclick = hide;
-            document.addEventListener('keydown', escHandler);
-        }
-
         window.addEventListener('load', function () {
             updateContent(currentLang);
-
-            const cvBtn = document.getElementById('cvBtn');
-            if (cvBtn)
-                cvBtn.addEventListener('click', function () {
-                    showCvModal();
-                });
             const projectCards = document.querySelectorAll('.project-card');
             projectCards.forEach((card) => {
                 card.style.opacity = '0';
@@ -679,88 +636,6 @@
         window.addEventListener('scroll', checkScroll);
         window.addEventListener('load', checkScroll);
     </script>
-
-    <style>
-        .cv-modal {
-            position: fixed;
-            inset: 0;
-            display: none;
-            align-items: center;
-            justify-content: center;
-            z-index: 2000;
-        }
-
-        .cv-modal.show {
-            display: flex;
-        }
-
-        .cv-modal-backdrop {
-            position: absolute;
-            inset: 0;
-            background: rgba(0, 0, 0, 0.6);
-        }
-
-        .cv-modal-content {
-            position: relative;
-            background: rgba(10, 10, 10, 0.98);
-            border: 2px solid #8A2BE2;
-            padding: 20px;
-            width: 90%;
-            max-width: 520px;
-            color: #fff;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
-        }
-
-        .cv-modal-content h3 {
-            margin: 0 0 10px;
-            color: #fff;
-        }
-
-        .cv-modal-actions {
-            margin-top: 18px;
-            display: flex;
-            gap: 12px;
-            justify-content: flex-end;
-        }
-
-        .cv-modal-close-btn,
-        .cv-modal-contact-btn {
-            padding: 10px 16px;
-            border: 2px solid #8A2BE2;
-            background: linear-gradient(135deg, transparent, rgba(138, 43, 226, 0.08));
-            color: #8A2BE2;
-            cursor: pointer;
-        }
-
-        .cv-modal-contact-btn {
-            background: #8A2BE2;
-            color: #000;
-        }
-
-        .cv-modal-close {
-            position: absolute;
-            top: 8px;
-            right: 8px;
-            background: transparent;
-            border: none;
-            color: #8A2BE2;
-            font-size: 20px;
-            cursor: pointer;
-        }
-    </style>
-
-    <div id="cvModal" class="cv-modal" aria-hidden="true">
-        <div class="cv-modal-backdrop" data-close></div>
-        <div class="cv-modal-content" role="dialog" aria-modal="true" aria-labelledby="cvModalTitle">
-            <button class="cv-modal-close" aria-label="Close" data-close>&times;</button>
-            <h3 id="cvModalTitle"></h3>
-            <p id="cvModalMessage"></p>
-            <div class="cv-modal-actions">
-                <a id="cvModalContact" class="cv-modal-contact-btn nav-button" href="contact.html"></a>
-                <button id="cvModalCloseBtn" class="cv-modal-close-btn">Close</button>
-            </div>
-        </div>
-    </div>
 </body>
 
 </html>
