@@ -4,9 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>What the??</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
     <style>
         *
         {
@@ -17,18 +14,18 @@
 
         body {
             background:
-                linear-gradient(135deg, #0a0015, #1a0a2a, #2a1540),
-                radial-gradient(circle at 25% 25%, rgba(138, 43, 226, 0.08) 0%, transparent 60%),
-                radial-gradient(circle at 75% 75%, rgba(75, 0, 130, 0.06) 0%, transparent 60%);
-            color: #fff;
-            font-family: 'Orbitron', 'Segoe UI', monospace;
+                linear-gradient(90deg, rgba(80, 48, 28, 0.055) 1px, transparent 1px),
+                linear-gradient(180deg, rgba(80, 48, 28, 0.04) 1px, transparent 1px),
+                #f7efe4;
+            background-size: 56px 56px;
+            color: #241a15;
+            font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
             padding: 2rem;
             min-height: 100vh;
-            background-attachment: fixed;
             position: relative;
             overflow-x: hidden;
         }
@@ -40,10 +37,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background:
-                radial-gradient(circle at 20% 80%, rgba(138, 43, 226, 0.12) 0%, transparent 40%),
-                radial-gradient(circle at 80% 20%, rgba(75, 0, 130, 0.10) 0%, transparent 40%),
-                radial-gradient(circle at 60% 60%, rgba(255, 0, 255, 0.05) 0%, transparent 30%);
+            background: radial-gradient(circle at 60% 30%, rgba(217, 101, 35, 0.12), transparent 36%);
             pointer-events: none;
             z-index: -1;
             animation: backgroundPulse 8s ease-in-out infinite alternate;
@@ -61,17 +55,17 @@
             max-width: 1200px;
             width: 100%;
             text-align: center;
-            animation: fadeIn 1s ease-in;
+            opacity: 1;
             z-index: 1;
         }
 
         h1
         {
             font-size: 3rem;
-            color: #fff;
-            text-shadow: 0 0 15px #8A2BE2, 0 0 30px #8A2BE2, 0 0 45px #8A2BE2;
+            color: #241a15;
+            text-shadow: none;
             animation: cyberpunk-glow 2s ease-in-out infinite alternate;
-            font-family: 'Orbitron', monospace;
+            font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
             font-weight: 900;
             letter-spacing: 3px;
             margin-bottom: 2rem;
@@ -80,10 +74,10 @@
         @keyframes cyberpunk-glow
         {
             from {
-                text-shadow: 0 0 10px #8A2BE2, 0 0 20px #8A2BE2, 0 0 30px #8A2BE2;
+                letter-spacing: 2px;
             }
             to {
-                text-shadow: 0 0 20px #8A2BE2, 0 0 30px #8A2BE2, 0 0 40px #8A2BE2, 0 0 50px #8A2BE2;
+                letter-spacing: 3px;
             }
         }
 
@@ -91,9 +85,9 @@
         {
             margin: 2rem auto;
             display: inline-block;
-            border: 3px solid #8A2BE2;
-            box-shadow: 0 0 20px rgba(138, 43, 226, 0.5);
-            background: rgba(0, 0, 0, 0.3);
+            border: 3px solid #d96523;
+            box-shadow: 0 0 20px rgba(217, 101, 35, 0.5);
+            background: rgba(255, 255, 255, 0.74);
             padding: 10px;
             animation: pulse 2s ease-in-out infinite;
         }
@@ -109,11 +103,11 @@
         {
             0%, 100%
             {
-                box-shadow: 0 0 20px rgba(138, 43, 226, 0.5);
+                box-shadow: 0 0 20px rgba(217, 101, 35, 0.5);
             }
             50%
             {
-                box-shadow: 0 0 40px rgba(138, 43, 226, 0.8), 0 0 60px rgba(138, 43, 226, 0.5);
+                box-shadow: 0 0 40px rgba(217, 101, 35, 0.8), 0 0 60px rgba(217, 101, 35, 0.5);
             }
         }
 
@@ -122,19 +116,20 @@
             margin: 2rem auto;
             max-width: 800px;
             width: 100%;
-            background: rgba(0, 0, 0, 0.6);
-            border: 2px solid #8A2BE2;
-            box-shadow: 0 0 20px rgba(138, 43, 226, 0.3);
-            border-radius: 0;
+            background: #1d120d;
+            border: 2px solid #d96523;
+            box-shadow: 0 0 20px rgba(217, 101, 35, 0.3);
+            border-radius: 8px;
+            overflow: hidden;
         }
 
         .terminal-header
         {
-            background: linear-gradient(135deg, rgba(138, 43, 226, 0.3), rgba(75, 0, 130, 0.3));
+            background: linear-gradient(135deg, rgba(217, 101, 35, 0.3), rgba(159, 63, 22, 0.3));
             padding: 10px 15px;
             display: flex;
             align-items: center;
-            border-bottom: 1px solid #8A2BE2;
+            border-bottom: 1px solid #d96523;
         }
 
         .terminal-buttons
@@ -171,7 +166,7 @@
             flex: 1;
             text-align: center;
             font-size: 0.9rem;
-            color: #8A2BE2;
+            color: #d96523;
             font-weight: 600;
         }
 
@@ -182,6 +177,8 @@
             max-height: 400px;
             overflow-y: auto;
             font-family: 'Courier New', monospace;
+            color: #f7efe4;
+            text-align: left;
         }
 
         .terminal-output
@@ -194,40 +191,44 @@
         {
             margin: 5px 0;
             line-height: 1.5;
+            color: #f7efe4;
+            overflow-wrap: anywhere;
         }
 
         .terminal-error
         {
-            color: #ff5555;
+            color: #ff7a6f;
         }
 
         .terminal-success
         {
-            color: #50fa7b;
+            color: #9ef0b8;
         }
 
         .terminal-info
         {
-            color: #8be9fd;
+            color: #8dd7ff;
         }
 
         .terminal-prompt
      {
-            color: #8A2BE2;
+            color: #d96523;
         }
 
         .terminal-input-line
         {
             display: flex;
             align-items: center;
-            margin-top: 10px;
+            gap: 10px;
+            padding: 0 20px 20px;
+            font-family: 'Courier New', monospace;
         }
 
         .terminal-input-line span
         {
-            color: #8A2BE2;
-            margin-right: 10px;
+            color: #d96523;
             font-weight: bold;
+            white-space: nowrap;
         }
 
         #terminalInput
@@ -235,20 +236,21 @@
             flex: 1;
             background: transparent;
             border: none;
-            color: #fff;
+            color: #fff4df;
             font-family: 'Courier New', monospace;
             font-size: 1rem;
             outline: none;
-            caret-color: #8A2BE2;
+            caret-color: #d96523;
+            min-width: 0;
         }
 
         .nav-button
         {
             margin: 2rem 10px 0;
             padding: 12px 24px;
-            background: linear-gradient(135deg, transparent, rgba(138, 43, 226, 0.1));
-            border: 2px solid #8A2BE2;
-            color: #8A2BE2;
+            background: linear-gradient(135deg, transparent, rgba(217, 101, 35, 0.1));
+            border: 2px solid #d96523;
+            color: #d96523;
             font-size: 1rem;
             cursor: pointer;
             transition: all 0.3s ease;
@@ -269,7 +271,7 @@
             left: -100%;
             width: 100%;
             height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(138, 43, 226, 0.2), transparent);
+            background: linear-gradient(90deg, transparent, rgba(217, 101, 35, 0.2), transparent);
             transition: left 0.5s ease;
         }
 
@@ -280,9 +282,9 @@
 
         .nav-button:hover
         {
-            background: #8A2BE2;
+            background: #d96523;
             color: #000;
-            box-shadow: 0 0 20px rgba(138, 43, 226, 0.6);
+            box-shadow: 0 0 20px rgba(217, 101, 35, 0.6);
         }
 
         @keyframes fadeIn
@@ -309,13 +311,13 @@
 
         .terminal-body::-webkit-scrollbar-thumb
         {
-            background: #8A2BE2;
+            background: #d96523;
             border-radius: 4px;
         }
 
         .terminal-body::-webkit-scrollbar-thumb:hover
         {
-            background: #9d4edd;
+            background: #f0a23a;
         }
 
         @media (max-width: 768px)
@@ -358,7 +360,7 @@
             </div>
             <div class="terminal-input-line">
                 <span class="terminal-prompt">visitor@maxwell:~$</span>
-                <input type="text" id="terminalInput" autofocus autocomplete="off">
+                <input type="text" id="terminalInput" autocomplete="off">
             </div>
         </div>
 
@@ -512,7 +514,7 @@
                             '���������������������',
                             '�7�DM�,D�,�ɒK�Slt�7����G����t��d',
                             '��O����$',
-                            '        &l��;Found something ===> https://cedric-martz.github.io/iaziuefhhdoiefhiqusdcnizueqhfpizaufeqizeqfizehfizqfoiezhiuezqsfoizeoifqzeisfzqiefsoziedsfjcosidjfcozeisfdoqzisdfjoczisfozeisdfozeijsfoezsjfoezijdsfoidsjfozijdsfxojdsfoezjdsfci.html'
+                            '        &l��;'
                         ];
 
                         let output = '<div class="terminal-line">';
@@ -559,8 +561,7 @@
                             'meow :3',
                             'meowmeow',
                             'meow~',
-                            'mew mew',
-                            'Found something ===> https://cedric-martz.github.io/iaziuefhhdoiefhiqusdcnizueqhfpizaufeqizeqfizehfizqfoiezhiuezqsfoizeoifqzeisfzqiefsoziedsfjcosidjfcozeisfdoqzisdfjoczisfozeisdfozeijsfoezsjfoezijdsfoidsjfozijdsfxojdsfoezjdsfci.html'
+                            'mew mew'
                         ];
 
                         let output = meowStrings.map(str =>
@@ -666,5 +667,6 @@
             terminalInput.focus();
         });
     </script>
+    <script src="../../portfolio.js" defer></script>
 </body>
 </html>
