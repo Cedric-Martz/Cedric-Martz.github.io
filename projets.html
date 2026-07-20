@@ -4,638 +4,167 @@
 <head>
     <meta charset="UTF-8">
     <meta name="description"
-        content="Explorez les projets créatifs de Cédric Martz. Une sélection de réalisations innovantes en développement et cybersécurité.">
+        content="Projets de Cédric Martz">
     <meta name="keywords"
-        content="Cédric Martz, développement, cybersécurité, projets, portfolio, Epitech, programmation, C++, Python, JavaScript">
+        content="Cédric Martz, développement, cybersécurité, projets, portfolio, programmation">
     <meta name="author" content="Cédric Martz">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#8A2BE2">
-    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#f5f2ea">
 
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://cedric-martz.github.io/projets.html">
     <meta property="og:title" content="Projets - Cédric Martz">
-    <meta property="og:description"
-        content="Explorez les projets créatifs de Cédric Martz. Une sélection de réalisations innovantes en développement et cybersécurité.">
+    <meta property="og:description" content="Une sélection de mes projets">
     <meta property="og:image" content="https://cedric-martz.github.io/assets/images/final_logo.png">
-
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://cedric-martz.github.io/projets.html">
-    <meta property="twitter:title" content="Projets - Cédric Martz">
-    <meta property="twitter:description"
-        content="Explorez les projets créatifs de Cédric Martz. Une sélection de réalisations innovantes en développement et cybersécurité.">
-    <meta property="twitter:image" content="https://cedric-martz.github.io/assets/images/final_logo.png">
 
     <title>Projets - Cédric Martz</title>
     <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
     <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
     <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
-    <link rel="manifest" href="assets/site.webmanifest">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <a href="#main-content" class="skip-link">Aller au contenu principal</a>
 
-    <header>
-        <h1>Cédric Martz - Mes Projets</h1>
-        <nav role="navigation" aria-label="Navigation principale">
-            <a href="index.html" class="nav-button">Accueil</a>
-            <a href="projets.html" class="nav-button active" aria-current="page">Projets</a>
-            <a href="contact.html" class="nav-button">Contact</a>
+    <header class="site-header">
+        <a class="brand" href="index.html" aria-label="Accueil">Cédric Martz</a>
+        <nav class="site-nav" aria-label="Navigation principale">
+            <a href="index.html">Accueil</a>
+            <a href="projets.html" aria-current="page">Projets</a>
+            <a href="blog.html">Blog</a>
+            <a href="contact.html">Contact</a>
         </nav>
     </header>
 
-    <main class="content" role="main" id="main-content">
-        <section class="intro-section">
-            <h2>Mes Projets de Développement</h2>
+    <main id="main-content">
+        <section class="page-hero section-shell">
+            <p class="eyebrow">Portfolio</p>
+            <h1>Projets sélectionnés</h1>
             <p>
-                Découvrez mes réalisations, dans le développement et la cybersécurité.
+                Retrouvez ici une sélection de mes projets, allant de la cybersécurité à du développement web et logiciel.
             </p>
         </section>
 
-        <section aria-labelledby="featured-project-title">
-            <h2 id="featured-project-title" class="sr-only">Projet principal</h2>
-            <div class="projects-grid">
-                <div class="featured-project">
-                    <div class="project-header">
-                        <h3> VIDOQ</h3>
-                    </div>
-                    <div class="project-tags">
-                        <span class="tag">Python</span>
-                        <span class="tag">CI/CD</span>
-                        <span class="tag">Rust</span>
-                        <span class="tag">Web</span>
-                    </div>
-                    <div class="featured-content">
-                        <div class="project-info">
-                            <div class="project-description">
-                                <p>Vidoq représente l'aboutissement de mes études. Vidoq vous permet d'auditer votre
-                                    empreinte numérique.</p>
-                                <div class="project-features">
-                                    <span>🧐 OSINT</span>
-                                    <span>🛡️ Cybersécurité</span>
-                                    <span>💻 Développement</span>
-                                    <span>📊 Analyse</span>
-                                </div>
-                            </div>
-                            <div class="project-links">
-                                <a href="assets/documents/Vidoq Public Presentation.pdf" target="_blank"
-                                    class="project-btn demo-btn" aria-label="Voir la présentation VIDOQ (PDF)">
-                                    <span>📄</span> <span id="vidoqPresentationBtn">Présentation</span>
-                                </a>
-                                <a href="https://vidoq.fr" target="_blank" rel="noopener noreferrer"
-                                    class="project-btn demo-btn" aria-label="Essayer VIDOQ">
-                                    <span>🚀</span> <span id="vidoqTryItBtn">ESSAYER</span>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="project-image">
-                            <img src="assets/images/final_logo.png" alt="Logo du projet VIDOQ">
-                        </div>
-                    </div>
+        <section class="section-shell split-feature">
+            <div class="section-heading">
+                <p class="eyebrow">Projet phare</p>
+                <h2>Vidoq</h2>
+                <p>
+                    Vidoq est un outil pour auditer votre empreinte numérique. Pour vous aider à comprendre et améliorer votre sécurité en ligne.
+                </p>
+                <div class="tag-row">
+                    <span>OSINT</span>
+                    <span>Cybersécurité</span>
+                    <span>Analyse</span>
+                    <span>Web</span>
                 </div>
-                <div class="project-card">
-                    <div class="project-header">
-                        <h3>systemd-backdoor</h3>
-                    </div>
-                    <div class="project-tags">
-                        <span class="tag">Linux</span>
-                        <span class="tag">systemd</span>
-                        <span class="tag">Red Team</span>
-                    </div>
-                    <div class="project-image">
-                        <div class="project-preview">
-                            <div class="terminal-preview">
-                                <div class="terminal-header">
-                                    <div class="terminal-buttons">
-                                        <span class="btn red"></span>
-                                        <span class="btn yellow"></span>
-                                        <span class="btn green"></span>
-                                    </div>
-                                    <span class="terminal-title">systemd-backdoor</span>
-                                </div>
-                                <div class="terminal-body">
-                                    <div class="terminal-line">$ systemctl status updater.service</div>
-                                    <div class="terminal-line text-yellow">[!] Persistence enabled</div>
-                                    <div class="terminal-line text-green">[ ] Service installed</div>
-                                    <div class="terminal-line text-purple">[INFO] Callback ready</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-description">
-                        <p>Backdoor Linux basée sur systemd pour explorer les mécanismes de persistance.</p>
-                        <div class="project-features">
-                            <span>🛡️ Persistence</span>
-                            <span>⚙️ Linux</span>
-                            <span>🔍 Red Team</span>
-                        </div>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://github.com/Cedric-Martz/systemd-backdoor" target="_blank"
-                            rel="noopener noreferrer" class="project-btn github-btn">
-                            <span>💻</span> GitHub
-                        </a>
-                    </div>
+                <div class="button-row">
+                    <a class="button primary" href="https://Vidoq.fr" target="_blank" rel="noopener noreferrer">Découvrir Vidoq</a>
                 </div>
+            </div>
+            <div class="feature-visual">
+                <img src="assets/images/final_logo.webp" alt="Logo du projet Vidoq" width="512" height="512">
+            </div>
+        </section>
 
-                <div class="project-card">
-                    <div class="project-header">
-                        <h3> Security assessment</h3>
-                    </div>
-                    <div class="project-tags">
-                        <span class="tag">CVE-2017-0143</span>
-                    </div>
-                    <div class="project-image">
-                        <div class="project-preview">
-                            <div class="terminal-preview">
-                                <div class="terminal-header">
-                                    <div class="terminal-buttons">
-                                        <span class="btn red"></span>
-                                        <span class="btn yellow"></span>
-                                        <span class="btn green"></span>
-                                    </div>
-                                    <span class="terminal-title">EternalBlue report</span>
-                                </div>
-                                <div class="terminal-body">
-                                    <div class="terminal-line">CVE-2017-0143 Analysis</div>
-                                    <div class="terminal-line text-yellow">[!] EternalBlue Vulnerability</div>
-                                    <div class="terminal-line text-green">[ ] Assessment Complete</div>
-                                    <div class="terminal-line text-purple">[INFO] Report Generated</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-description">
-                        <p>Rapport d'évaluation de sécurité sur EternalBlue.</p>
-                        <div class="project-features">
-                            <span>🛡️ Analyse CVE</span>
-                            <span>📊 Évaluation</span>
-                            <span>📋 Rapport</span>
-                        </div>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://github.com/Cedric-Martz/EthernalBlue_report" target="_blank"
-                            rel="noopener noreferrer" class="project-btn github-btn">
-                            <span>💻</span> GitHub
-                        </a>
-                    </div>
-                </div>
+        <section class="section-shell">
+            <div class="section-heading compact">
+                <p class="eyebrow">Cybersecurity</p>
+                <h2>Recherche, audit et outils</h2>
+            </div>
 
-                <div class="project-card">
-                    <div class="project-header">
-                        <h3> Phishing Wrapper</h3>
-                    </div>
-                    <div class="project-tags">
-                        <span class="tag">Python</span>
-                    </div>
-                    <div class="project-image">
-                        <div class="project-preview">
-                            <div class="terminal-preview">
-                                <div class="terminal-header">
-                                    <div class="terminal-buttons">
-                                        <span class="btn red"></span>
-                                        <span class="btn yellow"></span>
-                                        <span class="btn green"></span>
-                                    </div>
-                                    <span class="terminal-title">device_code_phishing</span>
-                                </div>
-                                <div class="terminal-body">
-                                    <div class="terminal-line">$ python device_code_wrapper.py</div>
-                                    <div class="terminal-line text-yellow">[!] OAuth Device Flow Attack</div>
-                                    <div class="terminal-line text-green">[o] Token Acquired</div>
-                                    <div class="terminal-line text-purple">[INFO] Wrapper Active</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-description">
-                        <p>Wrapper Python pour automatiser les attaques Device Code Phishing sur les flux OAuth.</p>
-                        <div class="project-features">
-                            <span>OAuth Attack</span>
-                            <span>Token Theft</span>
-                        </div>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://github.com/Cedric-Martz/DeviceCodePhishing_wrapper" target="_blank"
-                            rel="noopener noreferrer" class="project-btn github-btn">
-                            <span>💻</span> GitHub
-                        </a>
-                    </div>
-                </div>
+            <div class="project-grid">
+                <article class="project-card">
+                    <p class="card-kicker">Linux | systemd | Red Team</p>
+                    <h3>systemd-backdoor</h3>
+                    <p>Backdoor Linux basée sur systemd pour la persistance.</p>
+                    <a href="https://github.com/Cedric-Martz/systemd-backdoor" target="_blank"
+                        rel="noopener noreferrer">GitHub</a>
+                </article>
 
-                <div class="project-card">
-                    <div class="project-header">
-                        <h3>CVE-2025-36911</h3>
-                    </div>
-                    <div class="project-tags">
-                        <span class="tag">CVE-2025-36911</span>
-                    </div>
-                    <div class="project-image">
-                        <div class="project-preview">
-                            <div class="terminal-preview">
-                                <div class="terminal-header">
-                                    <div class="terminal-buttons">
-                                        <span class="btn red"></span>
-                                        <span class="btn yellow"></span>
-                                        <span class="btn green"></span>
-                                    </div>
-                                    <span class="terminal-title">CVE-2025-36911 Scanner</span>
-                                </div>
-                                <div class="terminal-body">
-                                    <div class="terminal-line">$ ./CVE-2025-36911.py</div>
-                                    <div class="terminal-line text-yellow">[!] Scanning</div>
-                                    <div class="terminal-line text-green">[ ] Scan Complete</div>
-                                    <div class="terminal-line text-purple">[INFO] Vulnerability Found</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-description">
-                        <p>Outil de détection et d'analyse de la vulnérabilité CVE-2025-36911.</p>
-                        <div class="project-features">
-                            <span>🛡️ CVE Detection</span>
-                            <span>🔍 Analysis</span>
-                            <span>📊 Scanning</span>
-                        </div>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://github.com/Cedric-Martz/CVE-2025-36911_scan" target="_blank"
-                            rel="noopener noreferrer" class="project-btn github-btn">
-                            <span>💻</span> GitHub
-                        </a>
-                    </div>
-                </div>
+                <article class="project-card">
+                    <p class="card-kicker">CVE-2017-0143</p>
+                    <h3>Security assessment</h3>
+                    <p>Rapport d'évaluation de sécurité sur EternalBlue.</p>
+                    <a href="https://github.com/Cedric-Martz/EthernalBlue_report" target="_blank"
+                        rel="noopener noreferrer">GitHub</a>
+                </article>
 
-                <div class="project-card">
-                    <div class="project-header">
+                <article class="project-card">
+                    <p class="card-kicker">Python | OAuth</p>
+                    <h3>Phishing Wrapper</h3>
+                    <p>Wrapper Python pour automatiser les attaques Device Code Phishing sur les flux OAuth.</p>
+                    <a href="https://github.com/Cedric-Martz/DeviceCodePhishing_wrapper" target="_blank"
+                        rel="noopener noreferrer">GitHub</a>
+                </article>
+
+                <article class="project-card">
+                    <p class="card-kicker">Scanner | CVE</p>
+                    <h3>CVE-2025-36911</h3>
+                    <p>Outil de détection et d'analyse de la vulnérabilité CVE-2025-36911 touchant vos appareils bluetooth.</p>
+                    <a href="https://github.com/Cedric-Martz/CVE-2025-36911_scan" target="_blank"
+                        rel="noopener noreferrer">GitHub</a>
+                </article>
+            </div>
+        </section>
+
+        <section class="section-shell">
+            <div class="section-heading compact">
+                <p class="eyebrow">Créations et expérimentations</p>
+                <h2>Autres réalisations</h2>
+            </div>
+
+            <div class="project-grid">
+                <article class="project-card visual-card">
+                    <img src="assets/images/quote_game_icon.webp" alt="Aperçu de Quotes Game" width="640" height="308"
+                        loading="lazy" decoding="async">
+                    <div>
+                        <p class="card-kicker">JS | JSON</p>
                         <h3>Quotes Game</h3>
+                        <p>Devinez qui a dit la citation.</p>
+                        <a href="quote-game.html">Jouer</a>
                     </div>
-                    <div class="project-tags">
-                        <span class="tag">JSON</span>
-                        <span class="tag">CSS</span>
-                        <span class="tag">JavaScript</span>
-                    </div>
-                    <div class="project-image">
-                        <div class="project-preview">
-                            <img src="assets/images/quote_game_icon.png" alt="quote game logo"
-                                style="width:100%; height:100%; object-fit:cover; display:block; background-position:center;">
-                        </div>
-                    </div>
-                    <div class="project-description">
-                        <p>Devinez qui a dit ça !</p>
-                        <div class="project-features">
-                            <span>📖 Culture</span>
-                            <span>📱 Gamified</span>
-                        </div>
-                    </div>
-                    <div class="project-links">
-                        <a href="quote-game.html" class="project-btn demo-btn">
-                            <span>🎮</span> PLAY
-                        </a>
-                    </div>
-                </div>
+                </article>
 
-                <div class="project-card">
-                    <div class="project-header">
-                        <h3> VibeFoxes</h3>
+                <article class="project-card visual-card">
+                    <img src="assets/images/fox.png" alt="Logo VibeFoxes" width="232" height="200" loading="lazy"
+                        decoding="async">
+                    <div>
+                        <p class="card-kicker">HTML | CSS | JS</p>
+                        <h3>VibeFoxes</h3>
+                        <p>Un site de vibe coding pour demander à l'IA de générer du code. Visualisation du résultat, audit du code possible.</p>
+                        <a href="https://cedric-martz.github.io/VibeFoxes/">Tester</a>
                     </div>
-                    <div class="project-tags">
-                        <span class="tag">HTML</span>
-                        <span class="tag">CSS</span>
-                        <span class="tag">JavaScript</span>
-                    </div>
-                    <div class="project-image">
-                        <div class="project-preview">
-                            <img src="assets/images/fox.png" alt="VibeFoxes logo"
-                                style="width:100%; height:100%; object-fit:cover; display:block;">
-                        </div>
-                    </div>
-                    <div class="project-description">
-                        <p>Un site de vibe coding. Vous pouvez demander à l'IA de faire du code</p>
-                        <div class="project-features">
-                            <span>✨ Vibe Coding</span>
-                            <span>📱 Gamified</span>
-                        </div>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://cedric-martz.github.io/VibeFoxes/" class="project-btn demo-btn">
-                            <span>🎮</span> Test
-                        </a>
-                    </div>
-                </div>
+                </article>
 
-                <div class="project-card">
-                    <div class="project-header">
-                        <h3>Raytracer 3D</h3>
-                    </div>
-                    <div class="project-tags">
-                        <span class="tag">C++</span>
-                    </div>
-                    <div class="project-image">
-                        <div class="project-preview">
-                            <div class="code-preview">
-                                <div class="code-line">#include &lt;iostream&gt;</div>
-                                <div class="code-line">class Ray </div>
-                                <div class="code-line"> Vector3 origin;</div>
-                                <div class="code-line"> Vector3 direction;</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-description">
-                        <p>Moteur de rendu 3D utilisant la technique de raytracing pour générer des formes.</p>
-                        <div class="project-features">
-                            <span>🎯 Raytracing</span>
-                            <span>💡 Lighting</span>
-                            <span>🪞 Reflections</span>
-                        </div>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://github.com/Cedric-Martz/Raytracer" target="_blank" rel="noopener noreferrer"
-                            class="project-btn github-btn">
-                            <span>💻</span> GitHub
-                        </a>
-                    </div>
-                </div>
+                <article class="project-card">
+                    <p class="card-kicker">C++ | Rendering</p>
+                    <h3>Raytracer 3D</h3>
+                    <p>Moteur de rendu 3D utilisant la technique de raytracing pour générer des formes.</p>
+                    <a href="https://github.com/Cedric-Martz/Raytracer" target="_blank" rel="noopener noreferrer">GitHub</a>
+                </article>
 
-                <div class="project-card">
-                    <div class="project-header">
-                        <h3>Zappy</h3>
-                    </div>
-                    <div class="project-tags">
-                        <span class="tag">C++</span>
-                        <span class="tag">Python</span>
-                        <span class="tag">Network</span>
-                        <span class="tag">AI</span>
-                    </div>
-                    <div class="project-image">
-                        <div class="project-preview">
-                            <div class="terminal-preview">
-                                <div class="terminal-header">
-                                    <div class="terminal-buttons">
-                                        <span class="btn red"></span>
-                                        <span class="btn yellow"></span>
-                                        <span class="btn green"></span>
-                                    </div>
-                                    <span class="terminal-title">zappy_server</span>
-                                </div>
-                                <div class="terminal-body">
-                                    <div class="terminal-line">$ ./zappy_server</div>
-                                    <div class="terminal-line text-green">[ ] Server started</div>
-                                    <div class="terminal-line text-yellow">[!] Client connected</div>
-                                    <div class="terminal-line text-purple">[INFO] Game running...</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-description">
-                        <p>Projet de fin de 2ème année à Epitech. Simulation d'équipes. Jeu en réseau avec serveur,
-                            client graphique et IA.</p>
-                        <div class="project-features">
-                            <span>🌐 Network</span>
-                            <span>🎮 Multiplayer</span>
-                            <span>🧠 AI</span>
-                            <span>🎨 3D</span>
-                        </div>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://github.com/Cedric-Martz/Zappy" target="_blank" rel="noopener noreferrer"
-                            class="project-btn github-btn">
-                            <span>💻</span> GitHub
-                        </a>
-                    </div>
-                </div>
+                <article class="project-card">
+                    <p class="card-kicker">C++ | Python | Network</p>
+                    <h3>Zappy</h3>
+                    <p>Projet de fin de 2ème année d'études: jeu en réseau avec serveur, client graphique et IA.</p>
+                    <a href="https://github.com/Cedric-Martz/Zappy" target="_blank" rel="noopener noreferrer">GitHub</a>
+                </article>
             </div>
         </section>
     </main>
 
-    <footer class="page-footer" role="contentinfo">
-        <a href="https://github.com/Cedric-Martz" target="_blank" rel="noopener noreferrer">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                <path
-                    d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.2 11.4.6.1.8-.26.8-.58v-2.02c-3.34.72-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.1-.75.08-.73.08-.73 1.21.09 1.85 1.25 1.85 1.25 1.08 1.85 2.83 1.31 3.52 1 .11-.78.42-1.31.77-1.61-2.67-.3-5.47-1.34-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.12-.3-.54-1.52.12-3.18 0 0 1.01-.32 3.3 1.23.96-.27 1.98-.4 3-.4s2.04.13 3 .4c2.29-1.55 3.3-1.23 3.3-1.23.66 1.66.24 2.88.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.61-2.8 5.63-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.2.69.82.57C20.57 21.8 24 17.3 24 12c0-6.63-5.37-12-12-12z" />
-            </svg>
-            GitHub
-        </a>
-        <a href="https://www.linkedin.com/in/c%C3%A9dric-m-2b2240259/" target="_blank" rel="noopener noreferrer">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                <path
-                    d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
-            </svg>
-            LinkedIn
-        </a>
-    </footer>
-
-    <div class="floating-controls">
-        <div class="language-toggle">
-            <button id="langBtn" class="lang-button" title="Switch to English" aria-label="Changer la langue">
-                <svg class="flag-icon" width="24" height="18" viewBox="0 0 24 18" fill="none">
-                    <rect width="24" height="18" fill="#012169" />
-                    <path d="M0 0L24 18M24 0L0 18" stroke="white" stroke-width="2" />
-                    <path d="M0 0L24 18M24 0L0 18" stroke="#C8102E" stroke-width="1" />
-                    <path d="M12 0V18M0 9H24" stroke="white" stroke-width="3" />
-                    <path d="M12 0V18M0 9H24" stroke="#C8102E" stroke-width="2" />
-                </svg>
-            </button>
+    <footer class="site-footer">
+        <span>© Cédric Martz</span>
+        <div>
+            <a href="https://github.com/Cedric-Martz" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a href="https://www.linkedin.com/in/c%C3%A9dric-m-2b2240259/" target="_blank"
+                rel="noopener noreferrer">LinkedIn</a>
+            <a href="blog.html">Blog</a>
         </div>
-    </div>
-
-    <script>
-        const translations = {
-            fr: {
-                title: "Projets - Cédric Martz",
-                metaDescription: "Explorez les projets créatifs de Cédric Martz. Une sélection de réalisations innovantes en développement et cybersécurité.",
-                headerTitle: "Cédric Martz - Mes Projets",
-                navHome: "Accueil",
-                navProjects: "Projets",
-                navContact: "Contact",
-                introTitle: "Mes Projets de Développement",
-                introText: "Découvrez mes réalisations, dans le développement et la cybersécurité.",
-                vidoqTitle: "🔎 VIDOQ",
-                vidoqDesc: "Vidoq représente l'aboutissement de mes études. Vidoq vous permet d'auditer votre empreinte numérique.",
-                vidoqPresentation: "Présentation",
-                vidoqTryIt: "ESSAYER",
-                vidoqFeatures: ["🧐 OSINT", "🛡️ Cybersécurité", "💻 Développement", "📊 Analyse"],
-                portfolioDesc: "Le site que vous consultez actuellement. Avez-vous trouvé l'Easter Egg ? Parfois, il faut ne pas trouver pour le trouver.",
-                quoteGameDesc: "Devinez qui a dit ça !",
-                systemdBackdoorDesc: "Backdoor Linux basée sur systemd pour explorer les mécanismes de persistance.",
-                vibefoxDesc: "Un site de vibe coding. Vous pouvez demander à l'IA de faire du code",
-                securityAssessmentDesc: "Rapport d'évaluation de sécurité sur EternalBlue.",
-                deviceCodeDesc: "Wrapper Python pour automatiser les attaques Device Code Phishing sur les flux OAuth.",
-                raytracerDesc: "Moteur de rendu 3D utilisant la technique de raytracing pour générer des formes.",
-                zappyDesc: "Projet de fin de 2ème année à Epitech. Simulation d'équipes. Jeu en réseau avec serveur, client graphique et IA.",
-                cveDesc: "Outil de détection et d'analyse de la vulnérabilité CVE-2025-36911.",
-                langButtonTitle: "Switch to English",
-                langAriaLabel: "Changer la langue"
-            },
-            en: {
-                title: "Projects - Cédric Martz",
-                metaDescription: "Explore Cédric Martz's creative projects. A selection of innovative achievements in development and cybersecurity.",
-                headerTitle: "Cédric Martz - My Projects",
-                navHome: "Home",
-                navProjects: "Projects",
-                navContact: "Contact",
-                introTitle: "My Development Projects",
-                introText: "Discover my achievements in development and cybersecurity.",
-                vidoqTitle: "🔎 VIDOQ",
-                vidoqDesc: "Vidoq is the culmination of my studies. Vidoq allows you to audit your digital footprint.",
-                vidoqPresentation: "Presentation",
-                vidoqTryIt: "TRY IT",
-                vidoqFeatures: ["🧐 OSINT", "🛡️ Cybersecurity", "💻 Development", "📊 Analysis"],
-                portfolioDesc: "The website you are currently visiting. Did you found the Easter Egg? Sometimes, you need to not found to find it.",
-                quoteGameDesc: "Guess who said that!",
-                systemdBackdoorDesc: "Linux backdoor based on systemd to explore persistence mechanisms.",
-                vibefoxDesc: "A vibe coding website. You can ask the AI to write code",
-                securityAssessmentDesc: "Security assessment report on EternalBlue.",
-                deviceCodeDesc: "Python wrapper to automate Device Code Phishing attacks on OAuth flows.",
-                raytracerDesc: "3D rendering engine using raytracing technique to generate shapes.",
-                zappyDesc: "Second-year final project at Epitech. Team simulation. Network game with server, graphical client, and AI.",
-                cveDesc: "Detection and analysis tool for CVE-2025-36911 vulnerability.",
-                langButtonTitle: "Passer en français",
-                langAriaLabel: "Switch language"
-            }
-        };
-
-        let currentLang = localStorage.getItem('language') || 'fr';
-
-        function updateContent(lang) {
-            const t = translations[lang];
-
-            document.title = t.title;
-            document.querySelector('meta[name="description"]').setAttribute('content', t.metaDescription);
-            document.documentElement.lang = lang;
-            document.querySelector('header h1').textContent = t.headerTitle;
-            document.querySelector('nav a[href="index.html"]').textContent = t.navHome;
-            document.querySelector('nav a[href="projets.html"]').textContent = t.navProjects;
-            document.querySelector('nav a[href="contact.html"]').textContent = t.navContact;
-            document.querySelector('.intro-section h2').textContent = t.introTitle;
-            document.querySelector('.intro-section p').textContent = t.introText;
-
-            const vidoqDesc = document.querySelector('.featured-project .project-description p');
-            if (vidoqDesc) vidoqDesc.textContent = t.vidoqDesc;
-
-            const vidoqFeatures = document.querySelectorAll('.featured-project .project-features span');
-            vidoqFeatures.forEach((span, index) => {
-                if (t.vidoqFeatures[index]) {
-                    span.textContent = t.vidoqFeatures[index];
-                }
-            });
-
-            const vidoqPresentationBtn = document.getElementById('vidoqPresentationBtn');
-            if (vidoqPresentationBtn) vidoqPresentationBtn.textContent = t.vidoqPresentation;
-
-            const vidoqTryItBtn = document.getElementById('vidoqTryItBtn');
-            if (vidoqTryItBtn) vidoqTryItBtn.textContent = t.vidoqTryIt;
-
-            document.querySelectorAll('.project-card').forEach(card => {
-                const description = card.querySelector('.project-description p');
-                if (description) {
-                    const titleText = card.querySelector('.project-header h3').textContent.trim();
-                    if (titleText.includes('Portfolio')) {
-                        description.textContent = t.portfolioDesc;
-                    } else if (titleText.includes('Quotes Game')) {
-                        description.textContent = t.quoteGameDesc;
-                    } else if (titleText.includes('systemd-backdoor')) {
-                        description.textContent = t.systemdBackdoorDesc;
-                    } else if (titleText.includes('VibeFoxes')) {
-                        description.textContent = t.vibefoxDesc;
-                    } else if (titleText.includes('Security assessment')) {
-                        description.textContent = t.securityAssessmentDesc;
-                    } else if (titleText.includes('Phishing Wrapper')) {
-                        description.textContent = t.deviceCodeDesc;
-                    } else if (titleText.includes('Raytracer')) {
-                        description.textContent = t.raytracerDesc;
-                    } else if (titleText.includes('Zappy')) {
-                        description.textContent = t.zappyDesc;
-                    } else if (titleText.includes('CVE-2025-36911')) {
-                        description.textContent = t.cveDesc;
-                    }
-                }
-            });
-
-            const langBtn = document.getElementById('langBtn');
-            if (langBtn) {
-                langBtn.title = t.langButtonTitle;
-                langBtn.setAttribute('aria-label', t.langAriaLabel);
-
-                if (lang === 'fr') {
-                    langBtn.innerHTML = `<svg class="flag-icon" width="24" height="18" viewBox="0 0 24 18" fill="none">
-                        <rect width="8" height="18" fill="#002654"/>
-                        <rect x="8" width="8" height="18" fill="white"/>
-                        <rect x="16" width="8" height="18" fill="#CE1126"/>
-                    </svg>`;
-                } else {
-                    langBtn.innerHTML = `<svg class="flag-icon" width="24" height="18" viewBox="0 0 24 18" fill="none">
-                        <rect width="24" height="18" fill="#012169"/>
-                        <path d="M0 0L24 18M24 0L0 18" stroke="white" stroke-width="2"/>
-                        <path d="M0 0L24 18M24 0L0 18" stroke="#C8102E" stroke-width="1"/>
-                        <path d="M12 0V18M0 9H24" stroke="white" stroke-width="3"/>
-                        <path d="M12 0V18M0 9H24" stroke="#C8102E" stroke-width="2"/>
-                    </svg>`;
-                }
-            }
-        }
-
-        window.addEventListener('load', function () {
-            updateContent(currentLang);
-            const projectCards = document.querySelectorAll('.project-card');
-            projectCards.forEach((card) => {
-                card.style.opacity = '0';
-                card.style.transform = 'translateY(50px) scale(0.9)';
-            });
-
-            projectCards.forEach((card, index) => {
-                setTimeout(() => {
-                    card.style.transition = 'all 0.6s ease-out';
-                    card.style.opacity = '1';
-                    card.style.transform = 'translateY(0) scale(1)';
-                }, index * 200);
-            });
-        });
-
-        document.addEventListener('DOMContentLoaded', function () {
-            const langBtn = document.getElementById('langBtn');
-
-            langBtn.addEventListener('click', function () {
-                this.style.transform = 'scale(0.9)';
-                this.style.boxShadow = '0 0 20px #8A2BE2';
-
-                setTimeout(() => {
-                    this.style.transform = 'scale(1)';
-                    currentLang = currentLang === 'fr' ? 'en' : 'fr';
-                    localStorage.setItem('language', currentLang);
-                    updateContent(currentLang);
-                }, 150);
-            });
-        });
-
-        function checkScroll() {
-            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-            const windowHeight = window.innerHeight;
-            const documentHeight = document.documentElement.scrollHeight;
-            const scrollPercentage = (scrollTop + windowHeight) / documentHeight;
-
-            if (scrollPercentage >= 0.9 || (scrollTop + windowHeight >= documentHeight - 50)) {
-                document.body.classList.add('show-footer');
-            } else {
-                document.body.classList.remove('show-footer');
-            }
-            const floatingControls = document.querySelector('.floating-controls');
-            if (scrollTop <= 100) {
-                floatingControls.classList.remove('hide-controls');
-            } else {
-                floatingControls.classList.add('hide-controls');
-            }
-        }
-        window.addEventListener('scroll', checkScroll);
-        window.addEventListener('load', checkScroll);
-    </script>
+    </footer>
+    <script src="portfolio.js" defer></script>
 </body>
 
 </html>

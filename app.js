@@ -1,9 +1,20 @@
+// quote-game.html does not load portfolio.js, so it registers offline support here.
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('./sw.js').catch((error) => {
+      console.warn('Offline mode could not be enabled:', error);
+    });
+  });
+}
+
 let quotes = [];
 let translations = {};
 let allAuthors = [];
 const imageCache = {};
 let isLoadingQuote = false;
-let currentLang = localStorage.getItem('quoteGameLang') || 'en';
+let currentLang = localStorage.getItem('quoteGameLang')
+  || localStorage.getItem('portfolioLanguage')
+  || ((navigator.language || '').toLowerCase().startsWith('fr') ? 'fr' : 'en');
 let currentQuote = null;
 let selectedAnswer = null;
 let isAnswered = false;
@@ -85,6 +96,7 @@ function updateLanguage() {
   document.getElementById('start-btn').textContent = t.startButton;
   document.getElementById('rules-btn').textContent = t.rulesButton;
   document.getElementById('lang-btn').textContent = t.languageButton;
+  document.getElementById('exit-btn').textContent = t.exitButton;
 
   if (document.getElementById('rules-title')) {
     document.getElementById('rules-title').textContent = t.rulesTitle;
@@ -409,6 +421,9 @@ document.addEventListener('DOMContentLoaded', () => {
   document.getElementById('start-btn').addEventListener('click', startGame);
   document.getElementById('rules-btn').addEventListener('click', () => showScreen(rulesScreen));
   document.getElementById('lang-btn').addEventListener('click', () => showScreen(langScreen));
+  document.getElementById('exit-btn').addEventListener('click', () => {
+    window.location.href = 'projets.html';
+  });
 
   document.getElementById('back-to-menu-rules').addEventListener('click', () => showScreen(mainMenu));
   document.getElementById('back-to-menu-game').addEventListener('click', () => showScreen(mainMenu));
