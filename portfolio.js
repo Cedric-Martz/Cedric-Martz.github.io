@@ -5,7 +5,6 @@ const ENGLISH_TRANSLATIONS = {
     'Blog de Cédric Martz: ressources OSINT, cybersécurité, investigation et notes personnelles.': 'Cédric Martz’s blog: OSINT, cybersecurity, investigation resources and personal notes.',
     'Contacter Cédric Martz pour un projet de développement ou de cybersécurité.': 'Contact Cédric Martz about a development or cybersecurity project.',
     'Projets - Cédric Martz': 'Projects - Cédric Martz',
-    '404 - Page introuvable': '404 - Page not found',
     'Aller au contenu principal': 'Skip to main content',
     'Accueil': 'Home',
     'Navigation principale': 'Main navigation',
@@ -76,11 +75,7 @@ const ENGLISH_TRANSLATIONS = {
     'Le plus simple moyen de limiter la désinformation consiste à ralentir, regarder les preuves et ne pas réagir trop vite.': 'The simplest way to limit misinformation is to slow down, examine the evidence and avoid reacting too quickly.',
     "Une idée de projet ? N'hésitez pas à me contacter !": 'Have a project idea? Get in touch!',
     "Je suis toujours partant pour échanger autour de la cybersécurité, de l'OSINT ou de tout autre projet.": 'I am always happy to discuss cybersecurity, OSINT or any other project.',
-    'Envoyer un email': 'Send an email',
-    'Route perdue': 'Lost route',
-    "Cette page n'existe pas. Enfin... probablement.": "This page doesn't exist. Well... probably.",
-    "Tu peux revenir à l'accueil, ou prendre le temps d'observer les traces laissées ici. Les erreurs racontent parfois quelque chose.": 'You can return home, or take a moment to examine the traces left here. Errors sometimes tell a story.',
-    "Retour à l'accueil": 'Back to home'
+    'Envoyer un email': 'Send an email'
 };
 
 const translatableAttributes = ['aria-label', 'alt', 'content'];
@@ -146,6 +141,14 @@ function applyLanguage(language) {
         switcher.textContent = language === 'fr' ? 'EN' : 'FR';
         switcher.setAttribute('aria-label', language === 'fr' ? 'Display the site in English' : 'Afficher le site en français');
     }
+
+    const menuButton = document.querySelector('.menu-toggle');
+    if (menuButton) {
+        const isOpen = menuButton.getAttribute('aria-expanded') === 'true';
+        menuButton.setAttribute('aria-label', language === 'fr'
+            ? (isOpen ? 'Fermer le menu' : 'Ouvrir le menu')
+            : (isOpen ? 'Close menu' : 'Open menu'));
+    }
 }
 
 function initLanguage() {
@@ -163,17 +166,53 @@ function initLanguage() {
         applyLanguage(language);
     });
 
-    const navigation = document.querySelector('.site-nav');
     const header = document.querySelector('.site-header');
-    if (navigation) navigation.appendChild(switcher);
-    else if (header) header.appendChild(switcher);
-    else document.body.appendChild(switcher);
-
-    const style = document.createElement('style');
-    style.textContent = `.language-switcher{border:1px solid currentColor;border-radius:999px;background:transparent;color:inherit;font:inherit;font-size:.78rem;font-weight:800;line-height:1;padding:.42rem .58rem;cursor:pointer}.language-switcher:hover,.language-switcher:focus-visible{background:var(--accent,#d96523);color:#fff}body>.language-switcher{position:fixed;top:1rem;right:1rem;z-index:10}`;
-    document.head.appendChild(style);
+    if (header) {
+        const controls = document.createElement('div');
+        controls.className = 'header-controls';
+        header.appendChild(controls);
+        controls.appendChild(switcher);
+    } else {
+        document.body.appendChild(switcher);
+    }
 
     applyLanguage(language);
+}
+
+function initMobileMenu() {
+    const header = document.querySelector('.site-header');
+    const navigation = document.querySelector('.site-nav');
+    const controls = document.querySelector('.header-controls');
+    if (!header || !navigation || !controls) return;
+
+    const button = document.createElement('button');
+    button.type = 'button';
+    button.className = 'menu-toggle';
+    button.setAttribute('aria-expanded', 'false');
+    button.setAttribute('aria-controls', 'site-navigation');
+    button.setAttribute('aria-label', document.documentElement.lang === 'fr' ? 'Ouvrir le menu' : 'Open menu');
+    button.innerHTML = '<span></span><span></span><span></span>';
+    navigation.id = 'site-navigation';
+    controls.prepend(button);
+
+    const setOpen = (isOpen) => {
+        header.classList.toggle('menu-open', isOpen);
+        button.setAttribute('aria-expanded', String(isOpen));
+        button.setAttribute('aria-label', document.documentElement.lang === 'fr'
+            ? (isOpen ? 'Fermer le menu' : 'Ouvrir le menu')
+            : (isOpen ? 'Close menu' : 'Open menu'));
+    };
+
+    button.addEventListener('click', () => setOpen(button.getAttribute('aria-expanded') !== 'true'));
+    navigation.addEventListener('click', (event) => {
+        if (event.target.closest('a')) setOpen(false);
+    });
+    document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') setOpen(false);
+    });
+    window.addEventListener('resize', () => {
+        if (window.innerWidth > 640) setOpen(false);
+    });
 }
 
 const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -225,109 +264,79 @@ function initScrollProgress() {
     window.addEventListener('resize', updateProgress);
 }
 
-function initCursorTrail() {
+function initPointerEffect() {
     if (reduceMotion || window.matchMedia('(pointer: coarse)').matches) {
         return;
     }
 
-    const canvas = document.createElement('canvas');
-    canvas.className = 'cursor-canvas';
-    document.body.appendChild(canvas);
-    const ctx = canvas.getContext('2d');
+    const glow = document.createElement('div');
+    glow.className = 'pointer-glow';
+    document.body.appendChild(glow);
 
-    const points = [];
-    const maxPoints = 28;
+    const trail = Array.from({ length: 6 }, (_, index) => {
+        const dot = document.createElement('span');
+        dot.className = 'interactive-trail-dot';
+        dot.style.setProperty('--trail-size', `${9 - index * 0.7}px`);
+        dot.style.setProperty('--trail-opacity', 0.34 - index * 0.045);
+        document.body.appendChild(dot);
+        return { element: dot, x: -40, y: -40 };
+    });
 
-    let pointerX = window.innerWidth / 2;
-    let pointerY = window.innerHeight / 2;
-    let hasPointer = false;
-
-    function resizeCanvas() {
-        const dpr = Math.min(window.devicePixelRatio || 1, 2);
-        canvas.width = Math.floor(window.innerWidth * dpr);
-        canvas.height = Math.floor(window.innerHeight * dpr);
-        canvas.style.width = `${window.innerWidth}px`;
-        canvas.style.height = `${window.innerHeight}px`;
-        ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-    }
-
-    resizeCanvas();
-    window.addEventListener('resize', resizeCanvas);
+    let pointerX = -40;
+    let pointerY = -40;
+    let isInteractive = false;
 
     window.addEventListener('pointermove', (event) => {
         pointerX = event.clientX;
         pointerY = event.clientY;
-        hasPointer = true;
+        glow.style.transform = `translate3d(${event.clientX}px, ${event.clientY}px, 0)`;
         document.body.classList.add('has-pointer');
-        points.push({
-            x: pointerX,
-            y: pointerY,
-            age: 0
-        });
 
-        if (points.length > maxPoints) {
-            points.shift();
+        const interactive = event.target instanceof Element
+            && Boolean(event.target.closest('a, button, [role="button"], input, select, textarea'));
+        if (interactive !== isInteractive) {
+            isInteractive = interactive;
+            document.body.classList.toggle('over-interactive', interactive);
+            if (interactive) {
+                trail.forEach((dot) => {
+                    dot.x = pointerX;
+                    dot.y = pointerY;
+                });
+            }
         }
     }, { passive: true });
 
     window.addEventListener('pointerleave', () => {
-        hasPointer = false;
         document.body.classList.remove('has-pointer');
+        document.body.classList.remove('over-interactive');
+        isInteractive = false;
     });
 
-    function animateTrail() {
-        ctx.clearRect(0, 0, window.innerWidth, window.innerHeight);
+    function animateInteractiveTrail() {
+        let targetX = pointerX;
+        let targetY = pointerY;
 
-        points.forEach((point) => {
-            point.age += 1;
+        trail.forEach((dot, index) => {
+            const easing = 0.34 - index * 0.025;
+            dot.x += (targetX - dot.x) * easing;
+            dot.y += (targetY - dot.y) * easing;
+            dot.element.style.transform = `translate3d(${dot.x}px, ${dot.y}px, 0)`;
+            targetX = dot.x;
+            targetY = dot.y;
         });
 
-        while (points.length && points[0].age > 34) {
-            points.shift();
-        }
-
-        if (points.length > 2) {
-            ctx.lineCap = 'round';
-            ctx.lineJoin = 'round';
-
-            for (let i = 1; i < points.length - 1; i++) {
-                const prev = points[i - 1];
-                const current = points[i];
-                const next = points[i + 1];
-                const alpha = Math.max(0, 1 - current.age / 34) * 0.34;
-                const width = Math.max(1, 18 * (1 - current.age / 42));
-
-                ctx.beginPath();
-                ctx.moveTo(prev.x, prev.y);
-                ctx.quadraticCurveTo(current.x, current.y, (current.x + next.x) / 2, (current.y + next.y) / 2);
-                ctx.strokeStyle = `rgba(217, 101, 35, ${alpha})`;
-                ctx.lineWidth = width;
-                ctx.stroke();
-
-                ctx.beginPath();
-                ctx.moveTo(prev.x, prev.y);
-                ctx.quadraticCurveTo(current.x, current.y, (current.x + next.x) / 2, (current.y + next.y) / 2);
-                ctx.strokeStyle = `rgba(240, 162, 58, ${alpha * 0.55})`;
-                ctx.lineWidth = width * 0.42;
-                ctx.stroke();
-            }
-        }
-
-        if (!hasPointer && points.length === 0) {
-            document.body.classList.remove('has-pointer');
-        }
-
-        requestAnimationFrame(animateTrail);
+        requestAnimationFrame(animateInteractiveTrail);
     }
 
-    animateTrail();
+    animateInteractiveTrail();
 }
 
 document.addEventListener('DOMContentLoaded', () => {
     initLanguage();
+    initMobileMenu();
     initScrollReveal();
     initScrollProgress();
-    initCursorTrail();
+    initPointerEffect();
 });
 // Give every portfolio page an offline copy. Registration is deliberately kept
 // in the shared script so individual HTML pages do not need duplicate markup.

@@ -1,10 +1,7 @@
-/* Offline support for the portfolio. Bump this value when the caching rules change. */
-const CACHE_VERSION = 'portfolio-v3';
+const CACHE_VERSION = 'portfolio-v4';
 const STATIC_CACHE = `${CACHE_VERSION}-static`;
 const RUNTIME_CACHE = `${CACHE_VERSION}-runtime`;
 
-// Keep the initial download small enough for mobile connections. Large audio files,
-// PDFs and optional Easter-egg assets are cached on first use by the fetch handler.
 const PRECACHE_URLS = [
   './',
   './index.html',
@@ -12,7 +9,6 @@ const PRECACHE_URLS = [
   './blog.html',
   './contact.html',
   './quote-game.html',
-  './404.html',
   './css/style.css',
   './portfolio.js',
   './app.js',
@@ -42,12 +38,10 @@ self.addEventListener('install', (event) => {
     const cache = await caches.open(STATIC_CACHE);
     await cache.addAll(PRECACHE_URLS);
 
-    // The game can start offline even if it has never been opened before.
     try {
       const response = await fetch(QUOTES_API);
       if (response.ok) await cache.put(QUOTES_API, response);
     } catch {
-      // A third-party outage must not prevent the local site from becoming offline-ready.
     }
 
     await self.skipWaiting();
@@ -89,7 +83,7 @@ async function staleWhileRevalidate(request) {
   });
 
   if (cached) {
-    update.catch(() => {});
+    update.catch(() => { });
     return cached;
   }
   return update;
@@ -107,14 +101,10 @@ self.addEventListener('fetch', (event) => {
   }
 
   if (url.origin === self.location.origin) {
-    // Serve immediately from cache, while refreshing in the background. This
-    // keeps repeat visits fast without pinning users to an old CSS/JS version.
     event.respondWith(staleWhileRevalidate(request));
     return;
   }
 
-  // Third-party JSON and images used by the quote game remain available after
-  // their first successful request.
   if (url.hostname === 'dummyjson.com' || url.hostname.endsWith('wikipedia.org') || url.hostname.endsWith('wikimedia.org')) {
     event.respondWith(staleWhileRevalidate(request));
   }
